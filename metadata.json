@@ -1,5 +1,189 @@
 {
-  "name": "Riva Strategies - Growth Partner",
-  "description": "A professional, conversion-focused consulting website for Riva Strategies, positioning them as a multi-disciplinary business growth partner.",
-  "requestFramePermissions": []
+  "site": {
+    "name": "Riva Strategies",
+    "url": "https://www.rivastrategies.com/",
+    "defaultLanguage": "en",
+    "locale": "en_US",
+    "description": "Multi-disciplinary business growth partner focused on revenue systems, operational efficiency, strategic planning, and team performance.",
+    "keywords": [
+      "business growth partner",
+      "revenue operations",
+      "revenue systems",
+      "operational efficiency",
+      "strategic planning",
+      "team performance",
+      "CRM automation",
+      "KPI dashboards",
+      "SOP documentation",
+      "business systems",
+      "operations consulting",
+      "growth strategy"
+    ]
+  },
+
+  "organization": {
+    "name": "Riva Strategies",
+    "url": "https://www.rivastrategies.com/",
+    "phoneDisplay": "832-905-0570",
+    "phoneE164": "+18329050570",
+    "telephoneSchema": "+1-832-905-0570",
+    "sameAs": [
+      "https://www.facebook.com/rivastrategies"
+    ],
+    "logo": {
+      "url": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png",
+      "alt": "Riva Strategies logo"
+    }
+  },
+
+  "pages": {
+    "home": {
+      "title": "Riva Strategies | Multi-Disciplinary Business Growth Partner",
+      "description": "Riva Strategies transforms operator-dependent businesses into high-performance, system-led assets through revenue systems, operational efficiency, strategic planning, and team performance.",
+      "canonical": "https://www.rivastrategies.com/",
+      "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      "themeColor": "#0A2F73",
+      "og": {
+        "type": "website",
+        "siteName": "Riva Strategies",
+        "title": "Riva Strategies | Multi-Disciplinary Business Growth Partner",
+        "description": "Multi-disciplinary business growth partner focused on revenue systems, operational efficiency, strategic planning, and team performance.",
+        "url": "https://www.rivastrategies.com/",
+        "image": {
+          "url": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "Riva Strategies"
+        }
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Riva Strategies | Multi-Disciplinary Business Growth Partner",
+        "description": "Multi-disciplinary business growth partner focused on revenue systems, operational efficiency, strategic planning, and team performance.",
+        "image": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png"
+      }
+    },
+
+    "services": {
+      "title": "Services | Riva Strategies",
+      "description": "Explore Riva Strategies services: Revenue Systems, Operational Efficiency, Strategic Planning, and Team Performance—built to create measurable ROI and operational freedom.",
+      "canonical": "https://www.rivastrategies.com/#services",
+      "robots": "index,follow",
+      "og": {
+        "type": "website",
+        "siteName": "Riva Strategies",
+        "title": "Services | Riva Strategies",
+        "description": "Revenue Systems, Operational Efficiency, Strategic Planning, and Team Performance—built to create measurable ROI and operational freedom.",
+        "url": "https://www.rivastrategies.com/#services",
+        "image": {
+          "url": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "Riva Strategies services"
+        }
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Services | Riva Strategies",
+        "description": "Revenue Systems, Operational Efficiency, Strategic Planning, and Team Performance—built to create measurable ROI and operational freedom.",
+        "image": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png"
+      }
+    },
+
+    "industries": {
+      "title": "Industries | Riva Strategies",
+      "description": "Industry-specific growth systems for hospitality, local services, professional services, retail/e-commerce, real estate, healthcare, technology/software, manufacturing/logistics, financial services, and non-profit/education.",
+      "canonical": "https://www.rivastrategies.com/#industries",
+      "robots": "index,follow",
+      "og": {
+        "type": "website",
+        "siteName": "Riva Strategies",
+        "title": "Industries | Riva Strategies",
+        "description": "Industry-specific growth systems across 10+ verticals—from hospitality and local services to SaaS and manufacturing.",
+        "url": "https://www.rivastrategies.com/#industries",
+        "image": {
+          "url": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "Riva Strategies industries"
+        }
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Industries | Riva Strategies",
+        "description": "Industry-specific growth systems across 10+ verticals—from hospitality and local services to SaaS and manufacturing.",
+        "image": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png"
+      }
+    },
+
+    "faq": {
+      "title": "FAQ | Riva Strategies",
+      "description": "Straight answers on fit, process, timelines, and what implementation looks like with Riva Strategies.",
+      "canonical": "https://www.rivastrategies.com/#faq",
+      "robots": "index,follow",
+      "og": {
+        "type": "website",
+        "siteName": "Riva Strategies",
+        "title": "FAQ | Riva Strategies",
+        "description": "Answers for high-intent operators: fit, process, timelines, implementation, industries served, and outcomes.",
+        "url": "https://www.rivastrategies.com/#faq",
+        "image": {
+          "url": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "Riva Strategies FAQ"
+        }
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "FAQ | Riva Strategies",
+        "description": "Answers for high-intent operators: fit, process, timelines, implementation, industries served, and outcomes.",
+        "image": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png"
+      }
+    },
+
+    "contact": {
+      "title": "Contact | Riva Strategies",
+      "description": "Apply for a Growth Audit / Strategy Audit. We assess constraints, identify leverage points, and define an implementation plan.",
+      "canonical": "https://www.rivastrategies.com/#contact",
+      "robots": "index,follow",
+      "og": {
+        "type": "website",
+        "siteName": "Riva Strategies",
+        "title": "Contact | Riva Strategies",
+        "description": "Apply for Growth Strategy. Request a Growth Audit / Strategy Audit and get a clear plan for system-led execution.",
+        "url": "https://www.rivastrategies.com/#contact",
+        "image": {
+          "url": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "Contact Riva Strategies"
+        }
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Contact | Riva Strategies",
+        "description": "Apply for Growth Strategy. Request a Growth Audit / Strategy Audit and get a clear plan for system-led execution.",
+        "image": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png"
+      }
+    }
+  },
+
+  "assets": {
+    "favicon": "/favicon.ico",
+    "icons": [
+      { "rel": "icon", "type": "image/png", "sizes": "32x32", "href": "/favicon-32x32.png" },
+      { "rel": "icon", "type": "image/png", "sizes": "16x16", "href": "/favicon-16x16.png" },
+      { "rel": "apple-touch-icon", "sizes": "180x180", "href": "/apple-touch-icon.png" }
+    ]
+  },
+
+  "social": {
+    "facebook": "https://www.facebook.com/rivastrategies"
+  },
+
+  "telemetry": {
+    "ga4MeasurementId": "",
+    "gtmContainerId": ""
+  }
 }
