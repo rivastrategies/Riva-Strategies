@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | Riva Strategies</title>
+  <meta name="robots" content="noindex" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root { --riva-blue: #0A2F73; --riva-gold: #C9A24D; --riva-gold-dark: #B08A3C; }
+    body { font-family: 'Inter', sans-serif; }
+    .text-riva-blue { color: var(--riva-blue); }
+    .bg-riva-blue { background-color: var(--riva-blue); }
+    .text-riva-gold { color: var(--riva-gold); }
+    .bg-riva-gold { background-color: var(--riva-gold); }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800 antialiased min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="w-full py-5 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center">
+        <a href="/" class="flex items-center">
+          <img src="/images/Untitled Design - 1 - Edited.png" alt="Riva Strategies" class="h-16 w-auto" />
+        </a>
+        <nav class="hidden md:flex space-x-8 items-center">
+          <a href="/" class="text-sm font-semibold text-gray-500 hover:text-riva-blue">Home</a>
+          <a href="/services/" class="text-sm font-semibold text-gray-500 hover:text-riva-blue">Services</a>
+          <a href="/industries/" class="text-sm font-semibold text-gray-500 hover:text-riva-blue">Industries</a>
+          <a href="/faq/" class="text-sm font-semibold text-gray-500 hover:text-riva-blue">FAQ</a>
+          <a href="/contact/" class="px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-widest bg-riva-gold text-riva-blue">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- 404 CONTENT -->
+  <main class="flex-grow flex items-center justify-center py-24">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <div class="text-riva-gold mb-8">
+        <i data-lucide="alert-circle" class="w-20 h-20 mx-auto"></i>
+      </div>
+      <h1 class="text-8xl font-black text-riva-blue mb-4">404</h1>
+      <h2 class="text-3xl font-bold text-gray-700 mb-6">Page Not Found</h2>
+      <p class="text-lg text-gray-500 mb-10 leading-relaxed">
+        The page you're looking for doesn't exist or has been moved. Let's get you back on track.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/" class="px-8 py-4 bg-riva-gold text-riva-blue rounded-sm font-bold text-xs uppercase tracking-widest hover:bg-riva-gold-dark transition-all">
+          Go Home
+        </a>
+        <a href="/contact/" class="px-8 py-4 border-2 border-riva-blue text-riva-blue rounded-sm font-bold text-xs uppercase tracking-widest hover:bg-blue-50 transition-all">
+          Contact Us
+        </a>
+      </div>
+
+      <div class="mt-16 pt-10 border-t border-gray-100">
+        <p class="text-sm text-gray-400 mb-6">Or explore these pages:</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/services/" class="text-sm font-semibold text-riva-blue hover:text-riva-gold transition-colors">Services</a>
+          <span class="text-gray-300">•</span>
+          <a href="/industries/" class="text-sm font-semibold text-riva-blue hover:text-riva-gold transition-colors">Industries</a>
+          <span class="text-gray-300">•</span>
+          <a href="/faq/" class="text-sm font-semibold text-riva-blue hover:text-riva-gold transition-colors">FAQ</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-riva-blue text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30">
+        © 2024 Riva Strategies Group. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

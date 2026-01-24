@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Riva Strategies - Revenue Systems, Operations, Strategy & Team Performance</title>
+  <meta name="description" content="Riva Strategies offers Revenue Systems, Operational Efficiency, Strategic Planning, and Team Performance services to transform operator-dependent businesses into system-led assets." />
+  <link rel="canonical" href="https://www.rivastrategies.com/services/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Services | Riva Strategies",
+    "description": "Revenue Systems, Operational Efficiency, Strategic Planning, and Team Performance services for business growth.",
+    "url": "https://www.rivastrategies.com/services/",
+    "isPartOf": { "@id": "https://www.rivastrategies.com/#website" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.rivastrategies.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.rivastrategies.com/services/" }
+      ]
+    }
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root { --riva-blue: #0A2F73; --riva-gold: #C9A24D; --riva-gold-dark: #B08A3C; }
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .text-riva-blue { color: var(--riva-blue); }
+    .bg-riva-blue { background-color: var(--riva-blue); }
+    .text-riva-gold { color: var(--riva-gold); }
+    .bg-riva-gold { background-color: var(--riva-gold); }
+    .border-riva-gold { border-color: var(--riva-gold); }
+    .hover-riva-gold-dark:hover { background-color: var(--riva-gold-dark); }
+    .glass-header { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    @keyframes page-entrance { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-page-entrance { animation: page-entrance 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+    .gold-glow:hover { box-shadow: 0 20px 40px -15px rgba(201, 162, 77, 0.25); transform: translateY(-6px); }
+    .selection-gold::selection { background: var(--riva-gold); color: var(--riva-blue); }
+    .nav-link { position: relative; transition: all 0.3s ease; }
+    .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--riva-gold); transition: width 0.3s ease; }
+    .nav-link.active::after, .nav-link:hover::after { width: 100%; }
+    #service-modal { transition: opacity 0.3s ease, visibility 0.3s ease; }
+    #service-modal.hidden { opacity: 0; visibility: hidden; display: flex; }
+    .modal-card { max-height: calc(100vh - 40px); overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800 antialiased selection-gold overflow-x-hidden">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center">
+        <a href="/" class="flex items-center group">
+          <img src="/images/Untitled Design - 1 - Edited.png" alt="Riva Strategies" class="h-20 w-auto" />
+        </a>
+        <nav class="hidden md:flex space-x-10 items-center">
+          <a href="/" class="nav-link text-sm font-semibold tracking-wide text-gray-500 hover:text-riva-blue">Home</a>
+          <a href="/services/" class="nav-link active text-sm font-semibold tracking-wide text-gray-500 hover:text-riva-blue">Services</a>
+          <a href="/industries/" class="nav-link text-sm font-semibold tracking-wide text-gray-500 hover:text-riva-blue">Industries</a>
+          <a href="/faq/" class="nav-link text-sm font-semibold tracking-wide text-gray-500 hover:text-riva-blue">FAQ</a>
+          <a href="/contact/" class="px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-widest bg-riva-gold text-riva-blue hover:bg-riva-gold-dark hover:scale-105 transition-all shadow-md">Book Strategy Call</a>
+        </nav>
+        <button id="mobile-menu-btn" class="md:hidden text-riva-blue p-2">
+          <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-nav" class="hidden md:hidden absolute w-full bg-white border-b border-gray-100 shadow-xl py-6 px-6 space-y-4">
+      <a href="/" class="block text-lg font-bold text-riva-blue">Home</a>
+      <a href="/services/" class="block text-lg font-bold text-riva-blue">Services</a>
+      <a href="/industries/" class="block text-lg font-bold text-riva-blue">Industries</a>
+      <a href="/faq/" class="block text-lg font-bold text-riva-blue">FAQ</a>
+      <a href="/contact/" class="block w-full text-center py-4 rounded font-bold uppercase tracking-widest bg-riva-gold text-riva-blue">Book Strategy Call</a>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main class="flex-grow pt-20">
+    <div class="animate-page-entrance">
+      <section class="bg-white pt-24 pb-20 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 class="text-[10px] font-black uppercase tracking-[0.3em] text-riva-gold mb-6">Expertise</h1>
+          <h2 class="text-5xl md:text-7xl font-black text-riva-blue tracking-tighter leading-tight">Growth <br />Architecture.</h2>
+          <p class="mt-8 text-xl text-gray-500 leading-relaxed max-w-2xl">We build predictable systems that transform operator-dependent businesses into high-performance, system-led assets.</p>
+        </div>
+      </section>
+
+      <section class="py-24 bg-gray-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+          <!-- Revenue Systems -->
+          <div id="revenue-systems" class="bg-white p-12 rounded-sm shadow-sm border border-gray-100 gold-glow transition-all flex flex-col lg:flex-row gap-16">
+            <div class="lg:w-1/2">
+              <div class="text-6xl mb-10">📈</div>
+              <h2 class="text-4xl font-black text-riva-blue mb-6 tracking-tight">Revenue Systems</h2>
+              <p class="text-gray-500 text-lg leading-relaxed font-light mb-10">We build predictable sales and marketing machines that turn cold leads into loyal customers without owner intervention.</p>
+              <div class="bg-gray-50 p-6 rounded-sm border border-gray-100">
+                <h4 class="text-xs font-black uppercase tracking-widest text-riva-blue mb-4">Key Implementation Areas</h4>
+                <ul class="space-y-3">
+                  <li class="flex items-start text-gray-600 font-medium"><div class="w-1.5 h-1.5 bg-riva-gold rounded-full mr-4 mt-2 flex-shrink-0"></div>CRM Automation & Lead Scoring</li>
+                  <li class="flex items-start text-gray-600 font-medium"><div class="w-1.5 h-1.5 bg-riva-gold rounded-full mr-4 mt-2 flex-shrink-0"></div>Authority-Driven Content Funnels</li>
+                  <li class="flex items-start text-gray-600 font-medium"><div class="w-1.5 h-1.5 bg-riva-gold rounded-full mr-4 mt-2 flex-shrink-0"></div>Performance-Based Paid Acquisition</li>
+                  <li class="flex items-start text-gray-600 font-medium"><div class="w-1.5 h-1.5 bg-riva-gold rounded-full mr-4 mt-2 flex-shrink-0"></div>Automated Referral & Retention Loops</li>
+                </ul>
+              </div>
+            </div>
+            <div class="lg:w-1/2 flex items-center">
+              <div class="space-y-6">
+                <h4 class="text-[10px] font-black uppercase tracking-widest text-riva-gold">The Result</h4>
+                <p class="text-lg text-gray-500 leading-relaxed">Your revenue should not depend on the owner's personality or a handful of heroic employees. We architect multi-channel systems that treat customer acquisition as a predictable manufacturing process.</p>
+                <a href="/contact/" class="inline-flex items-center px-8 py-4 bg-riva-gold text-riva-blue rounded-sm font-black text-xs uppercase tracking-widest hover:bg-riva-gold-dark transition-all">
+                  Request Revenue Audit <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Operational Efficiency -->
+          <div id="operational-efficiency" class="bg-white p-12 rounded-sm shadow-sm border border-gray-100 gold-glow transition-all flex flex-col lg:flex-row gap-16">
+            <div class="lg:w-1/2">
+              <div class="text-6xl mb-10">⚙️</div>
+              <h2 class="text-4xl font-black text-riva-blue mb-6 tracking-tight">Operational Efficiency</h2>
+              <p class="text-gray-500 text-lg leading-relaxed font-light mb-10">We audit and rebuild your workflows, removing bottlenecks and implementing the right tech stack for your specific stage.</p>
+              <div class="bg-gray-50 p-6 rounded-sm border border-gray-100">
+                <h4 class="text-xs font-black uppercase tracking-widest text-riva-blue mb-4">Key Implementation Areas</h4>
+                <ul class="space-y-3">
+                  <li class="flex items-start text-gray-600 font-medium"><div class="w-1.5 h-1.5 bg-riva-gold rounded-full mr-4 mt-2 flex-shrink-0"></div>End-to-End Workflow Mapping</li>
+                  <li class="flex items-start text-gray-600 font-medium"><div class="w-1.5 h-1.5 bg-riva-gold rounded-full mr-4 mt-2 flex-shrink-0"></div>Tech Stack Integration & Optimization</li>
+                  <li class="flex items-start text-gray-600 font-medium"><div class="w-1.5 h-1.5 bg-riva-gold rounded-full mr-4 mt-2 flex-shrink-0"></div>SOP Documentation & Training Protocols</li>
+                  <li class="flex items-start text-gray-600 font-medium"><div class="w-1.5 h-1.5 bg-riva-gold rounded-full mr-4 mt-2 flex-shrink-0"></div>Unit Economic & Margin Visibility</li>
+                </ul>
+              </div>
+            </div>
+            <div class="lg:w-1/2 flex items-center">
+              <div class="space-y-6">
+                <h4 class="text-[10px] font-black uppercase tracking-widest text-riva-gold">The Result</h4>
+                <p class="text-lg text-gray-500 leading-relaxed">Scale is only possible when your operations can handle volume without breaking. We eliminate manual "firefighting" by documenting and automating the core processes of your business.</p>
+                <a href="/contact/" class="inline-flex items-center px-8 py-4 bg-riva-gold text-riva-blue rounded-sm font-black text-xs uppercase tracking-widest hover:bg-riva-gold-dark transition-all">
+                  Request Operations Audit <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Strategic Planning -->
+          <div id="strategic-planning" class="bg-white p-12 rounded-sm shadow-sm border border-gray-100 gold-glow transition-all flex flex-col lg:flex-row gap-16">
+            <div class="lg:w-1/2">
+              <div class="text-6xl mb-10">🗺️</div>
+              <h2 class="text-4xl font-black text-riva-blue mb-6 tracking-tight">Strategic Planning</h2>
+              <p class="text-gray-500 text-lg leading-relaxed font-light mb-10">Long-term roadmaps based on hard data, not gut feelings. We help you define the "Where" and the "How" for the next 3-5 years.</p>
+              <div class="bg-gray-50 p-6 rounded-sm border border-gray-100">
+                <h4 class="text-xs font-black uppercase tracking-widest text-riva-blue mb-4">Key Implementation Areas</h4>
+                <ul class="space-y-3">
+                  <li class="flex items-start text-gray-600 font-medium"><div class="w-1.5 h-1.5 bg-riva-gold rounded-full mr-4 mt-2 flex-shrink-0"></div>Competitive Market Analysis</li>
+                  <li class="flex items-start text-gray-600 font-medium"><div class="w-1.5 h-1.5 bg-riva-gold rounded-full mr-4 mt-2 flex-shrink-0"></div>3-Year Financial Modeling</li>
+                  <li class="flex items-start text-gray-600 font-medium"><div class="w-1.5 h-1.5 bg-riva-gold rounded-full mr-4 mt-2 flex-shrink-0"></div>Quarterly Execution Frameworks</li>
+                  <li class="flex items-start text-gray-600 font-medium"><div class="w-1.5 h-1.5 bg-riva-gold rounded-full mr-4 mt-2 flex-shrink-0"></div>Succession & Exit Readiness Planning</li>
+                </ul>
+              </div>
+            </div>
+            <div class="lg:w-1/2 flex items-center">
+              <div class="space-y-6">
+                <h4 class="text-[10px] font-black uppercase tracking-widest text-riva-gold">The Result</h4>
+                <p class="text-lg text-gray-500 leading-relaxed">Most businesses operate without a true North Star. We develop data-driven strategic maps that align every dollar spent and every hour worked with your ultimate exit or expansion goals.</p>
+                <a href="/contact/" class="inline-flex items-center px-8 py-4 bg-riva-gold text-riva-blue rounded-sm font-black text-xs uppercase tracking-widest hover:bg-riva-gold-dark transition-all">
+                  Request Strategy Audit <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Performance -->
+          <div id="team-performance" class="bg-white p-12 rounded-sm shadow-sm border border-gray-100 gold-glow transition-all flex flex-col lg:flex-row gap-16">
+            <div class="lg:w-1/2">
+              <div class="text-6xl mb-10">🤝</div>
+              <h2 class="text-4xl font-black text-riva-blue mb-6 tracking-tight">Team Performance</h2>
+              <p class="text-gray-500 text-lg leading-relaxed font-light mb-10">Leadership training and incentive structures that align your team's output with your company's growth goals.</p>
+              <div class="bg-gray-50 p-6 rounded-sm border border-gray-100">
+                <h4 class="text-xs font-black uppercase tracking-widest text-riva-blue mb-4">Key Implementation Areas</h4>
+                <ul class="space-y-3">
+                  <li class="flex items-start text-gray-600 font-medium"><div class="w-1.5 h-1.5 bg-riva-gold rounded-full mr-4 mt-2 flex-shrink-0"></div>Departmental KPI Dashboards</li>
+                  <li class="flex items-start text-gray-600 font-medium"><div class="w-1.5 h-1.5 bg-riva-gold rounded-full mr-4 mt-2 flex-shrink-0"></div>Incentive & Compensation Design</li>
+                  <li class="flex items-start text-gray-600 font-medium"><div class="w-1.5 h-1.5 bg-riva-gold rounded-full mr-4 mt-2 flex-shrink-0"></div>Leadership Coaching & Accountability</li>
+                  <li class="flex items-start text-gray-600 font-medium"><div class="w-1.5 h-1.5 bg-riva-gold rounded-full mr-4 mt-2 flex-shrink-0"></div>Predictable Talent Acquisition Systems</li>
+                </ul>
+              </div>
+            </div>
+            <div class="lg:w-1/2 flex items-center">
+              <div class="space-y-6">
+                <h4 class="text-[10px] font-black uppercase tracking-widest text-riva-gold">The Result</h4>
+                <p class="text-lg text-gray-500 leading-relaxed">Company culture is defined by what you tolerate and what you reward. We help you build a high-performance team that thinks like owners, driven by clear KPIs and aligned incentives.</p>
+                <a href="/contact/" class="inline-flex items-center px-8 py-4 bg-riva-gold text-riva-blue rounded-sm font-black text-xs uppercase tracking-widest hover:bg-riva-gold-dark transition-all">
+                  Request Team Audit <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 text-center">
+          <a href="/faq/" class="inline-flex items-center px-10 py-5 border-2 border-riva-blue text-riva-blue rounded-sm font-black text-xs uppercase tracking-[0.2em] hover:bg-blue-50 transition-all">
+            Read FAQs <i data-lucide="arrow-right" class="ml-3 w-5 h-5"></i>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-riva-blue text-white pt-24 pb-12 overflow-hidden relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div class="md:col-span-4">
+          <span class="text-2xl font-bold tracking-tighter">RIVA<span class="font-light tracking-widest text-riva-gold ml-1">STRATEGIES</span></span>
+          <p class="mt-6 text-blue-100/70 text-base leading-relaxed max-w-sm">Architecting sustainable growth for high-ambition operators through systemic operational excellence.</p>
+        </div>
+        <div class="md:col-span-2">
+          <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-riva-gold mb-8">Expertise</h4>
+          <ul class="space-y-4 text-sm text-blue-100/80">
+            <li><a href="/services/#revenue-systems" class="hover:text-white transition-colors">Revenue Engines</a></li>
+            <li><a href="/services/#operational-efficiency" class="hover:text-white transition-colors">OpEx Design</a></li>
+            <li><a href="/services/#strategic-planning" class="hover:text-white transition-colors">Strategic Maps</a></li>
+            <li><a href="/services/#team-performance" class="hover:text-white transition-colors">Elite Teams</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-3">
+          <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-riva-gold mb-8">Verticals</h4>
+          <ul class="space-y-4 text-sm text-blue-100/80">
+            <li><a href="/industries/hospitality-food-service/" class="hover:text-white transition-colors">Hospitality Groups</a></li>
+            <li><a href="/industries/professional-services/" class="hover:text-white transition-colors">Professional Firms</a></li>
+            <li><a href="/industries/technology-software/" class="hover:text-white transition-colors">SaaS & Software</a></li>
+            <li><a href="/industries/healthcare-medical/" class="hover:text-white transition-colors">Medical Groups</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-3">
+          <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-riva-gold mb-8">Headquarters</h4>
+          <div class="space-y-6">
+            <a href="tel:+18329050570" class="flex items-center text-blue-100 hover:text-white transition-colors group">
+              <div class="w-8 h-8 rounded-sm bg-white/5 flex items-center justify-center mr-3 group-hover:bg-riva-gold transition-colors"><i data-lucide="phone" class="w-4 h-4"></i></div>
+              <span class="text-sm font-semibold">832-905-0570</span>
+            </a>
+            <a href="/contact/" class="group inline-flex items-center px-6 py-3 border border-riva-gold text-riva-gold rounded-sm font-bold text-xs uppercase tracking-widest hover:bg-riva-gold hover:text-riva-blue transition-all">
+              Start Audit <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em] text-white/30">
+        <p>© 2024 Riva Strategies Group. All rights reserved.</p>
+        <div class="mt-4 md:mt-0 space-x-8">
+          <a href="/faq/" class="hover:text-white transition-colors">FAQ</a>
+          <a href="#" class="hover:text-white transition-colors">Privacy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      header.classList.toggle('glass-header', window.scrollY > 20);
+      header.classList.toggle('shadow-lg', window.scrollY > 20);
+      header.classList.toggle('py-3', window.scrollY > 20);
+      header.classList.toggle('py-5', window.scrollY <= 20);
+    });
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-nav').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
