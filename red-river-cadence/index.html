@@ -60,6 +60,16 @@
     gap: 20px;
   }
 
+  .header-logo {
+    flex: 0 0 auto;
+  }
+
+  .header-logo img {
+    display: block;
+    width: 150px;
+    height: auto;
+  }
+
   .header-text {
     flex: 1;
   }
@@ -660,6 +670,7 @@
   /* Responsive tweaks */
   @media (max-width: 520px) {
     .header-inner { flex-direction: column; gap: 12px; }
+    .header-logo img { width: 120px; }
     td.day-cell { font-size: 14px; }
     .stack-row { flex-direction: column; align-items: flex-start; gap: 4px; }
     .stack-tool { width: auto; }
@@ -671,6 +682,9 @@
 <!-- HEADER -->
 <header class="site-header">
   <div class="header-inner">
+    <div class="header-logo">
+      <img src="red-river-logo.png" alt="Red River logo">
+    </div>
     <div class="header-text">
       <div class="header-eyebrow">Internal Reference Document</div>
       <div class="header-title">Weekly Marketing Cadence</div>
