@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Red River – Weekly Marketing Cadence (Master)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap');
+
+  :root {
+    --red: #C41B1B;
+    --red-dark: #9E1515;
+    --red-light: #E52222;
+    --off-white: #F5F2EE;
+    --white: #FFFFFF;
+    --charcoal: #1C1C1C;
+    --mid: #444444;
+    --muted: #888888;
+    --border: #E0DAD4;
+    --surface: #FAFAFA;
+    --tag-cantina: #1A6B5A;
+    --tag-cantina-bg: #E6F4F1;
+    --tag-bbq: #8B4A0F;
+    --tag-bbq-bg: #F5EDE3;
+    --tag-both: #1E4D7B;
+    --tag-both-bg: #E3EBF5;
+    --row-even: #F9F6F3;
+    --pin-bg: #FFF8E1;
+    --pin-border: #E8C930;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--off-white);
+    color: var(--charcoal);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* HEADER */
+  .site-header {
+    background: var(--red);
+    color: var(--white);
+    padding: 0;
+    border-bottom: 4px solid var(--red-dark);
+  }
+
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .header-text {
+    flex: 1;
+  }
+
+  .header-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-bottom: 6px;
+  }
+
+  .header-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 5vw, 42px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+
+  .header-subtitle {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    opacity: 0.85;
+  }
+
+  .header-meta {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
+
+  .meta-tag {
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 3px;
+  }
+
+  /* NAV BAR */
+  .section-nav {
+    background: var(--charcoal);
+    border-bottom: 2px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-inner::-webkit-scrollbar { display: none; }
+
+  .nav-link {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    padding: 13px 16px;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+    margin-bottom: -2px;
+  }
+
+  .nav-link:hover {
+    color: var(--white);
+    border-color: var(--red-light);
+  }
+
+  /* MAIN LAYOUT */
+  .main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+
+  /* SECTIONS */
+  .section {
+    margin-bottom: 48px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border);
+  }
+
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+  }
+
+  .section-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    color: var(--red);
+    text-transform: uppercase;
+  }
+
+  /* OBJECTIVE BOX */
+  .objective-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--red);
+    padding: 20px 24px;
+    border-radius: 4px;
+  }
+
+  .objective-box p {
+    font-size: 15px;
+    color: var(--mid);
+    margin-bottom: 12px;
+  }
+
+  .objective-box p:last-child { margin-bottom: 0; }
+
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .check-list li {
+    padding: 5px 0 5px 24px;
+    position: relative;
+    font-size: 15px;
+    color: var(--mid);
+  }
+
+  .check-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 8px;
+    height: 8px;
+    background: var(--red);
+    border-radius: 50%;
+  }
+
+  /* TWO-COL GRID */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media (max-width: 680px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+
+  .info-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 18px 20px;
+  }
+
+  .info-card-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 10px;
+  }
+
+  .info-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .info-card li {
+    padding: 4px 0 4px 16px;
+    position: relative;
+    font-size: 14px;
+    color: var(--mid);
+  }
+
+  .info-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 5px;
+    height: 5px;
+    background: var(--border);
+    border-radius: 50%;
+  }
+
+  /* WEEKLY TABLE */
+  .table-wrap {
+    overflow-x: auto;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    min-width: 640px;
+  }
+
+  thead tr {
+    background: var(--charcoal);
+    color: var(--white);
+  }
+
+  thead th {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    text-align: left;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.1s;
+  }
+
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:nth-child(even) { background: var(--row-even); }
+  tbody tr:hover { background: #F0EBE5; }
+
+  td {
+    padding: 12px 16px;
+    vertical-align: top;
+    font-size: 14px;
+    color: var(--mid);
+  }
+
+  td.day-cell {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--charcoal);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    width: 110px;
+  }
+
+  td.post-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    width: 150px;
+  }
+
+  .post-content {
+    font-size: 14px;
+    color: var(--mid);
+  }
+
+  .post-note {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* PIN badge */
+  .badge-pin {
+    display: inline-block;
+    background: var(--pin-bg);
+    border: 1px solid var(--pin-border);
+    color: #7A6200;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 3px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  /* Concept tags */
+  .tag {
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 3px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  .tag-cantina { background: var(--tag-cantina-bg); color: var(--tag-cantina); }
+  .tag-bbq { background: var(--tag-bbq-bg); color: var(--tag-bbq); }
+  .tag-all { background: var(--tag-both-bg); color: var(--tag-both); }
+
+  /* ROW DIVIDER for day grouping */
+  tr.day-start td {
+    padding-top: 18px;
+  }
+
+  tr.day-start-first td {
+    padding-top: 12px;
+  }
+
+  /* NON-NEGOTIABLES */
+  .non-neg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 10px;
+  }
+
+  .non-neg-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--red);
+    padding: 12px 16px;
+    border-radius: 0 4px 4px 0;
+    font-size: 14px;
+    color: var(--mid);
+  }
+
+  /* CONCEPT CARDS */
+  .concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media (max-width: 640px) {
+    .concept-grid { grid-template-columns: 1fr; }
+  }
+
+  .concept-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .concept-card-head {
+    padding: 12px 18px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .concept-card-head.cantina { background: var(--tag-cantina); }
+  .concept-card-head.bbq { background: var(--tag-bbq); }
+
+  .concept-card ul {
+    list-style: none;
+    padding: 14px 18px;
+    margin: 0;
+  }
+
+  .concept-card li {
+    padding: 4px 0 4px 16px;
+    position: relative;
+    font-size: 14px;
+    color: var(--mid);
+  }
+
+  .concept-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 5px;
+    height: 5px;
+    background: var(--border);
+    border-radius: 50%;
+  }
+
+  /* EXECUTION STACK */
+  .stack-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 14px 20px;
+    margin-bottom: 8px;
+  }
+
+  .stack-tool {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--charcoal);
+    width: 130px;
+    flex-shrink: 0;
+  }
+
+  .stack-desc {
+    font-size: 14px;
+    color: var(--mid);
+  }
+
+  /* HOW IT WORKS */
+  .timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 16px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+  }
+
+  .timeline li {
+    position: relative;
+    padding: 10px 0 10px 46px;
+    font-size: 14px;
+    color: var(--mid);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .timeline li:last-child { border-bottom: none; }
+
+  .timeline li::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 15px;
+    width: 14px;
+    height: 14px;
+    background: var(--red);
+    border: 2px solid var(--off-white);
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .timeline-day {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    display: block;
+    margin-bottom: 1px;
+  }
+
+  /* ENGAGEMENT + GBP ROW */
+  .three-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  @media (max-width: 760px) {
+    .three-col { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 500px) {
+    .three-col { grid-template-columns: 1fr; }
+  }
+
+  /* FOOTER */
+  .site-footer {
+    background: var(--charcoal);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 20px 24px;
+  }
+
+  /* NOTE BOX */
+  .note-box {
+    background: #FFF8E1;
+    border: 1px solid #E8C930;
+    border-radius: 4px;
+    padding: 16px 20px;
+  }
+
+  .note-box p {
+    font-size: 14px;
+    color: #5A4A00;
+  }
+
+  .note-box strong {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  /* SOURCES */
+  .source-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  @media (max-width: 600px) {
+    .source-grid { grid-template-columns: 1fr; }
+  }
+
+  .source-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 16px 18px;
+  }
+
+  .source-card-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+  }
+
+  .source-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .source-card li {
+    padding: 3px 0 3px 14px;
+    position: relative;
+    font-size: 13px;
+    color: var(--mid);
+  }
+
+  .source-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    background: var(--border);
+    border-radius: 50%;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 520px) {
+    .header-inner { flex-direction: column; gap: 12px; }
+    td.day-cell { font-size: 14px; }
+    .stack-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .stack-tool { width: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-text">
+      <div class="header-eyebrow">Internal Reference Document</div>
+      <div class="header-title">Weekly Marketing Cadence</div>
+      <div class="header-subtitle">Red River Restaurants &mdash; All Locations (Cantina + BBQ)</div>
+      <div class="header-meta">
+        <span class="meta-tag">Master Framework</span>
+        <span class="meta-tag">Est. 2002</span>
+        <span class="meta-tag">League City &bull; Richmond &bull; Katy</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="section-nav">
+  <div class="nav-inner">
+    <a href="#objective" class="nav-link">Objective</a>
+    <a href="#structure" class="nav-link">Structure</a>
+    <a href="#cadence" class="nav-link">Weekly Cadence</a>
+    <a href="#non-neg" class="nav-link">Non-Negotiables</a>
+    <a href="#concepts" class="nav-link">By Concept</a>
+    <a href="#sources" class="nav-link">Content Sources</a>
+    <a href="#engagement" class="nav-link">Engagement</a>
+    <a href="#gbp" class="nav-link">GBP</a>
+    <a href="#stack" class="nav-link">Execution Stack</a>
+    <a href="#howitworks" class="nav-link">How It Works</a>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- OBJECTIVE -->
+  <section class="section" id="objective">
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <h2 class="section-title">Objective</h2>
+    </div>
+    <div class="objective-box">
+      <p>Create a consistent weekly system that:</p>
+      <ul class="check-list">
+        <li>Drives traffic ahead of time</li>
+        <li>Reaches new customers (non-followers)</li>
+        <li>Gives returning customers a clear weekly plan</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTENT STRUCTURE -->
+  <section class="section" id="structure">
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <h2 class="section-title">Content Structure</h2>
+    </div>
+    <div class="two-col">
+      <div class="info-card">
+        <div class="info-card-title">Post Types</div>
+        <ul>
+          <li>Feed Posts (FB + IG) &mdash; built for non-followers and traffic</li>
+          <li>Pinned Post &mdash; weekly reference for what's happening</li>
+          <li>Stories &mdash; daily reinforcement and live energy</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <div class="info-card-title">Post Timing Windows</div>
+        <ul>
+          <li>Midday posts &mdash; capture lunch and afternoon decisions</li>
+          <li>Evening posts (6&ndash;8 PM) &mdash; drive next-day traffic</li>
+          <li>Stories &mdash; daily, no gaps</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEEKLY CADENCE TABLE -->
+  <section class="section" id="cadence">
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <h2 class="section-title">Weekly Cadence</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Post</th>
+            <th>Content Focus</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- SUNDAY -->
+          <tr class="day-start-first">
+            <td class="day-cell" rowspan="2">Sunday</td>
+            <td class="post-label">Midday</td>
+            <td class="post-content">
+              DoorDash / Toast / Online Ordering Push
+              <span class="tag tag-all">All Locations</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="post-label">Evening (6&ndash;8 PM)</td>
+            <td class="post-content">
+              Weekly Preview &mdash; All Locations
+              <span class="tag tag-all">All Locations</span>
+            </td>
+          </tr>
+
+          <!-- MONDAY -->
+          <tr class="day-start">
+            <td class="day-cell" rowspan="2">Monday</td>
+            <td class="post-label">Midday</td>
+            <td class="post-content">
+              Weekly Preview
+              <span class="badge-pin">Pin</span>
+              <span class="tag tag-all">All Locations</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="post-label">Evening (6&ndash;8 PM)</td>
+            <td class="post-content">
+              Tuesday Special Push
+              <span class="tag tag-all">All Locations</span>
+            </td>
+          </tr>
+
+          <!-- TUESDAY -->
+          <tr class="day-start">
+            <td class="day-cell" rowspan="2">Tuesday</td>
+            <td class="post-label">Midday</td>
+            <td class="post-content">
+              Core Special
+              <span class="tag tag-cantina">Taco Tuesday</span>
+              <span class="tag tag-bbq">BBQ Feature</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="post-label">Evening (6&ndash;8 PM)</td>
+            <td class="post-content">
+              Wednesday Hype
+              <span class="tag tag-all">All Locations</span>
+            </td>
+          </tr>
+
+          <!-- WEDNESDAY -->
+          <tr class="day-start">
+            <td class="day-cell" rowspan="2">Wednesday</td>
+            <td class="post-label">Midday</td>
+            <td class="post-content">
+              Core Special
+              <span class="tag tag-cantina">Fajita Wednesday</span>
+              <span class="tag tag-bbq">BBQ Feature</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="post-label">Evening (6&ndash;8 PM)</td>
+            <td class="post-content">
+              Sizzle Reel
+              <span class="tag tag-all">All Locations</span>
+            </td>
+          </tr>
+
+          <!-- THURSDAY -->
+          <tr class="day-start">
+            <td class="day-cell" rowspan="2">Thursday</td>
+            <td class="post-label">Midday</td>
+            <td class="post-content">
+              DoorDash / Online Ordering Push
+              <span class="tag tag-all">All Locations</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="post-label">Evening (6&ndash;8 PM)</td>
+            <td class="post-content">
+              Friday Night Hype
+              <span class="tag tag-all">All Locations</span>
+            </td>
+          </tr>
+
+          <!-- FRIDAY -->
+          <tr class="day-start">
+            <td class="day-cell" rowspan="2">Friday</td>
+            <td class="post-label">Midday</td>
+            <td class="post-content">
+              High Margin Feature / Happy Hour
+              <span class="tag tag-all">All Locations</span>
+              <br><span class="post-note">Happy Hour: 2:30&ndash;6:30 PM daily, all day Tuesday</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="post-label">Evening (6&ndash;8 PM)</td>
+            <td class="post-content">
+              Saturday Night Hype
+              <span class="tag tag-all">All Locations</span>
+            </td>
+          </tr>
+
+          <!-- SATURDAY -->
+          <tr class="day-start">
+            <td class="day-cell" rowspan="2">Saturday</td>
+            <td class="post-label">Midday</td>
+            <td class="post-content">
+              Family Packs / Group Dining Push
+              <span class="tag tag-all">All Locations</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="post-label">Evening (6&ndash;8 PM)</td>
+            <td class="post-content">
+              Atmosphere / Crowd / Food
+              <span class="tag tag-all">All Locations</span>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- NON-NEGOTIABLES -->
+  <section class="section" id="non-neg">
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <h2 class="section-title">Non-Negotiables</h2>
+    </div>
+    <div class="non-neg-grid">
+      <div class="non-neg-item">Weekly preview posted Sunday evening</div>
+      <div class="non-neg-item">Weekly preview pinned Monday midday</div>
+      <div class="non-neg-item">Monday evening post drives Tuesday traffic</div>
+      <div class="non-neg-item">Daily stories &mdash; no gaps</div>
+      <div class="non-neg-item">Minimum 1 Reel per week</div>
+      <div class="non-neg-item">Evening posts drive next-day decisions</div>
+    </div>
+  </section>
+
+  <!-- CONTENT BY CONCEPT -->
+  <section class="section" id="concepts">
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <h2 class="section-title">Content Direction by Concept</h2>
+    </div>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <div class="concept-card-head cantina">Cantina (Structured)</div>
+        <ul>
+          <li>Taco Tuesday</li>
+          <li>Fajita Wednesday</li>
+          <li>Margaritas / Happy Hour</li>
+          <li>Social / nightlife energy</li>
+        </ul>
+      </div>
+      <div class="concept-card">
+        <div class="concept-card-head bbq">BBQ (Flexible by Location)</div>
+        <ul>
+          <li>No forced mirroring between locations</li>
+          <li>Smoked meats</li>
+          <li>Plates / specials</li>
+          <li>Comfort food</li>
+          <li>Local identity</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT SOURCES -->
+  <section class="section" id="sources">
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <h2 class="section-title">Content Sources</h2>
+    </div>
+    <div class="source-grid">
+      <div class="source-card">
+        <div class="source-card-title">GMs Provide</div>
+        <ul>
+          <li>Staff highlights</li>
+          <li>Events</li>
+          <li>In-store moments</li>
+        </ul>
+      </div>
+      <div class="source-card">
+        <div class="source-card-title">Riva Staff Handles</div>
+        <ul>
+          <li>Structure</li>
+          <li>Posting</li>
+          <li>Optimization</li>
+        </ul>
+      </div>
+      <div class="source-card">
+        <div class="source-card-title">Monthly</div>
+        <ul>
+          <li>On-site content capture</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGAGEMENT + GBP -->
+  <section class="section" id="engagement">
+    <div class="section-header">
+      <span class="section-number">07</span>
+      <h2 class="section-title">Engagement Layer</h2>
+    </div>
+    <div class="two-col">
+      <div class="info-card">
+        <div class="info-card-title">Daily / Weekly</div>
+        <ul>
+          <li>All comments + DMs responded to daily</li>
+          <li>1x weekly outbound engagement per account</li>
+          <li>Review replies every 3&ndash;5 days (Google + Facebook)</li>
+        </ul>
+      </div>
+      <div class="info-card" id="gbp">
+        <div class="info-card-title">Google Business Profile (GBP)</div>
+        <ul>
+          <li>Minimum 2 posts per week per location</li>
+          <li>Focus on specials, events, and high-margin items</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXECUTION STACK -->
+  <section class="section" id="stack">
+    <div class="section-header">
+      <span class="section-number">08</span>
+      <h2 class="section-title">Execution Stack</h2>
+    </div>
+    <div class="stack-row">
+      <div class="stack-tool">monday.com</div>
+      <div class="stack-desc">Planning and workflow management</div>
+    </div>
+    <div class="stack-row">
+      <div class="stack-tool">Hootsuite</div>
+      <div class="stack-desc">Scheduling and publishing</div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="howitworks">
+    <div class="section-header">
+      <span class="section-number">09</span>
+      <h2 class="section-title">How This Works</h2>
+    </div>
+    <ul class="timeline">
+      <li>
+        <span class="timeline-day">Sunday Midday</span>
+        Capture delivery demand via DoorDash / online ordering push
+      </li>
+      <li>
+        <span class="timeline-day">Sunday Night</span>
+        Set the weekly plan with the preview post
+      </li>
+      <li>
+        <span class="timeline-day">Monday Midday</span>
+        Lock the reference &mdash; pin the weekly preview
+      </li>
+      <li>
+        <span class="timeline-day">Monday Night</span>
+        Drive Tuesday traffic with the special push
+      </li>
+      <li>
+        <span class="timeline-day">Saturday Midday</span>
+        Capture family and group dining decisions
+      </li>
+      <li>
+        <span class="timeline-day">Saturday Night</span>
+        Show proof and energy to close the week strong
+      </li>
+    </ul>
+  </section>
+
+  <!-- IMPORTANT NOTE -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">10</span>
+      <h2 class="section-title">Important Note</h2>
+    </div>
+    <div class="note-box">
+      <strong>Master Framework</strong>
+      <p>Cantina locations will follow a consistent structure. BBQ locations will operate within the framework but remain flexible. Locations will be separated and refined after rollout.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  Red River Restaurants &bull; Internal Use Only &bull; Est. 2002
+</footer>
+
+</body>
+</html>
