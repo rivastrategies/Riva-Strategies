@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riva Revenue Audit | Find Where Your Business Is Losing Money</title>
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <meta name="description" content="The Riva Revenue Audit identifies exactly where your restaurant, bar, or local service business is losing money — traffic, conversion, retention, or platform performance — and builds a clear action plan tied to revenue improvement." />
+  <link rel="canonical" href="https://www.rivastrategies.com/riva-revenue-audit/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Riva Revenue Audit",
+    "description": "Comprehensive revenue audit identifying traffic, conversion, retention, and platform performance issues with a clear action plan tied to revenue improvement.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Riva Strategies",
+      "url": "https://www.rivastrategies.com/"
+    },
+    "serviceType": "Business Revenue Audit",
+    "areaServed": "US",
+    "url": "https://www.rivastrategies.com/riva-revenue-audit/"
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root { --riva-blue: #0A2F73; --riva-gold: #C9A24D; --riva-gold-dark: #B08A3C; }
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .text-riva-blue { color: var(--riva-blue); }
+    .bg-riva-blue { background-color: var(--riva-blue); }
+    .text-riva-gold { color: var(--riva-gold); }
+    .bg-riva-gold { background-color: var(--riva-gold); }
+    .border-riva-gold { border-color: var(--riva-gold); }
+    .hover-riva-gold-dark:hover { background-color: var(--riva-gold-dark); }
+    .glass-header { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    @keyframes page-entrance { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-page-entrance { animation: page-entrance 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+    .gold-glow:hover { box-shadow: 0 20px 40px -15px rgba(201, 162, 77, 0.25); transform: translateY(-4px); }
+    .selection-gold::selection { background: var(--riva-gold); color: var(--riva-blue); }
+    .nav-link { position: relative; transition: all 0.3s ease; }
+    .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--riva-gold); transition: width 0.3s ease; }
+    .nav-link.active::after, .nav-link:hover::after { width: 100%; }
+    .step-number { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; flex-shrink: 0; }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800 antialiased selection-gold overflow-x-hidden">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center">
+        <a href="/" class="flex items-center group">
+          <img src="/images/Untitled Design - 1 - Edited.png" alt="Riva Strategies" class="h-20 w-auto" />
+        </a>
+        <nav class="hidden md:flex space-x-10 items-center">
+          <a href="/" class="nav-link text-sm font-semibold tracking-wide text-gray-500 hover:text-riva-blue">Home</a>
+          <a href="/services/" class="nav-link text-sm font-semibold tracking-wide text-gray-500 hover:text-riva-blue">Services</a>
+          <a href="/industries/" class="nav-link text-sm font-semibold tracking-wide text-gray-500 hover:text-riva-blue">Industries</a>
+          <a href="/faq/" class="nav-link text-sm font-semibold tracking-wide text-gray-500 hover:text-riva-blue">FAQ</a>
+          <a href="/contact/" class="px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-widest bg-riva-gold text-riva-blue hover:bg-riva-gold-dark hover:scale-105 transition-all shadow-md">Book Strategy Call</a>
+        </nav>
+        <button id="mobile-menu-btn" class="md:hidden text-riva-blue p-2">
+          <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-nav" class="hidden md:hidden absolute w-full bg-white border-b border-gray-100 shadow-xl py-6 px-6 space-y-4">
+      <a href="/" class="block text-lg font-bold text-riva-blue">Home</a>
+      <a href="/services/" class="block text-lg font-bold text-riva-blue">Services</a>
+      <a href="/industries/" class="block text-lg font-bold text-riva-blue">Industries</a>
+      <a href="/faq/" class="block text-lg font-bold text-riva-blue">FAQ</a>
+      <a href="/contact/" class="block w-full text-center py-4 rounded font-bold uppercase tracking-widest bg-riva-gold text-riva-blue">Book Strategy Call</a>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main class="flex-grow pt-20">
+    <div class="animate-page-entrance">
+
+      <!-- SECTION 1: HEADLINE -->
+      <section class="bg-riva-blue pt-28 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 class="text-[10px] font-black uppercase tracking-[0.3em] text-riva-gold mb-6">Riva Revenue Audit</h1>
+          <h2 class="text-4xl md:text-6xl lg:text-7xl font-black text-white tracking-tighter leading-[1.05]">
+            Find Exactly Where<br />Your Business Is<br />Losing Money.
+          </h2>
+          <p class="mt-8 text-xl text-blue-100/80 leading-relaxed max-w-2xl">
+            Most businesses don't have a marketing problem. They have a leak problem. Traffic that doesn't convert. Customers that don't return. Platforms that aren't pulling their weight. We find the leaks and fix them.
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row gap-4">
+            <a href="tel:+18329050570" class="inline-flex items-center justify-center px-8 py-4 bg-riva-gold text-riva-blue rounded-sm font-black text-sm uppercase tracking-widest hover:bg-riva-gold-dark transition-all shadow-lg">
+              <i data-lucide="phone" class="w-5 h-5 mr-3"></i> Call 832-905-0570
+            </a>
+            <a href="#request-audit" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white rounded-sm font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-all">
+              Request Audit <i data-lucide="arrow-down" class="w-5 h-5 ml-3"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: PROBLEM -->
+      <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-riva-gold mb-4">The Problem</h3>
+          <h4 class="text-3xl md:text-4xl font-black text-riva-blue tracking-tight mb-12">You're Working Hard But Revenue Isn't Moving.</h4>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-sm border border-gray-200 shadow-sm">
+              <div class="text-3xl mb-4">📉</div>
+              <h5 class="text-xl font-bold text-riva-blue mb-3">Traffic Without Conversion</h5>
+              <p class="text-gray-600 leading-relaxed">People visit your website, scroll through your social, see your Google listing — then leave. You're paying for attention but not capturing demand.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-sm border border-gray-200 shadow-sm">
+              <div class="text-3xl mb-4">🚪</div>
+              <h5 class="text-xl font-bold text-riva-blue mb-3">Customers Don't Return</h5>
+              <p class="text-gray-600 leading-relaxed">You spend real money acquiring new customers, but there's no system to bring them back. Repeat business is accidental, not engineered.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-sm border border-gray-200 shadow-sm">
+              <div class="text-3xl mb-4">📊</div>
+              <h5 class="text-xl font-bold text-riva-blue mb-3">No Visibility Into What's Working</h5>
+              <p class="text-gray-600 leading-relaxed">You're posting on social, running ads, updating the website — but you can't point to which activity is actually driving revenue.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-sm border border-gray-200 shadow-sm">
+              <div class="text-3xl mb-4">⚠️</div>
+              <h5 class="text-xl font-bold text-riva-blue mb-3">Platforms Are Underperforming</h5>
+              <p class="text-gray-600 leading-relaxed">Your Google Business Profile, website, and social channels exist — but none of them are optimized to convert visitors into customers.</p>
+            </div>
+          </div>
+
+          <div class="mt-12 bg-riva-blue/5 border-l-4 border-riva-blue p-6 rounded-r-sm">
+            <p class="text-lg text-riva-blue font-medium">
+              <strong>The real issue:</strong> You don't need more marketing. You need to find where the money is leaking and plug the holes before investing another dollar.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: WHAT WE DO -->
+      <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-riva-gold mb-4">What We Do</h3>
+          <h4 class="text-3xl md:text-4xl font-black text-riva-blue tracking-tight mb-6">A Complete Revenue Diagnosis.</h4>
+          <p class="text-xl text-gray-500 leading-relaxed max-w-3xl mb-12">
+            The Riva Revenue Audit examines every touchpoint between your business and your customers. We identify what's broken, what's underperforming, and what's missing entirely.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="flex items-start gap-4 p-6 bg-gray-50 rounded-sm border border-gray-100">
+              <div class="w-2 h-2 bg-riva-gold rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <h5 class="font-bold text-riva-blue mb-1">Traffic Analysis</h5>
+                <p class="text-gray-600 text-sm">Where visitors come from, how they behave, and why they're not converting.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4 p-6 bg-gray-50 rounded-sm border border-gray-100">
+              <div class="w-2 h-2 bg-riva-gold rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <h5 class="font-bold text-riva-blue mb-1">Conversion Review</h5>
+                <p class="text-gray-600 text-sm">Website, ordering flow, contact forms, calls-to-action — every step where you lose customers.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4 p-6 bg-gray-50 rounded-sm border border-gray-100">
+              <div class="w-2 h-2 bg-riva-gold rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <h5 class="font-bold text-riva-blue mb-1">Retention Assessment</h5>
+                <p class="text-gray-600 text-sm">Email, SMS, loyalty programs, review follow-up — are you actually bringing people back?</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4 p-6 bg-gray-50 rounded-sm border border-gray-100">
+              <div class="w-2 h-2 bg-riva-gold rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <h5 class="font-bold text-riva-blue mb-1">Platform Performance</h5>
+                <p class="text-gray-600 text-sm">Google Business Profile, website SEO, social channels — what's working, what's not, what's missing.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4 p-6 bg-gray-50 rounded-sm border border-gray-100">
+              <div class="w-2 h-2 bg-riva-gold rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <h5 class="font-bold text-riva-blue mb-1">Competitive Positioning</h5>
+                <p class="text-gray-600 text-sm">How you compare to direct competitors in your market and where you're losing ground.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4 p-6 bg-gray-50 rounded-sm border border-gray-100">
+              <div class="w-2 h-2 bg-riva-gold rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <h5 class="font-bold text-riva-blue mb-1">Revenue Prioritization</h5>
+                <p class="text-gray-600 text-sm">Which fixes will have the biggest impact on revenue — ranked by effort and return.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: HOW IT WORKS -->
+      <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-riva-gold mb-4">How It Works</h3>
+          <h4 class="text-3xl md:text-4xl font-black text-riva-blue tracking-tight mb-12">Four Steps to Revenue Clarity.</h4>
+
+          <div class="space-y-8">
+            <div class="flex items-start gap-6 bg-white p-8 rounded-sm border border-gray-200 shadow-sm gold-glow transition-all">
+              <div class="step-number bg-riva-gold text-riva-blue">1</div>
+              <div>
+                <h5 class="text-xl font-bold text-riva-blue mb-2">Discovery Call</h5>
+                <p class="text-gray-600 leading-relaxed">30-minute conversation to understand your business, current marketing activities, and where you think the problems are. No pitch — just diagnosis.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-6 bg-white p-8 rounded-sm border border-gray-200 shadow-sm gold-glow transition-all">
+              <div class="step-number bg-riva-gold text-riva-blue">2</div>
+              <div>
+                <h5 class="text-xl font-bold text-riva-blue mb-2">Data Collection</h5>
+                <p class="text-gray-600 leading-relaxed">We access your analytics, review your platforms, audit your customer journey, and analyze your competitive landscape. Takes 3-5 business days.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-6 bg-white p-8 rounded-sm border border-gray-200 shadow-sm gold-glow transition-all">
+              <div class="step-number bg-riva-gold text-riva-blue">3</div>
+              <div>
+                <h5 class="text-xl font-bold text-riva-blue mb-2">Revenue Report</h5>
+                <p class="text-gray-600 leading-relaxed">You receive a detailed report showing exactly where money is leaking, what's underperforming, and what's missing — with specific numbers and evidence.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-6 bg-white p-8 rounded-sm border border-gray-200 shadow-sm gold-glow transition-all">
+              <div class="step-number bg-riva-gold text-riva-blue">4</div>
+              <div>
+                <h5 class="text-xl font-bold text-riva-blue mb-2">Action Plan</h5>
+                <p class="text-gray-600 leading-relaxed">A prioritized roadmap showing which fixes to implement first, expected impact, and whether you can do it yourself or need support. No obligation to hire us.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: OUTCOME -->
+      <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-riva-gold mb-4">The Outcome</h3>
+          <h4 class="text-3xl md:text-4xl font-black text-riva-blue tracking-tight mb-12">You Leave With a Clear Path to More Revenue.</h4>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center p-8 bg-gray-50 rounded-sm border border-gray-100">
+              <div class="text-5xl font-black text-riva-gold mb-4">↑</div>
+              <h5 class="text-lg font-bold text-riva-blue mb-2">Traffic That Converts</h5>
+              <p class="text-gray-600 text-sm">Know exactly what's stopping visitors from becoming customers — and how to fix it.</p>
+            </div>
+
+            <div class="text-center p-8 bg-gray-50 rounded-sm border border-gray-100">
+              <div class="text-5xl font-black text-riva-gold mb-4">↻</div>
+              <h5 class="text-lg font-bold text-riva-blue mb-2">Customers Who Return</h5>
+              <p class="text-gray-600 text-sm">Identify retention gaps and build systems that bring people back automatically.</p>
+            </div>
+
+            <div class="text-center p-8 bg-gray-50 rounded-sm border border-gray-100">
+              <div class="text-5xl font-black text-riva-gold mb-4">$</div>
+              <h5 class="text-lg font-bold text-riva-blue mb-2">Revenue You Can Track</h5>
+              <p class="text-gray-600 text-sm">Finally see which activities drive revenue and which are wasting your money.</p>
+            </div>
+          </div>
+
+          <div class="mt-12 bg-riva-blue p-10 rounded-sm text-center">
+            <p class="text-2xl font-bold text-white mb-4">
+              "Stop guessing. Start knowing."
+            </p>
+            <p class="text-blue-100/80 max-w-2xl mx-auto">
+              The Revenue Audit gives you the clarity to make decisions based on data, not assumptions. Whether you fix the problems yourself or work with us, you'll know exactly what needs to happen.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: CALL TO ACTION -->
+      <section id="request-audit" class="py-24 bg-riva-blue">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-riva-gold mb-4">Get Started</h3>
+          <h4 class="text-3xl md:text-5xl font-black text-white tracking-tight mb-6">Request Your Revenue Audit.</h4>
+          <p class="text-xl text-blue-100/80 leading-relaxed mb-10 max-w-2xl mx-auto">
+            Call now to schedule your discovery call, or fill out the form and we'll reach out within 24 hours.
+          </p>
+
+          <!-- Primary CTA: Call -->
+          <div class="mb-12">
+            <a href="tel:+18329050570" class="inline-flex items-center justify-center px-10 py-5 bg-riva-gold text-riva-blue rounded-sm font-black text-lg uppercase tracking-widest hover:bg-riva-gold-dark transition-all shadow-xl">
+              <i data-lucide="phone" class="w-6 h-6 mr-4"></i> 832-905-0570
+            </a>
+            <p class="mt-4 text-blue-100/60 text-sm">Available Monday–Friday, 9am–5pm CT</p>
+          </div>
+
+          <!-- Secondary CTA: Form -->
+          <div class="bg-white/10 backdrop-blur-sm p-8 rounded-sm border border-white/20">
+            <h5 class="text-lg font-bold text-white mb-6">Or request a callback:</h5>
+            <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+              <div class="grid md:grid-cols-2 gap-4">
+                <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-sm text-white placeholder-white/50 focus:outline-none focus:border-riva-gold transition-colors" />
+                <input type="text" name="business" placeholder="Business Name" required class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-sm text-white placeholder-white/50 focus:outline-none focus:border-riva-gold transition-colors" />
+              </div>
+              <div class="grid md:grid-cols-2 gap-4">
+                <input type="email" name="email" placeholder="Email Address" required class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-sm text-white placeholder-white/50 focus:outline-none focus:border-riva-gold transition-colors" />
+                <input type="tel" name="phone" placeholder="Phone Number" class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-sm text-white placeholder-white/50 focus:outline-none focus:border-riva-gold transition-colors" />
+              </div>
+              <select name="business_type" required class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-sm text-white focus:outline-none focus:border-riva-gold transition-colors">
+                <option value="" disabled selected class="text-gray-800">Business Type</option>
+                <option value="restaurant-bar" class="text-gray-800">Restaurant / Bar</option>
+                <option value="local-service" class="text-gray-800">Local Service Business</option>
+                <option value="industrial-b2b" class="text-gray-800">Industrial / B2B</option>
+                <option value="other" class="text-gray-800">Other</option>
+              </select>
+              <textarea name="message" rows="3" placeholder="Briefly describe your biggest revenue challenge..." class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-sm text-white placeholder-white/50 focus:outline-none focus:border-riva-gold transition-colors resize-none"></textarea>
+              <button type="submit" class="w-full py-4 bg-riva-gold text-riva-blue rounded-sm font-black text-sm uppercase tracking-widest hover:bg-riva-gold-dark transition-all">
+                Request Revenue Audit
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- RELATED SERVICES -->
+      <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-riva-gold mb-4">After The Audit</h3>
+          <h4 class="text-2xl md:text-3xl font-black text-riva-blue tracking-tight mb-10">Fix the Problems With Riva Systems.</h4>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="/riva-foundation/" class="block bg-white p-6 rounded-sm border border-gray-200 hover:border-riva-gold hover:shadow-lg transition-all group">
+              <h5 class="font-bold text-riva-blue group-hover:text-riva-gold transition-colors mb-2">Riva Foundation</h5>
+              <p class="text-gray-500 text-sm">SEO, website, GBP, local signals — establish visibility and credibility.</p>
+            </a>
+            <a href="/riva-rollout/" class="block bg-white p-6 rounded-sm border border-gray-200 hover:border-riva-gold hover:shadow-lg transition-all group">
+              <h5 class="font-bold text-riva-blue group-hover:text-riva-gold transition-colors mb-2">Riva Rollout</h5>
+              <p class="text-gray-500 text-sm">Content cadence, posting system, initial execution — install a working marketing system.</p>
+            </a>
+            <a href="/riva-reach/" class="block bg-white p-6 rounded-sm border border-gray-200 hover:border-riva-gold hover:shadow-lg transition-all group">
+              <h5 class="font-bold text-riva-blue group-hover:text-riva-gold transition-colors mb-2">Riva Reach</h5>
+              <p class="text-gray-500 text-sm">Platform optimization, engagement strategy — amplify visibility and engagement.</p>
+            </a>
+            <a href="/riva-engine/" class="block bg-white p-6 rounded-sm border border-gray-200 hover:border-riva-gold hover:shadow-lg transition-all group">
+              <h5 class="font-bold text-riva-blue group-hover:text-riva-gold transition-colors mb-2">Riva Engine</h5>
+              <p class="text-gray-500 text-sm">SOPs, documentation, training — systemize marketing so you don't need us.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-riva-blue text-white pt-24 pb-12 overflow-hidden relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div class="md:col-span-4">
+          <span class="text-2xl font-bold tracking-tighter">RIVA<span class="font-light tracking-widest text-riva-gold ml-1">STRATEGIES</span></span>
+          <p class="mt-6 text-blue-100/70 text-base leading-relaxed max-w-sm">Revenue-focused marketing and business development for restaurants, local services, and industrial companies.</p>
+        </div>
+        <div class="md:col-span-2">
+          <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-riva-gold mb-8">Riva Systems</h4>
+          <ul class="space-y-4 text-sm text-blue-100/80">
+            <li><a href="/riva-revenue-audit/" class="hover:text-white transition-colors">Revenue Audit</a></li>
+            <li><a href="/riva-foundation/" class="hover:text-white transition-colors">Foundation</a></li>
+            <li><a href="/riva-rollout/" class="hover:text-white transition-colors">Rollout</a></li>
+            <li><a href="/riva-reach/" class="hover:text-white transition-colors">Reach</a></li>
+            <li><a href="/riva-engine/" class="hover:text-white transition-colors">Engine</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-3">
+          <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-riva-gold mb-8">Industries</h4>
+          <ul class="space-y-4 text-sm text-blue-100/80">
+            <li><a href="/industries/hospitality-food-service/" class="hover:text-white transition-colors">Restaurants & Bars</a></li>
+            <li><a href="/industries/local-field-services/" class="hover:text-white transition-colors">Local Services</a></li>
+            <li><a href="/industries/manufacturing-logistics/" class="hover:text-white transition-colors">Industrial / B2B</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-3">
+          <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-riva-gold mb-8">Contact</h4>
+          <div class="space-y-6">
+            <a href="tel:+18329050570" class="flex items-center text-blue-100 hover:text-white transition-colors group">
+              <div class="w-8 h-8 rounded-sm bg-white/5 flex items-center justify-center mr-3 group-hover:bg-riva-gold transition-colors"><i data-lucide="phone" class="w-4 h-4"></i></div>
+              <span class="text-sm font-semibold">832-905-0570</span>
+            </a>
+            <a href="/contact/" class="group inline-flex items-center px-6 py-3 border border-riva-gold text-riva-gold rounded-sm font-bold text-xs uppercase tracking-widest hover:bg-riva-gold hover:text-riva-blue transition-all">
+              Request Audit <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em] text-white/30">
+        <p>© 2024 Riva Strategies. All rights reserved.</p>
+        <div class="mt-4 md:mt-0 space-x-8">
+          <a href="/faq/" class="hover:text-white transition-colors">FAQ</a>
+          <a href="#" class="hover:text-white transition-colors">Privacy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      header.classList.toggle('glass-header', window.scrollY > 20);
+      header.classList.toggle('shadow-lg', window.scrollY > 20);
+      header.classList.toggle('py-3', window.scrollY > 20);
+      header.classList.toggle('py-5', window.scrollY <= 20);
+    });
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-nav').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
