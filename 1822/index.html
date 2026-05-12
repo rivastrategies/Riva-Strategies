@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>1822 Kitchen &amp; Bar — Menu Side A</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #1C2B4A;
+  --copper: #B05A2F;
+  --copper-light: #C8703F;
+  --parchment: #F5F0E8;
+  --ink-light: #2E3F5C;
+}
+html, body { width: 11in; height: 8.5in; margin: 0; padding: 0; background: #d0c9b8; }
+.sheet {
+  width: 11in; height: 8.5in;
+  background-color: var(--parchment);
+  position: relative; overflow: hidden;
+}
+.sheet::before {
+  content: ''; position: absolute; inset: 18px;
+  border: 2px solid var(--copper); pointer-events: none; z-index: 10;
+}
+.sheet::after {
+  content: ''; position: absolute; inset: 22px;
+  border: 0.5px solid var(--copper-light); pointer-events: none; z-index: 10; opacity: 0.5;
+}
+.content-area {
+  position: absolute; inset: 30px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+}
+.divider-v {
+  position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 1px; background: var(--copper); opacity: 0.4; transform: translateX(-50%);
+}
+
+/* LEFT PANEL */
+.left-panel {
+  padding: 24px 32px 20px 24px;
+  display: flex; flex-direction: column; align-items: center;
+}
+.logo-wrap {
+  width: 220px; height: 220px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--copper);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.logo-img {
+  width: 220px; height: 220px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.section-block { width: 100%; }
+.section-head {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 5px;
+}
+.section-rule { flex: 1; height: 1px; background: var(--copper); opacity: 0.55; }
+.section-title {
+  font-family: "EB Garamond", serif; font-size: 10.5px; font-weight: 700;
+  letter-spacing: 3.5px; text-transform: uppercase; color: var(--navy); white-space: nowrap;
+}
+.section-note {
+  font-family: "EB Garamond", serif; font-size: 8.5px; font-style: italic;
+  color: var(--copper); text-align: center; margin-bottom: 10px; display: block;
+}
+.item {
+  display: grid; grid-template-columns: 1fr auto; gap: 6px;
+  margin-bottom: 7px; align-items: baseline;
+}
+.item-name {
+  font-family: "EB Garamond", serif; font-size: 10px; font-weight: 700;
+  color: var(--navy); letter-spacing: 0.3px; text-transform: uppercase;
+  display: block; line-height: 1.2;
+}
+.item-desc {
+  font-family: "EB Garamond", serif; font-size: 9.5px; font-weight: 400;
+  font-style: italic; color: var(--ink-light); line-height: 1.3; display: block;
+}
+.item-price {
+  font-family: "EB Garamond", serif; font-size: 10px; font-weight: 500;
+  color: var(--navy); white-space: nowrap; align-self: start; padding-top: 1px;
+}
+.item-hr { border: none; border-top: 1px dotted rgba(176,90,47,0.2); margin: 0 0 7px 0; }
+.placeholder-note {
+  font-family: "EB Garamond", serif; font-size: 8.5px; font-style: italic;
+  color: var(--copper); opacity: 0.65; text-align: center; margin-top: 6px;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+  padding: 24px 24px 20px 32px;
+  display: flex; flex-direction: column;
+}
+.heritage-block {
+  margin-bottom: 20px; padding-bottom: 18px; border-bottom: 1px solid var(--copper);
+}
+.heritage-label {
+  font-family: "EB Garamond", serif; font-size: 9px; font-weight: 600;
+  letter-spacing: 4px; text-transform: uppercase; color: var(--copper);
+  margin-bottom: 10px; display: block;
+}
+.heritage-text {
+  font-family: "EB Garamond", serif; font-size: 11px; font-weight: 400;
+  color: var(--navy); line-height: 1.72;
+}
+.heritage-text p + p { margin-top: 8px; }
+
+.wine-beer-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; flex: 1;
+}
+.col-head {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 5px;
+}
+.sub-label {
+  font-family: "EB Garamond", serif; font-size: 8.5px; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--copper);
+  margin: 8px 0 5px 0; display: block;
+}
+.wine-item-row {
+  display: grid; grid-template-columns: 1fr auto; gap: 6px;
+  margin-bottom: 8px; align-items: baseline;
+}
+.wine-name {
+  font-family: "EB Garamond", serif; font-size: 10px; font-weight: 700;
+  color: var(--navy); text-transform: uppercase; letter-spacing: 0.3px; display: block;
+}
+.wine-varietal {
+  font-family: "EB Garamond", serif; font-size: 9px; font-style: italic;
+  color: var(--ink-light); display: block;
+}
+
+/* Bottom strip */
+.bottom-strip {
+  position: absolute; bottom: 30px; left: 30px; right: 30px;
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+}
+.bottom-strip-rule { flex: 1; height: 1px; background: var(--copper); opacity: 0.35; }
+.bottom-strip-text {
+  font-family: "EB Garamond", serif; font-size: 8.5px; letter-spacing: 3.5px;
+  text-transform: uppercase; color: var(--copper); opacity: 0.8;
+}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="content-area">
+    <div class="divider-v"></div>
+
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+      <div class="logo-wrap">
+        <img class="logo-img" src="" alt="1822 Kitchen &amp; Bar">
+      </div>
+
+      <!-- Specialty Cocktails -->
+      <div class="section-block">
+        <div class="section-head">
+          <div class="section-rule"></div>
+          <span class="section-title">Specialty Cocktails</span>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="item">
+          <div><span class="item-name">The Brazos Mule</span><span class="item-desc">Bourbon, ginger beer, fresh lime, smoked bitters</span></div>
+          <span class="item-price">12</span>
+        </div><hr class="item-hr">
+        <div class="item">
+          <div><span class="item-name">1822 Old Fashioned</span><span class="item-desc">Texas whiskey, demerara, Angostura, orange peel</span></div>
+          <span class="item-price">13</span>
+        </div><hr class="item-hr">
+        <div class="item">
+          <div><span class="item-name">Colony Margarita</span><span class="item-desc">Blanco tequila, fresh lime, agave, salted rim</span></div>
+          <span class="item-price">12</span>
+        </div><hr class="item-hr">
+        <div class="item">
+          <div><span class="item-name">Copper Paloma</span><span class="item-desc">Reposado tequila, grapefruit, lime, tajín rim</span></div>
+          <span class="item-price">12</span>
+        </div><hr class="item-hr">
+        <div class="item">
+          <div><span class="item-name">Groce Plantation Punch</span><span class="item-desc">Dark rum, passion fruit, citrus, house grenadine</span></div>
+          <span class="item-price">11</span>
+        </div><hr class="item-hr">
+        <div class="item">
+          <div><span class="item-name">Gulf Coast Spritz</span><span class="item-desc">Aperol, prosecco, blood orange, fresh mint</span></div>
+          <span class="item-price">11</span>
+        </div>
+
+        <p class="placeholder-note">— Cocktail list placeholder · replace with confirmed selections —</p>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel">
+      <div class="heritage-block">
+        <span class="heritage-label">Our Story</span>
+        <div class="heritage-text">
+          <p>In 1822, Stephen F. Austin led a small group of settlers into the Texas territory and granted land along the Brazos River to what history calls the Old 300 — the first Anglo colonists to put down roots in this state. Among them was Jared Ellison Groce, who rode alongside Austin, brought cotton seed to Texas soil, and built a plantation on the Brazos that became one of the young republic's most significant early homesteads.</p>
+          <p>Ric and Kevin Kiersh are Groce's fourth great-grandsons.</p>
+          <p>1822 Kitchen &amp; Bar carries that name deliberately — as a marker of where this family's story in Texas begins.</p>
+        </div>
+      </div>
+
+      <!-- Wine + Beer -->
+      <div class="wine-beer-grid">
+        <!-- Wine -->
+        <div>
+          <div class="col-head">
+            <div class="section-rule"></div>
+            <span class="section-title">Wine</span>
+            <div class="section-rule"></div>
+          </div>
+          <span class="section-note" style="text-align:left;margin-bottom:6px;">Glass &nbsp;·&nbsp; Bottle</span>
+
+          <span class="sub-label">Reds</span>
+          <div class="wine-item-row">
+            <div><span class="wine-name">Cabernet Sauvignon</span><span class="wine-varietal">Region TBD</span></div>
+            <span class="item-price" style="font-size:9.5px;">— / —</span>
+          </div>
+          <div class="wine-item-row">
+            <div><span class="wine-name">Malbec</span><span class="wine-varietal">Region TBD</span></div>
+            <span class="item-price" style="font-size:9.5px;">— / —</span>
+          </div>
+          <div class="wine-item-row">
+            <div><span class="wine-name">Pinot Noir</span><span class="wine-varietal">Region TBD</span></div>
+            <span class="item-price" style="font-size:9.5px;">— / —</span>
+          </div>
+
+          <span class="sub-label">Whites &amp; Rosé</span>
+          <div class="wine-item-row">
+            <div><span class="wine-name">Chardonnay</span><span class="wine-varietal">Region TBD</span></div>
+            <span class="item-price" style="font-size:9.5px;">— / —</span>
+          </div>
+          <div class="wine-item-row">
+            <div><span class="wine-name">Sauvignon Blanc</span><span class="wine-varietal">Region TBD</span></div>
+            <span class="item-price" style="font-size:9.5px;">— / —</span>
+          </div>
+          <div class="wine-item-row">
+            <div><span class="wine-name">Rosé</span><span class="wine-varietal">Region TBD</span></div>
+            <span class="item-price" style="font-size:9.5px;">— / —</span>
+          </div>
+          <p class="placeholder-note" style="text-align:left;">— Wine list placeholder —</p>
+        </div>
+
+        <!-- Beer & Beverages -->
+        <div>
+          <div class="col-head">
+            <div class="section-rule"></div>
+            <span class="section-title">Beer &amp; Beverages</span>
+            <div class="section-rule"></div>
+          </div>
+
+          <span class="sub-label">Draft</span>
+          <div class="item" style="margin-bottom:6px;">
+            <div><span class="item-name" style="font-size:9.5px;">Placeholder Draft</span><span class="item-desc">TBD</span></div>
+            <span class="item-price">—</span>
+          </div>
+          <div class="item" style="margin-bottom:6px;">
+            <div><span class="item-name" style="font-size:9.5px;">Placeholder Draft</span><span class="item-desc">TBD</span></div>
+            <span class="item-price">—</span>
+          </div>
+
+          <span class="sub-label">Bottles &amp; Cans</span>
+          <div class="item" style="margin-bottom:5px;"><div><span class="item-name" style="font-size:9.5px;">Placeholder</span></div><span class="item-price">—</span></div>
+          <div class="item" style="margin-bottom:5px;"><div><span class="item-name" style="font-size:9.5px;">Placeholder</span></div><span class="item-price">—</span></div>
+          <div class="item" style="margin-bottom:5px;"><div><span class="item-name" style="font-size:9.5px;">Placeholder</span></div><span class="item-price">—</span></div>
+          <div class="item" style="margin-bottom:5px;"><div><span class="item-name" style="font-size:9.5px;">Placeholder</span></div><span class="item-price">—</span></div>
+
+          <span class="sub-label">Non-Alcoholic</span>
+          <div class="item" style="margin-bottom:5px;"><div><span class="item-name" style="font-size:9.5px;">Soft Drinks</span></div><span class="item-price">3.50</span></div>
+          <div class="item" style="margin-bottom:5px;"><div><span class="item-name" style="font-size:9.5px;">Iced Tea</span></div><span class="item-price">3.50</span></div>
+          <div class="item" style="margin-bottom:5px;"><div><span class="item-name" style="font-size:9.5px;">Lemonade</span></div><span class="item-price">3.50</span></div>
+          <p class="placeholder-note" style="text-align:left;">— Beer list placeholder —</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-strip">
+    <div class="bottom-strip-rule"></div>
+    <span class="bottom-strip-text">1822 Kitchen &amp; Bar</span>
+    <div class="bottom-strip-rule"></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-riva-blue: #0A2F73;
+  --color-riva-gold: #C9A24D;
+  --color-riva-gold-dark: #B08A3C;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.glass-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.gold-glow:hover {
+  box-shadow: 0 20px 40px -15px rgba(201, 162, 77, 0.25);
+  transform: translateY(-4px);
+}
+
+.selection-gold::selection {
+  background: var(--color-riva-gold);
+  color: var(--color-riva-blue);
+}
+
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--color-riva-gold);
+  transition: width 0.3s ease;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 18px;
+  flex-shrink: 0;
+}
