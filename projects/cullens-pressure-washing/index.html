@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cullen's Pressure Washing | Demo Project</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f1115;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
+    background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.75)),
+        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.badge {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    opacity: .7;
+}
+
+h1 {
+    font-size: clamp(42px, 8vw, 90px);
+    line-height: .95;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #4cc9f0;
+}
+
+.subtext {
+    max-width: 750px;
+    font-size: 20px;
+    opacity: .85;
+    margin-bottom: 40px;
+}
+
+.cta-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    padding: 16px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .2s ease;
+}
+
+.btn-primary {
+    background: #4cc9f0;
+    color: #000;
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255,255,255,.2);
+    color: #fff;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #171b22;
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.footer {
+    padding: 40px 20px;
+    text-align: center;
+    opacity: .5;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="badge">
+        Riva Strategies Demo Project
+    </div>
+
+    <h1>
+        Cullen's <span class="highlight">Pressure Washing</span>
+    </h1>
+
+    <p class="subtext">
+        Professional exterior cleaning services built around curb appeal, property protection, and reliable local service.
+    </p>
+
+    <div class="cta-row">
+        <a href="#" class="btn btn-primary">
+            Request Estimate
+        </a>
+
+        <a href="#" class="btn btn-secondary">
+            View Services
+        </a>
+    </div>
+</section>
+
+<section class="section">
+    <h2>
+        Demo Service Layout
+    </h2>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>House Washing</h3>
+            <p>
+                Soft wash and pressure washing solutions designed to safely restore siding, brick, and exterior surfaces.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Driveway Cleaning</h3>
+            <p>
+                Oil stain reduction, concrete restoration, and curb appeal enhancement for residential properties.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Commercial Cleaning</h3>
+            <p>
+                Storefronts, sidewalks, parking areas, and commercial property maintenance programs.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<div class="footer">
+    Prototype Project • Riva Strategies
+</div>
+
+</body>
+</html>
