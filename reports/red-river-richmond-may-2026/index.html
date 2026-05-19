@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Red River Cantina Richmond | Marketing Performance Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #C0392B;
+    --red-dark: #922B21;
+    --red-light: #E74C3C;
+    --teal: #1A7A6A;
+    --teal-light: #27AE90;
+    --gold: #D4AC0D;
+    --gold-light: #F1C40F;
+    --off-white: #F9F5F0;
+    --warm-gray: #EDE8E1;
+    --mid-gray: #8C8277;
+    --dark: #1A1410;
+    --text: #2C2420;
+    --border: #D4CCC4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--off-white);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* COVER PAGE */
+  .cover {
+    background: var(--dark);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  .cover-pattern {
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(192,57,43,0.06) 40px,
+        rgba(192,57,43,0.06) 41px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 40px,
+        rgba(192,57,43,0.06) 40px,
+        rgba(192,57,43,0.06) 41px
+      );
+  }
+
+  .cover-top-bar {
+    background: var(--red);
+    height: 8px;
+    width: 100%;
+  }
+
+  .cover-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 24px;
+  }
+
+  .cover-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 62px;
+    font-weight: 900;
+    line-height: 1.05;
+    color: white;
+    margin-bottom: 16px;
+    max-width: 700px;
+  }
+
+  .cover-title span {
+    color: var(--red-light);
+  }
+
+  .cover-subtitle {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    margin-bottom: 60px;
+  }
+
+  .cover-divider {
+    width: 80px;
+    height: 3px;
+    background: var(--red);
+    margin-bottom: 40px;
+  }
+
+  .cover-meta {
+    display: flex;
+    gap: 48px;
+  }
+
+  .cover-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .cover-meta-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .cover-meta-value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 1px;
+  }
+
+  .cover-bottom {
+    padding: 40px 80px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-agency {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+  }
+
+  .cover-confidential {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+  }
+
+  /* BODY LAYOUT */
+  .report-body {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+  }
+
+  /* SECTION HEADERS */
+  .section {
+    margin-top: 72px;
+  }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+
+  .section-underline {
+    width: 48px;
+    height: 3px;
+    background: var(--red);
+    margin-bottom: 32px;
+  }
+
+  /* EXECUTIVE SUMMARY */
+  .exec-summary {
+    background: var(--dark);
+    color: white;
+    padding: 56px 64px;
+    margin-top: 64px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .exec-summary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: var(--red);
+  }
+
+  .exec-summary-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+  }
+
+  .exec-summary-text {
+    font-family: 'Barlow', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.82);
+    max-width: 780px;
+  }
+
+  .exec-summary-text p + p {
+    margin-top: 20px;
+  }
+
+  /* KPI GRID */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 40px;
+    background: var(--border);
+  }
+
+  .kpi-card {
+    background: white;
+    padding: 32px 28px;
+    position: relative;
+  }
+
+  .kpi-card.highlight {
+    background: var(--red);
+    color: white;
+  }
+
+  .kpi-card.teal {
+    background: var(--teal);
+    color: white;
+  }
+
+  .kpi-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--dark);
+    margin-bottom: 6px;
+  }
+
+  .kpi-card.highlight .kpi-value,
+  .kpi-card.teal .kpi-value {
+    color: white;
+  }
+
+  .kpi-delta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--teal);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .kpi-card.highlight .kpi-delta,
+  .kpi-card.teal .kpi-delta {
+    color: rgba(255,255,255,0.7);
+  }
+
+  .kpi-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+  }
+
+  .kpi-card.highlight .kpi-label,
+  .kpi-card.teal .kpi-label {
+    color: rgba(255,255,255,0.6);
+  }
+
+  .kpi-note {
+    font-family: 'Barlow', sans-serif;
+    font-size: 12px;
+    color: var(--mid-gray);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  .kpi-card.highlight .kpi-note,
+  .kpi-card.teal .kpi-note {
+    color: rgba(255,255,255,0.55);
+  }
+
+  /* TWO COLUMN */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  /* ANALYSIS BLOCK */
+  .analysis-block {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 32px;
+  }
+
+  .analysis-block-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .analysis-block p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text);
+  }
+
+  .analysis-block p + p {
+    margin-top: 12px;
+  }
+
+  /* METRIC ROW */
+  .metric-rows {
+    background: white;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    margin-top: 32px;
+  }
+
+  .metric-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 28px;
+    border-bottom: 1px solid var(--border);
+    gap: 16px;
+  }
+
+  .metric-row:last-child {
+    border-bottom: none;
+  }
+
+  .metric-row-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--text);
+    flex: 1;
+  }
+
+  .metric-row-bar-wrap {
+    flex: 2;
+    height: 6px;
+    background: var(--warm-gray);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .metric-row-bar {
+    height: 100%;
+    background: var(--red);
+    border-radius: 3px;
+  }
+
+  .metric-row-bar.teal {
+    background: var(--teal);
+  }
+
+  .metric-row-value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--dark);
+    min-width: 60px;
+    text-align: right;
+  }
+
+  /* PAID ADS SUMMARY */
+  .ads-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--border);
+    margin-top: 32px;
+  }
+
+  .ads-card {
+    background: white;
+    padding: 28px;
+  }
+
+  .ads-card-header {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .ads-stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--warm-gray);
+  }
+
+  .ads-stat-row:last-child {
+    border-bottom: none;
+  }
+
+  .ads-stat-label {
+    font-size: 13px;
+    color: var(--mid-gray);
+  }
+
+  .ads-stat-value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--dark);
+  }
+
+  .ads-total-card {
+    grid-column: 1 / -1;
+    background: var(--dark);
+    color: white;
+    padding: 28px;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .ads-total-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .ads-total-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: white;
+  }
+
+  .ads-total-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .ads-total-divider {
+    width: 1px;
+    height: 48px;
+    background: rgba(255,255,255,0.12);
+  }
+
+  /* INSIGHT CALLOUTS */
+  .insight-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border);
+    margin-top: 32px;
+  }
+
+  .insight-item {
+    background: var(--warm-gray);
+    padding: 24px;
+    position: relative;
+  }
+
+  .insight-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--red);
+  }
+
+  .insight-item.teal-accent::before {
+    background: var(--teal);
+  }
+
+  .insight-item.gold-accent::before {
+    background: var(--gold);
+  }
+
+  .insight-icon {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .insight-heading {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 8px;
+  }
+
+  .insight-item.teal-accent .insight-heading {
+    color: var(--teal);
+  }
+
+  .insight-item.gold-accent .insight-heading {
+    color: var(--gold);
+  }
+
+  .insight-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text);
+  }
+
+  /* DEMOGRAPHIC TABLE */
+  .demo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  .demo-block {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 28px;
+  }
+
+  .demo-block-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .demo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--warm-gray);
+  }
+
+  .demo-row:last-child {
+    border-bottom: none;
+  }
+
+  .demo-key {
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  .demo-pct {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--red);
+  }
+
+  /* RECOMMENDATIONS */
+  .rec-list {
+    counter-reset: rec;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .rec-item {
+    counter-increment: rec;
+    background: white;
+    border: 1px solid var(--border);
+    padding: 28px 28px 28px 80px;
+    position: relative;
+  }
+
+  .rec-item::before {
+    content: counter(rec, decimal-leading-zero);
+    position: absolute;
+    left: 28px;
+    top: 28px;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--red);
+    opacity: 0.25;
+    line-height: 1;
+  }
+
+  .rec-item-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+
+  .rec-item-body {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--mid-gray);
+  }
+
+  .rec-priority {
+    display: inline-block;
+    margin-top: 12px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+
+  .rec-priority.high {
+    background: rgba(192,57,43,0.1);
+    color: var(--red);
+  }
+
+  .rec-priority.medium {
+    background: rgba(26,122,106,0.1);
+    color: var(--teal);
+  }
+
+  /* CONCLUSION */
+  .conclusion {
+    margin-top: 64px;
+    background: var(--red);
+    color: white;
+    padding: 56px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .conclusion::after {
+    content: '"';
+    position: absolute;
+    right: 48px;
+    top: -20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 240px;
+    color: rgba(255,255,255,0.06);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .conclusion-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 20px;
+  }
+
+  .conclusion-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.65;
+    color: white;
+    max-width: 720px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .conclusion-text strong {
+    font-weight: 700;
+  }
+
+  /* FOOTER */
+  .report-footer {
+    margin-top: 64px;
+    padding: 32px 0;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-left {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+  }
+
+  .footer-right {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--border);
+  }
+
+  /* PAGE SECTION BREAK HEADER */
+  .page-section-break {
+    margin-top: 80px;
+    padding: 20px 0;
+    border-top: 2px solid var(--red);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .psb-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red);
+  }
+
+  .psb-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--border);
+  }
+
+  /* HIGHLIGHT QUOTE */
+  .highlight-quote {
+    border-left: 4px solid var(--teal);
+    padding: 20px 24px;
+    background: rgba(26,122,106,0.04);
+    margin-top: 24px;
+  }
+
+  .highlight-quote p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--teal);
+    font-style: italic;
+  }
+
+  @media print {
+    .cover { page-break-after: always; }
+    .section { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-pattern"></div>
+  <div class="cover-top-bar"></div>
+  <div class="cover-content">
+    <div class="cover-eyebrow">Riva Strategies | Prepared for Red River Restaurants</div>
+    <div class="cover-title">Marketing Performance<br><span>Report</span></div>
+    <div class="cover-subtitle">Red River Cantina &mdash; Richmond, TX</div>
+    <div class="cover-divider"></div>
+    <div class="cover-meta">
+      <div class="cover-meta-item">
+        <div class="cover-meta-label">Report Period</div>
+        <div class="cover-meta-value">Last 60 Days (Paid) / Last 28 Days (Organic)</div>
+      </div>
+      <div class="cover-meta-item">
+        <div class="cover-meta-label">Prepared By</div>
+        <div class="cover-meta-value">Riva Strategies</div>
+      </div>
+      <div class="cover-meta-item">
+        <div class="cover-meta-label">Report Date</div>
+        <div class="cover-meta-value">May 2026</div>
+      </div>
+    </div>
+  </div>
+  <div class="cover-bottom">
+    <div class="cover-agency">Riva Strategies / Red River Restaurants Group</div>
+    <div class="cover-confidential">Confidential &bull; Internal Use Only</div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="report-body">
+
+  <!-- EXECUTIVE SUMMARY -->
+  <div class="exec-summary">
+    <div class="exec-summary-label">Executive Summary</div>
+    <div class="exec-summary-text">
+      <p>Red River Cantina Richmond is a location with real market demand and a local audience that is ready to be reached. Historically, this location lacked consistent visibility, a defined content rhythm, and the paid infrastructure needed to build local awareness. That has changed.</p>
+      <p>Over the past several weeks, we established a posting cadence, launched targeted Meta ad campaigns, introduced weekly special promotion rhythm, and began the process of training the Facebook algorithm on this specific audience. The results confirm what we suspected: Richmond is not an underperforming market. It was an under-marketed one.</p>
+      <p>Page views are up 41%. Engagement is up 31%. Nearly 84% of content views are reaching new audiences outside of existing followers, a clear signal that Meta's algorithm is beginning to actively distribute this page. Paid campaigns generated over 105,000 views and reached nearly 48,000 people on $552 in spend. The foundation is in place. The next phase is acceleration.</p>
+    </div>
+  </div>
+
+  <!-- KEY METRICS -->
+  <div class="page-section-break">
+    <div class="psb-title">Section 01 &mdash; Key Performance Metrics</div>
+    <div class="psb-label">Organic / Last 28 Days</div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Performance Overview</div>
+    <div class="section-title">The Numbers</div>
+    <div class="section-underline"></div>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card highlight">
+      <div class="kpi-value">77,141</div>
+      <div class="kpi-delta">+41% vs. prior period</div>
+      <div class="kpi-label">Total Page Views</div>
+      <div class="kpi-note">Reach and discovery are accelerating as algorithmic distribution improves.</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-value">2,245</div>
+      <div class="kpi-delta" style="color:var(--teal)">+31.1% vs. prior period</div>
+      <div class="kpi-label">Total Engagements</div>
+      <div class="kpi-note">Reactions, comments, and shares. Shares are the highest-value signal for local restaurant audiences.</div>
+    </div>
+    <div class="kpi-card teal">
+      <div class="kpi-value">83.7%</div>
+      <div class="kpi-delta">Non-follower views</div>
+      <div class="kpi-label">New Audience Reach</div>
+      <div class="kpi-note">Meta is actively testing content outside the existing follower base. Strong algorithmic confidence signal.</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-value">3,327</div>
+      <div class="kpi-delta" style="color:var(--teal)">+24 net / only 5 unfollows</div>
+      <div class="kpi-label">Total Followers</div>
+      <div class="kpi-note">Low churn indicates content cadence is sustainable and not fatiguing the audience.</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-value">8,690</div>
+      <div class="kpi-delta" style="color: #C0392B;">Down 43%</div>
+      <div class="kpi-label">3-Second Video Views</div>
+      <div class="kpi-note">Hook strength on reels needs improvement. This is the primary content development priority.</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-value">32</div>
+      <div class="kpi-delta" style="color:var(--teal)">High-value organic shares</div>
+      <div class="kpi-label">Content Shares</div>
+      <div class="kpi-note">Each share extends reach to connected household and friend networks, the core suburban dining decision unit.</div>
+    </div>
+  </div>
+
+  <!-- WHAT THE METRICS MEAN -->
+  <div class="insight-strip">
+    <div class="insight-item">
+      <div class="insight-heading">Views Are Accelerating</div>
+      <div class="insight-text">A 41% increase in page views in 28 days is not noise. It reflects an algorithm that is increasingly confident in distributing this content to local users. Sustained cadence caused this. Inconsistency would have prevented it.</div>
+    </div>
+    <div class="insight-item teal-accent">
+      <div class="insight-heading">Engagement Is Healthy</div>
+      <div class="insight-text">31% engagement growth alongside 41% view growth means the audience growing is also a relevant one. The page is not buying impressions. It is earning attention from people who respond to the content.</div>
+    </div>
+    <div class="insight-item gold-accent">
+      <div class="insight-heading">Video Hooks Need Work</div>
+      <div class="insight-text">3-second video views are down, which means reels are losing audiences before they have a chance to engage. This is a solvable problem. Opening seconds need to do more work: motion, food, energy, or a clear hook in frame before the viewer decides to scroll.</div>
+    </div>
+  </div>
+
+  <!-- PAID ADS -->
+  <div class="page-section-break">
+    <div class="psb-title">Section 02 &mdash; Paid Media Performance</div>
+    <div class="psb-label">Meta Ads / Last 60 Days</div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Facebook Advertising</div>
+    <div class="section-title">Paid Campaign Results</div>
+    <div class="section-underline"></div>
+  </div>
+
+  <div class="ads-grid">
+    <div class="ads-total-card">
+      <div class="ads-total-item">
+        <div class="ads-total-value">$552.89</div>
+        <div class="ads-total-label">Total Ad Spend / 5 Campaigns</div>
+      </div>
+      <div class="ads-total-divider"></div>
+      <div class="ads-total-item">
+        <div class="ads-total-value">105,900</div>
+        <div class="ads-total-label">Total Views</div>
+      </div>
+      <div class="ads-total-divider"></div>
+      <div class="ads-total-item">
+        <div class="ads-total-value">48,013</div>
+        <div class="ads-total-label">Unique People Reached</div>
+      </div>
+      <div class="ads-total-divider"></div>
+      <div class="ads-total-item">
+        <div class="ads-total-value">23,964</div>
+        <div class="ads-total-label">Post Engagements</div>
+      </div>
+    </div>
+    <div class="ads-card">
+      <div class="ads-card-header">Top Campaign: Website Traffic</div>
+      <div class="ads-stat-row">
+        <div class="ads-stat-label">Ad Spend</div>
+        <div class="ads-stat-value">$199.91</div>
+      </div>
+      <div class="ads-stat-row">
+        <div class="ads-stat-label">Total Views</div>
+        <div class="ads-stat-value">30,335</div>
+      </div>
+      <div class="ads-stat-row">
+        <div class="ads-stat-label">Unique Reach</div>
+        <div class="ads-stat-value">20,908</div>
+      </div>
+      <div class="ads-stat-row">
+        <div class="ads-stat-label">Landing Page Views</div>
+        <div class="ads-stat-value">463</div>
+      </div>
+      <div class="ads-stat-row">
+        <div class="ads-stat-label">Cost Per Landing View</div>
+        <div class="ads-stat-value">$0.43</div>
+      </div>
+    </div>
+    <div class="ads-card">
+      <div class="ads-card-header">Recent Campaign: Family Pack / Delivery</div>
+      <div class="ads-stat-row">
+        <div class="ads-stat-label">Ad Spend</div>
+        <div class="ads-stat-value">$45.33</div>
+      </div>
+      <div class="ads-stat-row">
+        <div class="ads-stat-label">Total Views</div>
+        <div class="ads-stat-value">5,386</div>
+      </div>
+      <div class="ads-stat-row">
+        <div class="ads-stat-label">Unique Reach</div>
+        <div class="ads-stat-value">3,080</div>
+      </div>
+      <div class="ads-stat-row">
+        <div class="ads-stat-label">Landing Page Views</div>
+        <div class="ads-stat-value">54</div>
+      </div>
+      <div class="ads-stat-row">
+        <div class="ads-stat-label">Cost Per Landing View</div>
+        <div class="ads-stat-value">$0.84</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col" style="margin-top:24px;">
+    <div class="analysis-block">
+      <div class="analysis-block-title">What This Spend Accomplished</div>
+      <p>$552 across five campaigns generated over 105,000 views and reached nearly 48,000 individual people in the Richmond market. These are not vanity metrics. Paid reach at this level serves a specific function: it trains Meta's algorithm on who is responding to this brand in this geography, which in turn improves organic distribution.</p>
+      <p>The top traffic campaign drove 463 confirmed website visits at $0.43 per visit. For a restaurant with an average check of $15 to $25 per person, a single table converted from that traffic pays for the entire campaign.</p>
+    </div>
+    <div class="analysis-block">
+      <div class="analysis-block-title">Audience Responsiveness Confirmed</div>
+      <p>The Richmond market is engaging with paid content at a rate that justifies continued investment. The Family Pack and delivery-focused ad shows that offer-driven creative resonates, even on a small budget. The cost per reach is low, and the audience profile aligns with the dining demographic this location serves.</p>
+      <p>Future campaigns should layer offer-specific creative with pin-drop targeting around the Richmond location. Ads that combine a real offer with a clear call to action will outperform brand awareness creative for this objective.</p>
+    </div>
+  </div>
+
+  <!-- CONTENT PERFORMANCE -->
+  <div class="page-section-break">
+    <div class="psb-title">Section 03 &mdash; Content Performance</div>
+    <div class="psb-label">Format Analysis / Distribution</div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Content Format Breakdown</div>
+    <div class="section-title">What the Audience Is Watching</div>
+    <div class="section-underline"></div>
+  </div>
+
+  <div class="metric-rows">
+    <div class="metric-row">
+      <div class="metric-row-label">Reels</div>
+      <div class="metric-row-bar-wrap"><div class="metric-row-bar" style="width:60.6%"></div></div>
+      <div class="metric-row-value">60.6%</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-row-label">Links / Shared Posts</div>
+      <div class="metric-row-bar-wrap"><div class="metric-row-bar teal" style="width:22.5%"></div></div>
+      <div class="metric-row-value">22.5%</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-row-label">Photos</div>
+      <div class="metric-row-bar-wrap"><div class="metric-row-bar" style="width:16.4%; background:var(--mid-gray)"></div></div>
+      <div class="metric-row-value">16.4%</div>
+    </div>
+  </div>
+
+  <div class="highlight-quote">
+    <p>Reels represent roughly 5% of total posts on this page but account for over 60% of content views. The per-piece performance gap between reels and photos is significant. This is not a reason to abandon photo content. It is a reason to add more reels into the existing cadence.</p>
+  </div>
+
+  <div class="two-col" style="margin-top: 24px;">
+    <div class="analysis-block">
+      <div class="analysis-block-title">The Case for More Reels</div>
+      <p>The algorithm rewards video content with discovery reach. A well-executed reel, meaning 15 to 30 seconds of real kitchen action, sizzling food, or bar energy, has a higher probability of reaching non-followers than any other content format on this platform for this audience type.</p>
+      <p>The page currently publishes photos at an estimated 20:1 ratio to reels. That ratio should trend toward 10:1, or closer, with each reel intentionally scripted around an offer, event, or visual hook.</p>
+    </div>
+    <div class="analysis-block">
+      <div class="analysis-block-title">Why Photos Still Matter</div>
+      <p>Photos serve the audience that already knows this location. They reinforce weekly specials, menu familiarity, and brand consistency. A follower who sees Fajita Wednesday photos every week builds a habit. That habitual awareness is what converts a passive follower into a regular visit.</p>
+      <p>The strategy is not either/or. It is layered. Reels handle discovery. Photos handle reinforcement. Both are necessary.</p>
+    </div>
+  </div>
+
+  <div class="metric-rows" style="margin-top: 32px;">
+    <div style="padding: 16px 28px; background: var(--warm-gray);">
+      <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--mid-gray);">Content Discovery Sources</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-row-label">Facebook Feed</div>
+      <div class="metric-row-bar-wrap"><div class="metric-row-bar" style="width:76.1%"></div></div>
+      <div class="metric-row-value">76.1%</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-row-label">Reels Tab</div>
+      <div class="metric-row-bar-wrap"><div class="metric-row-bar teal" style="width:11.5%"></div></div>
+      <div class="metric-row-value">11.5%</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-row-label">Page Direct</div>
+      <div class="metric-row-bar-wrap"><div class="metric-row-bar" style="width:1.3%; background:var(--mid-gray)"></div></div>
+      <div class="metric-row-value">1.3%</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-row-label">Stories</div>
+      <div class="metric-row-bar-wrap"><div class="metric-row-bar" style="width:0.1%; background:var(--border)"></div></div>
+      <div class="metric-row-value">0.1%</div>
+    </div>
+  </div>
+
+  <div class="analysis-block" style="margin-top: 24px;">
+    <div class="analysis-block-title">Feed Dominance Is Expected for This Audience</div>
+    <p>76% of content discovery happens through the traditional Facebook feed. This is consistent with the demographic profile of this audience. The 35 to 54 age group, which makes up over 60% of the page's audience, uses Facebook feed as a primary browsing behavior. This audience does not primarily discover content through Reels or Stories. Feed consistency is therefore not optional. It is the primary distribution channel.</p>
+  </div>
+
+  <!-- AUDIENCE & DEMOGRAPHICS -->
+  <div class="page-section-break">
+    <div class="psb-title">Section 04 &mdash; Audience & Demographics</div>
+    <div class="psb-label">Who Is Watching</div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Audience Composition</div>
+    <div class="section-title">Who This Content Is Reaching</div>
+    <div class="section-underline"></div>
+  </div>
+
+  <div class="demo-grid">
+    <div class="demo-block">
+      <div class="demo-block-title">Age Breakdown</div>
+      <div class="demo-row">
+        <div class="demo-key">45 to 54 years old</div>
+        <div class="demo-pct">33.3%</div>
+      </div>
+      <div class="demo-row">
+        <div class="demo-key">35 to 44 years old</div>
+        <div class="demo-pct">28.0%</div>
+      </div>
+      <div class="demo-row">
+        <div class="demo-key">55 to 64 years old</div>
+        <div class="demo-pct">18.1%</div>
+      </div>
+      <div class="demo-row">
+        <div class="demo-key">Other age groups</div>
+        <div class="demo-pct">20.6%</div>
+      </div>
+    </div>
+    <div class="demo-block">
+      <div class="demo-block-title">Top Cities Reached</div>
+      <div class="demo-row"><div class="demo-key">Pecan Grove</div><div class="demo-pct" style="color:var(--teal)">#1</div></div>
+      <div class="demo-row"><div class="demo-key">Sugar Land</div><div class="demo-pct" style="color:var(--teal)">#2</div></div>
+      <div class="demo-row"><div class="demo-key">Rosenberg</div><div class="demo-pct" style="color:var(--teal)">#3</div></div>
+      <div class="demo-row"><div class="demo-key">Mission Bend</div><div class="demo-pct" style="color:var(--teal)">#4</div></div>
+      <div class="demo-row"><div class="demo-key">Houston</div><div class="demo-pct" style="color:var(--teal)">#5</div></div>
+    </div>
+  </div>
+
+  <div class="insight-strip" style="margin-top: 24px;">
+    <div class="insight-item">
+      <div class="insight-heading">Suburban Family Profile</div>
+      <div class="insight-text">Over 60% of the audience falls between 35 and 54. This is the primary household decision-maker demographic for casual dining in suburban Texas markets. They plan dinners around kids, value, and convenience.</div>
+    </div>
+    <div class="insight-item teal-accent">
+      <div class="insight-heading">Geographic Alignment</div>
+      <div class="insight-text">Pecan Grove, Sugar Land, and Rosenberg are the exact communities this location serves. The audience Meta is distributing content to maps directly to the drive radius of Richmond Cantina. Targeting is working.</div>
+    </div>
+    <div class="insight-item gold-accent">
+      <div class="insight-heading">Offer Alignment</div>
+      <div class="insight-text">This demographic profile is purpose-built for the offers that already exist: Happy Hour, Fajita Wednesday, family packs, and event-based dining. Content strategy should continue speaking directly to this group's behavior patterns.</div>
+    </div>
+  </div>
+
+  <!-- FOLLOWER BEHAVIOR -->
+  <div class="two-col" style="margin-top: 32px;">
+    <div class="demo-block">
+      <div class="demo-block-title">Views: Follower vs. Non-Follower</div>
+      <div class="demo-row">
+        <div class="demo-key">Non-followers (new reach)</div>
+        <div class="demo-pct">83.7%</div>
+      </div>
+      <div class="demo-row">
+        <div class="demo-key">Existing followers</div>
+        <div class="demo-pct" style="color: var(--mid-gray)">16.3%</div>
+      </div>
+    </div>
+    <div class="demo-block">
+      <div class="demo-block-title">Engagement: Follower vs. Non-Follower</div>
+      <div class="demo-row">
+        <div class="demo-key">Existing followers</div>
+        <div class="demo-pct" style="color:var(--teal)">54.6%</div>
+      </div>
+      <div class="demo-row">
+        <div class="demo-key">Non-followers</div>
+        <div class="demo-pct" style="color: var(--mid-gray)">45.4%</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="analysis-block" style="margin-top: 24px;">
+    <div class="analysis-block-title">The Split That Matters</div>
+    <p>83.7% of views come from non-followers while 54.6% of engagement comes from existing followers. This is exactly the dynamic a growing local restaurant page should demonstrate. The algorithm is expanding distribution to new people. Existing fans are the ones converting that exposure into reactions, shares, and comments. Both behaviors are healthy. The job now is to convert more of those new viewers into followers, and more followers into regular customers.</p>
+  </div>
+
+  <!-- STRATEGIC RECOMMENDATIONS -->
+  <div class="page-section-break">
+    <div class="psb-title">Section 05 &mdash; Strategic Recommendations</div>
+    <div class="psb-label">Next Phase Priorities</div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Recommendations</div>
+    <div class="section-title">What Happens Next</div>
+    <div class="section-underline"></div>
+  </div>
+
+  <div class="rec-list">
+    <div class="rec-item">
+      <div class="rec-item-title">Increase Reel Output Strategically</div>
+      <div class="rec-item-body">Add two to three intentional reels per week to the existing content cadence. Each reel should open with immediate visual interest: a pour, a sizzle, a plated dish being set down, or movement behind the bar. The first second determines whether the viewer scrolls or watches. Hooks must be prioritized. Keep reels between 15 and 30 seconds. Tie each one to a specific offer, event, or weekly special.</div>
+      <span class="rec-priority high">High Priority</span>
+    </div>
+    <div class="rec-item">
+      <div class="rec-item-title">Maintain Photo Cadence for Offer Reinforcement</div>
+      <div class="rec-item-body">Photo posts continue to serve the existing follower base. Weekly specials such as Taco Tuesday and Fajita Wednesday should be visually represented every week through real food photography. This is what builds habitual awareness and turns a casual follower into a weekly regular. Do not sacrifice photo consistency in favor of reels. Layer reels on top of the existing cadence.</div>
+      <span class="rec-priority medium">Ongoing</span>
+    </div>
+    <div class="rec-item">
+      <div class="rec-item-title">Build a Recurring Weekly Content Rhythm</div>
+      <div class="rec-item-body">The strongest local restaurant pages operate with predictable weekly rhythms. Taco Tuesday content every Tuesday. Happy Hour reminders before 2:30 PM. Fajita Wednesday posts on Wednesday. Family-oriented content on weekends. Delivery and rainy-day framing when appropriate. Each of these should be pre-planned and consistent, not reactive. Consistency is what trains both the algorithm and the audience.</div>
+      <span class="rec-priority high">High Priority</span>
+    </div>
+    <div class="rec-item">
+      <div class="rec-item-title">Continue and Expand Paid Amplification</div>
+      <div class="rec-item-body">The current paid results confirm that the Richmond audience is responsive. Continue running offer-specific campaigns with pin-drop geo-targeting around the Richmond location. Prioritize boosting organic posts that are already performing. Strong organic content plus paid amplification is a more efficient use of budget than creating separate ad creative. Keep spend consistent rather than sporadic to maintain algorithmic momentum.</div>
+      <span class="rec-priority high">High Priority</span>
+    </div>
+    <div class="rec-item">
+      <div class="rec-item-title">Strengthen Neighborhood-Level Identity</div>
+      <div class="rec-item-body">Richmond, Pecan Grove, Rosenberg, and Sugar Land are communities with strong local identity. Content that references these neighborhoods by name, acknowledges local events or weather, or speaks directly to the Richmond community performs better than generic restaurant content. This is hyperlocal marketing, and it costs nothing but intention. Every caption should feel like it came from a restaurant that belongs in this community.</div>
+      <span class="rec-priority medium">Ongoing</span>
+    </div>
+    <div class="rec-item">
+      <div class="rec-item-title">Develop a Content Asset Library</div>
+      <div class="rec-item-body">The highest-performing content in this period came from real food, real kitchen moments, and authentic operational footage. Schedule one content production session per month where a team member captures five to eight usable reel clips and 10 to 15 still photos across dishes, drinks, staff, and atmosphere. This creates an inventory that eliminates last-minute content scrambles and ensures quality across all posting days.</div>
+      <span class="rec-priority medium">Next 30 Days</span>
+    </div>
+  </div>
+
+  <!-- CONCLUSION -->
+  <div class="conclusion">
+    <div class="conclusion-label">Strategic Conclusion</div>
+    <div class="conclusion-text">
+      Richmond was not an underperforming market. It was an <strong>under-marketed location.</strong> The audience is here. The responsiveness is confirmed. What changed over the past several weeks is that we showed up consistently, with real content, real offers, and paid infrastructure behind it. The algorithm responded. The audience responded. <strong>The next phase is sustaining that momentum</strong> and converting growing awareness into measurable foot traffic, weekly regulars, and direct orders through the channels we control.
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="report-footer">
+    <div class="footer-left">Red River Cantina Richmond &bull; Riva Strategies &bull; May 2026</div>
+    <div class="footer-right">Confidential / Internal</div>
+  </div>
+
+</div><!-- end report-body -->
+</body>
+</html>
