@@ -1,0 +1,744 @@
+<meta name="robots" content="noindex, nofollow">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estimating Review — N2-24022 / IPB-3879</title>
+<style>
+  :root {
+    --navy: #1B2A4A;
+    --blue: #2E5FA3;
+    --light-blue: #D5E8F0;
+    --amber: #F5A623;
+    --red: #C0392B;
+    --yellow-bg: #FFF8E1;
+    --gray: #4A4A4A;
+    --border: #CCCCCC;
+    --row-alt: #F4F7FB;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 13px; color: #222; background: #f0f2f5; }
+  .wrapper { max-width: 1300px; margin: 0 auto; padding: 24px; }
+
+  /* Cover */
+  .cover { background: var(--navy); color: white; padding: 60px 40px; text-align: center; border-radius: 8px; margin-bottom: 32px; }
+  .cover h1 { font-size: 36px; letter-spacing: 1px; margin-bottom: 12px; }
+  .cover h2 { font-size: 22px; color: #7EB8D4; margin-bottom: 10px; }
+  .cover p { font-size: 14px; color: #aaa; margin: 4px 0; }
+  .cover .badge { display: inline-block; background: var(--amber); color: var(--navy); font-weight: bold; font-size: 13px; padding: 8px 20px; border-radius: 4px; margin-top: 20px; }
+  .cover .score-big { font-size: 48px; font-weight: bold; color: #7EB8D4; margin: 20px 0 4px; }
+  .cover .score-label { font-size: 16px; color: #aaa; }
+
+  /* Sections */
+  .section { background: white; border-radius: 8px; margin-bottom: 28px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section-header { background: var(--navy); color: white; padding: 14px 24px; font-size: 17px; font-weight: bold; letter-spacing: 0.5px; }
+  .section-body { padding: 20px 24px; }
+
+  h2.sub { font-size: 15px; color: var(--blue); border-bottom: 2px solid var(--blue); padding-bottom: 6px; margin: 20px 0 10px; }
+  h3.sub3 { font-size: 13px; font-weight: bold; color: var(--gray); margin: 14px 0 6px; }
+  p.body { margin: 6px 0; line-height: 1.6; }
+  ul.body-list { margin: 6px 0 6px 20px; }
+  ul.body-list li { margin: 4px 0; line-height: 1.5; }
+
+  /* Flags */
+  .flag { border-left: 4px solid var(--red); background: var(--yellow-bg); padding: 10px 14px; margin: 10px 0; border-radius: 0 4px 4px 0; font-size: 13px; }
+  .flag.amber { border-left-color: var(--amber); }
+  .flag.blue { border-left-color: var(--blue); }
+  .flag .label { font-weight: bold; color: var(--red); }
+  .flag.amber .label { color: #B07800; }
+  .flag.blue .label { color: var(--blue); }
+
+  /* Tables */
+  .tbl-wrap { overflow-x: auto; margin: 10px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  table thead tr { background: var(--blue); color: white; }
+  table thead th { padding: 8px 10px; text-align: left; font-weight: bold; white-space: nowrap; }
+  table tbody tr:nth-child(even) { background: var(--row-alt); }
+  table tbody tr:hover { background: var(--light-blue); }
+  table tbody td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.4; }
+  .badge-high { display: inline-block; background: #FDECEA; color: var(--red); font-weight: bold; font-size: 11px; padding: 2px 6px; border-radius: 3px; }
+  .badge-med { display: inline-block; background: #FFF3CD; color: #856404; font-weight: bold; font-size: 11px; padding: 2px 6px; border-radius: 3px; }
+  .badge-low { display: inline-block; background: #E8F5E9; color: #2E7D32; font-weight: bold; font-size: 11px; padding: 2px 6px; border-radius: 3px; }
+
+  /* Score table */
+  .score-table td:nth-child(2) { font-weight: bold; color: var(--blue); text-align: center; font-size: 15px; }
+  .score-table tr:last-child { background: var(--navy) !important; color: white; font-weight: bold; }
+  .score-table tr:last-child td { color: white; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 24px; color: #888; font-size: 12px; }
+  .footer strong { color: var(--red); }
+
+  /* Print */
+  @media print {
+    body { background: white; }
+    .wrapper { max-width: 100%; padding: 10px; }
+    .section { box-shadow: none; border: 1px solid #ccc; page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+<!-- COVER -->
+<div class="cover">
+  <h1>ESTIMATING REVIEW PACKAGE</h1>
+  <h2>PP Flare Tip NHVcz Improvement</h2>
+  <p>INEOS Polyolefins Battleground — Area 410 | La Porte, TX</p>
+  <p>Client Job No.: N2-24022 &nbsp;|&nbsp; PE Job No.: IPB-3879</p>
+  <p>EPC Engineer: Preferred Engineering | IFC: 03/11/2026 | Package: 136 pages</p>
+  <div class="score-big">68/100</div>
+  <div class="score-label">MEDIUM CONFIDENCE — See Section 15 for breakdown</div>
+  <div class="badge">FOR ESTIMATING VALIDATION ONLY — NOT A BID DOCUMENT</div>
+</div>
+
+<!-- 1. EXECUTIVE SUMMARY -->
+<div class="section">
+  <div class="section-header">1. EXECUTIVE SUMMARY</div>
+  <div class="section-body">
+    <p class="body">This project upgrades the existing flare tip on flare stack MS-468P at the INEOS Polypropylene plant (Battleground Manufacturing Complex, La Porte, TX). A temporary flare is installed first to allow the existing flare to be taken offline for tip replacement and associated modifications. The scope spans two phases: <strong>Temporary Flare</strong> and <strong>Permanent Flare Modification</strong>. All drawings are Rev. 0, Issued for Construction 03/11/2026.</p>
+    <h2 class="sub">Primary Work Scope</h2>
+    <ul class="body-list">
+      <li>Replace existing flare tip with new MS-2766P unit at top of flare stack MS-468P</li>
+      <li>Install new 2" staged steam line (Lines 50315 / 50240) from grade to new flare tip — 4+ iso sheets</li>
+      <li>Replace Flame Front Generator (FFG) and all connected fuel gas / AI piping (Lines 41001, 41005, 41006, 41007, 41008, 41009)</li>
+      <li>Install temporary 24" flare piping (TEMP-011, 12 iso sheets) from existing 12" header valves to temporary flare</li>
+      <li>Install temporary 6" steam piping (TEMP-002, 11 iso sheets) to supply temporary flare</li>
+      <li>Modify flow orifices on 6" and 2" steam control station bypasses</li>
+      <li>Add two new isolation valves on 24" flare header near MS-468P (Line 600039)</li>
+      <li>Rotate existing 12" valve on MS-468P 180 degrees (Tie-In 27)</li>
+      <li>Remove and replace insulation on 6" steam line on flare stack (asbestos survey required)</li>
+      <li>Demolition of existing FFG piping, AI, FG piping per sketches SK004–SK014, SK022 (12 demo drawings)</li>
+    </ul>
+    <h2 class="sub">Top 5 Confidence Blockers</h2>
+    <div class="flag"><span class="label">⚠ CRITICAL:</span> Flare stack height / scaffold scope — not dimensioned anywhere in 136 pages. Tie-in plan suggests ~EL 281'-0" working height. Scaffold is potentially the largest single labor item.</div>
+    <div class="flag"><span class="label">⚠ CRITICAL:</span> NDE Standard A61X-80-413 referenced on every isometric sheet and the spec register — not included in the package. Cannot estimate NDE labor without it.</div>
+    <div class="flag"><span class="label">⚠ CRITICAL:</span> Four P&ID sheets are listed as primary design documents but do not appear anywhere in the package body.</div>
+    <div class="flag"><span class="label">⚠ CRITICAL:</span> Asbestos survey status on insulated lines without blue band is unresolved. Could completely change demo scope and cost.</div>
+    <div class="flag"><span class="label">⚠ HIGH:</span> SS socket welds on 1" 300# lines at top of flare stack — most technically demanding welds on the project. Extreme elevation, SS qualification, TIG process, tight access.</div>
+  </div>
+</div>
+
+<!-- 2. DRAWING REGISTER -->
+<div class="section">
+  <div class="section-header">2. DRAWING REGISTER</div>
+  <div class="section-body">
+    <p class="body">All drawings Rev. 0, IFC 03/11/2026, except 3879-P-SK001 (Rev. D — see Risk R-15). Engineer of Record: Preferred Engineering, Nassau Bay TX, TBPE No. F-9207.</p>
+    <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Drawing No.</th><th>Rev</th><th>Title / Description</th><th>Type</th><th>Sheets</th><th>Phase</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>3879-P-SK000</td><td>0</td><td>Piping Scope of Work</td><td>SOW</td><td>6</td><td>T&amp;P</td><td>Primary estimating narrative; drawing index</td></tr>
+        <tr><td>K-DEMO-410-10030-D-3</td><td>0</td><td>Demo P&ID — FFG Area</td><td>P&ID</td><td>1</td><td>P</td><td><span class="badge-high">REFERENCED ONLY</span> — Not in package</td></tr>
+        <tr><td>K-410-10030-D-3</td><td>24</td><td>P&ID — FFG / Pilot Area</td><td>P&ID</td><td>1</td><td>P</td><td><span class="badge-high">REFERENCED ONLY</span> — Not in package</td></tr>
+        <tr><td>K-DEMO-410-60015-D-1</td><td>0</td><td>Demo P&ID — Steam/Flare</td><td>P&ID</td><td>1</td><td>T&amp;P</td><td><span class="badge-high">REFERENCED ONLY</span> — Not in package</td></tr>
+        <tr><td>K-410-60015-D-1</td><td>31</td><td>P&ID — Steam / Flare</td><td>P&ID</td><td>1</td><td>T&amp;P</td><td><span class="badge-high">REFERENCED ONLY</span> — Not in package</td></tr>
+        <tr><td>3879-P-SK001</td><td><strong>D</strong></td><td>Temporary Flare P&ID Sketch</td><td>P&ID Sketch</td><td>1</td><td>T</td><td>Only non-Rev-0 drawing — indicates scope churn on temp</td></tr>
+        <tr><td>F-3438</td><td>0</td><td>Line List</td><td>List</td><td>1</td><td>T&amp;P</td><td>Full line data — key estimating document</td></tr>
+        <tr><td>F-3439</td><td>0</td><td>Tie-In Schedule</td><td>List</td><td>1</td><td>T&amp;P</td><td>33 tie-in points defined — critical for weld count</td></tr>
+        <tr><td>N2-24022 SP Item List</td><td>0</td><td>Specialty Items List</td><td>List</td><td>1</td><td>T&amp;P</td><td>3 items: 6x steam traps (TP-01), 1x AI strainer (SR-05), 1x FG strainer (SR-03)</td></tr>
+        <tr><td>3879-P-SK002</td><td>0</td><td>Tie-In Location Plan</td><td>Plan</td><td>1</td><td>T&amp;P</td><td>Site plan with all 33 TI callouts and elevations</td></tr>
+        <tr><td>3879-P-SK003-1 / -2</td><td>0</td><td>Equipment &amp; Piping Plans (North / South)</td><td>Plan</td><td>2</td><td>T&amp;P</td><td>Layout plans for both FFG area and flare area</td></tr>
+        <tr><td>1 1/2-AI-41001-1CS1T81-1 thru -6</td><td>0</td><td>1-1/2" Instrument Air ISOs (6 sheets)</td><td>Isometric</td><td>6</td><td>P</td><td>Threaded galvanized CS</td></tr>
+        <tr><td>1 1/2-GF-41001-1CS1S81-1 thru -5</td><td>0</td><td>1-1/2" Fuel Gas ISOs (5 sheets)</td><td>Isometric</td><td>5</td><td>P</td><td>FFG supply — BW CS</td></tr>
+        <tr><td>1/2-GF-41005-1CS1S81-1</td><td>0</td><td>1/2" Fuel Gas to FFG</td><td>Isometric</td><td>1</td><td>P</td><td>Orifice connection to new FFG</td></tr>
+        <tr><td>1-GF-41006-3CS1S81-1 thru -2</td><td>0</td><td>1" Fuel Gas from FFG (2 sheets)</td><td>Isometric</td><td>2</td><td>P</td><td>CS SW 300#</td></tr>
+        <tr><td>1-GF-41006-3SA5S83-1</td><td>0</td><td>1" Fuel Gas 300# SS to Stack</td><td>Isometric</td><td>1</td><td>P</td><td>SS socket weld — elevated stack work</td></tr>
+        <tr><td>1-GF-41007-3SA5S83-1</td><td>0</td><td>1" Fuel Gas 300# SS to Stack</td><td>Isometric</td><td>1</td><td>P</td><td>SS socket weld — elevated stack work</td></tr>
+        <tr><td>1-GF-41008-3SA5S83-1</td><td>0</td><td>1" Fuel Gas 300# SS to Stack</td><td>Isometric</td><td>1</td><td>P</td><td>SS socket weld — elevated stack work</td></tr>
+        <tr><td>1-GF-41009-1SA5S81-1</td><td>0</td><td>1" Pilot Gas to Stack Tip</td><td>Isometric</td><td>1</td><td>P</td><td>SS socket weld — pilot gas</td></tr>
+        <tr><td>2-DR-TEMP-013-1CS1S81-1</td><td>0</td><td>2" Temp Flare Drain</td><td>Isometric</td><td>1</td><td>T</td><td>Drain from temp flare base</td></tr>
+        <tr><td>2-SM-50240-1CS1S82-1</td><td>0</td><td>2" Steam FV-4997P Bypass</td><td>Isometric</td><td>1</td><td>P</td><td>New bypass spool at existing valve</td></tr>
+        <tr><td>2-SM-50315-1CS1S82-1 thru -4</td><td>0</td><td>2" Staged Steam to Flare Tip (4 sheets)</td><td>Isometric</td><td>4</td><td>P</td><td>NEW — runs from grade to ~EL 281'. Critical elevated line.</td></tr>
+        <tr><td>3/4-SM-TEMP-004/008/012/014/016 (5 sheets)</td><td>0</td><td>3/4" Temp Steam Trap Supply ISOs</td><td>Isometric</td><td>5</td><td>T</td><td>Steam trap inlet legs off TEMP-002</td></tr>
+        <tr><td>3/4-SM-TEMP-003/006/007/015/017/018 (condensate)</td><td>0</td><td>3/4" Condensate Discharge ISOs</td><td>Isometric</td><td>~6</td><td>T</td><td>Condensate legs — service test only, expanded metal PPE insulation</td></tr>
+        <tr><td>6-SM-600038-1CS1S82-1</td><td>0</td><td>6" Steam Main — Sheet 1</td><td>Isometric</td><td>1</td><td>T&amp;P</td><td>Steam main tie-in — both phases</td></tr>
+        <tr><td>6-SM-600038-1CS1S82-2 thru -3</td><td>0</td><td>6" Steam — Orifice/Block Valves (2 sheets)</td><td>Isometric</td><td>2</td><td>P</td><td>New orifice spool and new block valves</td></tr>
+        <tr><td>6-SM-TEMP-002-1CS1S82-1 thru -11</td><td>0</td><td>6" Temporary Steam (11 sheets)</td><td>Isometric</td><td>11</td><td>T</td><td>Major temp steam run — high volume at grade</td></tr>
+        <tr><td>12-FL-TEMP-009-1CS1S81-1</td><td>0</td><td>12" Temp Flare Tie-In Spool</td><td>Isometric</td><td>1</td><td>T</td><td>From existing 20" lateral (TI-24)</td></tr>
+        <tr><td>12-FL-TEMP-010-1CS1S81-1</td><td>0</td><td>12" Temp Flare Tie-In Spool</td><td>Isometric</td><td>1</td><td>T</td><td>From existing 18" lateral (TI-25)</td></tr>
+        <tr><td>24-FL-600039-1CS1S81-1</td><td>0</td><td>24" Permanent Flare Spool to MS-468P</td><td>Isometric</td><td>1</td><td>P</td><td>New isolation valves + cold cut TI-07</td></tr>
+        <tr><td>24-FL-TEMP-011-1CS1S81-1 thru -12</td><td>0</td><td>24" Temp Flare Piping (12 sheets)</td><td>Isometric</td><td>12</td><td>T</td><td>Major ground-level run — highest volume pipe on job</td></tr>
+        <tr><td>MS-468P-TRIM-1</td><td>0</td><td>Flare Stack Trim Detail</td><td>Sketch</td><td>1</td><td>P</td><td>12" valve rotation, top-of-stack connection details</td></tr>
+        <tr><td>3879-P-SK004 thru SK013, SK022</td><td>0</td><td>Demolition Sketches (12 total)</td><td>Demo Photo</td><td>12</td><td>P</td><td>Photographic demolition callouts — field photos with green outline annotations</td></tr>
+        <tr><td>3879-P-SK015 thru SK019</td><td>0</td><td>Modified Pipe Support Details (5 sheets)</td><td>Support</td><td>5</td><td>T&amp;P</td><td>L4x4x3/8" angle on stack, shoe details, vertical support detail — ASTM A36</td></tr>
+        <tr><td>3879-P-SK020</td><td>0</td><td>Valve Isolation Sketch — Flare Stack</td><td>Sketch</td><td>1</td><td>T</td><td>MS-468P isolation sequence for switchover</td></tr>
+        <tr><td>3879-P-SK021</td><td>0</td><td>Valve Isolation Sketch — Steam</td><td>Sketch</td><td>1</td><td>T</td><td>V-1562P steam separator isolation sequence</td></tr>
+        <tr><td>OP-EDS-P-011 (PNFS Std Supports)</td><td>Rev 2, Mar 2024</td><td>Standard Pipe Support Details</td><td>Std Spec</td><td>~20</td><td>T&amp;P</td><td>PIP PNFS0001 with INEOS supplemental exceptions</td></tr>
+        <tr><td>N2-24022 Spec Register</td><td>0</td><td>Specification Register</td><td>Spec</td><td>1</td><td>T&amp;P</td><td>Full list of applicable specs — complete and useful</td></tr>
+        <tr><td>Valve Descriptions (11 sheets)</td><td>Various</td><td>Gate / Globe / Check / Ball Valve Specs</td><td>Spec</td><td>11</td><td>T&amp;P</td><td>GA01CB500, GA08CB200/202/302, GL01CB500, CS02BT000, CL08CB300, BA01CB508A, BA03CB301A, GA02BT000</td></tr>
+        <tr><td>OP-EDS-R-012 / R-014</td><td>Rev 3, Aug 2025</td><td>External Coating System Docs</td><td>Spec</td><td>Several</td><td>T&amp;P</td><td>D104 (EP for SS), D115 (IZ/EM/PX for CS), D132 (Cold Galvanizing repair)</td></tr>
+        <tr><td>A61X-80-413</td><td>Mar 2022</td><td>Fabrication, Inspection &amp; Testing of Piping</td><td>Spec</td><td>Ref only</td><td>T&amp;P</td><td><span class="badge-high">NOT IN PACKAGE</span> — governs all NDE requirements</td></tr>
+        <tr><td>John Zink K00265523-PFRK-001</td><td>Rev 1</td><td>FFG Ignition Panel GA Drawing</td><td>Vendor</td><td>1</td><td>P</td><td>For Reference Only — 3-pilot manual ignition rack</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<!-- 3. SCOPE SUMMARY -->
+<div class="section">
+  <div class="section-header">3. SCOPE SUMMARY</div>
+  <div class="section-body">
+    <h2 class="sub">3.1 Demolition / Removal</h2>
+    <ul class="body-list">
+      <li>Existing flare tip on MS-468P (removed to receive new MS-2766P tip)</li>
+      <li>Existing FFG and immediately connected fuel gas / AI piping and valves</li>
+      <li>Existing fuel gas and instrument air piping per 12 demo sketches (SK004–SK013, SK022) — photographic callout drawings</li>
+      <li>Existing insulation on 6" steam line on flare stack — <strong>asbestos survey required per SOW reference to A61X-81-201</strong></li>
+      <li>FE-4040P transmitter (element and spool marked SAVE / REUSE)</li>
+    </ul>
+    <h2 class="sub">3.2 Permanent New Installation</h2>
+    <ul class="body-list">
+      <li>New flare tip MS-2766P — vendor-furnished, contractor-installed at top of MS-468P (crane required)</li>
+      <li>4 spool pieces at stack top for pilot/FG connections — mates existing to new larger tip (1" SS and CS connections)</li>
+      <li>New 2" staged steam line (50315, 50240) — from flanged tie-in near grade to flare tip — 4 iso sheets — runs full stack height</li>
+      <li>New 6" steam mods (600038) — 3 iso sheets — new block valves and orifice spool modifications</li>
+      <li>New 24" flare spool (600039) — 1 iso sheet — new isolation valves, cold cut tie-in TI-07</li>
+      <li>New 1-1/2" fuel gas piping (41001) — 5 iso sheets — new FFG supply</li>
+      <li>New 1-1/2" instrument air piping (41001 AI class) — 6 iso sheets — threaded galvanized CS</li>
+      <li>New 1/2" fuel gas (41005) — 1 iso sheet — to FFG orifice</li>
+      <li>New 1" fuel gas lines (41006/07/08) — SS socket weld 300# — to stack pilots — 3 iso sheets</li>
+      <li>New 1" pilot gas (41009) — SS SW 150# — to pilots — 1 iso sheet</li>
+      <li>New FFG (John Zink replacement unit K00265523) with new regulators for FG and AI</li>
+      <li>Reuse XV-4877 on new FFG outlet piping</li>
+      <li>Two new isolation valves on 24" flare header near MS-468P inlet</li>
+      <li>Flow orifice modifications on 6" and 2" steam bypass stations (detail not in package)</li>
+      <li>Rotate existing 12" valve 180 degrees on MS-468P (TI-27)</li>
+      <li>New pipe supports per SK015–SK019 + standard supports (PNFS library)</li>
+      <li>New insulation: Pyrogel 10mm on 6" steam; Exp. Perlite 1.5" on 2" steam; personnel protection expanded metal on condensate</li>
+    </ul>
+    <h2 class="sub">3.3 Temporary Installation</h2>
+    <ul class="body-list">
+      <li>11 iso sheets of 6" temporary steam piping (TEMP-002) with 6 steam traps (3/4" legs)</li>
+      <li>12 iso sheets of 24" temporary flare piping (TEMP-011) from existing 12" header valves to temp flare location</li>
+      <li>Two 12" tie-in spools (TEMP-009 / TEMP-010) at existing 20" and 18" flare laterals</li>
+      <li>2" temporary flare drain (TEMP-013)</li>
+      <li>6x Yarway 721 thermodynamic disc steam traps with integral strainer (TP-01)</li>
+      <li>Temporary wooden cribbing supports: 7"x9"x8'-6" railroad ties at grade</li>
+    </ul>
+    <h2 class="sub">3.4 Scope Uncertainties</h2>
+    <div class="flag"><span class="label">⚠</span> Scope boundary between contractor and temporary flare vendor not defined. Vendor supplies fuel gas — connection method, isolation, and permitting are not specified.</div>
+    <div class="flag"><span class="label">⚠</span> Asbestos survey status unknown. Demo scope is materially different if asbestos is present on 6" steam insulation on the flare stack.</div>
+    <div class="flag"><span class="label">⚠</span> Orifice plate modification details not in package. SOW references modifications to 6" and 2" bypass control station orifices — no sizing or detail drawings provided.</div>
+    <div class="flag amber"><span class="label">⚠</span> FE-4040P spool marked SAVE — handling, temporary storage protection, and reinstallation scope not quantified anywhere in the package.</div>
+  </div>
+</div>
+
+<!-- 4. MATERIAL TAKEOFF -->
+<div class="section">
+  <div class="section-header">4. MATERIAL TAKEOFF (BILL OF MATERIALS)</div>
+  <div class="section-body">
+    <p class="body">Quantities derived from isometric fabrication/erection material schedule columns and the line list. Note 2 on every isometric states: <strong>"Field verify dimensions, maintain configuration of pipeline."</strong> All pipe lengths are estimated from iso sheet counts — treat as ±20% until field-verified.</p>
+
+    <h2 class="sub">4.1 Pipe — Permanent</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Size / Sched</th><th>Material</th><th>Service / Line</th><th>Est. Length</th><th>Piping Class</th><th>Confidence</th></tr></thead>
+      <tbody>
+        <tr><td>2" XS (0.218")</td><td>CS SMLS A53-B / A106-B</td><td>Steam 50240 / 50315</td><td>~60 LF</td><td>1CS1S82</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>6" STD (0.179")</td><td>CS ERW A53-B</td><td>Steam 600038 Perm</td><td>~30 LF</td><td>1CS1S82</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>24" STD (0.375")</td><td>CS ERW A53-B</td><td>Flare 600039</td><td>~25 LF</td><td>1CS1S81</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>1-1/2" XS (0.200")</td><td>CS SMLS A106-B / A53-B GALV</td><td>Fuel Gas 41001 GF</td><td>~80 LF</td><td>1CS1S81</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>1-1/2" XS (0.200") GALV</td><td>CS SMLS A106-B Galvanized</td><td>Inst Air 41001 AI</td><td>~50 LF</td><td>1CS1T81</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>1" Sch 80 SW (0.179")</td><td>304/304L SS A312</td><td>FG to Stack 41006/07/08</td><td>~15 LF</td><td>3SA5S83</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>1" SW (0.179")</td><td>CS A106-B / A53-B</td><td>FG from FFG 41006</td><td>~20 LF</td><td>3CS1S82</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>1" SW (0.133")</td><td>304/304L SS SW</td><td>Pilot Gas 41009</td><td>~15 LF</td><td>1SA5S81</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>1/2" SMLS (0.147")</td><td>CS A106-B / A53-B</td><td>FG to FFG 41005</td><td>~5 LF</td><td>1CS1S81</td><td><span class="badge-high">HIGH</span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 class="sub">4.2 Pipe — Temporary</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Size / Sched</th><th>Material</th><th>Service / Line</th><th>Est. Length</th><th>Piping Class</th><th>Confidence</th></tr></thead>
+      <tbody>
+        <tr><td>24" STD (0.375")</td><td>CS ERW A53-B</td><td>Temp Flare TEMP-011</td><td>~350 LF (12 iso sheets)</td><td>1CS1S81</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>6" XH (0.280")</td><td>CS ERW A53-B</td><td>Temp Steam TEMP-002</td><td>~350 LF (11 iso sheets)</td><td>1CS1S82</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>12" STD (0.375")</td><td>CS ERW A53-B</td><td>TEMP-009 / TEMP-010</td><td>~30 LF (2 iso sheets)</td><td>1CS1S81</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>3/4" SMLS (0.154–0.179")</td><td>CS A53-B</td><td>Temp steam trap legs</td><td>~60 LF (6 iso sheets)</td><td>1CS1S82</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>3/4" SMLS (0.154")</td><td>CS A53-B</td><td>Condensate legs</td><td>~30 LF</td><td>1CS1S82</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>2" (0.218")</td><td>CS SMLS A53-B</td><td>Temp drain TEMP-013</td><td>~15 LF</td><td>1CS1S81</td><td><span class="badge-high">HIGH</span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 class="sub">4.3 Flanges</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Type</th><th>Size / Class</th><th>Material</th><th>Line Ref</th><th>Qty Est.</th><th>Confidence</th></tr></thead>
+      <tbody>
+        <tr><td>WN RF</td><td>6" CL150</td><td>CS A105N, ASME B16.5</td><td>600038 Perm</td><td>~4 EA</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>WN RF</td><td>24" CL150</td><td>CS A105N, ASME B16.5</td><td>600039 / TEMP-011</td><td>~6–8 EA</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>WN RF</td><td>2" CL150</td><td>CS A105N, ASME B16.5</td><td>50315 / 50240</td><td>~8 EA</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>WN RF</td><td>12" CL150</td><td>CS A105N, ASME B16.5</td><td>TEMP-009/010</td><td>~4 EA</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>SO RF</td><td>1" CL150</td><td>CS A105N, ASME B16.5</td><td>41009 pilot</td><td>~2 EA</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>Blind RF</td><td>2" CL150</td><td>CS A105N, ASME B16.5</td><td>50240 bypass</td><td>~1 EA</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>Isolation Flange Kit</td><td>Various CL150</td><td>Per INEOS std</td><td>Flanged tie-in points</td><td>Per TI qty</td><td><span class="badge-high">HIGH</span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 class="sub">4.4 Valves</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Type</th><th>Size</th><th>Spec Code</th><th>Application</th><th>Est. Qty</th><th>Confidence</th></tr></thead>
+      <tbody>
+        <tr><td>Gate, CS Flanged RF CL150 OS&amp;Y BB</td><td>NPS 2–6</td><td>GA01CB501 (A216 WCB, Trim 8)</td><td>600038, 50315, 600039</td><td>~4–6 EA</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>Gate, CS Flanged RF CL150 OS&amp;Y BB (small)</td><td>NPS 0.5–2</td><td>GA01CB500 (A105, Trim 8)</td><td>Small flanged connections</td><td>~2–4 EA</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>Gate, CS SW×FNPT API800 OS&amp;Y BB</td><td>NPS 0.5–2</td><td>GA08CB200 (A105, Trim 8)</td><td>Steam trap isolations</td><td>~8–12 EA</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>Gate, CS SW API800 Welded Bonnet</td><td>NPS 0.5–2</td><td>GA08CB302 (A105, WB)</td><td>Small bore steam</td><td>~4–6 EA</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>Gate, Bronze CL200 Threaded ISRS</td><td>NPS 0.5–2</td><td>GA02BT000 (B61 Bronze)</td><td>Inst Air — galvanized lines</td><td>~2–4 EA</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>Globe, CS Flanged RF CL150</td><td>NPS 2–6</td><td>GL01CB500 (A216 WCB, Trim 8)</td><td>Steam control area</td><td>Per P&ID</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>Ball, CS Flanged RF CL150 Fire Safe</td><td>NPS 0.5–4</td><td>BA01CB508A (WCB, 316SS trim, RPTFE)</td><td>Flare isolations, FG</td><td>Per iso</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>Ball, CS SW CL300 Fire Safe</td><td>NPS 0.5–1.5</td><td>BA03CB301A (WCB, 316SS trim, RPTFE)</td><td>SS/CS FG to stack</td><td>Per iso</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>Check, Bronze CL200 Threaded Swing</td><td>NPS 0.5–2</td><td>CS02BT000 (Bronze)</td><td>Instrument Air</td><td>~2 EA</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>Check, CS SW API800 Piston Lift</td><td>NPS 0.5–2</td><td>CL08CB300 (A105, no spring)</td><td>Steam service</td><td>~2–4 EA</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>REUSE — Existing 12" Gate, rotate 180°</td><td>12"</td><td>Existing — TI-27</td><td>MS-468P flare stack</td><td>1 EA</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>REUSE — XV-4877 existing actuated valve</td><td>1"</td><td>Existing — TI-22/23</td><td>FFG outlet</td><td>1 EA</td><td><span class="badge-high">HIGH</span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 class="sub">4.5 Gaskets</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Description</th><th>Class</th><th>Standard</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Spiral Wound, 316L SS/Flex Graphite filler, 316L SS inner ring, CS outer ring</td><td>CL150</td><td>ASME B16.20</td><td>Multiple sizes 1/2" to 24" — confirmed visible on every iso BOM</td></tr>
+        <tr><td>Spiral Wound same spec</td><td>CL300</td><td>ASME B16.20</td><td>1" SS service 300# lines</td></tr>
+        <tr><td>Isolation Flange Kit, 150#</td><td>CL150</td><td>Per INEOS std</td><td>Qty per tie-in schedule flanged TIs</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 class="sub">4.6 Specialty Items (from N2-24022 SP Item List)</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>SP No.</th><th>Qty</th><th>Description</th><th>Mfr / Model</th><th>INEOS Spec</th><th>Application</th></tr></thead>
+      <tbody>
+        <tr><td>TP-01</td><td>6 EA</td><td>3/4" Thermodynamic Disc Steam Trap w/ Integral Strainer</td><td>Yarway / Model 721</td><td>A61X-80-401 (TP-01) Rev. 6</td><td>Temporary flare steam drain legs</td></tr>
+        <tr><td>SR-05</td><td>1 EA</td><td>3/4" Wye Strainer — Instrument Air</td><td>Mueller / Model 351M</td><td>A61X-80-401 (SR-05) Rev. 1</td><td>AI supply to new FFG</td></tr>
+        <tr><td>SR-03</td><td>1 EA</td><td>1" Wye Strainer — Fuel Gas</td><td>Mueller / Model 862</td><td>A61X-80-401 (SR-03) Rev. 4</td><td>FG supply to new FFG</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 class="sub">4.7 Pipe Supports (Partial)</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Type</th><th>Drawing / Std</th><th>Pipe Size</th><th>Material</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>FS-1 — Pipe Shoe Small Bore</td><td>PNFS0910, OP-EDS-P-011</td><td>Up to 2-1/2"</td><td>CS A36</td><td>Multiple ISOs — 2" SM lines at grade</td></tr>
+        <tr><td>S-2 — Pipe Shoe Large Bore</td><td>PNFS0400</td><td>6", 24"</td><td>CS A36</td><td>6" SM and 24" FL isometrics</td></tr>
+        <tr><td>S-3 — Pipe Shoe for Guides/DS</td><td>PNFS0401</td><td>3"–8"</td><td>CS A36</td><td>6" steam at grade — with directional stop</td></tr>
+        <tr><td>DS-1 — Directional Stop (insulated)</td><td>PNFS0100</td><td>6", 24"</td><td>CS A36/A992</td><td>For insulated steam lines</td></tr>
+        <tr><td>PS-25 — Standard U-Bolt</td><td>PNFS0374</td><td>Multiple</td><td>CS</td><td>Small bore and temp piping</td></tr>
+        <tr><td>SK017-SK019 Modified Stack Supports</td><td>Project-specific</td><td>24" flare, 6" steam on stack</td><td>CS A36 — L4x4x3/8" angle, 1-1/2"x1/4" bar</td><td>Weld to existing stack shell — see SK018 sections</td></tr>
+        <tr><td>SK015-SK016 Temp Supports</td><td>Project-specific</td><td>6" and 24" temp piping</td><td>CS A36</td><td>Modified temporary supports at grade</td></tr>
+        <tr><td>Timber Cribbing</td><td>Note 4 on temp ISOs</td><td>24" and 6" temp</td><td>Timber — railroad tie</td><td>7"x9"x8'-6" — temp support for uneven ground</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<!-- 5. WELD REGISTER -->
+<div class="section">
+  <div class="section-header">5. WELD REGISTER</div>
+  <div class="section-body">
+    <p class="body">Weld IDs are temporary for estimating only. 33 tie-in points defined in Tie-In Schedule F-3439. Cold cut + field weld tie-ins are highest risk. Total weld count across all groups estimated at 280–420 fusion welds (all sizes).</p>
+
+    <h2 class="sub">5.1 Tie-In Welds (Field — Critical Path)</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>TI No.</th><th>Iso Ref</th><th>Size / Service</th><th>Method</th><th>Joint Type</th><th>Test Press</th><th>Risk</th></tr></thead>
+      <tbody>
+        <tr><td>TI-01</td><td>6-SM-600038-1</td><td>6" Steam</td><td>Bolt-Up only</td><td>Flange</td><td>Service</td><td><span class="badge-low">LOW</span></td></tr>
+        <tr><td>TI-07</td><td>24-FL-600039-1</td><td>24" Flare</td><td><strong>COLD CUT + FIELD WELD</strong></td><td>BW Groove</td><td>450 PSIG Hydro</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>TI-11</td><td>2-SM-50240-1</td><td>2" Steam</td><td><strong>COLD CUT + FIELD WELD</strong></td><td>BW Groove</td><td>450 PSIG Hydro</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>TI-12</td><td>6-SM-600038-2</td><td>1" branch off 6" Steam</td><td><strong>COLD CUT + FIELD WELD</strong></td><td>SW / Olet branch</td><td>450 PSIG Hydro</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>TI-13</td><td>6-SM-600038-2</td><td>1" branch off 6" Steam</td><td><strong>COLD CUT + FIELD WELD</strong></td><td>SW / Olet branch</td><td>450 PSIG Hydro</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>TI-21</td><td>1 1/2-AI-41001-1</td><td>1-1/2" Inst Air</td><td>COLD CUT + THREAD</td><td>Threaded</td><td>Service</td><td><span class="badge-low">LOW</span></td></tr>
+        <tr><td>TI-29</td><td>6-SM-600038-1</td><td>6" Steam (elevated)</td><td><strong>COLD CUT + FIELD WELD</strong></td><td>BW Groove</td><td>450 PSIG Hydro</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>TI-30</td><td>1 1/2-GF-41001-3</td><td>1-1/2" Fuel Gas (elevated)</td><td><strong>COLD CUT + FIELD WELD</strong></td><td>BW Groove</td><td>450 PSIG Hydro</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>TI-02/03/04/05 (4 TIs)</td><td>41006/07/08/09 SS ISOs</td><td>1" 300# Fuel Gas to stack</td><td>Bolt-Up</td><td>Flange 300#</td><td>1080 PSIG Hydro</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>TI-08/09/10</td><td>24-FL, 2-SM ISOs</td><td>20"–24" Flare / 2" Steam bolt-ups</td><td>Bolt-Up</td><td>Flange</td><td>450 PSIG Hydro</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>TI-24/25</td><td>12-FL-TEMP-009/010</td><td>12" Temp flare tie-ins</td><td>Bolt-Up</td><td>Flange</td><td>450 PSIG Hydro</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>TI-14–TI-20, TI-22–TI-23 (10 TIs)</td><td>41001 GF / AI ISOs</td><td>1/2"–1-1/2" FG and AI bolt-ups</td><td>Bolt-Up, some w/ FE-4040P reuse</td><td>Flange / Thread</td><td>450 / Service</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>TI-26</td><td>MS-468P</td><td>20" Flare stack nozzle</td><td>Bolt-Up</td><td>Flange CL150</td><td>Service</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>TI-27</td><td>MS-468P-TRIM-1</td><td>12" Valve on stack — rotate 180°</td><td>Bolt-Up after rotation</td><td>Flange CL150</td><td>Service</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>TI-28/32 (Steam bolt-ups)</td><td>6-SM-600038-1</td><td>6" Steam bolt-ups</td><td>Bolt-Up</td><td>Flange CL150</td><td>450 PSIG Hydro</td><td><span class="badge-low">LOW</span></td></tr>
+        <tr><td>TI-31/33 (AI threaded/tube)</td><td>1 1/2-AI-41001-4/5</td><td>1/2"–1-1/2" AI to instruments</td><td>Threaded / Tubing</td><td>Threaded / Tube fitting</td><td>Service</td><td><span class="badge-low">LOW</span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 class="sub">5.2 Fabrication Weld Estimates by Line Group</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Group</th><th>Line</th><th>Size / Mat'l</th><th>Type</th><th>Est. Count</th><th>Est. Weld-In.</th><th>Shop/Field</th><th>Difficulty</th></tr></thead>
+      <tbody>
+        <tr><td>Perm 24" Flare</td><td>600039</td><td>24" BW CS</td><td>Groove BW</td><td>~6–8</td><td>~120–160</td><td>Shop+Field</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>Perm 6" Steam</td><td>600038 (Perm)</td><td>6" BW CS</td><td>Groove BW</td><td>~15–20</td><td>~90–120</td><td>Shop+Field</td><td><span class="badge-high">HIGH — elevated</span></td></tr>
+        <tr><td>Perm 2" Steam to Tip</td><td>50315 / 50240</td><td>2" BW CS</td><td>Groove BW</td><td>~25–30</td><td>~50–60</td><td>Shop+Field</td><td><span class="badge-high">HIGH — full stack ht.</span></td></tr>
+        <tr><td>Perm 1" FG SS 300#</td><td>41006/07/08/09 SA5S83</td><td>1" SW SS</td><td>Socket Weld</td><td>~10–15</td><td>~10–15</td><td>Shop+Field</td><td><span class="badge-high">HIGH — SS, top of stack</span></td></tr>
+        <tr><td>Perm 1" FG CS 300#</td><td>41006 CS1S82</td><td>1" SW CS</td><td>Socket Weld</td><td>~8–12</td><td>~8–12</td><td>Shop+Field</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>Perm 1-1/2" FG</td><td>41001 GF</td><td>1-1/2" BW+SW CS</td><td>Groove+SW</td><td>~25–35</td><td>~35–50</td><td>Shop+Field</td><td><span class="badge-med">MEDIUM — grade</span></td></tr>
+        <tr><td>Perm 1-1/2" AI</td><td>41001 AI</td><td>1-1/2" Threaded Galv</td><td>Threaded only</td><td>~0 fusion</td><td>N/A</td><td>Shop+Field</td><td><span class="badge-low">LOW</span></td></tr>
+        <tr><td>Temp 24" Flare</td><td>TEMP-011</td><td>24" BW CS</td><td>Groove BW</td><td>~60–80</td><td>~1200–1600</td><td>Field</td><td><span class="badge-low">LOW — grade, open</span></td></tr>
+        <tr><td>Temp 6" Steam</td><td>TEMP-002</td><td>6" BW CS</td><td>Groove BW</td><td>~50–70</td><td>~300–420</td><td>Shop+Field</td><td><span class="badge-low">LOW–MED</span></td></tr>
+        <tr><td>Temp 12" Flare</td><td>TEMP-009/010</td><td>12" BW CS</td><td>Groove BW</td><td>~6–8</td><td>~72–96</td><td>Field</td><td><span class="badge-med">MEDIUM — TI to existing</span></td></tr>
+        <tr><td>Temp 3/4" Steam Traps</td><td>TEMP-004/008/012/014/016</td><td>3/4" SW CS</td><td>Socket Weld</td><td>~40–60</td><td>~30–45</td><td>Field</td><td><span class="badge-low">LOW</span></td></tr>
+        <tr><td>Support Fabrication</td><td>SK015–SK019</td><td>3/16" fillet / structural</td><td>Fillet</td><td>~30–50</td><td>Variable</td><td>Shop+Field</td><td><span class="badge-low">LOW</span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="flag"><span class="label">⚠ HIGH RISK:</span> 2" steam line (50315) runs the full height of the flare stack (~280') to the flare tip. Every weld on this line above 30 feet is a HIGH-difficulty field weld. Estimate 3–4× ground-level labor factor for elevated welds.</div>
+    <div class="flag"><span class="label">⚠ HIGH RISK:</span> 1" SS socket welds at top of flare stack (41006/07/08/09) require separate SS WPS and SS-qualified welders. These are the most technically demanding welds on the job — extreme elevation, TIG process, tight access at flare tip, separate PQR required.</div>
+  </div>
+</div>
+
+<!-- 6. CODE & PROCEDURE REVIEW -->
+<div class="section">
+  <div class="section-header">6. CODE AND PROCEDURE REVIEW</div>
+  <div class="section-body">
+    <p class="body">Applicable codes identified from spec register, isometric notes, and piping class designations. This is an identification of likely requirements only — not a compliance determination.</p>
+    <h2 class="sub">Applicable Codes (Likely)</h2>
+    <ul class="body-list">
+      <li><strong>ASME B31.3</strong> — Process Piping: Governing code per OP-EDS-P-003. Applies to all new process and utility piping.</li>
+      <li><strong>ASME Section IX</strong> — WPS/PQR required for all fusion welds. Both CS BW and SS SW procedures needed.</li>
+      <li><strong>ASME B16.5 / B16.11 / B16.10 / B16.34 / B16.20</strong> — Flanges, fittings, valves, gaskets.</li>
+      <li><strong>API 598</strong> — Valve testing per all valve descriptions in package.</li>
+      <li><strong>API 602 / API 600</strong> — CS gate valve design per valve specs.</li>
+      <li><strong>API 570</strong> — Piping inspection code: applies to tie-in modifications on existing operating piping.</li>
+      <li><strong>MSS SP-58</strong> — Pipe hangers and supports per OP-EDS-P-011.</li>
+      <li><strong>MSS SP-80</strong> — Bronze valves in AI service (GA02BT000, CS02BT000).</li>
+      <li><strong>INEOS A61X-80-413</strong> — Fabrication, Inspection and Testing of Piping: explicitly governs all NDE. Referenced on every iso sheet. <strong>NOT IN PACKAGE.</strong></li>
+    </ul>
+    <h2 class="sub">WPS Requirements (Likely)</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>WPS ID</th><th>Base Metal / P-No.</th><th>Process</th><th>Application</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>WPS-CS-BW</td><td>CS, P-No. 1</td><td>SMAW or GTAW</td><td>All CS piping BW: 24", 12", 6", 2"</td><td>Confirm position qualifications — 6G likely required for elevated work</td></tr>
+        <tr><td>WPS-CS-SW</td><td>CS, P-No. 1</td><td>SMAW or GTAW</td><td>All CS socket weld joints (3/4", 1", 1-1/2", 2")</td><td>Standard small bore SW</td></tr>
+        <tr><td>WPS-SS-SW</td><td>304/304L SS, P-No. 8</td><td>GTAW (TIG) preferred</td><td>1" SS SW lines 41006/07/08/09</td><td><strong>Separate PQR required. SS welder qualifications separate from CS. CRITICAL at stack top.</strong></td></tr>
+        <tr><td>WPS-CS-FW</td><td>CS, P-No. 1</td><td>SMAW</td><td>Support fillet welds per SK015–019</td><td>Standard structural — low complexity</td></tr>
+        <tr><td>WPS-Thread</td><td>N/A — no fusion</td><td>N/A</td><td>Galvanized AI lines (1CS1T81 class)</td><td>Threading only — no WPS needed for connection</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<!-- 7. QUALITY CONTROL REVIEW -->
+<div class="section">
+  <div class="section-header">7. QUALITY CONTROL REVIEW</div>
+  <div class="section-body">
+    <div class="flag"><span class="label">⚠ CRITICAL:</span> NDE Standard A61X-80-413 is referenced on every isometric sheet and in the spec register but is NOT included in this package. Specific NDE percentages and method requirements cannot be determined without it. This directly impacts labor and schedule estimates.</div>
+
+    <h2 class="sub">7.1 Hydrostatic Testing (from Line List and TI Schedule)</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Scope</th><th>Test Medium</th><th>Test Pressure PSIG</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>All permanent CS steam and flare piping</td><td>H2O</td><td>450 PSIG</td><td>Confirmed on line list and all TI entries</td></tr>
+        <tr><td>300# Fuel Gas lines (41006 3CS1S82, 41007/08 3SA5S83)</td><td>H2O</td><td>1080–1110 PSIG</td><td>High pressure test — separate test event</td></tr>
+        <tr><td>1" 150# Pilot Gas (41009 1SA5S81)</td><td>H2O</td><td>412.5 PSIG</td><td>SS service line</td></tr>
+        <tr><td>Temporary steam and temp flare piping</td><td>H2O</td><td>450 PSIG</td><td>Must be tested before commissioning temp flare</td></tr>
+        <tr><td>Condensate discharge legs (TEMP-003/006/007 etc.)</td><td>Service</td><td>Service press.</td><td>Line list note: service test only, no hydro</td></tr>
+        <tr><td>Instrument air piping (1CS1T81 class)</td><td>Service</td><td>Service press.</td><td>Line list note: service test only</td></tr>
+        <tr><td>TI-01 and TI-26 (bolt-up only)</td><td>Service</td><td>Service press.</td><td>Per TI schedule — no separate hydro</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 class="sub">7.2 Expected NDE (Based on Service / B31.3 Category)</h2>
+    <ul class="body-list">
+      <li><strong>CS BW — steam and flare service:</strong> Expect RT or UT on selected percentage per A61X-80-413 and fluid service classification under B31.3.</li>
+      <li><strong>CS BW — fuel gas (Normal Fluid, B31.3):</strong> May be VT only or low percentage RT/UT — confirm per INEOS standard.</li>
+      <li><strong>SS SW — 300# FG and pilot at stack top:</strong> Expect PT or MT on all or high percentage — elevated criticality in pilot service.</li>
+      <li><strong>Cold cut field welds (8 total — TI-07, 11, 12, 13, 29, 30 + others):</strong> 100% RT/UT strongly recommended as connection-critical welds on existing operating systems.</li>
+      <li><strong>PMI:</strong> Expected on all SS material (41006/07/08/09). Confirm per A61X-80-413.</li>
+      <li><strong>PWHT:</strong> Not indicated. B31.3 P1 material at these wall thicknesses and temperatures does not trigger mandatory PWHT. Verify against A61X-80-413.</li>
+    </ul>
+
+    <h2 class="sub">7.3 Hold / Witness Points</h2>
+    <ul class="body-list">
+      <li>All tie-in activities — SOW requires INEOS representative coordination</li>
+      <li>Project completion — formal sign-off with INEOS site contact required</li>
+      <li>Hydrostatic tests — expect INEOS inspector witness on permanent piping tests</li>
+      <li>FE-4040P spool removal and reinstallation — INEOS coordination</li>
+      <li>XV-4877 reuse — INEOS coordination before removal</li>
+    </ul>
+    <div class="flag blue"><span class="label">ESTIMATOR REVIEW:</span> Full ITP (Inspection and Test Plan) not in package. Each hydro test and NDE milestone represents a hold point that drives schedule. Estimate these intervals and build them into the schedule.</div>
+  </div>
+</div>
+
+<!-- 8. LABOR ANALYSIS -->
+<div class="section">
+  <div class="section-header">8. LABOR ANALYSIS (MAN-HOURS — NO RATES)</div>
+  <div class="section-body">
+    <p class="body">Effort estimates in man-hours. Class 4–5 accuracy. Apply appropriate contingency based on project risk profile. Scaffold is the dominant unknown and is called out separately.</p>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Category</th><th>Estimated MH</th><th>Resource</th><th>Basis</th><th>Confidence</th></tr></thead>
+      <tbody>
+        <tr><td>Engineering Review / RFI / Coordination</td><td>8–16 MH</td><td>Engineer / Estimator</td><td>Package complexity, 33 TIs</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>Material Receiving / Handling / Laydown</td><td>40–80 MH</td><td>Material coordinator</td><td>Line count + specialty items (vendor FFG, flare tip)</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>Equipment Mobilization (crane, lifts, welding machines)</td><td>40–60 MH</td><td>Crew-based</td><td>Crane required for flare tip at elevation — size FIELD VERIFY</td><td><span class="badge-low">LOW</span></td></tr>
+        <tr><td>Demolition — Permanent (12 demo sketches, FFG/AI/FG)</td><td>100–180 MH</td><td>Pipefitters + helpers</td><td>12 demo photo sketches — moderate complexity. Asbestos caveat adds major uncertainty.</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>Demolition — Temporary (after permanent commissioned)</td><td>60–100 MH</td><td>Pipefitters</td><td>~23 iso sheets of temp material — often missed</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>Cold Cut Tie-Ins (8 cold cuts on existing pipe)</td><td>24–48 MH</td><td>Pipefitters, cold cut machine</td><td>TI-07, 11, 12, 13, 21, 29, 30 + others</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>Fit-Up — Permanent Piping</td><td>200–300 MH</td><td>Pipefitters</td><td>Elevated stack work multiplies 2–3× vs. grade</td><td><span class="badge-low">LOW–MED</span></td></tr>
+        <tr><td>Fit-Up — Temporary Piping (high volume)</td><td>180–260 MH</td><td>Pipefitters</td><td>12+11 iso sheets at grade — more accessible</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>Welding — CS BW Permanent (6" steam, 2" steam, 24" flare)</td><td>150–220 MH</td><td>CS Welders</td><td>Elevated welds &gt;50': apply 3–4× ground factor</td><td><span class="badge-low">LOW</span></td></tr>
+        <tr><td>Welding — CS BW Temporary (24" flare, 6" steam, 12" tie-ins)</td><td>250–350 MH</td><td>CS Welders</td><td>Ground level, high footage — most accessible welding on job</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>Welding — SS SW (1" at stack top)</td><td>40–80 MH</td><td>SS-qualified welders</td><td>Extreme elevation, SS TIG, 10–15 welds</td><td><span class="badge-low">LOW</span></td></tr>
+        <tr><td>Welding — CS SW Small Bore (3/4" trap legs, 1-1/2" branches)</td><td>60–100 MH</td><td>CS Welders</td><td>Ground and rack level — more accessible</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>Grinding / Weld Prep</td><td>40–80 MH</td><td>Grinders/Fitters</td><td>Standard 20% of welding MH allowance</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>Modified Support Fabrication and Installation</td><td>60–100 MH</td><td>Ironworkers / Fitters</td><td>Structural angle welding to stack shell — elevated. SK015–SK019.</td><td><span class="badge-low">LOW</span></td></tr>
+        <tr><td>Valve Installation</td><td>40–80 MH</td><td>Pipefitters</td><td>Large bore gate valves and small bore SW valves throughout</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>Flange Assembly / Bolt-Up</td><td>80–140 MH</td><td>Pipefitters</td><td>24 bolt-up TIs + permanent flanges + torque per INEOS requirements</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>Insulation Removal (6" steam on stack)</td><td>40–80 MH</td><td>Insulators</td><td>Elevated insulation removal — if asbestos: hazmat scope, dramatically different cost</td><td><span class="badge-low">LOW</span></td></tr>
+        <tr><td>Insulation Installation — New</td><td>60–100 MH</td><td>Insulators</td><td>Pyrogel on 6" steam, Exp. Perlite on 2" steam, PPE expanded metal on condensate</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>NDE Support / Escort</td><td>40–80 MH</td><td>Pipefitter + Tech</td><td>1 craft escort per NDE crew for full NDE duration</td><td><span class="badge-low">LOW</span></td></tr>
+        <tr><td>Hydrostatic Testing (multiple systems)</td><td>60–120 MH</td><td>Pipefitters + Inspector</td><td>Multiple separate test systems — fill, pressurize, hold, drain, dry, document</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>Flare Tip Installation (crane lift, align, connect)</td><td>80–160 MH</td><td>Pipefitters + Rigging</td><td>Crane required. Vendor coordination. Extreme elevation.</td><td><span class="badge-low">LOW</span></td></tr>
+        <tr><td>New FFG Installation (set, connect piping, E&amp;I interface)</td><td>40–80 MH</td><td>Pipefitters + E&amp;I</td><td>John Zink K00265523 — vendor coordination required</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>INEOS Coordination / Permitting / LOTO</td><td>60–100 MH</td><td>Craft + Supervision</td><td>33 TIs, each requiring INEOS permit and LOTO coordination</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>Rework Allowance (5% of welding MH)</td><td>~5% weld MH</td><td>All welders</td><td>Industry standard minimum</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>Punch List / Closeout</td><td>40–80 MH</td><td>Crew mix</td><td>Standard allowance</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>Housekeeping (daily — INEOS requirement)</td><td>40–60 MH</td><td>Helpers</td><td>Explicitly required by INEOS SOW</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td style="color:var(--red);font-weight:bold">SCAFFOLD — Flare Stack</td><td style="color:var(--red);font-weight:bold">FIELD VERIFY REQUIRED</td><td>Scaffold crew</td><td style="color:var(--red)">Could be 20–40% of total project MH. Stack height not in package. ~EL 281' working height inferred from TI plan. This is potentially the largest single cost item.</td><td><span class="badge-high">LOW — MAJOR UNKNOWN</span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="flag"><span class="label">⚠ SCAFFOLD WARNING:</span> Until the stack height is confirmed and a scaffold plan developed, no MH total should be presented as reliable. Scaffold at ~280 feet of working height can exceed the combined MH of all piping work below.</div>
+  </div>
+</div>
+
+<!-- 9. CONSTRUCTION EXECUTION -->
+<div class="section">
+  <div class="section-header">9. CONSTRUCTION EXECUTION PLAN</div>
+  <div class="section-body">
+    <h2 class="sub">Phase 1 — Temporary Flare (Pre-Shutdown)</h2>
+    <ol style="margin-left:20px;line-height:1.8;">
+      <li>Isolate V-1562P steam separator per SK021 and install new tie-in valve/spool at steam outlet (TI-01 bolt-up, TI-11 cold cut + weld)</li>
+      <li>Fabricate and spool 6" temp steam piping (TEMP-002, 11 iso sheets) in shop</li>
+      <li>Install 24" temp flare piping (TEMP-011, 12 iso sheets) from existing 12" header valves to temp flare location at grade</li>
+      <li>Install 12" tie-in spools at TI-24 and TI-25 (existing 20" and 18" flare laterals — bolt-up)</li>
+      <li>Install 6" temp steam run and all trap legs (TEMP-004 through TEMP-016)</li>
+      <li>Hydrotest all temporary piping to 450 PSIG</li>
+      <li>Connect to temporary flare vendor fuel gas supply (scope boundary — coordinate)</li>
+      <li>Commission temporary flare — INEOS switching sequence per SK020</li>
+    </ol>
+    <h2 class="sub">Phase 2 — Permanent Work (Flare Shutdown)</h2>
+    <ol style="margin-left:20px;line-height:1.8;">
+      <li>Shut down MS-468P per SK020 isolation plan after temp flare confirmed operational</li>
+      <li>Execute demolition per SK004–SK013, SK022 — FFG, AI, FG piping. <strong>Complete asbestos survey before any insulated line demolition.</strong></li>
+      <li>Rotate existing 12" valve 180° on MS-468P (TI-27) — must be done before 2" steam line installation</li>
+      <li>Erect scaffold on flare stack for all elevated work</li>
+      <li>Remove existing flare tip — crane lift required</li>
+      <li>Install new MS-2766P flare tip — crane lift, align, land on stack</li>
+      <li>Install 4 spool pieces at stack top (1" SS and CS — TI-02/03/04/05/06 area)</li>
+      <li>Install 2" staged steam line (50315) from grade TI to flare tip — full stack height elevated work</li>
+      <li>Install 6" steam mods (600038) — orifice spools, new block valves (TI-12/13/28/29)</li>
+      <li>Install 24" flare spool (600039) — new isolation valves (TI-06/07/08 area — includes cold cut TI-07)</li>
+      <li>Install new FFG (John Zink K00265523), connect all piping, AI, FG, and E&amp;I</li>
+      <li>Modify orifice plates on 6" and 2" bypass control stations</li>
+      <li>Install new insulation on all modified lines</li>
+      <li>Hydrotest all permanent piping — separate tests per service group</li>
+      <li>NDE per A61X-80-413</li>
+      <li>Commission MS-468P — restore to service</li>
+      <li>Demobilize temp flare, remove all temporary piping (separate work event)</li>
+      <li>Final punch list — formal sign-off with INEOS site contact</li>
+    </ol>
+    <h2 class="sub">Critical Path Items</h2>
+    <div class="flag"><span class="label">Critical 1:</span> Temporary flare commissioning — all permanent work depends on this. Any delay = direct impact to permanent schedule.</div>
+    <div class="flag"><span class="label">Critical 2:</span> Flare tip delivery — vendor lead time not confirmed. Must confirm before scheduling elevated crane work.</div>
+    <div class="flag"><span class="label">Critical 3:</span> Asbestos survey — must be complete before demo begins. If positive, remediation precedes all insulation work.</div>
+    <div class="flag"><span class="label">Critical 4:</span> 12" valve rotation (TI-27) — must be completed before 2" steam line installation. Cannot be done until MS-468P is offline.</div>
+    <h2 class="sub">Equipment Requirements</h2>
+    <ul class="body-list">
+      <li><strong>Crane:</strong> Required for flare tip installation. Size depends on stack height and tip weight — ESTIMATOR REVIEW REQUIRED on lift plan.</li>
+      <li><strong>Man-basket / Aerial lift:</strong> For elevated weld work. Confirm type and duration required.</li>
+      <li><strong>Scaffold:</strong> Major item on flare stack — scope and height must be field-determined.</li>
+      <li><strong>Welding machines:</strong> Minimum 3–4 machines for concurrent temp and permanent scope work.</li>
+      <li><strong>Cold cut machine:</strong> Required for 8 cold cut tie-ins on existing pipe.</li>
+      <li><strong>Hydro test pump and gauges:</strong> Multiple sequential tests required.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 10. RISK REGISTER -->
+<div class="section">
+  <div class="section-header">10. RISK REGISTER</div>
+  <div class="section-body">
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Risk ID</th><th>Description</th><th>Category</th><th>Risk Level</th><th>Mitigation</th></tr></thead>
+      <tbody>
+        <tr><td>R-01</td><td>Flare stack height / scaffold scope not defined. TI plan suggests ~EL 281'-0" working height. Scaffold is potentially the largest single cost driver.</td><td>Missing Dimension</td><td><span class="badge-high">HIGH</span></td><td>Obtain stack height. Commission scaffold engineer before estimating.</td></tr>
+        <tr><td>R-02</td><td>Asbestos survey on insulated lines without blue band is unresolved. If positive, demo scope becomes hazmat remediation.</td><td>Missing Info</td><td><span class="badge-high">HIGH</span></td><td>Obtain asbestos survey results before estimating demolition.</td></tr>
+        <tr><td>R-03</td><td>SS socket welds at top of flare stack. Extreme elevation, SS qualification required, TIG process, tight access at flare tip.</td><td>Fabrication / Access</td><td><span class="badge-high">HIGH</span></td><td>Separate SS weld labor rate. Apply 3–4× access factor. Consider shop-fab alternatives.</td></tr>
+        <tr><td>R-04</td><td>8 cold cut tie-ins into live/energized steam and flare headers. Error = uncontrolled release in live plant.</td><td>Installation / Safety</td><td><span class="badge-high">HIGH</span></td><td>Confirm all isolations per SK020/021 before cold cut. INEOS witness required. Hot work permit.</td></tr>
+        <tr><td>R-05</td><td>4 P&ID sheets listed as primary design documents not in package. Scope verification and complete valve count not possible without them.</td><td>Missing Document</td><td><span class="badge-high">HIGH</span></td><td>Request P&IDs from Preferred Engineering before finalizing estimate.</td></tr>
+        <tr><td>R-06</td><td>Vendor (temp flare) scope boundary not fully defined. Fuel gas connection method and isolation not specified.</td><td>Unclear Scope</td><td><span class="badge-med">MEDIUM</span></td><td>Written scope boundary agreement with temp flare vendor before estimating.</td></tr>
+        <tr><td>R-07</td><td>Flare tip (MS-2766P) delivery date not confirmed. Late delivery while temp flare is operational = cost with no productivity.</td><td>Procurement</td><td><span class="badge-high">HIGH</span></td><td>Confirm flare tip vendor, delivery date, and lead time immediately.</td></tr>
+        <tr><td>R-08</td><td>FE-4040P spool: remove, tag, store, protect, reinstall scope not quantified anywhere.</td><td>Hidden Scope</td><td><span class="badge-med">MEDIUM</span></td><td>Add spool handling labor as a discrete line item.</td></tr>
+        <tr><td>R-09</td><td>Orifice plate modification scope on 6" and 2" bypass control stations — no detail in package.</td><td>Missing Detail</td><td><span class="badge-med">MEDIUM</span></td><td>Request orifice modification details and new plate sizing from engineer.</td></tr>
+        <tr><td>R-10</td><td>NDE standard A61X-80-413 not in package. Cannot estimate NDE labor or schedule percentages.</td><td>Missing Spec</td><td><span class="badge-high">HIGH</span></td><td>Request A61X-80-413 from INEOS before finalizing estimate.</td></tr>
+        <tr><td>R-11</td><td>Temporary piping demolition (~23 iso sheets) is a separate work event after permanent flare is commissioned. Often missed in initial estimates.</td><td>Hidden Scope</td><td><span class="badge-med">MEDIUM</span></td><td>Add temp piping demolition as a separate line item.</td></tr>
+        <tr><td>R-12</td><td>INEOS permitting timeline — each of 33 tie-ins requires a permit. Delays directly impact schedule.</td><td>Access / Admin</td><td><span class="badge-med">MEDIUM</span></td><td>Build permit lead time into schedule. Confirm advance notice requirement.</td></tr>
+        <tr><td>R-13</td><td>Field verify dimensions on all isometrics (Note 2). Spool lengths may require field adjustment after fabrication.</td><td>Drawing Quality</td><td><span class="badge-med">MEDIUM</span></td><td>Include 10–15% spool modification contingency in labor estimate.</td></tr>
+        <tr><td>R-14</td><td>3879-P-SK001 is Rev D — only non-Rev-0 drawing. Indicates multiple design changes in temp scope before IFC.</td><td>Revision Concern</td><td><span class="badge-low">LOW</span></td><td>Verify Rev D is current IFC. Review for carryover scope from earlier revisions.</td></tr>
+        <tr><td>R-15</td><td>Coating scope — new CS pipe supports and modified structural steel require coating per D115 (IZ/EM/PX). Not separately itemized.</td><td>Hidden Scope</td><td><span class="badge-low">LOW</span></td><td>Add coating on all new CS support fabrications and touched structural steel.</td></tr>
+        <tr><td>R-16</td><td>E&amp;I scope for new FFG (panel wiring, XV-4877 reinstall, instrument connections). Vendor drawing marks some items as "customer" vs. "JZ supplied-shipped loose."</td><td>Scope Boundary</td><td><span class="badge-med">MEDIUM</span></td><td>Confirm which E&amp;I items are contractor scope vs. owner scope before estimating.</td></tr>
+        <tr><td>R-17</td><td>New flare tip weight, lift points, and crane radius data not in package. Cannot finalize crane size or lift plan.</td><td>Missing Vendor Data</td><td><span class="badge-high">HIGH</span></td><td>Request vendor drawing with weight, center of gravity, and lift point locations.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<!-- 11. ESTIMATOR AUDIT -->
+<div class="section">
+  <div class="section-header">11. ESTIMATOR AUDIT FINDINGS</div>
+  <div class="section-body">
+    <h2 class="sub">11.1 Scope Likely to Be Missed</h2>
+    <div class="flag amber"><span class="label">⚠ MISS:</span> <strong>Temporary piping demolition</strong> — removal of ~23 iso sheets of temp 24", 6", 12", 2", and 3/4" piping after permanent flare is commissioned. This is a separate work event, not on any permanent scope drawing.</div>
+    <div class="flag amber"><span class="label">⚠ MISS:</span> <strong>Orifice plate modifications</strong> — SOW explicitly calls out modifying flow orifices on 6" and 2" steam bypass stations. No detail drawings exist in the package. Could involve spool removal, new plates, or in-line modifications.</div>
+    <div class="flag amber"><span class="label">⚠ MISS:</span> <strong>FE-4040P spool handling</strong> — Remove, tag, protect, store, reinstall in live plant context with permit and INEOS inspection coordination. Not on any iso as a quantified activity.</div>
+    <div class="flag amber"><span class="label">⚠ MISS:</span> <strong>12" valve rotation (TI-27)</strong> — Rotating a large-bore valve 180° likely requires breaking the valve out of the line, rotating it, and re-installing with new gaskets and bolt sets. Scaffold and rigging may be needed at elevation.</div>
+    <div class="flag amber"><span class="label">⚠ MISS:</span> <strong>Insulation removal and replacement on 6" steam stack line</strong> — Elevated work. If asbestos confirmed: completely separate hazmat scope. Insulation replacement with Pyrogel at 200'+ elevation is expensive per LF.</div>
+    <div class="flag amber"><span class="label">⚠ MISS:</span> <strong>Coating scope</strong> — New CS support fabrications (SK015–SK019) require 3-coat IZ/EM/PX system (D115) per OP-EDS-R-012/014 included in this package. Blasting + 3 coats takes time and materials not separately itemized.</div>
+
+    <h2 class="sub">11.2 Hidden Labor Items</h2>
+    <ul class="body-list">
+      <li><strong>Daily housekeeping</strong> — INEOS SOW explicitly requires it. Estimate dedicated cleanup hours, especially during demo.</li>
+      <li><strong>Permit coordination</strong> — 33 tie-ins, each requiring INEOS permitting and LOTO. Supervisor/engineer hours for preparation.</li>
+      <li><strong>Scaffold daily inspection</strong> — Required on operating plant. Budget modification hours as work progresses.</li>
+      <li><strong>Hydro test documentation</strong> — Each test requires a formal record. Include documentation prep in quality labor.</li>
+      <li><strong>INEOS representative wait time</strong> — SOW requires coordinating every tie-in with an INEOS rep. Wait time is real cost.</li>
+      <li><strong>NDE escort</strong> — 1 craft escort per NDE crew for full NDE duration is standard practice at this type of facility.</li>
+    </ul>
+
+    <h2 class="sub">11.3 Hidden Materials</h2>
+    <ul class="body-list">
+      <li><strong>Isolation flange kits</strong> — Required at electrical isolation points per INEOS standards. Not in any BOM.</li>
+      <li><strong>Temporary caps and plugs</strong> — Multiple open ends during phased construction.</li>
+      <li><strong>Thread sealant / Teflon tape</strong> — All threaded galvanized AI connections. Not listed.</li>
+      <li><strong>Touch-up paint</strong> — Field welds, damaged galvanizing, and support welds. Cold galvanizing (D132) for galvanized repair. IZ/EM/PX touch-up for CS pipe.</li>
+      <li><strong>Spare gaskets and bolts (10% spare)</strong> — Especially important on 24" flanges — limited access for reorder during construction.</li>
+      <li><strong>Timber blocking</strong> — 7"x9"x8'-6" railroad tie cribbing for temp piping. Specified on iso notes but not in a formal materials list.</li>
+    </ul>
+
+    <h2 class="sub">11.4 Hidden QC Requirements</h2>
+    <ul class="body-list">
+      <li><strong>PMI on all SS material</strong> — Expected per typical INEOS standards. Not in package but standard for SS piping in refinery service.</li>
+      <li><strong>Weld maps / traveler documentation</strong> — INEOS will likely require each weld numbered and tracked through NDE and test. Engineering hours to prepare and maintain.</li>
+      <li><strong>Hydro test records</strong> — Formal test record per system. Include documentation time.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 12. ASSUMPTIONS -->
+<div class="section">
+  <div class="section-header">12. ASSUMPTIONS LOG</div>
+  <div class="section-body">
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Assumption ID</th><th>Statement</th><th>Confidence</th></tr></thead>
+      <tbody>
+        <tr><td>A-01</td><td>All CS piping is A106-B or A53-B SMLS where SMLS is specified; A53-B ERW for standard wall large bore — consistent with line list and iso BOM descriptions.</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>A-02</td><td>All CS BW welds use SMAW or GTAW process per standard WPS. No SAW assumed.</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>A-03</td><td>SS socket welds on 1" 41006/07/08/09 lines are GTAW (TIG). Separate SS-qualified welder required.</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>A-04</td><td>Temporary flare vendor is responsible for fuel gas connection at their equipment terminal point. Contractor connects to vendor's stated connection.</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>A-05</td><td>All hydrotests performed with water per line list. No pneumatic testing assumed for any line.</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>A-06</td><td>PWHT is not required per B31.3 for P1 material at the wall thicknesses and temperatures shown.</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>A-07</td><td>Scaffold is required on the flare stack for all elevated work. Scope and height are unknown — must be field-verified.</td><td>CONFIRM</td></tr>
+        <tr><td>A-08</td><td>The 4 spool pieces referenced in the SOW for mating existing piping to new flare tip are the 1" SS/CS connections at stack top (41006/07/08/09). Vendor scope for tip nozzle connections is excluded.</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>A-09</td><td>FE-4040P spool is removed, tagged, stored, and reinstalled by contractor. No additional NDE on spool unless required by inspector.</td><td><span class="badge-med">MEDIUM</span></td></tr>
+        <tr><td>A-10</td><td>John Zink FFG unit (K00265523) is vendor-furnished, owner-supplied. Contractor installs and connects piping. E&amp;I scope boundary requires confirmation.</td><td>CONFIRM</td></tr>
+        <tr><td>A-11</td><td>Coating system D115 (IZ/EM/PX) applies to all new uninsulated CS piping at ambient temperature and all new fabricated support steel.</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>A-12</td><td>No trenching, underground work, or civil/foundation work in this scope. All work is aboveground.</td><td><span class="badge-high">HIGH</span></td></tr>
+        <tr><td>A-13</td><td>Navisworks model (IPB-3879_N2-24022_MASTER MODEL_03-10-26) is available for 3D access. Not reviewed in this analysis.</td><td><span class="badge-high">HIGH</span></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<!-- 13. CLARIFICATION REQUIRED -->
+<div class="section">
+  <div class="section-header">13. CLARIFICATION REQUIRED</div>
+  <div class="section-body">
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>CL No.</th><th>Priority</th><th>Clarification Required</th></tr></thead>
+      <tbody>
+        <tr><td>CL-01</td><td><span class="badge-high">HIGH</span></td><td>Provide the 4 missing P&ID sheets: K-DEMO-410-10030-D-3, K-410-10030-D-3, K-DEMO-410-60015-D-1, K-410-60015-D-1. These are listed as primary design documents and are not in the 136-page package.</td></tr>
+        <tr><td>CL-02</td><td><span class="badge-high">HIGH</span></td><td>Provide INEOS Standard A61X-80-413 (Fabrication, Inspection and Testing of Piping). Referenced on every isometric sheet. Required to determine NDE scope, methods, and percentages.</td></tr>
+        <tr><td>CL-03</td><td><span class="badge-high">HIGH</span></td><td>Provide asbestos survey results for all insulated lines without blue band — specifically the 6" steam line insulation on the flare stack, required before any demo scope commitment.</td></tr>
+        <tr><td>CL-04</td><td><span class="badge-high">HIGH</span></td><td>Confirm working elevation on flare stack MS-468P. Tie-in plan suggests ~EL +281'-0" for flare tip. Confirm this is the highest working point and provide intermediate platform elevations. Required before scaffold estimate.</td></tr>
+        <tr><td>CL-05</td><td><span class="badge-high">HIGH</span></td><td>Provide new flare tip (MS-2766P) vendor drawing with weight, center of gravity, lift point locations, and confirmed delivery date. Required for crane planning and schedule.</td></tr>
+        <tr><td>CL-06</td><td><span class="badge-med">MEDIUM</span></td><td>Clarify contractor vs. owner scope on new FFG (John Zink K00265523): specifically which "shipped loose for field installation" items are contractor-installed, and whether panel wiring/E&amp;I is in contractor scope.</td></tr>
+        <tr><td>CL-07</td><td><span class="badge-med">MEDIUM</span></td><td>Provide orifice plate modification details for 6" and 2" bypass control stations (new orifice bore, plate material, modification method).</td></tr>
+        <tr><td>CL-08</td><td><span class="badge-med">MEDIUM</span></td><td>Confirm scope and count of spool pieces at flare tip top — the SOW references "four pipe spools to mate existing piping to new larger tip." Confirm these are the 1" SS/CS connections on 41006/07/08/09.</td></tr>
+        <tr><td>CL-09</td><td><span class="badge-med">MEDIUM</span></td><td>Confirm INEOS permitting lead time per tie-in point. How many days advance notice is required to obtain a hot work permit for each tie-in event?</td></tr>
+        <tr><td>CL-10</td><td><span class="badge-low">LOW</span></td><td>Confirm whether contractor scope includes supply of timber cribbing/railroad tie blocking for temporary piping supports (specified in Note 4 on temp iso sheets).</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<!-- 14. FIELD VERIFY REQUIRED -->
+<div class="section">
+  <div class="section-header">14. FIELD VERIFY REQUIRED</div>
+  <div class="section-body">
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>FV No.</th><th>Priority</th><th>Field Verify Required</th></tr></thead>
+      <tbody>
+        <tr><td>FV-01</td><td><span class="badge-high">HIGH</span></td><td>All isometric spool dimensions — Note 2 on every isometric: "Field verify dimensions, maintain configuration of pipeline." Material orders should allow for length adjustment. Treat all iso quantities as ±20% until field-verified.</td></tr>
+        <tr><td>FV-02</td><td><span class="badge-high">HIGH</span></td><td>Stack height and all working elevations on MS-468P. Confirm EL +281'-0" is the flare tip elevation. Confirm intermediate platform and support elevations for scaffold planning.</td></tr>
+        <tr><td>FV-03</td><td><span class="badge-high">HIGH</span></td><td>Existing 12" valve on MS-468P (TI-27 rotation) — field confirm valve can be physically rotated without removal from line, or if line break-out and re-install is required.</td></tr>
+        <tr><td>FV-04</td><td><span class="badge-high">HIGH</span></td><td>Physical access and isolation capability at all 33 tie-in points prior to scheduling any hot work. Walk each TI before committing to schedule.</td></tr>
+        <tr><td>FV-05</td><td><span class="badge-high">HIGH</span></td><td>Location and condition of FE-4040P spool (marked SAVE on drawings). Confirm spool is in as-built location before planning removal.</td></tr>
+        <tr><td>FV-06</td><td><span class="badge-high">HIGH</span></td><td>XV-4877 condition — confirm valve is serviceable before including reuse in schedule. If not serviceable, replacement must be added to scope.</td></tr>
+        <tr><td>FV-07</td><td><span class="badge-med">MEDIUM</span></td><td>Access for TI-12 and TI-13 (1" branch taps into 6" steam main at elevation on flare stack). Confirm cold cut machine access and cold cut method.</td></tr>
+        <tr><td>FV-08</td><td><span class="badge-med">MEDIUM</span></td><td>Temporary flare tie-in locations (TI-24/25) and routing corridor for 24" temp piping. Confirm ground conditions and obstructions along TEMP-011 route as shown on plan SK003.</td></tr>
+        <tr><td>FV-09</td><td><span class="badge-med">MEDIUM</span></td><td>Condition of existing pipe support steel at all modified support locations (SK015–SK019). Confirm weld-ability and structural adequacy before field welding new supports to existing structure.</td></tr>
+        <tr><td>FV-10</td><td><span class="badge-low">LOW</span></td><td>Confirm Navisworks model (IPB-3879_N2-24022_MASTER MODEL_03-10-26) is current and accessible for 3D planning and clash detection.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<!-- 15. CONFIDENCE ASSESSMENT -->
+<div class="section">
+  <div class="section-header">15. CONFIDENCE ASSESSMENT</div>
+  <div class="section-body">
+    <h2 class="sub">Score Breakdown by Section</h2>
+    <div class="tbl-wrap"><table class="score-table">
+      <thead><tr><th>Section</th><th>Score (0–100)</th><th>Limiting Factor</th></tr></thead>
+      <tbody>
+        <tr><td>Drawing Register</td><td>95</td><td>Package IFC and indexed. P&IDs referenced only — not present.</td></tr>
+        <tr><td>Scope Summary</td><td>80</td><td>SOW text is thorough. Vendor scope boundary unclear. Demo detail in photos only.</td></tr>
+        <tr><td>Material Takeoff</td><td>65</td><td>ISO BOM schedules readable. All pipe lengths carry field-verify note. Fitting counts not fully tallied.</td></tr>
+        <tr><td>Weld Register</td><td>60</td><td>Count estimated from ISO sheets and TI schedule. SS welds at elevation are HIGH unknowns.</td></tr>
+        <tr><td>Code / Procedure Review</td><td>85</td><td>Spec register is complete and codes are standard for this type of facility.</td></tr>
+        <tr><td>QC / NDE Review</td><td>45</td><td>A61X-80-413 not in package. Cannot determine NDE scope accurately.</td></tr>
+        <tr><td>Labor Analysis</td><td>50</td><td>Scaffold is the dominant unknown. Elevated work factor for ~280' stack unquantified. Temp piping volume is high.</td></tr>
+        <tr><td>Construction Execution</td><td>70</td><td>Sequence is logical. Crane plan and scaffold plan are missing.</td></tr>
+        <tr><td>Risk Register</td><td>90</td><td>Risks systematically identified from available information.</td></tr>
+        <tr><td>Estimator Audit</td><td>90</td><td>Scope gaps identified from package review — cannot verify without P&IDs and NDE standard.</td></tr>
+        <tr><td><strong>OVERALL</strong></td><td><strong>68</strong></td><td>Major blockers: scaffold, NDE standard, P&IDs, asbestos survey, SS welds at elevation.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 class="sub">What Would Raise This Score</h2>
+    <ul class="body-list">
+      <li>Scaffold plan or stack elevation data confirmed → +10 points</li>
+      <li>A61X-80-413 NDE standard obtained → +8 points</li>
+      <li>P&ID sheets provided → +5 points</li>
+      <li>Asbestos survey results obtained → +5 points</li>
+      <li>Flare tip delivery date and weight confirmed → +4 points</li>
+      <li>Isometric field verify measurements taken → +5 points</li>
+      <li>3D Navisworks model accessed → +3 points</li>
+    </ul>
+
+    <h2 class="sub">Areas Requiring Human Estimator Review (Cannot Be Resolved from Drawings)</h2>
+    <ul class="body-list">
+      <li><strong>Scaffold:</strong> Requires site visit and structural assessment of flare stack. A scaffold engineer must walk the job.</li>
+      <li><strong>SS socket weld labor at elevation:</strong> Labor factor for TIG welding SS at ~280' is experience-dependent. Estimator with flare stack experience must apply the correct factor.</li>
+      <li><strong>Flare tip installation rigging:</strong> Crane size and lift plan require vendor weight data and boom radius calculation. Rigging engineer required.</li>
+      <li><strong>NDE scope:</strong> Must be determined from A61X-80-413. NDE estimator should review standard and apply percentages to weld counts in Section 5.</li>
+      <li><strong>Asbestos handling (if positive):</strong> Certified abatement contractor scope must be developed separately from piping estimate.</li>
+      <li><strong>Temp flare vendor coordination:</strong> Written scope boundary meeting required before estimating interface work.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="footer">
+  <p><strong>FOR ESTIMATING VALIDATION PURPOSES ONLY — NOT A BID DOCUMENT</strong></p>
+  <p style="margin-top:8px">Project: N2-24022 / IPB-3879 &nbsp;|&nbsp; INEOS Polyolefins Battleground &nbsp;|&nbsp; PP Flare Tip NHVcz Improvement &nbsp;|&nbsp; Overall Confidence: 68/100</p>
+</div>
+
+</div>
+</body>
+</html>
