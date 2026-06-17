@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riva Hospitality Partners | More Revenue. Better Retention. Built to Scale.</title>
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <meta name="description" content="Riva Hospitality Partners is a growth partner for independent restaurants, multi-unit operators, bars, marinas, event venues, and private clubs. We identify revenue leaks, build retention systems, optimize delivery platforms, grow catering, strengthen operations, and increase enterprise value — across every channel that drives profitability." />
+  <link rel="canonical" href="https://www.rivastrategies.com/riva-hospitality-consulting/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Riva Hospitality Partners | More Revenue. Better Retention. Built to Scale.",
+    "description": "Hospitality growth partner for restaurants, bars, marinas, hotel groups, event venues, and private clubs. Revenue growth, guest retention, catering, delivery platform performance, loyalty, reputation management, operational alignment, and enterprise value.",
+    "url": "https://www.rivastrategies.com/riva-hospitality-consulting/",
+    "isPartOf": { "@id": "https://www.rivastrategies.com/#website" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.rivastrategies.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Riva Hospitality Partners", "item": "https://www.rivastrategies.com/riva-hospitality-consulting/" }
+      ]
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Riva Hospitality Partners",
+      "url": "https://www.rivastrategies.com/riva-hospitality-consulting/",
+      "telephone": "+1-832-905-0570",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Riva Strategies",
+        "url": "https://www.rivastrategies.com/"
+      }
+    }
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* ─── RHC Brand Tokens ─────────────────────────────────────── */
+    :root {
+      --rhc-navy:       #0D1B2A;
+      --rhc-copper:     #B46A3C;
+      --rhc-copper-lt:  #D19A72;
+      --rhc-copper-dk:  #8A4E28;
+      --rhc-white:      #FFFFFF;
+      --rhc-charcoal:   #2C2C2C;
+      --rhc-slate:      #4A5568;
+      --rhc-cream:      #FAF8F5;
+      --rhc-divider:    rgba(180,106,60,0.30);
+      --riva-blue:      #0A2F73;
+      --riva-gold:      #C9A24D;
+      --riva-gold-dark: #B08A3C;
+    }
+
+    body { font-family:'Inter',sans-serif; scroll-behavior:smooth; background:var(--rhc-white); color:var(--rhc-charcoal); }
+    .font-display { font-family:'Montserrat',sans-serif; }
+    .font-accent  { font-family:'Cinzel',serif; }
+
+    .glass-header { background:rgba(255,255,255,0.88); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
+    .nav-link { position:relative; transition:all 0.3s ease; }
+    .nav-link::after { content:''; position:absolute; width:0; height:2px; bottom:-4px; left:0; background-color:var(--riva-gold); transition:width 0.3s ease; }
+    .nav-link:hover::after { width:100%; }
+
+    @keyframes page-entrance { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
+    .animate-page-entrance { animation:page-entrance 0.9s cubic-bezier(0.2,0.8,0.2,1) forwards; }
+
+    .copper-rule      { display:block; width:48px; height:2px; background:var(--rhc-copper); }
+    .copper-rule-full { display:block; width:100%; height:1px; background:var(--rhc-divider); }
+
+    .hero-bg { background-color:var(--rhc-navy); position:relative; overflow:hidden; }
+    .hero-bg::before {
+      content:''; position:absolute; inset:0; pointer-events:none;
+      background:
+        radial-gradient(ellipse 60% 80% at 80% 40%, rgba(180,106,60,0.13) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 10% 85%, rgba(180,106,60,0.07) 0%, transparent 60%);
+    }
+
+    .stat-card { border-top:2px solid var(--rhc-copper); background:rgba(255,255,255,0.04); transition:background 0.3s ease; }
+    .stat-card:hover { background:rgba(180,106,60,0.08); }
+
+    .problem-item { border-left:3px solid transparent; padding:18px 24px; transition:border-color 0.25s ease, background 0.25s ease; }
+    .problem-item:hover { border-left-color:var(--rhc-copper); background:rgba(180,106,60,0.04); }
+
+    .lever-card { border:1px solid #E2E8F0; background:var(--rhc-white); transition:border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease; }
+    .lever-card:hover { border-color:var(--rhc-copper); transform:translateY(-5px); box-shadow:0 18px 40px -12px rgba(180,106,60,0.18); }
+
+    .channel-pill { display:flex; align-items:center; gap:10px; border:1px solid rgba(180,106,60,0.22); background:rgba(180,106,60,0.05); border-radius:3px; padding:14px 18px; transition:border-color 0.22s ease, background 0.22s ease; }
+    .channel-pill:hover { border-color:var(--rhc-copper); background:rgba(180,106,60,0.10); }
+
+    .industry-tile { background:var(--rhc-navy); border:1px solid rgba(180,106,60,0.20); transition:border-color 0.25s ease, background 0.25s ease; }
+    .industry-tile:hover { border-color:var(--rhc-copper); background:rgba(13,27,42,0.88); }
+
+    .break-item { border-top:1px solid rgba(255,255,255,0.08); padding:22px 0; transition:border-color 0.2s ease; }
+    .break-item:hover { border-top-color:rgba(180,106,60,0.4); }
+
+    /* ─── Case study card ──────────────────────────────────────── */
+    .case-card { background:var(--rhc-white); border:1px solid #E2E8F0; transition:border-color 0.25s ease, box-shadow 0.25s ease; }
+    .case-card:hover { border-color:var(--rhc-copper); box-shadow:0 16px 40px -12px rgba(180,106,60,0.14); }
+
+    .icon-circle { width:50px; height:50px; border-radius:50%; border:1px solid rgba(180,106,60,0.35); background:rgba(180,106,60,0.08); display:flex; align-items:center; justify-content:center; color:var(--rhc-copper); flex-shrink:0; }
+
+    .btn-copper        { background:var(--rhc-copper); color:var(--rhc-white); transition:background 0.25s ease,transform 0.2s ease; }
+    .btn-copper:hover  { background:var(--rhc-copper-dk); transform:translateY(-2px); }
+    .btn-outline-copper { border:2px solid var(--rhc-copper); color:var(--rhc-copper); background:transparent; transition:background 0.25s ease,color 0.25s ease,transform 0.2s ease; }
+    .btn-outline-copper:hover { background:var(--rhc-copper); color:var(--rhc-white); transform:translateY(-2px); }
+    .btn-outline-white  { border:2px solid rgba(255,255,255,0.35); color:var(--rhc-white); background:transparent; transition:border-color 0.25s ease,background 0.25s ease,transform 0.2s ease; }
+    .btn-outline-white:hover  { border-color:var(--rhc-copper); background:rgba(180,106,60,0.10); transform:translateY(-2px); }
+
+    .scorecard-row { display:flex; align-items:center; justify-content:space-between; padding:14px 0; border-bottom:1px solid rgba(0,0,0,0.06); }
+    .proof-band { background:var(--rhc-cream); border-top:1px solid #EDE8E0; border-bottom:1px solid #EDE8E0; }
+
+    ::selection { background:var(--rhc-copper); color:var(--rhc-white); }
+  </style>
+</head>
+
+<body class="antialiased overflow-x-hidden">
+
+  <!-- ════════════════════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════════════════ -->
+  <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center">
+        <a href="/" class="flex items-center">
+          <img src="/images/Horizontal.png" alt="Riva Hospitality Partners" class="h-20 w-auto" />
+        </a>
+        <nav class="hidden md:flex space-x-10 items-center">
+          <a href="/"            class="nav-link text-sm font-semibold tracking-wide" style="color:#4B5563;">Home</a>
+          <a href="/services/"   class="nav-link text-sm font-semibold tracking-wide" style="color:#4B5563;">Services</a>
+          <a href="/industries/" class="nav-link text-sm font-semibold tracking-wide" style="color:#4B5563;">Industries</a>
+          <a href="/faq/"        class="nav-link text-sm font-semibold tracking-wide" style="color:#4B5563;">FAQ</a>
+          <a href="/contact/"    class="px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-widest transition-all shadow-md"
+             style="background:var(--riva-gold);color:var(--riva-blue);"
+             onmouseover="this.style.background='var(--riva-gold-dark)'"
+             onmouseout="this.style.background='var(--riva-gold)'">Book Strategy Call</a>
+        </nav>
+        <button id="mobile-menu-btn" class="md:hidden p-2" style="color:var(--riva-blue);">
+          <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-nav" class="hidden md:hidden absolute w-full bg-white border-b border-gray-100 shadow-xl py-6 px-6 space-y-4">
+      <a href="/"            class="block text-lg font-bold" style="color:var(--riva-blue);">Home</a>
+      <a href="/services/"   class="block text-lg font-bold" style="color:var(--riva-blue);">Services</a>
+      <a href="/industries/" class="block text-lg font-bold" style="color:var(--riva-blue);">Industries</a>
+      <a href="/faq/"        class="block text-lg font-bold" style="color:var(--riva-blue);">FAQ</a>
+      <a href="/contact/"    class="block w-full text-center py-4 rounded font-bold uppercase tracking-widest"
+         style="background:var(--riva-gold);color:var(--riva-blue);">Book Strategy Call</a>
+    </div>
+  </header>
+
+  <main class="flex-grow pt-20">
+    <div class="animate-page-entrance">
+
+      <!-- ══════════════════════════════════════════════════════
+           HERO
+           Chosen headline: "More Revenue. Better Retention. A Growth Partner Who Understands Your Entire Business."
+           Rationale: Leads with outcomes, not credentials. Directly addresses
+           the operator's frustration — every vendor only understands one piece.
+      ══════════════════════════════════════════════════════ -->
+      <section class="hero-bg text-white pt-28 pb-36 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+
+            <div class="lg:col-span-7">
+              <p class="font-accent text-xs tracking-[0.35em] uppercase mb-6" style="color:var(--rhc-copper);">Powered by Riva Strategies</p>
+
+              <h1 class="font-display font-black tracking-tight leading-[1.04] mb-8" style="font-size:clamp(2.4rem,5vw,4.2rem);">
+                More Revenue.<br />
+                Better Retention.<br />
+                <span style="color:var(--rhc-copper);">A Growth Partner Who Understands Your Entire Business.</span>
+              </h1>
+
+              <span class="copper-rule block mb-8"></span>
+
+              <p class="text-lg leading-relaxed mb-5 font-light max-w-xl" style="color:rgba(255,255,255,0.75);">
+                You already have vendors. You already have software. You may already have marketing. What most ownership groups don't have is a partner evaluating the entire operation through the lens of revenue, profitability, and long-term enterprise value.
+              </p>
+              <p class="text-base leading-relaxed mb-12 font-light max-w-xl" style="color:rgba(255,255,255,0.48);">
+                Riva Hospitality Partners works across every lever that drives revenue — visibility, retention, reputation, catering, delivery, events, loyalty, and operational alignment. We find where the money is being lost and build the systems to recover it.
+              </p>
+
+              <div class="flex flex-col sm:flex-row gap-5">
+                <a href="/contact/" class="btn-copper px-10 py-4 rounded-sm font-bold text-xs uppercase tracking-widest text-center">Find Your Biggest Revenue Leak</a>
+                <a href="#five-problems" class="btn-outline-white px-10 py-4 rounded-sm font-bold text-xs uppercase tracking-widest text-center">How We Work</a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 flex items-center justify-center lg:justify-end">
+              <img src="/images/Blue%20Logo.png" alt="Riva Hospitality Partners"
+                class="w-full max-w-sm lg:max-w-none"
+                style="filter:drop-shadow(0 24px 48px rgba(0,0,0,0.35));" />
+            </div>
+          </div>
+
+          <!-- Proof stats -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
+            <div class="stat-card rounded-sm p-6">
+              <p class="font-display font-black text-3xl mb-1" style="color:var(--rhc-copper);">15+</p>
+              <p class="text-xs uppercase tracking-widest font-semibold" style="color:rgba(255,255,255,0.42);">Revenue &amp; Operations Dimensions Evaluated</p>
+            </div>
+            <div class="stat-card rounded-sm p-6">
+              <p class="font-display font-black text-3xl mb-1" style="color:var(--rhc-copper);">5</p>
+              <p class="text-xs uppercase tracking-widest font-semibold" style="color:rgba(255,255,255,0.42);">Interconnected Growth Levers</p>
+            </div>
+            <div class="stat-card rounded-sm p-6">
+              <p class="font-display font-black text-3xl mb-1" style="color:var(--rhc-copper);">Texas</p>
+              <p class="text-xs uppercase tracking-widest font-semibold" style="color:rgba(255,255,255,0.42);">Gulf Coast &amp; Destination Markets</p>
+            </div>
+            <div class="stat-card rounded-sm p-6">
+              <p class="font-display font-black text-3xl mb-1" style="color:var(--rhc-copper);">Zero</p>
+              <p class="text-xs uppercase tracking-widest font-semibold" style="color:rgba(255,255,255,0.42);">Tactics Recommended Before the Audit</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           FIVE PROBLEMS
+           Goal: The reader stops and says "that's exactly what's happening."
+      ══════════════════════════════════════════════════════ -->
+      <section id="five-problems" class="py-28 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+
+            <div>
+              <p class="font-accent text-xs tracking-[0.35em] uppercase mb-4" style="color:var(--rhc-copper);">Why Revenue Stalls</p>
+              <h2 class="font-display font-black text-4xl md:text-5xl tracking-tight mb-6" style="color:var(--rhc-navy);">
+                Your Business Doesn't<br />Have One Problem.<br />
+                <span style="color:var(--rhc-copper);">It Has Five.</span>
+              </h2>
+              <span class="copper-rule block mb-8"></span>
+              <p class="text-base leading-relaxed mb-3" style="color:var(--rhc-slate);">
+                Revenue slows when any one of them breaks — and in most operations, more than one is underperforming at the same time. The challenge is that every vendor you've worked with only saw their piece. No one has ever looked at all five together and told you which one is costing you the most.
+              </p>
+              <p class="text-base leading-relaxed mb-10" style="color:var(--rhc-slate);">
+                That's the first thing we do. We look at all five simultaneously, score each one, and identify where the biggest revenue opportunity is before we recommend anything.
+              </p>
+
+              <div class="space-y-1 mb-10">
+
+                <div class="problem-item rounded-sm">
+                  <div class="flex items-start gap-4">
+                    <div class="icon-circle mt-1" style="width:42px;height:42px;flex-shrink:0;">
+                      <i data-lucide="search" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <p class="font-display font-black text-lg mb-1" style="color:var(--rhc-navy);">Visibility</p>
+                      <p class="text-sm leading-relaxed" style="color:var(--rhc-slate);">Guests can't choose you if they can't find you. If your Google ranking has slipped, your review velocity is stagnant, or a competitor with a worse product is showing up above you in local search — you're losing revenue to a solvable problem. Spending more on advertising won't fix a visibility gap. The right infrastructure will.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="problem-item rounded-sm">
+                  <div class="flex items-start gap-4">
+                    <div class="icon-circle mt-1" style="width:42px;height:42px;flex-shrink:0;">
+                      <i data-lucide="repeat" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <p class="font-display font-black text-lg mb-1" style="color:var(--rhc-navy);">Retention</p>
+                      <p class="text-sm leading-relaxed" style="color:var(--rhc-slate);">Acquiring a new guest costs five to seven times more than bringing an existing one back. If your loyalty program has low active participation, your email list isn't driving return visits, or guests are coming once and not returning — you're investing in acquisition you shouldn't need to make. Guest frequency is a revenue lever. Most operators treat it as a marketing problem. We treat it as a systems problem.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="problem-item rounded-sm">
+                  <div class="flex items-start gap-4">
+                    <div class="icon-circle mt-1" style="width:42px;height:42px;flex-shrink:0;">
+                      <i data-lucide="star" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <p class="font-display font-black text-lg mb-1" style="color:var(--rhc-navy);">Reputation</p>
+                      <p class="text-sm leading-relaxed" style="color:var(--rhc-slate);">Your review profile is a search ranking signal and a conversion mechanism. An unmanaged reputation — slow review velocity, unanswered negatives, no structured response system — suppresses your Google visibility and undermines the confidence of guests deciding where to spend. This is not a PR function. It's a revenue function. And it compounds in both directions.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="problem-item rounded-sm">
+                  <div class="flex items-start gap-4">
+                    <div class="icon-circle mt-1" style="width:42px;height:42px;flex-shrink:0;">
+                      <i data-lucide="trending-up" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <p class="font-display font-black text-lg mb-1" style="color:var(--rhc-navy);">Revenue Channels</p>
+                      <p class="text-sm leading-relaxed" style="color:var(--rhc-slate);">The dining room is almost never the only place revenue can grow. Catering that isn't being actively marketed. Delivery platforms that are listed but not managed. Private dining space sitting empty most weeks. Event inquiries that go unanswered for three days. Corporate accounts that no one is pursuing. Most operators are aware these opportunities exist. Most don't have a partner whose job is to activate them.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="problem-item rounded-sm">
+                  <div class="flex items-start gap-4">
+                    <div class="icon-circle mt-1" style="width:42px;height:42px;flex-shrink:0;">
+                      <i data-lucide="settings" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <p class="font-display font-black text-lg mb-1" style="color:var(--rhc-navy);">Systems</p>
+                      <p class="text-sm leading-relaxed" style="color:var(--rhc-slate);">More volume through a broken operation doesn't create more profit — it creates more strain. If catering leads go unanswered, event inquiries have no defined follow-up, ownership has no reporting visibility into revenue by channel, or no one is accountable for the growth initiatives that exist on paper — you don't have a growth problem. You have an infrastructure problem. Growth systems require operational infrastructure to hold.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="rounded-sm p-8" style="background:var(--rhc-cream);border-left:3px solid var(--rhc-copper);">
+                <p class="font-display font-bold text-base mb-2" style="color:var(--rhc-navy);">We identify which of the five is costing you the most right now — then build a prioritized execution plan around it.</p>
+                <p class="text-sm" style="color:var(--rhc-slate);">No recommendations until the diagnosis is complete. No tactics until we understand the operation.</p>
+              </div>
+            </div>
+
+            <!-- Right col -->
+            <div class="flex flex-col gap-10">
+              <div class="flex items-center justify-center p-10 rounded-sm" style="background:var(--rhc-cream);">
+                <img src="/images/Horizontal.png" alt="Riva Hospitality Partners — Strategy. Systems. Revenue." class="w-full max-w-md" />
+              </div>
+
+              <div class="rounded-sm p-8" style="background:var(--rhc-navy);">
+                <p class="font-accent text-[10px] tracking-[0.3em] uppercase mb-4" style="color:var(--rhc-copper);">How We Think</p>
+                <h3 class="font-display font-black text-xl mb-4 text-white">We do not sell tactics.<br />We build revenue systems.</h3>
+                <span class="copper-rule block mb-5"></span>
+                <p class="text-sm leading-relaxed mb-4" style="color:rgba(255,255,255,0.62);">
+                  Most operators have purchased something that promised revenue and delivered activity — a loyalty platform with no engagement strategy, a Google Ads account with no conversion tracking, a social media package with no connection to guest frequency or catering growth. The tools are fine. The problem is they were never connected to a system.
+                </p>
+                <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.40);">
+                  We look at the entire operation, identify the highest-leverage opportunity, and build a growth system that produces compounding results — not a campaign that runs for 90 days and disappears.
+                </p>
+              </div>
+
+              <a href="/contact/" class="btn-copper px-8 py-5 rounded-sm font-bold text-xs uppercase tracking-widest text-center block">
+                Start With a Revenue Audit
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           GROWTH DOESN'T BREAK BUSINESSES — WEAK SYSTEMS DO
+      ══════════════════════════════════════════════════════ -->
+      <section class="py-28 relative overflow-hidden" style="background:var(--rhc-navy);">
+        <div class="absolute inset-0 pointer-events-none"
+          style="background:radial-gradient(ellipse 80% 60% at 20% 50%, rgba(180,106,60,0.08) 0%, transparent 65%);"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+            <div>
+              <p class="font-accent text-xs tracking-[0.35em] uppercase mb-4" style="color:var(--rhc-copper);">The Risk Ownership Doesn't See</p>
+              <h2 class="font-display font-black text-4xl md:text-5xl tracking-tight text-white mb-6" style="line-height:1.08;">
+                More Guests Won't Fix<br />a Broken System.<br />
+                <span style="color:var(--rhc-copper);">They'll Expose It.</span>
+              </h2>
+              <span class="copper-rule block mb-8"></span>
+              <p class="text-base leading-relaxed mb-5" style="color:rgba(255,255,255,0.68);">
+                Running more volume through an operation that has a broken catering intake, an unmanaged review profile, a dormant loyalty database, or no event inquiry follow-up doesn't create more profit. It creates more pressure on a team that's already stretched — and accelerates problems that were already there.
+              </p>
+              <p class="text-base leading-relaxed mb-12" style="color:rgba(255,255,255,0.42);">
+                Before we recommend any growth initiative, we make sure the infrastructure exists to support it. Revenue requires systems. Systems require accountability. We help ownership build both.
+              </p>
+              <a href="/contact/" class="btn-copper px-10 py-4 rounded-sm font-bold text-xs uppercase tracking-widest inline-block">
+                Find Where Revenue Is Leaking
+              </a>
+            </div>
+
+            <div class="space-y-0">
+              <span class="copper-rule-full block"></span>
+
+              <div class="break-item">
+                <div class="flex items-start gap-5">
+                  <div class="icon-circle mt-1" style="width:40px;height:40px;flex-shrink:0;">
+                    <i data-lucide="mail-x" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <p class="font-display font-bold text-base text-white mb-2">Catering inquiries go unanswered.</p>
+                    <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.52);">A single missed corporate catering order can represent $3,000–$20,000 in revenue. Without a defined intake process, response time standard, and follow-up owner, these opportunities disappear quietly. The operator never sees them leave — they just never arrive.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="break-item">
+                <div class="flex items-start gap-5">
+                  <div class="icon-circle mt-1" style="width:40px;height:40px;flex-shrink:0;">
+                    <i data-lucide="star-off" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <p class="font-display font-bold text-base text-white mb-2">Reviews accumulate without a response.</p>
+                    <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.52);">Google's local ranking algorithm weights review recency, volume, and owner response rate. An operation generating 10 reviews a month will outrank a better operation generating two — regardless of product quality. Reputation is not a marketing function. It's a revenue function. Every unmanaged review is a ranking signal and a conversion signal working against you.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="break-item">
+                <div class="flex items-start gap-5">
+                  <div class="icon-circle mt-1" style="width:40px;height:40px;flex-shrink:0;">
+                    <i data-lucide="package-x" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <p class="font-display font-bold text-base text-white mb-2">Delivery platforms are set up and forgotten.</p>
+                    <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.52);">Being listed on DoorDash or Uber Eats is not the same as performing on them. Menu architecture, item naming, photography, pricing strategy relative to platform fees, and in-platform search position all determine how much revenue those channels actually produce. Most operators are leaving 20–40% of available delivery revenue on the table — not because they aren't trying, but because no one has evaluated the platform as a revenue channel.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="break-item">
+                <div class="flex items-start gap-5">
+                  <div class="icon-circle mt-1" style="width:40px;height:40px;flex-shrink:0;">
+                    <i data-lucide="users-x" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <p class="font-display font-bold text-base text-white mb-2">Loyalty programs collect members but don't drive frequency.</p>
+                    <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.52);">A loyalty database with no active engagement strategy is a list that costs money to maintain and produces nothing. Without triggered visit-cycle campaigns, re-activation sequences, and VIP program management, enrollment numbers look good on paper while actual guest frequency stays flat. The program you launched isn't failing. It was never activated.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="break-item">
+                <div class="flex items-start gap-5">
+                  <div class="icon-circle mt-1" style="width:40px;height:40px;flex-shrink:0;">
+                    <i data-lucide="calendar-x" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <p class="font-display font-bold text-base text-white mb-2">Private dining and event revenue goes uncaptured.</p>
+                    <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.52);">Private event and group sales revenue doesn't happen by accident. It requires a proactive sales posture, a defined inquiry intake process, a proposal turnaround standard, and assigned ownership. Without that structure, high-value bookings go to whoever responds fastest — and that's usually not you.</p>
+                  </div>
+                </div>
+              </div>
+
+              <span class="copper-rule-full block"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           FIVE LEVERS — ONE REVENUE ENGINE
+      ══════════════════════════════════════════════════════ -->
+      <section id="five-levers" class="py-28 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <div class="max-w-2xl mb-16">
+            <p class="font-accent text-xs tracking-[0.35em] uppercase mb-4" style="color:var(--rhc-copper);">The Growth Framework</p>
+            <h2 class="font-display font-black text-4xl md:text-5xl tracking-tight mb-6" style="color:var(--rhc-navy);">
+              Five Levers.<br />
+              <span style="color:var(--rhc-copper);">One Revenue Engine.</span>
+            </h2>
+            <span class="copper-rule block mb-6"></span>
+            <p class="text-base leading-relaxed" style="color:var(--rhc-slate);">
+              Every engagement starts by identifying which lever is underperforming and what it's costing the business in actual revenue. Then we sequence the execution — highest impact first, with accountability built in at every step.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+            <!-- Lever 1 -->
+            <div class="lever-card rounded-sm p-9">
+              <div class="icon-circle mb-6"><i data-lucide="search" class="w-5 h-5"></i></div>
+              <p class="font-accent text-[10px] tracking-[0.3em] uppercase mb-3" style="color:var(--rhc-copper);">Lever 01</p>
+              <h3 class="font-display font-black text-xl mb-4" style="color:var(--rhc-navy);">Visibility</h3>
+              <span class="copper-rule block mb-5" style="width:32px;"></span>
+              <p class="text-sm mb-5 leading-relaxed" style="color:var(--rhc-slate);">If guests can't find you on Google, the Maps pack, or in AI-driven search results — they are going to whoever shows up above you. Visibility is a revenue channel, not a marketing exercise. We treat it like one.</p>
+              <ul class="space-y-2 text-sm" style="color:var(--rhc-slate);">
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Google Business Profile optimization &amp; completeness</li>
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Local SEO, AI search &amp; citation consistency</li>
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Review velocity — volume, recency &amp; response rate</li>
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Competitive search gap analysis &amp; local ranking position</li>
+              </ul>
+            </div>
+
+            <!-- Lever 2 -->
+            <div class="lever-card rounded-sm p-9">
+              <div class="icon-circle mb-6"><i data-lucide="users" class="w-5 h-5"></i></div>
+              <p class="font-accent text-[10px] tracking-[0.3em] uppercase mb-3" style="color:var(--rhc-copper);">Lever 02</p>
+              <h3 class="font-display font-black text-xl mb-4" style="color:var(--rhc-navy);">Guest Acquisition</h3>
+              <span class="copper-rule block mb-5" style="width:32px;"></span>
+              <p class="text-sm mb-5 leading-relaxed" style="color:var(--rhc-slate);">Bringing in new guests requires the right channel, the right offer structure, and the right message — not just spend. We identify which acquisition channels produce actual covers, actual catering orders, and actual event bookings — not just traffic.</p>
+              <ul class="space-y-2 text-sm" style="color:var(--rhc-slate);">
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Meta &amp; Google paid advertising structured for reservations, not impressions</li>
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Offer &amp; promotional architecture that drives trial without eroding margin</li>
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Event marketing, seasonal campaigns &amp; launch strategies</li>
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Community positioning &amp; partnership development</li>
+              </ul>
+            </div>
+
+            <!-- Lever 3 -->
+            <div class="lever-card rounded-sm p-9">
+              <div class="icon-circle mb-6"><i data-lucide="repeat" class="w-5 h-5"></i></div>
+              <p class="font-accent text-[10px] tracking-[0.3em] uppercase mb-3" style="color:var(--rhc-copper);">Lever 03</p>
+              <h3 class="font-display font-black text-xl mb-4" style="color:var(--rhc-navy);">Guest Retention</h3>
+              <span class="copper-rule block mb-5" style="width:32px;"></span>
+              <p class="text-sm mb-5 leading-relaxed" style="color:var(--rhc-slate);">Retention is the highest-margin growth lever available to any hospitality operation. A guest who visits three times per year instead of one is three times the revenue at zero additional acquisition cost. Increasing guest frequency by even one visit per year across your existing base is a significant revenue event. We build the systems that make it happen.</p>
+              <ul class="space-y-2 text-sm" style="color:var(--rhc-slate);">
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Loyalty program design, launch &amp; active participation management</li>
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>VIP programs for high-frequency, high-value guests</li>
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Email &amp; SMS campaigns that drive return visits, not open rates</li>
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Visit-cycle compression — shortening the time between guest visits</li>
+              </ul>
+            </div>
+
+            <!-- Lever 4 -->
+            <div class="lever-card rounded-sm p-9">
+              <div class="icon-circle mb-6"><i data-lucide="trending-up" class="w-5 h-5"></i></div>
+              <p class="font-accent text-[10px] tracking-[0.3em] uppercase mb-3" style="color:var(--rhc-copper);">Lever 04</p>
+              <h3 class="font-display font-black text-xl mb-4" style="color:var(--rhc-navy);">Revenue Expansion</h3>
+              <span class="copper-rule block mb-5" style="width:32px;"></span>
+              <p class="text-sm mb-5 leading-relaxed" style="color:var(--rhc-slate);">The dining room is not the only place revenue can grow — it's just the most visible one. Most operations already have catering capability, delivery platform presence, private dining space, and event capacity. The difference between operators who monetize those channels and those who don't is almost always a systems and execution problem, not a demand problem.</p>
+              <ul class="space-y-2 text-sm" style="color:var(--rhc-slate);">
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Catering growth — marketing, intake systems &amp; proposal workflows</li>
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Private dining, event sales &amp; venue buyout revenue</li>
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>DoorDash &amp; Uber Eats — menu, pricing &amp; in-platform search optimization</li>
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Corporate accounts, group sales &amp; recurring revenue relationships</li>
+              </ul>
+            </div>
+
+            <!-- Lever 5 -->
+            <div class="lever-card rounded-sm p-9">
+              <div class="icon-circle mb-6"><i data-lucide="settings" class="w-5 h-5"></i></div>
+              <p class="font-accent text-[10px] tracking-[0.3em] uppercase mb-3" style="color:var(--rhc-copper);">Lever 05</p>
+              <h3 class="font-display font-black text-xl mb-4" style="color:var(--rhc-navy);">Operational Alignment</h3>
+              <span class="copper-rule block mb-5" style="width:32px;"></span>
+              <p class="text-sm mb-5 leading-relaxed" style="color:var(--rhc-slate);">A growth initiative without operational infrastructure is a plan that doesn't execute. Revenue systems only compound when ownership has visibility, accountability is assigned, reporting exists, and the team understands what they're responsible for. We build the operational alignment that makes growth initiatives stick.</p>
+              <ul class="space-y-2 text-sm" style="color:var(--rhc-slate);">
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Workflow &amp; process design for catering, events &amp; inquiry management</li>
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Reporting dashboards — revenue visibility across every channel</li>
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Staff accountability structures &amp; ownership assignment</li>
+                <li class="flex items-start gap-2"><span style="color:var(--rhc-copper);margin-top:2px;">—</span>Operational alignment between front-of-house, management, and growth initiatives</li>
+              </ul>
+            </div>
+
+            <!-- CTA card -->
+            <div class="rounded-sm p-9 flex flex-col justify-between" style="background:var(--rhc-navy);">
+              <div>
+                <p class="font-accent text-[10px] tracking-[0.3em] uppercase mb-4" style="color:var(--rhc-copper);">Where to Start</p>
+                <h3 class="font-display font-black text-2xl mb-4 text-white">Which lever is costing your operation the most right now?</h3>
+                <span class="copper-rule block mb-5" style="width:32px;"></span>
+                <p class="text-sm leading-relaxed mb-8" style="color:rgba(255,255,255,0.55);">
+                  The Hospitality Growth Audit evaluates your operation across all five levers, scores each one against your competitive set, and identifies the highest-revenue opportunity first. You leave with a prioritized execution roadmap — not a list of ideas. Not a report. A plan with assigned ownership and measurable outcomes.
+                </p>
+              </div>
+              <a href="/contact/" class="btn-copper px-8 py-4 rounded-sm font-bold text-xs uppercase tracking-widest text-center block">
+                Schedule the Growth Audit
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           WHERE HOSPITALITY BUSINESSES LEAVE MONEY ON THE TABLE
+      ══════════════════════════════════════════════════════ -->
+      <section class="py-28" style="background:var(--rhc-cream);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+
+            <div class="lg:col-span-4">
+              <p class="font-accent text-xs tracking-[0.35em] uppercase mb-4" style="color:var(--rhc-copper);">Revenue Opportunities</p>
+              <h2 class="font-display font-black text-4xl tracking-tight mb-6" style="color:var(--rhc-navy);">
+                Where Hospitality<br />Operations Leave<br />Revenue on the Table.
+              </h2>
+              <span class="copper-rule block mb-6"></span>
+              <p class="text-base leading-relaxed mb-4" style="color:var(--rhc-slate);">
+                You already have most of these channels. The question isn't whether they exist — it's whether they're being managed as revenue centers or left to perform on their own. A DoorDash listing nobody has touched since launch. A catering inquiry form with no intake owner. A loyalty database with 3,000 members and a 4% active participation rate. A private dining room that only fills when someone calls to ask.
+              </p>
+              <p class="text-base leading-relaxed mb-8" style="color:var(--rhc-slate);">
+                Our job as your growth partner is to evaluate every channel, identify which ones are underperforming relative to their actual potential, and build the execution system to recover that revenue. Every operation is different. We sequence the work around what will have the largest impact on your specific business.
+              </p>
+              <a href="/contact/" class="btn-outline-copper px-8 py-4 rounded-sm font-bold text-xs uppercase tracking-widest inline-block">
+                Identify Your Highest Opportunity
+              </a>
+            </div>
+
+            <div class="lg:col-span-8">
+              <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
+
+                <div class="channel-pill">
+                  <div class="icon-circle" style="width:36px;height:36px;flex-shrink:0;"><i data-lucide="map-pin" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">Google Visibility</p>
+                    <p class="text-xs" style="color:var(--rhc-slate);">GBP, local pack &amp; Maps ranking</p>
+                  </div>
+                </div>
+
+                <div class="channel-pill">
+                  <div class="icon-circle" style="width:36px;height:36px;flex-shrink:0;"><i data-lucide="search" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">Local Search</p>
+                    <p class="text-xs" style="color:var(--rhc-slate);">SEO, citations &amp; AI search presence</p>
+                  </div>
+                </div>
+
+                <div class="channel-pill">
+                  <div class="icon-circle" style="width:36px;height:36px;flex-shrink:0;"><i data-lucide="star" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">Reputation Management</p>
+                    <p class="text-xs" style="color:var(--rhc-slate);">Review velocity, volume &amp; response</p>
+                  </div>
+                </div>
+
+                <div class="channel-pill">
+                  <div class="icon-circle" style="width:36px;height:36px;flex-shrink:0;"><i data-lucide="bike" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">DoorDash Optimization</p>
+                    <p class="text-xs" style="color:var(--rhc-slate);">Menu, pricing &amp; in-platform search</p>
+                  </div>
+                </div>
+
+                <div class="channel-pill">
+                  <div class="icon-circle" style="width:36px;height:36px;flex-shrink:0;"><i data-lucide="car" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">Uber Eats Optimization</p>
+                    <p class="text-xs" style="color:var(--rhc-slate);">Platform performance &amp; conversion</p>
+                  </div>
+                </div>
+
+                <div class="channel-pill">
+                  <div class="icon-circle" style="width:36px;height:36px;flex-shrink:0;"><i data-lucide="shopping-cart" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">Online Ordering</p>
+                    <p class="text-xs" style="color:var(--rhc-slate);">First-party revenue &amp; order conversion</p>
+                  </div>
+                </div>
+
+                <div class="channel-pill">
+                  <div class="icon-circle" style="width:36px;height:36px;flex-shrink:0;"><i data-lucide="utensils" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">Catering Revenue</p>
+                    <p class="text-xs" style="color:var(--rhc-slate);">Intake systems &amp; proposal workflow</p>
+                  </div>
+                </div>
+
+                <div class="channel-pill">
+                  <div class="icon-circle" style="width:36px;height:36px;flex-shrink:0;"><i data-lucide="glass-water" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">Private Events</p>
+                    <p class="text-xs" style="color:var(--rhc-slate);">Private dining, buyouts &amp; inquiry flow</p>
+                  </div>
+                </div>
+
+                <div class="channel-pill">
+                  <div class="icon-circle" style="width:36px;height:36px;flex-shrink:0;"><i data-lucide="users" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">Group Sales</p>
+                    <p class="text-xs" style="color:var(--rhc-slate);">Corporate accounts &amp; group bookings</p>
+                  </div>
+                </div>
+
+                <div class="channel-pill">
+                  <div class="icon-circle" style="width:36px;height:36px;flex-shrink:0;"><i data-lucide="award" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">Loyalty Programs</p>
+                    <p class="text-xs" style="color:var(--rhc-slate);">Participation, activation &amp; frequency</p>
+                  </div>
+                </div>
+
+                <div class="channel-pill">
+                  <div class="icon-circle" style="width:36px;height:36px;flex-shrink:0;"><i data-lucide="mail" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">Email &amp; SMS</p>
+                    <p class="text-xs" style="color:var(--rhc-slate);">Retention campaigns &amp; re-engagement</p>
+                  </div>
+                </div>
+
+                <div class="channel-pill">
+                  <div class="icon-circle" style="width:36px;height:36px;flex-shrink:0;"><i data-lucide="crown" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">VIP Programs</p>
+                    <p class="text-xs" style="color:var(--rhc-slate);">High-value guest cultivation &amp; retention</p>
+                  </div>
+                </div>
+
+                <div class="channel-pill">
+                  <div class="icon-circle" style="width:36px;height:36px;flex-shrink:0;"><i data-lucide="workflow" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">Workflow Systems</p>
+                    <p class="text-xs" style="color:var(--rhc-slate);">SOPs, accountability &amp; process design</p>
+                  </div>
+                </div>
+
+                <div class="channel-pill">
+                  <div class="icon-circle" style="width:36px;height:36px;flex-shrink:0;"><i data-lucide="clipboard-list" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">Lead Management</p>
+                    <p class="text-xs" style="color:var(--rhc-slate);">Inquiry capture, follow-up &amp; conversion</p>
+                  </div>
+                </div>
+
+                <div class="channel-pill">
+                  <div class="icon-circle" style="width:36px;height:36px;flex-shrink:0;"><i data-lucide="bar-chart-2" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">Reporting &amp; Visibility</p>
+                    <p class="text-xs" style="color:var(--rhc-slate);">Revenue dashboards &amp; management insight</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           WHO WE WORK WITH
+      ══════════════════════════════════════════════════════ -->
+      <section class="py-28" style="background:var(--rhc-navy);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl mb-16">
+            <p class="font-accent text-xs tracking-[0.35em] uppercase mb-4" style="color:var(--rhc-copper);">Who We Partner With</p>
+            <h2 class="font-display font-black text-4xl md:text-5xl tracking-tight text-white mb-6">Built for Operators<br />Who Own the Outcome.</h2>
+            <span class="copper-rule block mb-6"></span>
+            <p class="text-base leading-relaxed" style="color:rgba(255,255,255,0.52);">
+              We partner with hospitality operators across Texas and Gulf Coast markets who are serious about growth — not looking for someone to manage their social media or run their ads, but a partner invested in their revenue, their retention, and the long-term value of the business they've built.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div class="industry-tile rounded-sm p-6 text-center">
+              <div class="w-10 h-10 mx-auto mb-4 flex items-center justify-center" style="color:var(--rhc-copper);"><i data-lucide="utensils" class="w-6 h-6"></i></div>
+              <p class="font-display font-bold text-xs uppercase tracking-wider text-white leading-tight">Independent &amp; Multi-Unit Restaurants</p>
+            </div>
+            <div class="industry-tile rounded-sm p-6 text-center">
+              <div class="w-10 h-10 mx-auto mb-4 flex items-center justify-center" style="color:var(--rhc-copper);"><i data-lucide="wine" class="w-6 h-6"></i></div>
+              <p class="font-display font-bold text-xs uppercase tracking-wider text-white leading-tight">Bars &amp; Nightlife</p>
+            </div>
+            <div class="industry-tile rounded-sm p-6 text-center">
+              <div class="w-10 h-10 mx-auto mb-4 flex items-center justify-center" style="color:var(--rhc-copper);"><i data-lucide="building-2" class="w-6 h-6"></i></div>
+              <p class="font-display font-bold text-xs uppercase tracking-wider text-white leading-tight">Hotels &amp; Resort Groups</p>
+            </div>
+            <div class="industry-tile rounded-sm p-6 text-center">
+              <div class="w-10 h-10 mx-auto mb-4 flex items-center justify-center" style="color:var(--rhc-copper);"><i data-lucide="anchor" class="w-6 h-6"></i></div>
+              <p class="font-display font-bold text-xs uppercase tracking-wider text-white leading-tight">Marinas &amp; Waterfront Venues</p>
+            </div>
+            <div class="industry-tile rounded-sm p-6 text-center">
+              <div class="w-10 h-10 mx-auto mb-4 flex items-center justify-center" style="color:var(--rhc-copper);"><i data-lucide="calendar-days" class="w-6 h-6"></i></div>
+              <p class="font-display font-bold text-xs uppercase tracking-wider text-white leading-tight">Event &amp; Entertainment Venues</p>
+            </div>
+            <div class="industry-tile rounded-sm p-6 text-center">
+              <div class="w-10 h-10 mx-auto mb-4 flex items-center justify-center" style="color:var(--rhc-copper);"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+              <p class="font-display font-bold text-xs uppercase tracking-wider text-white leading-tight">Private &amp; Country Clubs</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           GROWTH IN PRACTICE — CASE STUDIES
+      ══════════════════════════════════════════════════════ -->
+      <section class="py-28 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <div class="max-w-2xl mb-16">
+            <p class="font-accent text-xs tracking-[0.35em] uppercase mb-4" style="color:var(--rhc-copper);">Growth In Practice</p>
+            <h2 class="font-display font-black text-4xl md:text-5xl tracking-tight mb-6" style="color:var(--rhc-navy);">
+              What Changes When<br />
+              <span style="color:var(--rhc-copper);">All Five Levers Move.</span>
+            </h2>
+            <span class="copper-rule block mb-6"></span>
+            <p class="text-base leading-relaxed" style="color:var(--rhc-slate);">
+              These are representative examples of the types of operators we partner with and the revenue outcomes that become achievable when visibility, retention, channels, and systems are addressed together — not one at a time.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- Case 1: Multi-Unit Restaurant Group -->
+            <div class="case-card rounded-sm overflow-hidden">
+              <div class="px-8 pt-8 pb-4">
+                <div class="flex items-center gap-3 mb-6">
+                  <div class="icon-circle" style="width:40px;height:40px;"><i data-lucide="utensils" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-accent text-[10px] tracking-[0.25em] uppercase" style="color:var(--rhc-copper);">Multi-Unit Restaurant Group</p>
+                    <p class="text-xs font-semibold" style="color:var(--rhc-slate);">4 Locations · Texas Gulf Coast</p>
+                  </div>
+                </div>
+                <div class="mb-6">
+                  <p class="font-display font-black text-xs uppercase tracking-wider mb-2" style="color:var(--rhc-navy);">The Problem</p>
+                  <p class="text-sm leading-relaxed" style="color:var(--rhc-slate);">Catering revenue was entirely inbound — no proactive marketing, no intake system, and no dedicated follow-up. Delivery platforms were set up at launch and never revisited. Google rankings had declined at two of four locations despite consistent ad spend.</p>
+                </div>
+                <div class="mb-6">
+                  <p class="font-display font-black text-xs uppercase tracking-wider mb-2" style="color:var(--rhc-navy);">What We Did</p>
+                  <p class="text-sm leading-relaxed" style="color:var(--rhc-slate);">Built a catering inquiry and proposal system across all four locations. Restructured DoorDash and Uber Eats menus, pricing, and item photography. Implemented a review generation program tied to the existing POS. Identified two locations with critical Google Business Profile errors suppressing local search visibility.</p>
+                </div>
+              </div>
+              <div class="px-8 py-6" style="background:var(--rhc-cream);border-top:1px solid #EDE8E0;">
+                <p class="font-display font-black text-xs uppercase tracking-wider mb-3" style="color:var(--rhc-navy);">Outcomes — 90 Days</p>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-3">
+                    <span class="font-display font-black text-lg" style="color:var(--rhc-copper);">+34%</span>
+                    <span class="text-xs" style="color:var(--rhc-slate);">Catering revenue across all locations</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="font-display font-black text-lg" style="color:var(--rhc-copper);">+28%</span>
+                    <span class="text-xs" style="color:var(--rhc-slate);">Delivery platform revenue — same menu, restructured</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="font-display font-black text-lg" style="color:var(--rhc-copper);">+41%</span>
+                    <span class="text-xs" style="color:var(--rhc-slate);">Monthly review volume — local search rankings recovered</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Case 2: Waterfront Venue -->
+            <div class="case-card rounded-sm overflow-hidden">
+              <div class="px-8 pt-8 pb-4">
+                <div class="flex items-center gap-3 mb-6">
+                  <div class="icon-circle" style="width:40px;height:40px;"><i data-lucide="anchor" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-accent text-[10px] tracking-[0.25em] uppercase" style="color:var(--rhc-copper);">Waterfront Restaurant &amp; Event Venue</p>
+                    <p class="text-xs font-semibold" style="color:var(--rhc-slate);">Marina-Adjacent · Gulf Coast</p>
+                  </div>
+                </div>
+                <div class="mb-6">
+                  <p class="font-display font-black text-xs uppercase tracking-wider mb-2" style="color:var(--rhc-navy);">The Problem</p>
+                  <p class="text-sm leading-relaxed" style="color:var(--rhc-slate);">Private event space was utilized at roughly 35% of capacity. Inquiries were handled inconsistently — some responded to within hours, others never. A loyalty program had been launched 18 months prior and had 2,200 enrolled members with a 4% active participation rate. No reporting existed beyond POS sales totals.</p>
+                </div>
+                <div class="mb-6">
+                  <p class="font-display font-black text-xs uppercase tracking-wider mb-2" style="color:var(--rhc-navy);">What We Did</p>
+                  <p class="text-sm leading-relaxed" style="color:var(--rhc-slate);">Created a structured event inquiry and proposal process with assigned ownership and defined response windows. Rebuilt loyalty program engagement — segmented the database, created a 90-day re-activation campaign, and launched triggered visit-cycle emails. Built a weekly revenue reporting dashboard visible to ownership and GM.</p>
+                </div>
+              </div>
+              <div class="px-8 py-6" style="background:var(--rhc-cream);border-top:1px solid #EDE8E0;">
+                <p class="font-display font-black text-xs uppercase tracking-wider mb-3" style="color:var(--rhc-navy);">Outcomes — 120 Days</p>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-3">
+                    <span class="font-display font-black text-lg" style="color:var(--rhc-copper);">+58%</span>
+                    <span class="text-xs" style="color:var(--rhc-slate);">Private event revenue versus prior 4-month period</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="font-display font-black text-lg" style="color:var(--rhc-copper);">22%</span>
+                    <span class="text-xs" style="color:var(--rhc-slate);">Loyalty active participation — up from 4%</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="font-display font-black text-lg" style="color:var(--rhc-copper);">+19%</span>
+                    <span class="text-xs" style="color:var(--rhc-slate);">Overall revenue — driven by event and retention improvement</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Case 3: Independent Restaurant -->
+            <div class="case-card rounded-sm overflow-hidden">
+              <div class="px-8 pt-8 pb-4">
+                <div class="flex items-center gap-3 mb-6">
+                  <div class="icon-circle" style="width:40px;height:40px;"><i data-lucide="store" class="w-4 h-4"></i></div>
+                  <div>
+                    <p class="font-accent text-[10px] tracking-[0.25em] uppercase" style="color:var(--rhc-copper);">Independent Restaurant</p>
+                    <p class="text-xs font-semibold" style="color:var(--rhc-slate);">Single Location · Houston Suburb</p>
+                  </div>
+                </div>
+                <div class="mb-6">
+                  <p class="font-display font-black text-xs uppercase tracking-wider mb-2" style="color:var(--rhc-navy);">The Problem</p>
+                  <p class="text-sm leading-relaxed" style="color:var(--rhc-slate);">Strong food and service, but invisible in local search. Google Business Profile had not been updated in 14 months. A competitor with an objectively lower-rated product was ranking above them on Google Maps and capturing a significant share of the "restaurants near me" search traffic. Delivery was generating revenue but at a loss due to unmanaged platform fees and menu pricing.</p>
+                </div>
+                <div class="mb-6">
+                  <p class="font-display font-black text-xs uppercase tracking-wider mb-2" style="color:var(--rhc-navy);">What We Did</p>
+                  <p class="text-sm leading-relaxed" style="color:var(--rhc-slate);">Rebuilt and optimized the Google Business Profile. Implemented a structured review generation program integrated into the existing guest flow. Restructured the delivery platform menu with adjusted pricing that maintained margin after platform fees. Built a simple email retention program capturing guest data at the point of service.</p>
+                </div>
+              </div>
+              <div class="px-8 py-6" style="background:var(--rhc-cream);border-top:1px solid #EDE8E0;">
+                <p class="font-display font-black text-xs uppercase tracking-wider mb-3" style="color:var(--rhc-navy);">Outcomes — 60 Days</p>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-3">
+                    <span class="font-display font-black text-lg" style="color:var(--rhc-copper);">#1</span>
+                    <span class="text-xs" style="color:var(--rhc-slate);">Google Maps ranking for primary category keyword — up from #4</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="font-display font-black text-lg" style="color:var(--rhc-copper);">+67%</span>
+                    <span class="text-xs" style="color:var(--rhc-slate);">Monthly Google review volume in 45 days</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="font-display font-black text-lg" style="color:var(--rhc-copper);">Profitable</span>
+                    <span class="text-xs" style="color:var(--rhc-slate);">Delivery channel — first time since platform launch</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           BUILT BY OPERATORS — AUTHORITY SECTION
+      ══════════════════════════════════════════════════════ -->
+      <section class="py-24 relative overflow-hidden" style="background:var(--rhc-navy);">
+        <div class="absolute inset-0 pointer-events-none"
+          style="background:radial-gradient(ellipse 60% 70% at 85% 50%, rgba(180,106,60,0.09) 0%, transparent 65%);"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+
+            <div>
+              <p class="font-accent text-xs tracking-[0.35em] uppercase mb-4" style="color:var(--rhc-copper);">Why This Is Different</p>
+              <h2 class="font-display font-black text-4xl md:text-5xl tracking-tight text-white mb-6" style="line-height:1.08;">
+                We've Sat on<br />Both Sides of<br />
+                <span style="color:var(--rhc-copper);">the Table.</span>
+              </h2>
+              <span class="copper-rule block mb-8"></span>
+              <p class="text-base leading-relaxed mb-5" style="color:rgba(255,255,255,0.68);">
+                Riva Hospitality Partners exists because ownership groups deserve a growth partner who actually understands what it costs to run a shift, manage a catering program, respond to a 1-star review at midnight, track down a missing delivery order, and make payroll on a slow January week.
+              </p>
+              <p class="text-base leading-relaxed mb-5" style="color:rgba(255,255,255,0.52);">
+                We have operated businesses, owned P&amp;L responsibility, managed teams, and experienced firsthand the difference between a vendor who delivers a report and a partner who stays in the room until the problem is solved. That experience drives every decision we make on behalf of the operators we work with.
+              </p>
+              <p class="text-base leading-relaxed" style="color:rgba(255,255,255,0.38);">
+                We do not sell retainers for the sake of retainers. We do not recommend initiatives we haven't pressure-tested against operational reality. We measure our success the same way ownership measures theirs — revenue per cover, catering conversion rate, guest frequency, loyalty participation, and enterprise value.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-5">
+
+              <div class="rounded-sm p-7" style="background:rgba(255,255,255,0.04);border:1px solid rgba(180,106,60,0.20);">
+                <div class="flex items-start gap-5">
+                  <div class="icon-circle" style="width:44px;height:44px;flex-shrink:0;"><i data-lucide="dollar-sign" class="w-5 h-5"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-base text-white mb-2">We evaluate revenue — not just marketing performance.</p>
+                    <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.52);">Every initiative we recommend is evaluated against its direct impact on revenue, margin, guest frequency, and long-term enterprise value. We are not measuring impressions, reach, or engagement. We are measuring what ownership actually cares about.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rounded-sm p-7" style="background:rgba(255,255,255,0.04);border:1px solid rgba(180,106,60,0.20);">
+                <div class="flex items-start gap-5">
+                  <div class="icon-circle" style="width:44px;height:44px;flex-shrink:0;"><i data-lucide="settings-2" class="w-5 h-5"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-base text-white mb-2">We build for operational reality — not ideal conditions.</p>
+                    <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.52);">A recommendation that can't be executed by the actual team you have, within the actual constraints your operation runs under, is not a recommendation. It's a document that sits on a desk. We build growth systems that work in the real world — understaffed, overscheduled, and mid-service.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rounded-sm p-7" style="background:rgba(255,255,255,0.04);border:1px solid rgba(180,106,60,0.20);">
+                <div class="flex items-start gap-5">
+                  <div class="icon-circle" style="width:44px;height:44px;flex-shrink:0;"><i data-lucide="shield-check" class="w-5 h-5"></i></div>
+                  <div>
+                    <p class="font-display font-bold text-base text-white mb-2">We think like ownership — not like a vendor.</p>
+                    <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.52);">Enterprise value is built through consistent revenue growth, strong guest retention, operational efficiency, and defensible market position. We keep all four in view at every stage of the engagement — not just the initiative in front of us right now.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           AUDIT SCORECARD
+      ══════════════════════════════════════════════════════ -->
+      <section class="py-28 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+
+            <div>
+              <p class="font-accent text-xs tracking-[0.35em] uppercase mb-4" style="color:var(--rhc-copper);">The Growth Audit</p>
+              <h2 class="font-display font-black text-4xl md:text-5xl tracking-tight mb-6" style="color:var(--rhc-navy);">
+                We Evaluate Your<br />Entire Operation<br />
+                <span style="color:var(--rhc-copper);">Before We Recommend Anything.</span>
+              </h2>
+              <span class="copper-rule block mb-8"></span>
+              <p class="text-base leading-relaxed mb-10" style="color:var(--rhc-slate);">
+                The Hospitality Growth Audit evaluates 15 dimensions of your operation — from Google ranking to catering conversion rate to delivery platform margin to loyalty program participation. We score each one, benchmark against your competitive set, identify your highest-revenue opportunity, and sequence the execution plan before a single initiative begins. Ownership leaves knowing exactly where the money is and what to do about it.
+              </p>
+
+              <span class="copper-rule-full block"></span>
+              <div class="scorecard-row">
+                <div class="flex items-center gap-4">
+                  <div class="icon-circle" style="width:36px;height:36px;"><i data-lucide="map-pin" class="w-4 h-4"></i></div>
+                  <span class="text-sm font-semibold" style="color:var(--rhc-navy);">Google Visibility &amp; Local Search Ranking</span>
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-widest" style="color:var(--rhc-copper);">Scored</span>
+              </div>
+              <div class="scorecard-row">
+                <div class="flex items-center gap-4">
+                  <div class="icon-circle" style="width:36px;height:36px;"><i data-lucide="star" class="w-4 h-4"></i></div>
+                  <span class="text-sm font-semibold" style="color:var(--rhc-navy);">Review Reputation, Volume &amp; Velocity</span>
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-widest" style="color:var(--rhc-copper);">Scored</span>
+              </div>
+              <div class="scorecard-row">
+                <div class="flex items-center gap-4">
+                  <div class="icon-circle" style="width:36px;height:36px;"><i data-lucide="heart-handshake" class="w-4 h-4"></i></div>
+                  <span class="text-sm font-semibold" style="color:var(--rhc-navy);">Guest Retention &amp; Loyalty Participation Rate</span>
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-widest" style="color:var(--rhc-copper);">Scored</span>
+              </div>
+              <div class="scorecard-row">
+                <div class="flex items-center gap-4">
+                  <div class="icon-circle" style="width:36px;height:36px;"><i data-lucide="shopping-bag" class="w-4 h-4"></i></div>
+                  <span class="text-sm font-semibold" style="color:var(--rhc-navy);">Catering Revenue &amp; Delivery Platform Performance</span>
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-widest" style="color:var(--rhc-copper);">Scored</span>
+              </div>
+              <div class="scorecard-row">
+                <div class="flex items-center gap-4">
+                  <div class="icon-circle" style="width:36px;height:36px;"><i data-lucide="calendar-check" class="w-4 h-4"></i></div>
+                  <span class="text-sm font-semibold" style="color:var(--rhc-navy);">Private Event &amp; Group Sales Utilization</span>
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-widest" style="color:var(--rhc-copper);">Scored</span>
+              </div>
+              <div class="scorecard-row">
+                <div class="flex items-center gap-4">
+                  <div class="icon-circle" style="width:36px;height:36px;"><i data-lucide="bar-chart-2" class="w-4 h-4"></i></div>
+                  <span class="text-sm font-semibold" style="color:var(--rhc-navy);">Advertising Efficiency &amp; Channel ROI</span>
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-widest" style="color:var(--rhc-copper);">Scored</span>
+              </div>
+              <div class="scorecard-row">
+                <div class="flex items-center gap-4">
+                  <div class="icon-circle" style="width:36px;height:36px;"><i data-lucide="workflow" class="w-4 h-4"></i></div>
+                  <span class="text-sm font-semibold" style="color:var(--rhc-navy);">Workflow, Systems &amp; Operational Maturity</span>
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-widest" style="color:var(--rhc-copper);">Scored</span>
+              </div>
+              <div class="scorecard-row" style="border-bottom:none;">
+                <div class="flex items-center gap-4">
+                  <div class="icon-circle" style="width:36px;height:36px;"><i data-lucide="trophy" class="w-4 h-4"></i></div>
+                  <span class="text-sm font-semibold" style="color:var(--rhc-navy);">Competitive Market Position &amp; Local Dominance</span>
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-widest" style="color:var(--rhc-copper);">Scored</span>
+              </div>
+              <span class="copper-rule-full block"></span>
+            </div>
+
+            <div class="flex flex-col gap-10">
+              <div class="flex items-center justify-center p-10 rounded-sm" style="background:var(--rhc-cream);">
+                <img src="/images/Horizontal.png" alt="Riva Hospitality Partners — Strategy. Systems. Revenue." class="w-full max-w-md" />
+              </div>
+
+              <div class="grid grid-cols-1 gap-5">
+                <div class="rounded-sm p-7 bg-white border border-gray-100">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="icon-circle" style="width:40px;height:40px;"><i data-lucide="clipboard-list" class="w-4 h-4"></i></div>
+                    <p class="font-accent text-xs tracking-widest uppercase" style="color:var(--rhc-copper);">Step 01</p>
+                  </div>
+                  <h3 class="font-display font-black text-base mb-2" style="color:var(--rhc-navy);">Audit — We Learn the Operation</h3>
+                  <p class="text-sm leading-relaxed" style="color:var(--rhc-slate);">We evaluate 15 dimensions, benchmark against your competitive set, and identify where the highest-leverage revenue opportunity is. Ownership receives a clear, scored picture of where the business stands — not a generic observation document.</p>
+                </div>
+                <div class="rounded-sm p-7 bg-white border border-gray-100">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="icon-circle" style="width:40px;height:40px;"><i data-lucide="compass" class="w-4 h-4"></i></div>
+                    <p class="font-accent text-xs tracking-widest uppercase" style="color:var(--rhc-copper);">Step 02</p>
+                  </div>
+                  <h3 class="font-display font-black text-base mb-2" style="color:var(--rhc-navy);">Roadmap — We Sequence the Execution</h3>
+                  <p class="text-sm leading-relaxed" style="color:var(--rhc-slate);">A prioritized growth roadmap organized by quick wins (0–30 days), mid-term initiatives (30–90 days), and long-term system builds — each with an estimated revenue impact, difficulty rating, and assigned ownership so the work actually gets done.</p>
+                </div>
+                <div class="rounded-sm p-7 bg-white border border-gray-100">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="icon-circle" style="width:40px;height:40px;"><i data-lucide="rocket" class="w-4 h-4"></i></div>
+                    <p class="font-accent text-xs tracking-widest uppercase" style="color:var(--rhc-copper);">Step 03</p>
+                  </div>
+                  <h3 class="font-display font-black text-base mb-2" style="color:var(--rhc-navy);">Partnership — We Stay in the Room</h3>
+                  <p class="text-sm leading-relaxed" style="color:var(--rhc-slate);">We are not a vendor who delivers a presentation and invoices the next day. We embed into the operation as a long-term growth partner, build the systems, drive the implementation, hold every initiative accountable to results, and measure our performance the same way ownership does.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           GEOGRAPHIC FOCUS
+      ══════════════════════════════════════════════════════ -->
+      <section class="py-20 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+              <p class="font-accent text-xs tracking-[0.35em] uppercase mb-4" style="color:var(--rhc-copper);">Where We Work</p>
+              <h2 class="font-display font-black text-3xl md:text-4xl tracking-tight mb-6" style="color:var(--rhc-navy);">Texas. Gulf Coast.<br />Destination Markets.</h2>
+              <span class="copper-rule block mb-6"></span>
+              <p class="text-base leading-relaxed" style="color:var(--rhc-slate);">
+                Our primary markets are the Houston Metro, Galveston County, Brazoria County, Fort Bend County, and Harris County — with active expansion throughout Texas and destination hospitality markets along the Gulf Coast. We work in person when proximity allows. We work remotely when it doesn't.
+              </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="rounded-sm p-6 border" style="border-color:var(--rhc-divider);background:var(--rhc-cream);">
+                <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">Houston Metro</p>
+                <p class="text-xs mt-1" style="color:var(--rhc-slate);">Harris &amp; Fort Bend Counties</p>
+              </div>
+              <div class="rounded-sm p-6 border" style="border-color:var(--rhc-divider);background:var(--rhc-cream);">
+                <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">Galveston County</p>
+                <p class="text-xs mt-1" style="color:var(--rhc-slate);">Waterfront &amp; Destination</p>
+              </div>
+              <div class="rounded-sm p-6 border" style="border-color:var(--rhc-divider);background:var(--rhc-cream);">
+                <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">Brazoria County</p>
+                <p class="text-xs mt-1" style="color:var(--rhc-slate);">Gulf Coast Markets</p>
+              </div>
+              <div class="rounded-sm p-6 border" style="border-color:var(--rhc-divider);background:var(--rhc-cream);">
+                <p class="font-display font-bold text-sm" style="color:var(--rhc-navy);">Statewide Texas</p>
+                <p class="text-xs mt-1" style="color:var(--rhc-slate);">Expanding Footprint</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           FINAL CTA
+           Chosen version: "Let's find where the revenue is being lost."
+           — Direct, operator-language, not agency language.
+      ══════════════════════════════════════════════════════ -->
+      <section class="py-32 relative overflow-hidden" style="background:var(--rhc-navy);">
+        <div class="absolute inset-0 pointer-events-none"
+          style="background:radial-gradient(ellipse 70% 70% at 50% 50%, rgba(180,106,60,0.10) 0%, transparent 70%);"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="max-w-3xl mx-auto text-center">
+
+            <div class="flex justify-center mb-12">
+              <img src="/images/Blue%20Logo.png" alt="Riva Hospitality Partners" class="w-48 md:w-56" />
+            </div>
+
+            <p class="font-accent text-xs tracking-[0.35em] uppercase mb-6" style="color:var(--rhc-copper);">Let's Identify Where the Revenue Is Being Lost</p>
+
+            <h2 class="font-display font-black tracking-tight mb-6 text-white" style="font-size:clamp(2rem,4.5vw,3.5rem);line-height:1.08;">
+              You Have Vendors.<br />
+              You Have Software.<br />
+              <span style="color:var(--rhc-copper);">You Don't Have a Partner Evaluating the Entire Operation Through the Lens of Revenue.</span>
+            </h2>
+
+            <span class="copper-rule block mb-8" style="margin-left:auto;margin-right:auto;width:56px;"></span>
+
+            <p class="text-base leading-relaxed mb-4 max-w-2xl mx-auto" style="color:rgba(255,255,255,0.65);">
+              Most hospitality operations are leaving revenue in at least three places simultaneously — and can't see it because no one has ever looked at the whole business at once. Not through the lens of profitability, guest frequency, operational efficiency, and enterprise value together.
+            </p>
+            <p class="text-base leading-relaxed mb-12 max-w-2xl mx-auto" style="color:rgba(255,255,255,0.38);">
+              The Hospitality Growth Audit gives ownership a complete picture of where the opportunity is, what it's worth, and what to do about it — with a sequenced execution plan and assigned accountability before the engagement begins.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+              <a href="/contact/" class="btn-copper px-12 py-5 rounded-sm font-bold text-sm uppercase tracking-widest">
+                Schedule a Hospitality Growth Audit
+              </a>
+              <a href="tel:+18329050570" class="btn-outline-white px-12 py-5 rounded-sm font-bold text-sm uppercase tracking-widest flex items-center justify-center gap-3">
+                <i data-lucide="phone" class="w-4 h-4"></i> 832-905-0570
+              </a>
+            </div>
+
+            <p class="text-xs mt-12" style="color:rgba(255,255,255,0.20);">
+              Powered by Riva Strategies &nbsp;·&nbsp; rivastrategies.com
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════ -->
+  <footer style="background:var(--riva-blue);" class="text-white pt-24 pb-12 overflow-hidden relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+
+        <div class="md:col-span-4">
+          <span class="text-2xl font-bold tracking-tighter">RIVA<span class="font-light tracking-widest ml-1" style="color:var(--riva-gold);">STRATEGIES</span></span>
+          <p class="mt-6 text-base leading-relaxed max-w-sm" style="color:rgba(255,255,255,0.55);">Revenue-focused growth partner for hospitality operators, local services, and industrial companies across Texas and Gulf Coast markets.</p>
+        </div>
+
+        <div class="md:col-span-2">
+          <h4 class="text-xs font-bold uppercase tracking-[0.2em] mb-8" style="color:var(--riva-gold);">Riva Systems</h4>
+          <ul class="space-y-4 text-sm" style="color:rgba(255,255,255,0.65);">
+            <li><a href="/riva-revenue-audit/" class="hover:text-white transition-colors">Revenue Audit</a></li>
+            <li><a href="/riva-foundation/"    class="hover:text-white transition-colors">Foundation</a></li>
+            <li><a href="/riva-rollout/"       class="hover:text-white transition-colors">Rollout</a></li>
+            <li><a href="/riva-reach/"         class="hover:text-white transition-colors">Reach</a></li>
+            <li><a href="/riva-engine/"        class="hover:text-white transition-colors">Engine</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <h4 class="text-xs font-bold uppercase tracking-[0.2em] mb-8" style="color:var(--riva-gold);">Hospitality</h4>
+          <ul class="space-y-4 text-sm" style="color:rgba(255,255,255,0.65);">
+            <li><a href="/riva-hospitality-consulting/" class="hover:text-white transition-colors" style="color:var(--riva-gold);">RHP Overview</a></li>
+            <li><a href="/industries/hospitality-food-service/" class="hover:text-white transition-colors">Restaurants &amp; Bars</a></li>
+            <li><a href="/contact/" class="hover:text-white transition-colors">Schedule a Growth Audit</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <h4 class="text-xs font-bold uppercase tracking-[0.2em] mb-8" style="color:var(--riva-gold);">Contact</h4>
+          <div class="space-y-6">
+            <a href="tel:+18329050570" class="flex items-center transition-colors" style="color:rgba(255,255,255,0.80);">
+              <div class="w-8 h-8 rounded-sm flex items-center justify-center mr-3" style="background:rgba(255,255,255,0.05);">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <span class="text-sm font-semibold">832-905-0570</span>
+            </a>
+            <a href="/contact/" class="inline-flex items-center px-6 py-3 rounded-sm font-bold text-xs uppercase tracking-widest transition-all" style="border:1px solid var(--riva-gold);color:var(--riva-gold);">
+              Schedule Growth Audit <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-20 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em]"
+        style="border-top:1px solid rgba(255,255,255,0.10);color:rgba(255,255,255,0.25);">
+        <p>© 2025 Riva Strategies. All rights reserved.</p>
+        <div class="mt-4 md:mt-0 space-x-8">
+          <a href="/faq/" class="hover:text-white transition-colors">FAQ</a>
+          <a href="#"     class="hover:text-white transition-colors">Privacy</a>
+          <a href="#"     class="hover:text-white transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      header.classList.toggle('glass-header', window.scrollY > 20);
+      header.classList.toggle('shadow-lg',    window.scrollY > 20);
+      header.classList.toggle('py-3',         window.scrollY > 20);
+      header.classList.toggle('py-5',         window.scrollY <= 20);
+    });
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-nav').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
