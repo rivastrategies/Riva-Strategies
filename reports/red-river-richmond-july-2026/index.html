@@ -1,1 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Red River Cantina Richmond — Digital Performance Report | Riva Restaurant Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-deep:#070f1e;
+  --navy:#0d1b2e;
+  --navy-panel:#122544;
+  --navy-panel-2:#0f2038;
+  --hairline:rgba(196,167,125,0.16);
+  --copper:#c17f45;
+  --copper-bright:#e0a868;
+  --copper-dim:#8a5a30;
+  --gold:#d4af37;
+  --teal:#2a9d9d;
+  --teal-bright:#3fc4c0;
+  --red:#c8151c;
+  --red-bright:#e14750;
+  --ink:#f2efe7;
+  --ink-dim:#c7cddb;
+  --ink-mute:#8996ac;
+  --ink-faint:#5d6a83;
+  --good:#4caf7d;
+  --warn:#d4af37;
+  --bad:#d9564f;
+  --radius:14px;
+  --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:var(--navy-deep);
+  background-image:
+    radial-gradient(ellipse 900px 500px at 15% -5%, rgba(193,127,69,0.09), transparent 60%),
+    radial-gradient(ellipse 700px 500px at 100% 8%, rgba(42,157,157,0.07), transparent 55%);
+  color:var(--ink-dim);
+  font-family:'Barlow',sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;color:var(--ink);font-weight:700;}
+.eyebrow{
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  font-size:12.5px;
+  font-weight:600;
+  color:var(--copper-bright);
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:10px;
+}
+.eyebrow::before{content:'';width:22px;height:1px;background:var(--copper);display:inline-block;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+a{color:inherit;}
+img{display:block;max-width:100%;}
+:focus-visible{outline:2px solid var(--copper-bright);outline-offset:3px;}
+ul{list-style:none;}
 
+/* ===== NAV (pure CSS, no JS) ===== */
+#nav{
+  position:sticky;top:0;z-index:500;
+  background:rgba(7,15,30,0.95);
+  border-bottom:1px solid var(--hairline);
+}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;max-width:1400px;}
+.brandmark{display:flex;align-items:center;gap:10px;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:0.06em;color:var(--ink);font-size:14.5px;text-transform:uppercase;}
+.brandmark .dot{width:7px;height:7px;border-radius:50%;background:var(--copper-bright);}
+#navlinks{display:flex;gap:2px;list-style:none;overflow-x:auto;}
+#navlinks a{
+  white-space:nowrap;font-family:'Barlow Condensed',sans-serif;font-size:12.5px;font-weight:600;
+  letter-spacing:0.05em;text-transform:uppercase;color:var(--ink-mute);text-decoration:none;
+  padding:10px 11px;border-bottom:2px solid transparent;display:inline-block;
+}
+#navlinks a:hover{color:var(--copper-bright);border-color:var(--copper-bright);}
+.nav-check{display:none;}
+.nav-toggle-label{display:none;background:none;border:1px solid var(--hairline);color:var(--ink);border-radius:8px;padding:6px 11px;font-size:17px;cursor:pointer;}
+@media(max-width:820px){
+  #navlinks{position:absolute;top:58px;left:0;right:0;background:var(--navy);flex-direction:column;display:none;border-bottom:1px solid var(--hairline);max-height:70vh;overflow-y:auto;}
+  .nav-check:checked ~ #navlinks{display:flex;}
+  #navlinks a{padding:14px 22px;border-bottom:1px solid var(--hairline);}
+  .nav-toggle-label{display:inline-block;}
+}
+
+/* ===== COVER ===== */
+.cover{
+  min-height:86vh;display:flex;flex-direction:column;justify-content:center;
+  border-bottom:1px solid var(--hairline);padding:64px 0;position:relative;
+}
+.cover::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 620px 380px at 50% 40%, rgba(193,127,69,0.08), transparent 70%);
+}
+.cover-logos{display:flex;align-items:center;justify-content:center;gap:40px;margin-bottom:52px;flex-wrap:wrap;}
+.logo-chip{
+  background:#fff;border-radius:10px;padding:12px 20px;
+  display:flex;align-items:center;box-shadow:0 10px 30px rgba(0,0,0,0.4), 0 0 0 1px rgba(193,127,69,0.3);
+}
+.logo-chip img{height:54px;width:auto;}
+.logo-chip.riva img{height:36px;}
+.cover-divider{width:1px;height:54px;background:var(--hairline);}
+.cover-title{text-align:center;max-width:760px;margin:0 auto;position:relative;}
+.cover-title .eyebrow{justify-content:center;}
+.cover-title .eyebrow::before{display:none;}
+.cover-title .eyebrow::after{content:'';width:22px;height:1px;background:var(--copper);display:inline-block;}
+.cover-title h1{font-size:clamp(34px,5vw,54px);line-height:1.1;margin-bottom:8px;}
+.cover-title h1 em{font-style:italic;color:var(--copper-bright);}
+.cover-title .loc{font-family:'Barlow Condensed',sans-serif;font-size:20px;letter-spacing:0.05em;color:var(--ink-mute);margin-bottom:26px;}
+.cover-title .rpttype{font-family:'Barlow Condensed',sans-serif;font-size:14.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--teal-bright);margin-bottom:30px;}
+.cover-meta{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;margin-top:8px;}
+.cover-meta .m{text-align:center;}
+.cover-meta .m .k{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);}
+.cover-meta .m .v{font-family:'Playfair Display',serif;font-size:17px;color:var(--ink);margin-top:3px;}
+.prepared-by{font-size:13px;color:var(--ink-faint);font-style:italic;margin-top:34px;text-align:center;}
+
+/* ===== SECTIONS ===== */
+section{padding:76px 0;border-bottom:1px solid var(--hairline);}
+section:last-of-type{border-bottom:none;}
+.sec-head{max-width:700px;margin-bottom:40px;}
+.sec-head h2{font-size:clamp(24px,3vw,34px);line-height:1.2;}
+.sec-head p{color:var(--ink-mute);font-size:15.5px;margin-top:10px;}
+
+/* ===== KPI CARDS ===== */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;}
+.kpi-card{
+  background:linear-gradient(160deg,var(--navy-panel),var(--navy-panel-2));
+  border:1px solid var(--hairline);border-radius:var(--radius);padding:24px 22px;position:relative;overflow:hidden;
+}
+.kpi-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--copper),transparent);}
+.kpi-card .lbl{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;}
+.kpi-card .val{font-family:'Playfair Display',serif;font-size:32px;color:var(--ink);font-weight:700;line-height:1;}
+.kpi-card .val small{font-size:16px;color:var(--ink-mute);font-family:'Barlow',sans-serif;font-weight:500;}
+.kpi-card .sub{font-size:12.5px;color:var(--ink-mute);margin-top:7px;}
+.kpi-card.big{grid-column:span 2;background:linear-gradient(160deg,rgba(193,127,69,0.16),var(--navy-panel-2));}
+
+/* ===== RING GAUGES (static CSS conic-gradient) ===== */
+.ring-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;}
+.ring-card{text-align:center;background:var(--navy-panel);border:1px solid var(--hairline);border-radius:var(--radius);padding:24px 14px 20px;}
+.ring{width:118px;height:118px;border-radius:50%;margin:0 auto;background:conic-gradient(var(--c) calc(var(--p)*1%), rgba(255,255,255,0.07) 0);display:flex;align-items:center;justify-content:center;}
+.ring-inner{width:76%;height:76%;border-radius:50%;background:var(--navy-panel);display:flex;align-items:center;justify-content:center;}
+.ring-inner span{font-family:'Playfair Display',serif;font-size:20px;color:var(--ink);font-weight:700;}
+.ring-card .lbl{font-family:'Barlow Condensed',sans-serif;font-size:12.5px;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink-dim);margin-top:14px;}
+.ring-card .note{font-size:12px;color:var(--ink-faint);margin-top:5px;}
+.ring-hero{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;margin-bottom:36px;padding:34px;background:radial-gradient(ellipse at center, rgba(193,127,69,0.08), transparent 70%);border:1px solid var(--hairline);border-radius:var(--radius);}
+.ring-hero .ring{width:180px;height:180px;}
+.ring-hero .ring-inner span{font-size:36px;}
+.ring-hero-text h3{font-size:26px;margin-bottom:8px;}
+.ring-hero-text p{color:var(--ink-mute);font-size:14.5px;max-width:320px;}
+
+/* ===== BAR LISTS (static comparison bars) ===== */
+.bar-list{display:flex;flex-direction:column;gap:14px;}
+.bar-row{display:grid;grid-template-columns:210px 1fr 64px;align-items:center;gap:14px;}
+.bar-row .bl{font-size:13.5px;color:var(--ink-dim);}
+.bar-track{height:9px;background:rgba(255,255,255,0.06);border-radius:6px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--copper-dim),var(--copper-bright));}
+.bar-fill.teal{background:linear-gradient(90deg,#1c6b6b,var(--teal-bright));}
+.bar-fill.gold{background:linear-gradient(90deg,#8a6d1a,var(--gold));}
+.bar-row .bv{font-family:'Barlow Condensed',sans-serif;font-size:13.5px;font-weight:600;color:var(--ink);text-align:right;font-variant-numeric:tabular-nums;}
+@media(max-width:640px){.bar-row{grid-template-columns:1fr;gap:6px;}.bar-row .bv{text-align:left;}}
+
+/* ===== TABLES ===== */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--hairline);border-radius:var(--radius);}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:640px;}
+th{
+  font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;
+  text-align:left;padding:14px 16px;color:var(--copper-bright);background:var(--navy-panel-2);
+  border-bottom:1px solid var(--hairline);
+}
+td{padding:12px 16px;border-bottom:1px solid rgba(196,167,125,0.08);color:var(--ink-dim);}
+tbody tr:last-child td{font-weight:700;color:var(--ink);background:rgba(193,127,69,0.06);}
+.num-cell{font-variant-numeric:tabular-nums;}
+
+/* ===== BADGES ===== */
+.pill{display:inline-flex;align-items:center;gap:6px;font-family:'Barlow Condensed',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;padding:5px 12px;border-radius:100px;}
+.pill.good{background:rgba(76,175,125,0.15);color:var(--good);}
+.pill.warn{background:rgba(212,175,55,0.15);color:var(--warn);}
+.pill.bad{background:rgba(217,86,79,0.15);color:var(--bad);}
+.pill.teal{background:rgba(42,157,157,0.17);color:var(--teal-bright);}
+
+/* ===== CALLOUTS ===== */
+.callout{border-left:3px solid var(--copper);background:rgba(193,127,69,0.06);border-radius:0 10px 10px 0;padding:20px 24px;font-size:14.5px;color:var(--ink-dim);margin-top:20px;}
+.callout strong{color:var(--ink);}
+.callout.teal{border-color:var(--teal);background:rgba(42,157,157,0.06);}
+.callout-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px;}
+@media(max-width:760px){.callout-grid{grid-template-columns:1fr;}}
+
+/* ===== EXEC SUMMARY LISTS ===== */
+.exec-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px;}
+@media(max-width:760px){.exec-cols{grid-template-columns:1fr;}}
+.exec-col{background:var(--navy-panel);border:1px solid var(--hairline);border-radius:var(--radius);padding:26px;}
+.exec-col.wins{border-top:2px solid var(--good);}
+.exec-col.opps{border-top:2px solid var(--warn);}
+.exec-col h4{font-family:'Barlow Condensed',sans-serif;letter-spacing:0.06em;text-transform:uppercase;font-size:14px;margin-bottom:16px;}
+.exec-col.wins h4{color:var(--good);}
+.exec-col.opps h4{color:var(--warn);}
+.exec-col li{font-size:14.5px;color:var(--ink-dim);padding-left:18px;position:relative;margin-bottom:11px;}
+.exec-col li::before{content:'';position:absolute;left:0;top:8px;width:7px;height:1px;background:currentColor;}
+
+/* ===== SCAN GRID (static, precomputed) ===== */
+.scan-wrap{display:grid;grid-template-columns:1fr 260px;gap:26px;align-items:center;}
+@media(max-width:900px){.scan-wrap{grid-template-columns:1fr;}}
+.scan-grid-box{background:var(--navy-panel);border:1px solid var(--hairline);border-radius:var(--radius);padding:24px;}
+.scan-grid{display:grid;grid-template-columns:repeat(9,1fr);gap:5px;aspect-ratio:1/1;max-width:400px;margin:0 auto;}
+.scan-pt{border-radius:4px;aspect-ratio:1/1;}
+.scan-legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:16px;justify-content:center;font-size:11.5px;color:var(--ink-faint);font-family:'Barlow Condensed',sans-serif;letter-spacing:0.03em;}
+.scan-legend span{display:inline-flex;align-items:center;gap:5px;}
+.scan-legend i{width:10px;height:10px;border-radius:3px;display:inline-block;}
+.scan-stats{display:flex;flex-direction:column;gap:12px;}
+.scan-stats .stat{background:var(--navy-panel);border:1px solid var(--hairline);border-radius:10px;padding:14px 16px;}
+.scan-stats .stat .n{font-family:'Playfair Display',serif;font-size:22px;color:var(--ink);}
+.scan-stats .stat .l{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-faint);}
+.scan-caption{font-size:12px;color:var(--ink-faint);margin-top:14px;font-style:italic;text-align:center;}
+
+/* ===== SPARKLINE (static SVG) ===== */
+.spark-box{background:var(--navy-panel);border:1px solid var(--hairline);border-radius:var(--radius);padding:26px;}
+.spark-labels{display:flex;justify-content:space-between;margin-top:10px;font-family:'Barlow Condensed',sans-serif;font-size:11.5px;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink-faint);}
+
+/* ===== OPPORTUNITY MATRIX (static positioned dots) ===== */
+.matrix-box{background:var(--navy-panel);border:1px solid var(--hairline);border-radius:var(--radius);padding:28px;}
+.matrix{position:relative;width:100%;padding-bottom:70%;border-left:1px solid var(--hairline);border-bottom:1px solid var(--hairline);}
+.matrix-quad{position:absolute;inset:0;}
+.matrix-quad::before,.matrix-quad::after{content:'';position:absolute;background:var(--hairline);}
+.matrix-quad::before{left:50%;top:0;bottom:0;width:1px;}
+.matrix-quad::after{top:50%;left:0;right:0;height:1px;}
+.matrix-dot{position:absolute;width:11px;height:11px;border-radius:50%;background:var(--copper-bright);border:2px solid var(--navy-panel);transform:translate(-50%,-50%);box-shadow:0 0 0 1px rgba(224,168,104,0.4);}
+.matrix-dot.high{background:var(--red-bright);}
+.matrix-dot.med{background:var(--gold);}
+.matrix-tag{position:absolute;font-size:10.5px;font-family:'Barlow Condensed',sans-serif;color:var(--ink-mute);white-space:nowrap;transform:translate(-50%,6px);top:100%;}
+.matrix-axis-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-faint);}
+.matrix-axis-x{text-align:center;margin-top:14px;}
+.matrix-axis-y{position:absolute;left:-34px;top:50%;transform:rotate(-90deg) translateX(50%);transform-origin:left;}
+
+/* ===== DUAL SEARCH CARDS ===== */
+.dual-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:760px){.dual-grid{grid-template-columns:1fr;}}
+.dual-card{border-radius:var(--radius);padding:26px;border:1px solid var(--hairline);}
+.dual-card.trad{background:linear-gradient(160deg,rgba(200,21,28,0.07),var(--navy-panel));}
+.dual-card.ai{background:linear-gradient(160deg,rgba(42,157,157,0.09),var(--navy-panel));}
+.dual-card h4{font-family:'Barlow Condensed',sans-serif;letter-spacing:0.05em;text-transform:uppercase;font-size:14px;margin-bottom:8px;}
+.dual-card.trad h4{color:var(--red-bright);}
+.dual-card.ai h4{color:var(--teal-bright);}
+.dual-card p{font-size:13.5px;color:var(--ink-mute);}
+.query-chip{background:rgba(255,255,255,0.04);border:1px solid var(--hairline);border-radius:8px;padding:11px 14px;margin-top:10px;font-size:13.5px;color:var(--ink-dim);font-style:italic;}
+
+/* ===== META CAMPAIGN CARDS ===== */
+.campaign-card{background:var(--navy-panel);border:1px solid var(--hairline);border-radius:var(--radius);padding:24px;border-top:2px solid var(--teal);}
+.campaign-card h4{font-family:'Barlow Condensed',sans-serif;letter-spacing:0.03em;font-size:16px;color:var(--ink);margin-bottom:3px;}
+.campaign-card .obj{font-size:11.5px;color:var(--teal-bright);font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:18px;}
+.campaign-stats{display:flex;gap:26px;flex-wrap:wrap;}
+.campaign-stats .cs .n{font-family:'Playfair Display',serif;font-size:25px;color:var(--ink);font-weight:700;line-height:1;}
+.campaign-stats .cs .l{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink-faint);margin-top:5px;}
+
+/* ===== DONUT (static two-tone conic-gradient) ===== */
+.donut-wrap{display:flex;align-items:center;gap:28px;flex-wrap:wrap;}
+.donut{width:150px;height:150px;border-radius:50%;flex-shrink:0;}
+.donut-inner{width:68%;height:68%;border-radius:50%;background:var(--navy-panel);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:16% auto 0;}
+.donut-inner .n{font-family:'Playfair Display',serif;font-size:20px;color:var(--ink);font-weight:700;}
+.donut-inner .l{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-faint);}
+.donut-legend{display:flex;flex-direction:column;gap:12px;}
+.donut-legend .dl{display:flex;align-items:center;gap:10px;font-size:14.5px;color:var(--ink-dim);}
+.donut-legend i{width:12px;height:12px;border-radius:3px;display:inline-block;flex-shrink:0;}
+.donut-legend b{color:var(--ink);font-family:'Barlow Condensed',sans-serif;font-size:16px;margin-left:4px;}
+
+/* ===== RANKED LISTS (age groups, top cities) ===== */
+.rank-list{display:flex;flex-direction:column;gap:9px;}
+.rank-item{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.03);border:1px solid var(--hairline);border-radius:10px;padding:12px 16px;}
+.rank-num{width:26px;height:26px;border-radius:50%;background:rgba(193,127,69,0.18);color:var(--copper-bright);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.rank-label{font-size:14px;color:var(--ink-dim);}
+
+/* ===== RIVA GROWTH LIFECYCLE ===== */
+.lifecycle-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
+@media(max-width:1050px){.lifecycle-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.lifecycle-grid{grid-template-columns:1fr;}}
+.lifecycle-card{background:var(--navy-panel);border:1px solid var(--hairline);border-radius:var(--radius);padding:24px 20px;display:flex;flex-direction:column;}
+.lifecycle-num{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.1em;color:var(--ink-faint);margin-bottom:12px;}
+.lifecycle-icon{width:50px;height:50px;border-radius:50%;background:rgba(193,127,69,0.14);display:flex;align-items:center;justify-content:center;margin-bottom:16px;flex-shrink:0;}
+.lifecycle-icon svg{width:24px;height:24px;}
+.lifecycle-card h4{font-size:17px;margin-bottom:6px;line-height:1.25;}
+.lifecycle-card .obj{font-size:12.5px;color:var(--teal-bright);font-style:italic;margin-bottom:14px;line-height:1.4;}
+.lifecycle-card ul{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+.lifecycle-card li{font-size:12px;color:var(--ink-mute);padding-left:12px;position:relative;line-height:1.4;}
+.lifecycle-card li::before{content:'';position:absolute;left:0;top:6px;width:5px;height:1px;background:var(--ink-faint);}
+.lifecycle-deliv{margin-top:auto;padding-top:14px;border-top:1px solid var(--hairline);}
+.lifecycle-deliv .dtitle{font-family:'Barlow Condensed',sans-serif;font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--copper-bright);margin-bottom:6px;}
+.lifecycle-deliv div{font-size:11.5px;color:var(--ink-faint);line-height:1.5;}
+
+/* ===== LIFECYCLE STEPPER ===== */
+.stepper{display:flex;align-items:flex-start;justify-content:space-between;position:relative;margin:34px 0 6px;padding:0 6px;}
+.stepper-track{position:absolute;top:18px;left:6%;right:6%;height:2px;background:rgba(255,255,255,0.08);}
+.stepper-fill{position:absolute;top:18px;left:6%;height:2px;background:linear-gradient(90deg,var(--good),var(--teal-bright));width:48%;}
+.step{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;z-index:2;}
+.step-node{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--navy);border:2px solid var(--hairline);margin-bottom:12px;}
+.step-node svg{width:16px;height:16px;}
+.step.done .step-node{background:var(--good);border-color:var(--good);}
+.step.active .step-node{background:var(--navy-panel);border-color:var(--teal-bright);box-shadow:0 0 0 5px rgba(63,196,192,0.16);}
+.step.active .step-node .dot{width:10px;height:10px;border-radius:50%;background:var(--teal-bright);}
+.step.beginning .step-node{background:var(--navy-panel);border-color:var(--warn);}
+.step.beginning .step-node .dot{width:8px;height:8px;border-radius:50%;background:var(--warn);opacity:0.7;}
+.step.future .step-node{border-color:var(--ink-faint);opacity:0.55;}
+.step-label{font-family:'Barlow Condensed',sans-serif;font-size:13.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--ink);font-weight:600;}
+.step.future .step-label{color:var(--ink-faint);}
+.step-status{font-size:11.5px;color:var(--ink-faint);margin-top:3px;}
+.step.done .step-status{color:var(--good);}
+.step.active .step-status{color:var(--teal-bright);}
+
+/* ===== CHECKLIST ===== */
+.check-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;}
+.check-card{background:var(--navy-panel);border:1px solid var(--hairline);border-radius:var(--radius);padding:22px;}
+.check-card h4{font-family:'Barlow Condensed',sans-serif;letter-spacing:0.05em;text-transform:uppercase;font-size:13px;color:var(--copper-bright);margin-bottom:14px;}
+.check-item{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--ink-dim);margin-bottom:10px;}
+.check-icon{flex-shrink:0;width:16px;height:16px;border-radius:4px;background:rgba(76,175,125,0.18);display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.check-icon svg{width:10px;height:10px;}
+.status-row{display:flex;gap:10px;margin-bottom:24px;flex-wrap:wrap;}
+
+/* ===== TIMELINE (roadmap) ===== */
+.roadmap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;}
+.roadmap-card{background:var(--navy-panel);border:1px solid var(--hairline);border-radius:var(--radius);padding:22px;border-top:2px solid var(--copper);}
+.roadmap-card h4{font-family:'Barlow Condensed',sans-serif;letter-spacing:0.05em;text-transform:uppercase;font-size:13.5px;color:var(--copper-bright);margin-bottom:12px;}
+.roadmap-card li{font-size:13.5px;color:var(--ink-dim);padding-left:14px;position:relative;margin-bottom:8px;}
+.roadmap-card li::before{content:'—';position:absolute;left:0;color:var(--ink-faint);}
+
+/* ===== 90-day goal bars (static) ===== */
+.goal-row{display:grid;grid-template-columns:210px 1fr 140px;align-items:center;gap:16px;padding:15px 0;border-bottom:1px solid var(--hairline);}
+.goal-row:last-child{border-bottom:none;}
+.goal-label{font-family:'Barlow Condensed',sans-serif;font-size:14px;color:var(--ink);font-weight:600;}
+.goal-bar-track{height:8px;background:rgba(255,255,255,0.06);border-radius:6px;position:relative;}
+.goal-bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--copper-dim),var(--copper-bright));}
+.goal-bar-target{position:absolute;top:-4px;width:2px;height:16px;background:var(--teal-bright);}
+.goal-target-val{font-size:12.5px;color:var(--ink-mute);text-align:right;font-family:'Barlow Condensed',sans-serif;font-weight:600;}
+.goal-target-val b{color:var(--teal-bright);}
+@media(max-width:640px){.goal-row{grid-template-columns:1fr;gap:6px;}.goal-target-val{text-align:left;}}
+
+/* ===== CLOSING ===== */
+.closing-panel{background:linear-gradient(160deg,rgba(193,127,69,0.1),var(--navy-panel));border:1px solid var(--hairline);border-radius:var(--radius);padding:44px;text-align:center;}
+.closing-panel p{max-width:680px;margin:0 auto 14px;color:var(--ink-dim);font-size:15px;}
+.closing-mark{font-family:'Barlow Condensed',sans-serif;letter-spacing:0.14em;text-transform:uppercase;color:var(--copper-bright);font-size:13px;margin-bottom:18px;}
+
+/* ===== FOOTER ===== */
+footer{padding:56px 0 44px;}
+.footer-logos{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:26px;}
+.footer-text{text-align:center;color:var(--ink-faint);font-size:13px;line-height:1.9;}
+.footer-text .tm{color:var(--ink-mute);font-family:'Barlow Condensed',sans-serif;letter-spacing:0.06em;text-transform:uppercase;font-size:12px;margin-bottom:10px;}
+.confidential{margin-top:18px;font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);text-align:center;}
+
+/* ===== PRINT ===== */
+@media print{
+  #nav{position:static;background:#fff;border-color:#ccc;}
+  #nav a{color:#333;}
+  .nav-toggle-label{display:none;}
+  body{background:#fff;color:#222;}
+  section{break-inside:avoid;border-color:#ddd;padding:36px 0;}
+  .cover{min-height:auto;padding:40px 0;}
+  .kpi-card,.ring-card,.scan-grid-box,.exec-col,.check-card,.roadmap-card,.spark-box,.matrix-box,.closing-panel{border-color:#ccc;background:#fafafa;}
+  h1,h2,h3,h4{color:#111;}
+  .callout{background:#f4ede3;color:#333;}
+  a[href]::after{content:'';}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <div class="brandmark"><span class="dot"></span>Red River Cantina · Richmond</div>
+    <input type="checkbox" id="navcheck" class="nav-check">
+    <label for="navcheck" class="nav-toggle-label" aria-label="Toggle navigation">☰</label>
+    <ul id="navlinks">
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#lifecycle">Growth Lifecycle</a></li>
+      <li><a href="#kpi">KPI Dashboard</a></li>
+      <li><a href="#ads">Google Ads</a></li>
+      <li><a href="#search">Search Intel</a></li>
+      <li><a href="#local">Local Search</a></li>
+      <li><a href="#keywords">Keywords</a></li>
+      <li><a href="#meta">Meta Performance</a></li>
+      <li><a href="#foundation">Foundation</a></li>
+      <li><a href="#completed">Completed</a></li>
+      <li><a href="#roadmap">30-Day Roadmap</a></li>
+      <li><a href="#vision">90-Day Vision</a></li>
+      <li><a href="#next90">Next 90 Days</a></li>
+      <li><a href="#closing">Closing</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ 1. EXECUTIVE COVER ============ -->
+<header class="cover">
+  <div class="wrap">
+    <div class="cover-logos">
+      <div class="logo-chip"><img src="images/red-river-cantina-logo.png" alt="Red River Cantina logo"></div>
+      <div class="cover-divider"></div>
+      <div class="logo-chip riva"><img src="images/riva-strategies-logo.png" alt="Riva Strategies logo"></div>
+    </div>
+    <div class="cover-title">
+      <div class="eyebrow">Digital Performance Report</div>
+      <h1>Red River <em>Cantina</em></h1>
+      <div class="loc">Richmond, Texas</div>
+      <div class="rpttype">Google Marketing · Meta Marketing · Local SEO · Search Visibility · Keyword Intelligence · Growth Roadmap</div>
+      <div class="cover-meta">
+        <div class="m"><div class="k">Report Type</div><div class="v">Baseline</div></div>
+        <div class="m"><div class="k">Period</div><div class="v">July 2026</div></div>
+        <div class="m"><div class="k">Digital Health</div><div class="v">89 / 100</div></div>
+      </div>
+      <div class="prepared-by">Prepared by Riva Strategies · Riva Restaurant Intelligence™ Version 1</div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 2. EXECUTIVE SUMMARY ============ -->
+<section id="summary">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Section 01</div>
+      <h2>Executive Summary</h2>
+      <p>This report establishes the first comprehensive digital marketing benchmark for Red River Cantina Richmond, measured against the Riva Growth Lifecycle™ — the structured framework Riva Strategies uses to guide every client from initial discovery through sustainable, predictable scaling. It becomes the baseline against which all future monthly improvements are measured.</p>
+    </div>
+
+    <p style="font-size:15px;color:var(--ink-dim);max-width:760px;margin-bottom:8px;">Over the previous several weeks, Richmond progressed through the Discovery and Foundation milestones and is now actively inside the Learning Milestone. Riva Strategies completed a full digital foundation build across two platforms — Google Ads deployment and Performance Max optimization, Google Business Profile optimization and category refinement, local search benchmarking, keyword intelligence research, and analytics implementation on the Google side; Meta audience acquisition, organic content distribution, and paid campaign testing across Reach, Engagement, and Traffic objectives on the Meta side — and is now deliberately teaching both platforms who the ideal Red River customer is.</p>
+    <p style="font-size:15px;color:var(--ink-dim);max-width:760px;">The result is a location that is already performing efficiently in paid search, holds an outright category lead in local search, and has begun building a qualified Meta audience from a standing start — with clear, specific room to grow broader "Mexican Restaurant" visibility, Google review rating, and organic engagement depth as the location moves into the Optimization Milestone over the next 90 days.</p>
+
+    <div class="callout" style="margin-top:24px;max-width:820px;">
+      <strong>Performance Context.</strong> Several top-line engagement metrics in this report read lower than a mature, steady-state account would show. That is expected, and it is by design — the deliberate signature of a properly managed Learning Milestone, not a shortfall. Richmond intentionally accelerated this milestone: Google and Meta were deliberately given significant behavioral data in a compressed window, compressing what would normally take months of gradual audience refinement into a short, concentrated period. The objective was not short-term engagement — it was to rapidly generate high-quality audience signals, validate creative, refine geographic targeting, and provide both platforms with enough behavioral data to improve delivery going forward. Temporary fluctuations in engagement metrics should be read within that context, not against it. The growth in qualified page visits, new follower acquisition, search visibility, LocalFalcon-tracked rankings, Google Ads optimization score, and audience intelligence are stronger long-term indicators than short-term engagement percentages. Future reports will increasingly reflect the optimization gains this Learning Milestone is built to produce. This period establishes the baseline every future monthly report will be measured against.
+    </div>
+
+    <div class="exec-cols">
+      <div class="exec-col wins">
+        <h4>Biggest Wins</h4>
+        <ul>
+          <li>Google Ads campaign is fully optimized (90.3% Optimization Score) at a $1.16 cost per conversion event</li>
+          <li>Category leader for "Tex-Mex Restaurant" — Top 3 ranking across 100% of the scanned trade area</li>
+          <li>Google Business Profile is fully optimized with strong review volume (1,469 reviews)</li>
+          <li>Meta audience acquisition delivered 28 new followers in the period (+27.3%) at efficient acquisition cost</li>
+          <li>Weekend Traffic + Fiesta campaign reached 80,512 people at $5.26 per 1,000 reached</li>
+          <li>Analytics and conversion tracking are fully implemented across both platforms, giving ownership a real measurement baseline</li>
+        </ul>
+      </div>
+      <div class="exec-col opps">
+        <h4>Biggest Opportunities</h4>
+        <ul>
+          <li>Share of Local Voice for the broader "Mexican Restaurant" search is 12.35% versus a 59.26% market leader</li>
+          <li>Google rating sits at 4.2 — closing this to 4.3–4.4 is the single highest-leverage review lever available</li>
+          <li>Google Posting cadence has lapsed since April 23, 2026 and should resume weekly</li>
+          <li>AI Search Readiness is an early-stage 35% — conversational query content is largely untapped</li>
+          <li>Meta content interactions (149) are early-stage relative to reach (77,417 views) — organic hook and CTA testing is the next lever</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="closing-panel" style="margin-top:32px;text-align:left;border-top:2px solid var(--copper);">
+      <div class="closing-mark">Strategic Milestone</div>
+      <p style="margin:0 0 18px;max-width:100%;">Richmond is the first Red River Restaurants location to receive a fully integrated digital growth system. This report reflects the coordinated deployment of eight connected disciplines under one strategy, rather than isolated marketing tactics:</p>
+      <div class="check-grid" style="text-align:left;">
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Google Ads</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Meta Ads</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Google Business Profile Optimization</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Local SEO</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>LocalFalcon GeoGrid Tracking</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Keyword Intelligence</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>AI Search Monitoring</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Monthly Executive Reporting</div>
+      </div>
+      <p style="margin:18px 0 0;max-width:100%;">This report serves as the baseline benchmark from which all future monthly improvements — across every discipline above, and across every milestone of the Riva Growth Lifecycle™ — will be measured.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. THE RIVA GROWTH LIFECYCLE ============ -->
+<section id="lifecycle">
+  <div class="wrap">
+    <div class="sec-head" style="max-width:100%;">
+      <div class="eyebrow">Section 02</div>
+      <h2>The Riva Growth Lifecycle™</h2>
+      <p>A Structured Framework for Sustainable Digital Growth</p>
+    </div>
+
+    <p style="font-size:15px;color:var(--ink-dim);max-width:820px;margin-bottom:36px;">Sustainable digital growth does not happen through isolated advertising campaigns. It is the result of progressing through a structured framework in which each stage builds on the one before it. Rather than measuring success over days or weeks, Riva evaluates progress across approximately 90-day strategic milestones — recognizing that every business advances at its own pace, and that milestones frequently overlap.</p>
+
+    <div class="lifecycle-grid">
+      <div class="lifecycle-card">
+        <div class="lifecycle-num">Milestone 01</div>
+        <div class="lifecycle-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="10.5" cy="10.5" r="6.5" stroke="#e0a868" stroke-width="1.8"/><line x1="15.3" y1="15.3" x2="21" y2="21" stroke="#e0a868" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h4>Discovery</h4>
+        <div class="obj">Understand the business before changing the business.</div>
+        <ul>
+          <li>Business discovery</li>
+          <li>Competitive analysis</li>
+          <li>Revenue opportunity assessment</li>
+          <li>Customer journey evaluation</li>
+          <li>Technology review</li>
+          <li>Digital audit &amp; strategic planning</li>
+        </ul>
+        <div class="lifecycle-deliv"><div class="dtitle">Primary Deliverables</div><div>Growth Assessment · Strategic Roadmap · Initial Priorities</div></div>
+      </div>
+
+      <div class="lifecycle-card">
+        <div class="lifecycle-num">Milestone 02</div>
+        <div class="lifecycle-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="12" width="5" height="8" stroke="#e0a868" stroke-width="1.8"/><rect x="9.5" y="7" width="5" height="13" stroke="#e0a868" stroke-width="1.8"/><rect x="15.5" y="4" width="5" height="16" stroke="#e0a868" stroke-width="1.8"/></svg></div>
+        <h4>Foundation</h4>
+        <div class="obj">Build the infrastructure required for measurable growth.</div>
+        <ul>
+          <li>Website improvements</li>
+          <li>Google Business Profile optimization</li>
+          <li>Analytics &amp; conversion tracking</li>
+          <li>Meta Business configuration</li>
+          <li>Google Ads setup</li>
+          <li>Local SEO, photography &amp; landing pages</li>
+        </ul>
+        <div class="lifecycle-deliv"><div class="dtitle">Primary Deliverables</div><div>Fully Connected Digital Ecosystem · Reliable Measurement Systems · Marketing Infrastructure</div></div>
+      </div>
+
+      <div class="lifecycle-card">
+        <div class="lifecycle-num">Milestone 03</div>
+        <div class="lifecycle-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4.5c-3 0-5 2-5 4.6 0 1.7.9 2.7 1.7 3.5.6.6 1 1.1 1.1 1.9v1.5h4.4v-1.5c0-.8.4-1.3 1-1.9.8-.8 1.8-1.8 1.8-3.5 0-2.6-2-4.6-5-4.6z" stroke="#e0a868" stroke-width="1.6" stroke-linejoin="round"/><line x1="10" y1="18.5" x2="14" y2="18.5" stroke="#e0a868" stroke-width="1.6" stroke-linecap="round"/><line x1="10.5" y1="20.5" x2="13.5" y2="20.5" stroke="#e0a868" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h4>Learning</h4>
+        <div class="obj">Teach Google and Meta who the ideal customer is.</div>
+        <p style="font-size:12px;color:var(--ink-mute);line-height:1.55;margin-bottom:12px;">Advertising is intentionally focused on generating high-quality audience signals rather than maximizing short-term returns.</p>
+        <ul>
+          <li>Search behavior</li>
+          <li>Customer interests</li>
+          <li>Geographic trends</li>
+          <li>Audience quality &amp; creative preferences</li>
+          <li>Conversion behavior</li>
+        </ul>
+        <div class="lifecycle-deliv"><div class="dtitle">Success Measure</div><div>Quality of data collected — not immediate campaign efficiency</div></div>
+      </div>
+
+      <div class="lifecycle-card">
+        <div class="lifecycle-num">Milestone 04</div>
+        <div class="lifecycle-icon"><svg viewBox="0 0 24 24" fill="none"><polyline points="3.5,17 9,10.5 13,14 20.5,5.5" stroke="#e0a868" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><polyline points="15,5.5 20.5,5.5 20.5,11" stroke="#e0a868" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h4>Optimization</h4>
+        <div class="obj">Use accumulated data to improve performance.</div>
+        <ul>
+          <li>Audience refinement</li>
+          <li>Budget optimization</li>
+          <li>Creative testing</li>
+          <li>Keyword &amp; local SEO refinement</li>
+          <li>Landing page &amp; GBP improvements</li>
+          <li>AI search optimization</li>
+        </ul>
+        <div class="lifecycle-deliv"><div class="dtitle">Success Measure</div><div>Increasingly measurable month-over-month performance gains</div></div>
+      </div>
+
+      <div class="lifecycle-card">
+        <div class="lifecycle-num">Milestone 05</div>
+        <div class="lifecycle-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3.5c2.5 1.7 4 4.6 4 8 0 2-1 4.3-2 5.5l-2-1.5-2 1.5c-1-1.2-2-3.5-2-5.5 0-3.4 1.5-6.3 4-8z" stroke="#e0a868" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10.5" r="1.4" stroke="#e0a868" stroke-width="1.4"/><path d="M9 17.5l-2 3M15 17.5l2 3" stroke="#e0a868" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h4>Scaling</h4>
+        <div class="obj">Expand proven systems.</div>
+        <ul>
+          <li>Increased advertising investment</li>
+          <li>Additional campaigns</li>
+          <li>Geographic expansion</li>
+          <li>Catering initiatives &amp; loyalty programs</li>
+          <li>Automation &amp; AI integration</li>
+          <li>Revenue diversification</li>
+        </ul>
+        <div class="lifecycle-deliv"><div class="dtitle">Success Measure</div><div>Predictable growth, supported by accumulated performance data</div></div>
+      </div>
+    </div>
+
+    <div class="closing-panel" style="margin-top:36px;text-align:left;border-top:2px solid var(--teal);">
+      <div class="closing-mark">Current Lifecycle Position</div>
+      <p style="margin:0 0 6px;max-width:100%;">Richmond Cantina currently sits between the Foundation and Learning milestones — infrastructure is largely in place, and the account is actively teaching Google and Meta who the ideal Red River customer is.</p>
+
+      <div class="stepper">
+        <div class="stepper-track"></div>
+        <div class="stepper-fill"></div>
+        <div class="step done">
+          <div class="step-node"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#070f1e" stroke-width="1.8" fill="none"/></svg></div>
+          <div class="step-label">Discovery</div>
+          <div class="step-status">Complete</div>
+        </div>
+        <div class="step done">
+          <div class="step-node"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#070f1e" stroke-width="1.8" fill="none"/></svg></div>
+          <div class="step-label">Foundation</div>
+          <div class="step-status">Largely Complete</div>
+        </div>
+        <div class="step active">
+          <div class="step-node"><span class="dot"></span></div>
+          <div class="step-label">Learning</div>
+          <div class="step-status">Active</div>
+        </div>
+        <div class="step beginning">
+          <div class="step-node"><span class="dot"></span></div>
+          <div class="step-label">Optimization</div>
+          <div class="step-status">Beginning</div>
+        </div>
+        <div class="step future">
+          <div class="step-node"></div>
+          <div class="step-label">Scaling</div>
+          <div class="step-status">Future</div>
+        </div>
+      </div>
+
+      <p style="margin:30px 0 0;max-width:100%;">The objective of this reporting period was not to evaluate final campaign performance. It was to establish the measurable baseline from which all future optimization and scaling efforts will be evaluated.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. EXECUTIVE KPI DASHBOARD ============ -->
+<section id="kpi">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Section 03</div>
+      <h2>Executive KPI Dashboard</h2>
+      <p>Every headline number from this baseline period.</p>
+    </div>
+    <div class="kpi-grid">
+      <div class="kpi-card"><div class="lbl">Impressions</div><div class="val">17,161</div></div>
+      <div class="kpi-card"><div class="lbl">Clicks</div><div class="val">668</div></div>
+      <div class="kpi-card"><div class="lbl">CTR</div><div class="val">3.89%</div></div>
+      <div class="kpi-card"><div class="lbl">Conversion Events</div><div class="val">224</div><div class="sub">Google Ads reported</div></div>
+      <div class="kpi-card"><div class="lbl">Average CPC</div><div class="val">$0.39</div></div>
+      <div class="kpi-card"><div class="lbl">Ad Spend</div><div class="val">$259.24</div></div>
+      <div class="kpi-card"><div class="lbl">Cost / Conversion Event</div><div class="val">$1.16</div></div>
+      <div class="kpi-card"><div class="lbl">Optimization Score</div><div class="val">90.3%</div></div>
+      <div class="kpi-card big"><div class="lbl">Overall Digital Health Score</div><div class="val">89<small>/100</small></div></div>
+    </div>
+
+    <div class="ring-hero" style="margin-top:36px;">
+      <div class="ring" style="--p:89;--c:#c17f45;"><div class="ring-inner"><span>89</span></div></div>
+      <div class="ring-hero-text">
+        <h3>89 / 100 — Strong Foundation</h3>
+        <p>Google Ads and Google Business Profile are performing at an executive standard. The clearest lever for the next quarter is closing the gap on Local SEO breadth and AI search readiness.</p>
+      </div>
+    </div>
+    <div class="ring-grid">
+      <div class="ring-card"><div class="ring" style="--p:95;--c:#c17f45;"><div class="ring-inner"><span>95%</span></div></div><div class="lbl">Google Ads</div><div class="note">Efficient, optimized spend</div></div>
+      <div class="ring-card"><div class="ring" style="--p:96;--c:#3fc4c0;"><div class="ring-inner"><span>96%</span></div></div><div class="lbl">Business Profile</div><div class="note">Fully optimized listing</div></div>
+      <div class="ring-card"><div class="ring" style="--p:90;--c:#c17f45;"><div class="ring-inner"><span>90%</span></div></div><div class="lbl">Website</div><div class="note">Solid technical baseline</div></div>
+      <div class="ring-card"><div class="ring" style="--p:90;--c:#3fc4c0;"><div class="ring-inner"><span>90%</span></div></div><div class="lbl">Analytics</div><div class="note">Tracking fully implemented</div></div>
+      <div class="ring-card"><div class="ring" style="--p:78;--c:#d4af37;"><div class="ring-inner"><span>78%</span></div></div><div class="lbl">Local SEO</div><div class="note">Category-leading, room to widen</div></div>
+      <div class="ring-card"><div class="ring" style="--p:35;--c:#d9564f;"><div class="ring-inner"><span>35%</span></div></div><div class="lbl">AI Search Readiness</div><div class="note">Emerging priority, early stage</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. GOOGLE ADS PERFORMANCE ============ -->
+<section id="ads">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Section 04</div>
+      <h2>Google Ads Performance</h2>
+      <p>RRC Richmond | Local Awareness | PMax | July 2026 &nbsp; <span class="pill good">Active</span></p>
+    </div>
+
+    <div class="kpi-grid" style="margin-bottom:28px;">
+      <div class="kpi-card"><div class="lbl">Budget</div><div class="val" style="font-size:24px;">$20<small>/day</small></div></div>
+      <div class="kpi-card"><div class="lbl">Bid Strategy</div><div class="val" style="font-size:19px;">Maximize Conversions</div></div>
+      <div class="kpi-card"><div class="lbl">Learning Status</div><div class="val" style="font-size:19px;">Exited Learning</div><div class="sub">Optimization phase active</div></div>
+      <div class="kpi-card"><div class="lbl">Optimization Score</div><div class="val">90.3%</div></div>
+    </div>
+
+    <div class="grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+      <div class="spark-box">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:16px;">Cost per Conversion Event — Baseline Trend</div>
+        <svg viewBox="0 0 400 130" width="100%" style="overflow:visible;">
+          <line x1="20" y1="20" x2="380" y2="20" stroke="rgba(196,167,125,0.12)" stroke-width="1"/>
+          <line x1="20" y1="60" x2="380" y2="60" stroke="rgba(196,167,125,0.12)" stroke-width="1"/>
+          <line x1="20" y1="100" x2="380" y2="100" stroke="rgba(196,167,125,0.12)" stroke-width="1"/>
+          <polyline points="20,100 140,63.5 260,40.9 380,20" fill="none" stroke="#e0a868" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="20" cy="100" r="5" fill="#0f2038" stroke="#e0a868" stroke-width="2.5"/>
+          <circle cx="140" cy="63.5" r="5" fill="#0f2038" stroke="#e0a868" stroke-width="2.5"/>
+          <circle cx="260" cy="40.9" r="5" fill="#0f2038" stroke="#e0a868" stroke-width="2.5"/>
+          <circle cx="380" cy="20" r="5" fill="#e0a868"/>
+          <text x="20" y="115" font-family="Barlow Condensed" font-size="11" fill="#8996ac">$1.62</text>
+          <text x="120" y="80" font-family="Barlow Condensed" font-size="11" fill="#8996ac">$1.41</text>
+          <text x="240" y="58" font-family="Barlow Condensed" font-size="11" fill="#8996ac">$1.28</text>
+          <text x="345" y="14" font-family="Barlow Condensed" font-size="12" fill="#f2efe7" font-weight="700">$1.16</text>
+        </svg>
+        <div class="spark-labels"><span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4 (Current)</span></div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div class="ring-card" style="text-align:left;display:flex;align-items:center;gap:18px;padding:20px;">
+          <div class="ring" style="--p:86;--c:#e0a868;width:88px;height:88px;flex-shrink:0;"><div class="ring-inner"><span style="font-size:14px;">3.89%</span></div></div>
+          <div><div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:0.05em;color:var(--ink);">CTR vs 4.5% Target</div><div style="font-size:12.5px;color:var(--ink-faint);margin-top:4px;">86% of goal reached</div></div>
+        </div>
+        <div class="ring-card" style="text-align:left;display:flex;align-items:center;gap:18px;padding:20px;">
+          <div class="ring" style="--p:78;--c:#4caf7d;width:88px;height:88px;flex-shrink:0;"><div class="ring-inner"><span style="font-size:14px;">$0.39</span></div></div>
+          <div><div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:0.05em;color:var(--ink);">Avg CPC vs $0.50 Ceiling</div><div style="font-size:12.5px;color:var(--ink-faint);margin-top:4px;">22% of budget headroom remaining</div></div>
+        </div>
+        <div class="ring-card" style="text-align:left;display:flex;align-items:center;gap:18px;padding:20px;">
+          <div class="ring" style="--p:90;--c:#3fc4c0;width:88px;height:88px;flex-shrink:0;"><div class="ring-inner"><span style="font-size:14px;">90.3%</span></div></div>
+          <div><div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:0.05em;color:var(--ink);">Spend Pacing / Optimization</div><div style="font-size:12.5px;color:var(--ink-faint);margin-top:4px;">Full daily budget utilization</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Performance observation:</strong> The campaign has successfully entered Google's optimization phase and is producing efficient traffic with a low average cost per click while maintaining meaningful local visibility. Conversion events are labeled as <strong>Google Ads reported conversion events</strong> — they indicate meaningful on-site or call actions, not confirmed restaurant sales.
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. SEARCH INTELLIGENCE ============ -->
+<section id="search">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Section 05</div>
+      <h2>Search Intelligence</h2>
+      <p>Top search terms triggering Red River Cantina's ads, ranked by click volume.</p>
+    </div>
+
+    <div class="bar-list" style="margin-bottom:32px;">
+      <div class="bar-row"><div class="bl">Red River Cantina</div><div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div><div class="bv">53 clicks</div></div>
+      <div class="bar-row"><div class="bl">Mexican Restaurant Near Me</div><div class="bar-track"><div class="bar-fill" style="width:90.6%;"></div></div><div class="bv">48 clicks</div></div>
+      <div class="bar-row"><div class="bl">Chipotle Near Me</div><div class="bar-track"><div class="bar-fill" style="width:37.7%;"></div></div><div class="bv">20 clicks</div></div>
+      <div class="bar-row"><div class="bl">Chipotle Cerca de Mi</div><div class="bar-track"><div class="bar-fill" style="width:24.5%;"></div></div><div class="bv">13 clicks</div></div>
+      <div class="bar-row"><div class="bl">Mexican Food Near Me</div><div class="bar-track"><div class="bar-fill" style="width:22.6%;"></div></div><div class="bv">12 clicks</div></div>
+      <div class="bar-row"><div class="bl">Pappasito's Cantina Near Me</div><div class="bar-track"><div class="bar-fill" style="width:22.6%;"></div></div><div class="bv">12 clicks</div></div>
+      <div class="bar-row"><div class="bl">Don Rey Mexican Restaurant</div><div class="bar-track"><div class="bar-fill" style="width:15.1%;"></div></div><div class="bv">8 clicks</div></div>
+      <div class="bar-row"><div class="bl">Mexican Near Me</div><div class="bar-track"><div class="bar-fill" style="width:15.1%;"></div></div><div class="bv">8 clicks</div></div>
+      <div class="bar-row"><div class="bl">Red River Cantina Menu</div><div class="bar-track"><div class="bar-fill" style="width:13.2%;"></div></div><div class="bv">7 clicks</div></div>
+      <div class="bar-row"><div class="bl">Mexican Restaurants Near Me</div><div class="bar-track"><div class="bar-fill" style="width:11.3%;"></div></div><div class="bv">6 clicks</div></div>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Search Term</th><th>Clicks</th><th>Impr.</th><th>CTR</th><th>Avg CPC</th><th>Cost</th><th>Conv. Rate</th><th>Conv. Events</th></tr></thead>
+        <tbody>
+          <tr><td>Red River Cantina</td><td class="num-cell">53</td><td class="num-cell">483</td><td class="num-cell">10.97%</td><td class="num-cell">$0.28</td><td class="num-cell">$14.59</td><td class="num-cell">33.96%</td><td class="num-cell">18</td></tr>
+          <tr><td>Mexican Restaurant Near Me</td><td class="num-cell">48</td><td class="num-cell">1,710</td><td class="num-cell">2.81%</td><td class="num-cell">$0.40</td><td class="num-cell">$19.03</td><td class="num-cell">33.33%</td><td class="num-cell">16</td></tr>
+          <tr><td>Chipotle Near Me</td><td class="num-cell">20</td><td class="num-cell">227</td><td class="num-cell">8.81%</td><td class="num-cell">$0.50</td><td class="num-cell">$9.96</td><td class="num-cell">55.00%</td><td class="num-cell">11</td></tr>
+          <tr><td>Chipotle Cerca de Mi</td><td class="num-cell">13</td><td class="num-cell">135</td><td class="num-cell">9.63%</td><td class="num-cell">$0.63</td><td class="num-cell">$8.13</td><td class="num-cell">53.85%</td><td class="num-cell">7</td></tr>
+          <tr><td>Mexican Food Near Me</td><td class="num-cell">12</td><td class="num-cell">443</td><td class="num-cell">2.71%</td><td class="num-cell">$0.35</td><td class="num-cell">$4.22</td><td class="num-cell">33.33%</td><td class="num-cell">4</td></tr>
+          <tr><td>Pappasito's Cantina Near Me</td><td class="num-cell">12</td><td class="num-cell">263</td><td class="num-cell">4.56%</td><td class="num-cell">$0.45</td><td class="num-cell">$5.44</td><td class="num-cell">41.67%</td><td class="num-cell">5</td></tr>
+          <tr><td>Don Rey Mexican Restaurant</td><td class="num-cell">8</td><td class="num-cell">66</td><td class="num-cell">12.12%</td><td class="num-cell">$0.43</td><td class="num-cell">$3.46</td><td class="num-cell">37.50%</td><td class="num-cell">3</td></tr>
+          <tr><td>Mexican Near Me</td><td class="num-cell">8</td><td class="num-cell">199</td><td class="num-cell">4.02%</td><td class="num-cell">$0.27</td><td class="num-cell">$2.18</td><td class="num-cell">0.00%</td><td class="num-cell">0</td></tr>
+          <tr><td>Red River Cantina Menu</td><td class="num-cell">7</td><td class="num-cell">39</td><td class="num-cell">17.95%</td><td class="num-cell">$0.12</td><td class="num-cell">$0.81</td><td class="num-cell">14.29%</td><td class="num-cell">1</td></tr>
+          <tr><td>Mexican Restaurants Near Me</td><td class="num-cell">6</td><td class="num-cell">220</td><td class="num-cell">2.73%</td><td class="num-cell">$0.39</td><td class="num-cell">$2.34</td><td class="num-cell">83.33%</td><td class="num-cell">5</td></tr>
+          <tr><td>Total (all search terms)</td><td class="num-cell">526</td><td class="num-cell">12,043</td><td class="num-cell">4.37%</td><td class="num-cell">$0.45</td><td class="num-cell">$237.66</td><td class="num-cell">36.31%</td><td class="num-cell">191</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout-grid">
+      <div class="callout">
+        <strong>Highest performing query:</strong> "Red River Cantina Menu" converts at the lowest cost per click ($0.12) with a 17.95% CTR — the strongest signal of qualified, ready-to-visit intent in the account.
+      </div>
+      <div class="callout teal">
+        <strong>Most valuable search behavior:</strong> Competitor comparison terms ("Chipotle Near Me," "Pappasito's Cantina Near Me") are converting at 41–55%, showing Red River is winning consideration against established regional and national brands.
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:0;">
+      Google is serving Red River within brand searches, high-intent category searches, location-based searches, and competitor comparison searches — indicating the restaurant is being actively considered alongside established competitors during real dining decisions.
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. LOCAL SEARCH VISIBILITY ============ -->
+<section id="local">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Section 06</div>
+      <h2>Local Search Visibility</h2>
+      <p>Local Falcon scans for Red River Cantina · 19220 W Bellfort, Richmond, TX 77407 · 9×9 grid · 3-mile radius · Scanned July 14, 2026</p>
+    </div>
+
+    <h3 style="font-size:19px;margin-bottom:16px;">"Mexican Restaurant"</h3>
+    <div class="scan-wrap">
+      <div class="scan-grid-box">
+        <div class="scan-grid">
+          <div class="scan-pt" style="background:#5d6a83;" title="Not ranked in top 20"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #12"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #10"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #12"></div><div class="scan-pt" style="background:#5d6a83;" title="Not ranked in top 20"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #12"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #9"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #9"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #8"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #9"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #9"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #12"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #9"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #8"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #7"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #6"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #7"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #8"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #9"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #9"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #7"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #5"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #5"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #7"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #9"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #10"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #8"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #6"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #2"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #6"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #8"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #10"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #9"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #7"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #5"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #5"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #7"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #9"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #9"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #8"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #7"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #6"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #7"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #8"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #9"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #12"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #9"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #9"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #8"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #9"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #9"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #12"></div><div class="scan-pt" style="background:#5d6a83;" title="Not ranked in top 20"></div><div class="scan-pt" style="background:#5d6a83;" title="Not ranked in top 20"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #10"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#8a5a30;" title="Rank #11"></div><div class="scan-pt" style="background:#5d6a83;" title="Not ranked in top 20"></div><div class="scan-pt" style="background:#5d6a83;" title="Not ranked in top 20"></div>
+        </div>
+        <div class="scan-legend">
+          <span><i style="background:#4caf7d;"></i>Rank 1–3</span>
+          <span><i style="background:#d4af37;"></i>Rank 4–7</span>
+          <span><i style="background:#8a5a30;"></i>Rank 8–15</span>
+          <span><i style="background:#5d6a83;"></i>Not Ranked</span>
+        </div>
+        <div class="scan-caption">Report-native scan visualization built from this scan's metrics. No Local Falcon screenshot file was supplied for this baseline — swap this panel for the original heatmap PNG once provided.</div>
+      </div>
+      <div class="scan-stats">
+        <div class="stat"><div class="n">7.84</div><div class="l">Average Rank Position</div></div>
+        <div class="stat"><div class="n">8.81</div><div class="l">Avg. Total Rank Position</div></div>
+        <div class="stat"><div class="n">12.35%</div><div class="l">Share of Local Voice</div></div>
+        <div class="stat"><div class="n">75 / 81</div><div class="l">Scan Points Visible (92.59%)</div></div>
+      </div>
+    </div>
+
+    <h3 style="font-size:19px;margin:44px 0 16px;">"Tex-Mex Restaurant" <span class="pill good" style="margin-left:8px;">Market Leader</span></h3>
+    <div class="scan-wrap">
+      <div class="scan-grid-box">
+        <div class="scan-grid">
+          <div class="scan-pt" style="background:#d4af37;" title="Rank #5"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #5"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #2"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #2"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #2"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #2"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #2"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #1"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #2"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #2"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #2"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #1"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #1"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #1"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #2"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #2"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #2"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #1"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #2"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #2"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #2"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #2"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #2"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#4caf7d;" title="Rank #3"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #5"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #4"></div><div class="scan-pt" style="background:#d4af37;" title="Rank #5"></div>
+        </div>
+        <div class="scan-legend">
+          <span><i style="background:#4caf7d;"></i>Rank 1–3</span>
+          <span><i style="background:#d4af37;"></i>Rank 4–7</span>
+        </div>
+        <div class="scan-caption">Report-native scan visualization built from this scan's metrics — swap for the original screenshot once supplied.</div>
+      </div>
+      <div class="scan-stats">
+        <div class="stat"><div class="n">2.83</div><div class="l">Average Rank Position</div></div>
+        <div class="stat"><div class="n">80.25%</div><div class="l">Share of Local Voice</div></div>
+        <div class="stat"><div class="n">81 / 81</div><div class="l">Scan Points Visible (100%)</div></div>
+        <div class="stat"><div class="n">80</div><div class="l">Competitors Scanned</div></div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:16px;">Share of Local Voice — Tex-Mex Restaurant, Richmond TX</div>
+      <div class="bar-list">
+        <div class="bar-row"><div class="bl">Red River Cantina</div><div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div><div class="bv">80.25%</div></div>
+        <div class="bar-row"><div class="bl">Pablo's Mexican Kitchen</div><div class="bar-track"><div class="bar-fill" style="width:86.2%;background:linear-gradient(90deg,#40506b,#5d6a83);"></div></div><div class="bv">69.14%</div></div>
+        <div class="bar-row"><div class="bl">Ruthie's Tex-Mex</div><div class="bar-track"><div class="bar-fill" style="width:44.6%;background:linear-gradient(90deg,#40506b,#5d6a83);"></div></div><div class="bv">35.80%</div></div>
+        <div class="bar-row"><div class="bl">Lopez Mexican Restaurant</div><div class="bar-track"><div class="bar-fill" style="width:30.8%;background:linear-gradient(90deg,#40506b,#5d6a83);"></div></div><div class="bv">24.69%</div></div>
+        <div class="bar-row"><div class="bl">Los 3 Regios Mexican Restaurant</div><div class="bar-track"><div class="bar-fill" style="width:27.7%;background:linear-gradient(90deg,#40506b,#5d6a83);"></div></div><div class="bv">22.22%</div></div>
+        <div class="bar-row"><div class="bl">Carmelo's Mexican Grill</div><div class="bar-track"><div class="bar-fill" style="width:15.4%;background:linear-gradient(90deg,#40506b,#5d6a83);"></div></div><div class="bv">12.35%</div></div>
+      </div>
+    </div>
+
+    <div class="callout-grid">
+      <div class="callout">
+        <strong>Visibility observation:</strong> Red River is visible across nearly the entire scan area for "Mexican Restaurant." Visibility is strongest within the immediate trade area and gradually declines with distance due to Google's proximity weighting — a clear baseline for future local SEO growth.
+      </div>
+      <div class="callout teal">
+        <strong>Category leadership:</strong> Red River Cantina is the dominant business in Richmond for "Tex-Mex Restaurant," with Google consistently ranking it in the Top 3 across nearly the entire scan radius — a 46.91-point SoLV lead over the nearest competitor in that category.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. KEYWORD INTELLIGENCE ============ -->
+<section id="keywords">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Section 07</div>
+      <h2>Keyword Intelligence</h2>
+      <p>Local Falcon keyword research, scored by volume, difficulty, and WYN (worth-your-notice) score.</p>
+    </div>
+
+    <div class="dual-grid" style="margin-bottom:28px;">
+      <div class="dual-card trad">
+        <h4>Traditional Search</h4>
+        <p>Short, keyword-based queries matched against listings, categories, and on-page content.</p>
+        <div class="query-chip">"mexican restaurant richmond tx"</div>
+        <div class="query-chip">"fajitas near me"</div>
+      </div>
+      <div class="dual-card ai">
+        <h4>Conversational AI Search</h4>
+        <p>Full-sentence questions answered by AI Overviews, AI Mode, ChatGPT, and Gemini — won through FAQ content, Q&amp;A, and structured data.</p>
+        <div class="query-chip">"Where is the best place for margaritas in Richmond TX?"</div>
+        <div class="query-chip">"Who has the best beef fajitas in 77407?"</div>
+      </div>
+    </div>
+
+    <div class="matrix-box" style="margin-bottom:28px;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:22px;">Opportunity Matrix — Volume vs. Difficulty</div>
+      <div style="padding-left:34px;">
+        <div class="matrix">
+          <div class="matrix-quad"></div>
+          <div class="matrix-axis-y matrix-axis-label">Volume →</div>
+          <div class="matrix-dot high" style="left:82%;top:5%;"></div><div class="matrix-tag" style="left:82%;top:5%;">Mexican Restaurant</div>
+          <div class="matrix-dot high" style="left:75%;top:12%;"></div><div class="matrix-tag" style="left:75%;top:12%;">Mex. Restaurant Richmond TX</div>
+          <div class="matrix-dot med" style="left:68%;top:28%;"></div><div class="matrix-tag" style="left:68%;top:28%;">Best Tex-Mex in Richmond</div>
+          <div class="matrix-dot high" style="left:70%;top:15%;"></div><div class="matrix-tag" style="left:70%;top:15%;">Fajitas Near Me</div>
+          <div class="matrix-dot" style="left:55%;top:35%;"></div><div class="matrix-tag" style="left:55%;top:35%;">Margaritas Richmond TX</div>
+          <div class="matrix-dot" style="left:48%;top:42%;"></div><div class="matrix-tag" style="left:48%;top:42%;">Mex. Catering Richmond TX</div>
+          <div class="matrix-dot med" style="left:62%;top:22%;"></div><div class="matrix-tag" style="left:62%;top:22%;">Taco Tuesday Richmond</div>
+        </div>
+        <div class="matrix-axis-x matrix-axis-label">Difficulty →</div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:28px;">
+      <div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:16px;">WYN Score — Traditional Keywords</div>
+        <div class="bar-list">
+          <div class="bar-row"><div class="bl">Mexican Restaurant Richmond TX</div><div class="bar-track"><div class="bar-fill teal" style="width:100%;"></div></div><div class="bv">67</div></div>
+          <div class="bar-row"><div class="bl">Fajitas Near Me</div><div class="bar-track"><div class="bar-fill teal" style="width:97%;"></div></div><div class="bv">65</div></div>
+          <div class="bar-row"><div class="bl">Mexican Restaurant</div><div class="bar-track"><div class="bar-fill teal" style="width:95.5%;"></div></div><div class="bv">64</div></div>
+          <div class="bar-row"><div class="bl">Taco Tuesday Richmond</div><div class="bar-track"><div class="bar-fill teal" style="width:91%;"></div></div><div class="bv">61</div></div>
+          <div class="bar-row"><div class="bl">Best Tex-Mex in Richmond</div><div class="bar-track"><div class="bar-fill teal" style="width:86.6%;"></div></div><div class="bv">58</div></div>
+          <div class="bar-row"><div class="bl">Margaritas Richmond Texas</div><div class="bar-track"><div class="bar-fill teal" style="width:80.6%;"></div></div><div class="bv">54</div></div>
+          <div class="bar-row"><div class="bl">Mexican Catering Richmond TX</div><div class="bar-track"><div class="bar-fill teal" style="width:77.6%;"></div></div><div class="bv">52</div></div>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:16px;">WYN Score — Conversational AI Queries</div>
+        <div class="bar-list">
+          <div class="bar-row"><div class="bl">Mex. food open now, W. Bellfort</div><div class="bar-track"><div class="bar-fill gold" style="width:100%;"></div></div><div class="bv">59</div></div>
+          <div class="bar-row"><div class="bl">Best margaritas in Richmond TX?</div><div class="bar-track"><div class="bar-fill gold" style="width:89.8%;"></div></div><div class="bv">53</div></div>
+          <div class="bar-row"><div class="bl">Best beef fajitas in 77407?</div><div class="bar-track"><div class="bar-fill gold" style="width:81.4%;"></div></div><div class="bv">48</div></div>
+          <div class="bar-row"><div class="bl">Authentic Tex-Mex, outdoor seating</div><div class="bar-track"><div class="bar-fill gold" style="width:79.7%;"></div></div><div class="bv">47</div></div>
+          <div class="bar-row"><div class="bl">Family friendly w/ playground</div><div class="bar-track"><div class="bar-fill gold" style="width:71.2%;"></div></div><div class="bv">42</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout-grid">
+      <div class="callout">
+        <strong>High priority:</strong> Mexican Restaurant · Mexican Restaurant Richmond TX · Fajitas Near Me · Taco Tuesday Richmond
+      </div>
+      <div class="callout teal">
+        <strong>Medium priority:</strong> Best Tex-Mex in Richmond · Margaritas Richmond Texas · Mexican Catering Richmond TX
+      </div>
+    </div>
+    <div class="callout">
+      <strong>Executive recommendation:</strong> Traditional keyword content should prioritize the four High-priority terms first. Conversational AI queries represent an under-served channel — FAQ content, GBP Q&amp;A, and schema markup targeting these phrases can win visibility before competitors adapt.
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. META PLATFORM PERFORMANCE ============ -->
+<section id="meta">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Section 08</div>
+      <h2>Meta Platform Performance</h2>
+      <p>Facebook Page performance across organic reach, audience growth, and paid campaign delivery for this baseline period.</p>
+    </div>
+
+    <div class="kpi-grid" style="margin-bottom:12px;">
+      <div class="kpi-card"><div class="lbl">Facebook Followers</div><div class="val">3,363</div></div>
+      <div class="kpi-card"><div class="lbl">Net New Followers (28 Days)</div><div class="val">+23</div></div>
+      <div class="kpi-card"><div class="lbl">New Followers</div><div class="val">28</div><div class="sub">+27.3% vs prior period</div></div>
+      <div class="kpi-card"><div class="lbl">Views</div><div class="val">77,417</div></div>
+      <div class="kpi-card"><div class="lbl">Unique Viewers</div><div class="val">50,497</div></div>
+      <div class="kpi-card"><div class="lbl">Page Visits</div><div class="val">2,100</div></div>
+      <div class="kpi-card"><div class="lbl">Content Interactions</div><div class="val">149</div></div>
+      <div class="kpi-card"><div class="lbl">Link Clicks</div><div class="val">15</div></div>
+      <div class="kpi-card"><div class="lbl">Videos / Reels Views</div><div class="val">229</div></div>
+      <div class="kpi-card"><div class="lbl">Watch Time</div><div class="val" style="font-size:26px;">52m 35s</div></div>
+      <div class="kpi-card"><div class="lbl">Conversations Started</div><div class="val">3</div></div>
+      <div class="kpi-card"><div class="lbl">Response Rate</div><div class="val">66.7%</div></div>
+    </div>
+
+    <!-- Audience Intelligence -->
+    <h3 style="font-size:20px;margin:44px 0 20px;">Audience Intelligence</h3>
+    <div class="grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+      <div class="chart-box" style="background:var(--navy-panel);border:1px solid var(--hairline);border-radius:var(--radius);padding:26px;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:20px;">Gender Split — 3,363 Followers</div>
+        <div class="donut-wrap">
+          <div class="donut" style="background:conic-gradient(#3fc4c0 0% 74.1%, #e0a868 74.1% 100%);">
+            <div class="donut-inner"><span class="n">3,363</span><span class="l">Followers</span></div>
+          </div>
+          <div class="donut-legend">
+            <div class="dl"><i style="background:#3fc4c0;"></i>Women <b>74.1%</b></div>
+            <div class="dl"><i style="background:#e0a868;"></i>Men <b>25.9%</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-box" style="background:var(--navy-panel);border:1px solid var(--hairline);border-radius:var(--radius);padding:26px;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:16px;">Largest Age Groups</div>
+        <div class="rank-list">
+          <div class="rank-item"><div class="rank-num">1</div><div class="rank-label">45–54</div></div>
+          <div class="rank-item"><div class="rank-num">2</div><div class="rank-label">35–44</div></div>
+          <div class="rank-item"><div class="rank-num">3</div><div class="rank-label">55–64</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-box" style="background:var(--navy-panel);border:1px solid var(--hairline);border-radius:var(--radius);padding:26px;margin-top:18px;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:16px;">Top Cities</div>
+      <div class="rank-list" style="display:grid;grid-template-columns:1fr 1fr;gap:9px;">
+        <div class="rank-item"><div class="rank-num">1</div><div class="rank-label">Pecan Grove</div></div>
+        <div class="rank-item"><div class="rank-num">2</div><div class="rank-label">Houston</div></div>
+        <div class="rank-item"><div class="rank-num">3</div><div class="rank-label">Sugar Land</div></div>
+        <div class="rank-item"><div class="rank-num">4</div><div class="rank-label">League City</div></div>
+        <div class="rank-item"><div class="rank-num">5</div><div class="rank-label">Rosenberg</div></div>
+        <div class="rank-item"><div class="rank-num">6</div><div class="rank-label">Richmond</div></div>
+        <div class="rank-item"><div class="rank-num">7</div><div class="rank-label">Mission Bend</div></div>
+      </div>
+    </div>
+
+    <div class="callout teal">
+      <strong>Executive observation:</strong> The audience skews strongly female (74.1%) and concentrates in the 45–64 range — a profile that overlaps closely with the household decision-maker for family and group dining occasions. Notably, Richmond itself ranks 6th among top cities, behind Pecan Grove, Houston, Sugar Land, League City, and Rosenberg — the page is currently reaching a wider commuter and cross-town audience more than the immediate home market, which is both an opportunity (regional draw) and a signal to strengthen hyper-local Richmond targeting.
+    </div>
+
+    <!-- Organic Performance -->
+    <h3 style="font-size:20px;margin:44px 0 20px;">Organic Performance</h3>
+    <div class="kpi-grid">
+      <div class="kpi-card"><div class="lbl">Views</div><div class="val">77,417</div></div>
+      <div class="kpi-card"><div class="lbl">Unique Viewers</div><div class="val">50,497</div></div>
+      <div class="kpi-card"><div class="lbl">Page Visits</div><div class="val">2,100</div></div>
+      <div class="kpi-card"><div class="lbl">Content Interactions</div><div class="val">149</div></div>
+      <div class="kpi-card"><div class="lbl">Follower Growth</div><div class="val">+23 <small>Net</small></div></div>
+      <div class="kpi-card"><div class="lbl">Videos</div><div class="val">229</div></div>
+      <div class="kpi-card"><div class="lbl">Watch Time</div><div class="val" style="font-size:26px;">52m 35s</div></div>
+    </div>
+    <div class="callout">
+      <strong>Executive observation:</strong> Organic content reached 50,497 unique viewers and drove 2,100 page visits from a standing start — real top-of-funnel awareness. Content interactions (149) are proportionally light against that reach, which is the expected pattern in an audience-building phase: the page is currently optimized for reach and discovery, not yet for engagement depth. The next lever is creative and CTA testing to convert reach into interaction, not more reach itself.
+    </div>
+
+    <!-- Paid Advertising Highlights -->
+    <h3 style="font-size:20px;margin:44px 0 20px;">Paid Advertising Highlights</h3>
+    <div class="roadmap-grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+      <div class="campaign-card">
+        <h4>Weekend Traffic + Fiesta</h4>
+        <div class="obj">Reach &amp; Traffic Objective</div>
+        <div class="campaign-stats">
+          <div class="cs"><div class="n">80,512</div><div class="l">Reach</div></div>
+          <div class="cs"><div class="n">163,718</div><div class="l">Views</div></div>
+          <div class="cs"><div class="n">$423.60</div><div class="l">Spend</div></div>
+          <div class="cs"><div class="n">$5.26</div><div class="l">CPM (per 1,000 Reached)</div></div>
+        </div>
+      </div>
+      <div class="campaign-card">
+        <h4>$5 Margarita Thursday</h4>
+        <div class="obj">Engagement Objective</div>
+        <div class="campaign-stats">
+          <div class="cs"><div class="n">271</div><div class="l">Engagements</div></div>
+          <div class="cs"><div class="n">$0.83</div><div class="l">Cost Per Engagement</div></div>
+        </div>
+      </div>
+      <div class="campaign-card">
+        <h4>Fajita Reel</h4>
+        <div class="obj">Video / ThruPlay Objective</div>
+        <div class="campaign-stats">
+          <div class="cs"><div class="n">13,766</div><div class="l">ThruPlays</div></div>
+          <div class="cs"><div class="n">$0.02</div><div class="l">Cost Per ThruPlay</div></div>
+        </div>
+      </div>
+      <div class="campaign-card">
+        <h4>Website Promotion</h4>
+        <div class="obj">Landing Page View Objective</div>
+        <div class="campaign-stats">
+          <div class="cs"><div class="n">205</div><div class="l">Landing Page Views</div></div>
+          <div class="cs"><div class="n">$0.97</div><div class="l">Cost Per Landing Page View</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="callout teal">
+      <strong>Executive observation:</strong> Each paid campaign was structured against a distinct objective rather than run as one generic boost. The Fajita Reel is the standout efficiency signal at $0.02 per ThruPlay — food-in-motion content is clearly the cheapest attention this account can buy, and it should anchor the next round of creative. Weekend Traffic + Fiesta did the heavy lifting on reach (80,512 people at $5.26 CPM), while Margarita Thursday and Website Promotion validated that both engagement and on-site intent can be bought efficiently once the audience is warm. Together, these four tests give the account a validated creative and objective playbook heading into the next 90 days.
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. DIGITAL FOUNDATION REVIEW ============ -->
+<section id="foundation">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Section 09</div>
+      <h2>Digital Foundation Review</h2>
+      <p>Everything built and verified across the account during this baseline period.</p>
+    </div>
+    <div class="check-grid">
+      <div class="check-card">
+        <h4>Google Business Profile</h4>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Business description present</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Business hours listed</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Category refinement (Tex-Mex alignment)</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Menu updated on profile</div>
+      </div>
+      <div class="check-card">
+        <h4>Photos &amp; Content</h4>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Professional photography uploaded</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Website content reviewed and optimized</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Menu pages verified for accuracy</div>
+      </div>
+      <div class="check-card">
+        <h4>Reviews</h4>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Review management process active</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>1,469 reviews at 4.2★ baseline</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Sentiment themes identified (wait times)</div>
+      </div>
+      <div class="check-card">
+        <h4>Analytics &amp; Tracking</h4>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Analytics implementation complete</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Conversion tracking connected</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Google Ads conversion actions verified</div>
+      </div>
+      <div class="check-card">
+        <h4>Google Ads</h4>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Performance Max campaign deployed</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Campaign optimization complete (90.3%)</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Budget and bid strategy tuned</div>
+      </div>
+      <div class="check-card">
+        <h4>Local SEO</h4>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Local search benchmarking complete</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Keyword intelligence research complete</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Category leadership confirmed (Tex-Mex)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. COMPLETED IMPROVEMENTS ============ -->
+<section id="completed">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Section 10</div>
+      <h2>Completed Improvements</h2>
+      <p>Status of every initiative as of this baseline.</p>
+    </div>
+    <div class="status-row">
+      <span class="pill good">Completed — 10</span>
+      <span class="pill teal">Currently Running — 3</span>
+      <span class="pill warn">Being Monitored — 4</span>
+    </div>
+    <div class="check-grid">
+      <div class="check-card">
+        <h4><span class="pill good" style="margin-right:6px;">Completed</span></h4>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Google Ads deployment</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Performance Max campaign optimization</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Google Business Profile optimization</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Business category refinement</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Menu updates</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Professional photography uploads</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Website optimization</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Local search benchmarking</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Keyword intelligence research</div>
+        <div class="check-item"><span class="check-icon"><svg viewBox="0 0 10 10"><path d="M1 5l3 3 5-6" stroke="#4caf7d" stroke-width="1.6" fill="none"/></svg></span>Analytics implementation</div>
+      </div>
+      <div class="check-card">
+        <h4><span class="pill teal" style="margin-right:6px;">Running</span></h4>
+        <div class="check-item"><span class="check-icon" style="background:rgba(42,157,157,0.2);"><svg viewBox="0 0 10 10"><circle cx="5" cy="5" r="3" fill="#3fc4c0"/></svg></span>Performance Max campaign — active daily</div>
+        <div class="check-item"><span class="check-icon" style="background:rgba(42,157,157,0.2);"><svg viewBox="0 0 10 10"><circle cx="5" cy="5" r="3" fill="#3fc4c0"/></svg></span>Review management and response</div>
+        <div class="check-item"><span class="check-icon" style="background:rgba(42,157,157,0.2);"><svg viewBox="0 0 10 10"><circle cx="5" cy="5" r="3" fill="#3fc4c0"/></svg></span>Conversion tracking and analytics</div>
+      </div>
+      <div class="check-card">
+        <h4><span class="pill warn" style="margin-right:6px;">Monitored</span></h4>
+        <div class="check-item"><span class="check-icon" style="background:rgba(212,175,55,0.2);"><svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" fill="#d4af37"/></svg></span>Cost per conversion event trend</div>
+        <div class="check-item"><span class="check-icon" style="background:rgba(212,175,55,0.2);"><svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" fill="#d4af37"/></svg></span>Share of Local Voice movement</div>
+        <div class="check-item"><span class="check-icon" style="background:rgba(212,175,55,0.2);"><svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" fill="#d4af37"/></svg></span>Google review rating trend</div>
+        <div class="check-item"><span class="check-icon" style="background:rgba(212,175,55,0.2);"><svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" fill="#d4af37"/></svg></span>Competitor rank movement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12. 30-DAY ROADMAP ============ -->
+<section id="roadmap">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Section 11</div>
+      <h2>Next 30-Day Roadmap</h2>
+    </div>
+    <div class="roadmap-grid">
+      <div class="roadmap-card">
+        <h4>Google Ads</h4>
+        <ul>
+          <li>Maintain current Performance Max campaign</li>
+          <li>Continue monitoring budget constraints</li>
+          <li>Review conversion action definitions</li>
+          <li>Launch catering-focused campaign</li>
+          <li>Launch family pack campaign</li>
+          <li>Build high-intent search campaign</li>
+        </ul>
+      </div>
+      <div class="roadmap-card">
+        <h4>Meta</h4>
+        <ul>
+          <li>Align organic social calendar with confirmed offers</li>
+          <li>Coordinate creative with catering and family pack pushes</li>
+          <li>Track engagement against Google-side conversion lift</li>
+        </ul>
+      </div>
+      <div class="roadmap-card">
+        <h4>Local SEO</h4>
+        <ul>
+          <li>Run monthly Local Falcon scans</li>
+          <li>Track a consistent keyword set</li>
+          <li>Monitor Share of Local Voice</li>
+          <li>Track competitor movement</li>
+          <li>Maintain identical scan settings month over month</li>
+        </ul>
+      </div>
+      <div class="roadmap-card">
+        <h4>Review Growth</h4>
+        <ul>
+          <li>Continue active review responses</li>
+          <li>Address wait-time sentiment operationally</li>
+          <li>Prioritize rating improvement from 4.2 baseline</li>
+        </ul>
+      </div>
+      <div class="roadmap-card">
+        <h4>Content</h4>
+        <ul>
+          <li>Add AI-focused FAQ content</li>
+          <li>Expand Tex-Mex content</li>
+          <li>Build localized Richmond content</li>
+          <li>Improve internal linking</li>
+          <li>Add or improve structured data</li>
+        </ul>
+      </div>
+      <div class="roadmap-card">
+        <h4>Photography</h4>
+        <ul>
+          <li>Add fresh photography to Google Business Profile</li>
+          <li>Support catering and family pack landing pages</li>
+        </ul>
+      </div>
+      <div class="roadmap-card">
+        <h4>Analytics</h4>
+        <ul>
+          <li>Confirm conversion action definitions</li>
+          <li>Validate tracking accuracy against booking/order data</li>
+        </ul>
+      </div>
+      <div class="roadmap-card">
+        <h4>Conversion Improvements</h4>
+        <ul>
+          <li>Resume weekly Google Posts</li>
+          <li>Emphasize Tex-Mex leadership in GBP content</li>
+          <li>Monitor ChatGPT, Gemini, AI Overviews, AI Mode</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13. 90-DAY VISION ============ -->
+<section id="vision">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Section 12</div>
+      <h2>90-Day Vision</h2>
+      <p>Current baseline against 90-day targets. The teal marker on each bar is the goal.</p>
+    </div>
+    <div class="spark-box">
+      <div class="goal-row">
+        <div class="goal-label">Mexican Restaurant ARP</div>
+        <div class="goal-bar-track"><div class="goal-bar-fill" style="width:34.7%;"></div><div class="goal-bar-target" style="left:58.3%;"></div></div>
+        <div class="goal-target-val">7.84 → <b>Under 5.0</b></div>
+      </div>
+      <div class="goal-row">
+        <div class="goal-label">Mexican Restaurant SoLV</div>
+        <div class="goal-bar-track"><div class="goal-bar-fill" style="width:41.2%;"></div><div class="goal-bar-target" style="left:66.7%;"></div></div>
+        <div class="goal-target-val">12.35% → <b>20%+</b></div>
+      </div>
+      <div class="goal-row">
+        <div class="goal-label">Google Ads CTR</div>
+        <div class="goal-bar-track"><div class="goal-bar-fill" style="width:64.8%;"></div><div class="goal-bar-target" style="left:75%;"></div></div>
+        <div class="goal-target-val">3.89% → <b>4.5%+</b></div>
+      </div>
+      <div class="goal-row">
+        <div class="goal-label">Average CPC</div>
+        <div class="goal-bar-track"><div class="goal-bar-fill" style="width:44.3%;"></div><div class="goal-bar-target" style="left:28.6%;"></div></div>
+        <div class="goal-target-val">$0.39 → <b>Maintain below $0.50</b></div>
+      </div>
+      <div class="goal-row">
+        <div class="goal-label">Google Rating</div>
+        <div class="goal-bar-track"><div class="goal-bar-fill" style="width:84%;"></div><div class="goal-bar-target" style="left:87%;"></div></div>
+        <div class="goal-target-val">4.2 → <b>4.3–4.4</b></div>
+      </div>
+      <div class="goal-row">
+        <div class="goal-label">Google Posts</div>
+        <div class="goal-bar-track"><div class="goal-bar-fill" style="width:20%;"></div><div class="goal-bar-target" style="left:100%;"></div></div>
+        <div class="goal-target-val">Infrequent → <b>Weekly</b></div>
+      </div>
+      <div class="goal-row">
+        <div class="goal-label">AI Visibility</div>
+        <div class="goal-bar-track"><div class="goal-bar-fill" style="width:15%;"></div><div class="goal-bar-target" style="left:100%;"></div></div>
+        <div class="goal-target-val">Baseline → <b>Measurable Growth</b></div>
+      </div>
+      <div class="goal-row">
+        <div class="goal-label">Catering Visibility</div>
+        <div class="goal-bar-track"><div class="goal-bar-fill" style="width:10%;"></div><div class="goal-bar-target" style="left:100%;"></div></div>
+        <div class="goal-target-val">Baseline → <b>Active Campaign</b></div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:28px;">
+      <strong>Expected trajectory:</strong> With weekly Google Posts, expanded local content, and review rating improvement, the Mexican Restaurant Share of Local Voice is the single largest lever to move — closing even a third of the current gap to the market leader would meaningfully expand the addressable search funnel above and beyond the existing Tex-Mex category lead.
+    </div>
+    <div class="callout teal">
+      <strong>Future initiatives:</strong> Catering-focused and family pack Google Ads campaigns, AI-focused FAQ and schema markup content, and expanded Richmond-specific local landing pages are staged for the next 30–60 days pending this baseline's approval.
+    </div>
+  </div>
+</section>
+
+<!-- ============ 14. NEXT 90 DAYS ============ -->
+<section id="next90">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Section 13</div>
+      <h2>Next 90 Days</h2>
+      <p>As Google Ads exits the Learning Phase and Meta optimization continues, this is the expected trajectory across the full integrated system.</p>
+    </div>
+    <div class="roadmap-grid">
+      <div class="roadmap-card">
+        <h4>Audience &amp; Delivery</h4>
+        <ul>
+          <li>Higher quality audience delivery as Meta's algorithm matures on collected signals</li>
+          <li>Stronger remarketing audiences built from this period's traffic and engagement</li>
+          <li>Better campaign efficiency across both Google and Meta as both platforms exit learning</li>
+        </ul>
+      </div>
+      <div class="roadmap-card">
+        <h4>Organic Growth</h4>
+        <ul>
+          <li>Increased organic reach on Meta as follower base compounds</li>
+          <li>Greater family dining awareness through targeted creative themes</li>
+        </ul>
+      </div>
+      <div class="roadmap-card">
+        <h4>Search &amp; Local</h4>
+        <ul>
+          <li>Better Google local rankings for "Mexican Restaurant"</li>
+          <li>Improved LocalFalcon visibility across the scanned trade area</li>
+          <li>Expanded keyword footprint into medium-priority and AI search terms</li>
+        </ul>
+      </div>
+      <div class="roadmap-card">
+        <h4>Revenue Channels</h4>
+        <ul>
+          <li>Increased catering visibility through dedicated campaign and content support</li>
+          <li>Monthly executive reporting with trend comparisons against this baseline</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>What to expect next month:</strong> This baseline report will be the last one without a prior period to compare against. Every report going forward will show trend lines against this document — the true measure of whether the integrated system is compounding.
+    </div>
+  </div>
+</section>
+
+<!-- ============ 15. EXECUTIVE CLOSING ============ -->
+<section id="closing" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="sec-head" style="max-width:100%;">
+      <div class="eyebrow">Riva Restaurant Intelligence™</div>
+      <h2>The Standard, Going Forward</h2>
+    </div>
+    <div class="closing-panel">
+      <div class="closing-mark">Version 1 · Riva Restaurant Intelligence™</div>
+      <p>This report is Version 1 of the standardized monthly reporting framework being developed by Riva Strategies and Riva Hospitality Partners. This document establishes the baseline from which all future monthly reports for Red River Cantina Richmond will be measured.</p>
+      <p>Each month, this framework will compare Google Ads, Meta Ads, Google Business Profile, Local Search Rankings, Share of Local Voice, Keyword Intelligence, AI Visibility, Website Analytics, Reviews, Traffic, Conversion Events, and Strategic Recommendations — giving ownership objective performance tracking, clear priorities, and measurable month-over-month growth across every Red River location and future Riva Hospitality Partners client.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-logos">
+      <div class="logo-chip"><img src="images/red-river-cantina-logo.png" alt="Red River Cantina logo"></div>
+      <div class="logo-chip riva"><img src="images/riva-strategies-logo.png" alt="Riva Strategies logo"></div>
+    </div>
+    <div class="footer-text">
+      <div class="tm">Prepared exclusively for Red River Restaurants by Riva Strategies</div>
+      <p style="max-width:520px;margin:0 auto 16px;font-style:italic;">This report is part of the Riva Growth Lifecycle™ framework and is intended to provide objective month-over-month measurement of digital performance, strategic progress, and growth opportunities.</p>
+      Red River Cantina Richmond<br>
+      Digital Performance Report — July 2026 Baseline
+    </div>
+    <div class="confidential">Confidential Client Document</div>
+  </div>
+</footer>
+
+</body>
+</html>
