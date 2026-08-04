@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riva Hospitality Partners | Hospitality Growth, Gulf Coast</title>
+<meta name="description" content="Hospitality growth partner for restaurants, hotels, resorts, marinas, and private clubs across the Gulf Coast and Southern US. Powered by Riva Strategies.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rivastrategies.com/rivahospitality/">
+<meta name="theme-color" content="#011633">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Riva Hospitality Partners">
+<meta property="og:title" content="Riva Hospitality Partners | Hospitality Growth, Gulf Coast">
+<meta property="og:description" content="Growth partnership for restaurants, hotels, resorts, marinas, and private clubs across the Gulf Coast and Southern US. Powered by Riva Strategies.">
+<meta property="og:url" content="https://rivastrategies.com/rivahospitality/">
+<meta property="og:image" content="https://rivastrategies.com/rivahospitality/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Riva Hospitality Partners | Hospitality Growth, Gulf Coast">
+<meta name="twitter:description" content="Growth partnership for restaurants, hotels, resorts, marinas, and private clubs across the Gulf Coast and Southern US.">
+<meta name="twitter:image" content="https://rivastrategies.com/rivahospitality/assets/og-image.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy: #011633;
+    --navy-soft: #0B2749;
+    --navy-deep: #000C1C;
+    --copper: #A85A34;
+    --copper-light: #C17F52;
+    --copper-pale: #E8CFBE;
+    --ivory: #F7F4EE;
+    --white: #FFFFFF;
+    --ink: #161F2B;
+    --slate: #5C6674;
+    --line: rgba(1,22,51,0.10);
+    --line-on-navy: rgba(255,255,255,0.14);
+
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --maxw: 1240px;
+    --compass-img: url("assets/compass.png");
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; text-decoration:none; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 40px; }
+
+  h1,h2,h3,h4{ font-family:var(--serif); font-weight:500; color:var(--navy); letter-spacing:0.01em; }
+
+  .eyebrow{
+    font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:0.22em;
+    text-transform:uppercase; color:var(--copper);
+    display:flex; align-items:center; gap:12px;
+  }
+  .eyebrow::before{ content:''; width:28px; height:1px; background:var(--copper); display:inline-block; }
+  .eyebrow.center{ justify-content:center; }
+  .eyebrow.light{ color:var(--copper-light); }
+
+  section{ position:relative; }
+
+  /* ---------- focus & motion ---------- */
+  a:focus-visible, button:focus-visible{ outline:2px solid var(--copper); outline-offset:3px; }
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
+  }
+
+  /* ---------- compass mark (real brand artwork, embedded) ---------- */
+  .compass{
+    display:block;
+    background-image:var(--compass-img);
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    aspect-ratio:1/1;
+  }
+  .spin-slow{ animation:spin 90s linear infinite; transform-origin:center; }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+
+  /* ================= NAV ================= */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(1,22,51,0.97);
+    backdrop-filter:blur(8px);
+    box-shadow:0 1px 0 var(--line-on-navy);
+  }
+  .nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 40px; max-width:var(--maxw); margin:0 auto; }
+  .nav-right{ display:flex; align-items:center; gap:20px; }
+
+  nav.links{ display:flex; align-items:center; gap:34px; }
+  nav.links a{ color:rgba(255,255,255,0.82); font-size:14px; font-weight:500; letter-spacing:0.01em; transition:color .2s; }
+  nav.links a:hover{ color:var(--white); }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:12px 24px; font-size:13px; font-weight:600; letter-spacing:0.04em;
+    border-radius:2px; border:1px solid transparent; cursor:pointer; white-space:nowrap;
+    transition:all .25s ease;
+  }
+  .btn-copper{ background:var(--copper); color:var(--white); }
+  .btn-copper:hover{ background:var(--copper-light); }
+  .btn-line-light{ border-color:rgba(255,255,255,0.35); color:var(--white); }
+  .btn-line-light:hover{ border-color:var(--white); background:rgba(255,255,255,0.06); }
+  .btn-line-navy{ border-color:var(--line); color:var(--navy); }
+  .btn-line-navy:hover{ border-color:var(--navy); }
+  .menu-toggle{ display:none; background:none; border:none; color:var(--white); font-size:24px; cursor:pointer; }
+
+  /* ================= HERO ================= */
+  .hero{
+    background:radial-gradient(120% 140% at 82% -10%, var(--navy-soft) 0%, var(--navy) 45%, var(--navy-deep) 100%);
+    color:var(--white);
+    padding:100px 40px 150px;
+    overflow:hidden;
+    position:relative;
+  }
+  .hero-inner{ max-width:var(--maxw); margin:0 auto; position:relative; z-index:2; }
+  .hero .compass-watermark{
+    position:absolute; right:-140px; top:-120px; width:640px; height:640px; opacity:0.07;
+    z-index:1;
+  }
+  .hero-content{ max-width:760px; }
+  .hero-brand{ display:flex; align-items:center; gap:17px; margin-bottom:34px; }
+  .hero-brand .compass{ width:56px; height:56px; flex-shrink:0; }
+  .hero-brand-text{
+    font-family:var(--serif); font-size:27px; font-weight:600; letter-spacing:0.075em;
+    color:var(--white);
+  }
+  .hero-brand-text .copper{ color:var(--copper-light); }
+  .hero h1{
+    color:var(--white); font-size:clamp(42px,6vw,68px); line-height:1.06; margin:22px 0 26px; font-weight:500;
+  }
+  .hero h1 em{ font-style:italic; color:var(--copper-light); }
+  .hero p.lead{ font-size:19px; color:rgba(255,255,255,0.78); max-width:600px; margin-bottom:44px; font-weight:400; }
+  .hero-ctas{ display:flex; gap:18px; flex-wrap:wrap; }
+
+  .bearing-strip{
+    margin-top:88px; padding-top:32px; border-top:1px solid var(--line-on-navy);
+    display:flex; flex-wrap:wrap; gap:14px 40px; color:rgba(255,255,255,0.55);
+    font-size:12.5px; letter-spacing:0.14em; text-transform:uppercase; font-weight:600;
+  }
+  .bearing-strip span{ color:rgba(255,255,255,0.85); }
+
+  /* ================= STATEMENT ================= */
+  .statement{ background:var(--white); padding:130px 40px; text-align:center; }
+  .statement .wrap{ max-width:880px; }
+  .statement h2{ font-size:clamp(30px,4vw,44px); line-height:1.3; font-weight:500; color:var(--navy); }
+  .statement h2 .accent{ color:var(--copper); font-style:italic; }
+  .statement p{ margin-top:28px; font-size:17px; color:var(--slate); max-width:620px; margin-left:auto; margin-right:auto; }
+
+  /* ================= SERVICES ================= */
+  .services{ background:var(--ivory); padding:120px 40px; }
+  .section-head{ max-width:640px; margin-bottom:64px; }
+  .section-head h2{ font-size:clamp(32px,4vw,46px); margin-top:18px; }
+  .section-head p{ color:var(--slate); font-size:16px; margin-top:16px; max-width:520px; }
+
+  .svc-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+  .framework-grid{ grid-template-columns:repeat(5,1fr); }
+  .svc-card{ background:var(--ivory); padding:32px 24px; transition:background .25s ease; }
+  .svc-card:hover{ background:var(--white); }
+  .svc-num{ font-family:var(--serif); font-size:14px; color:var(--copper); letter-spacing:0.08em; }
+  .svc-card h3{ font-size:18px; margin:0 0 16px; font-weight:600; letter-spacing:0.01em; }
+  .svc-card p{ font-size:14.5px; color:var(--slate); line-height:1.65; }
+  .svc-list{ list-style:none; }
+  .svc-list li{
+    font-size:13.5px; color:var(--slate); line-height:1.5; padding:8px 0 8px 16px;
+    border-top:1px solid var(--line); position:relative;
+  }
+  .svc-list li:first-child{ border-top:none; }
+  .svc-list li::before{ content:'•'; position:absolute; left:0; color:var(--copper); }
+
+  /* ================= WHY RIVA ================= */
+  .why{ background:var(--navy); color:var(--white); padding:130px 40px; position:relative; overflow:hidden; }
+  .why-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:56px; margin-top:70px; }
+  .why-grid.five{ grid-template-columns:repeat(5,1fr); gap:36px; }
+  .why-col .mark{ width:44px; height:44px; margin-bottom:22px; }
+  .why-grid.five .why-col .mark{ width:36px; height:36px; margin-bottom:18px; }
+  .why-col h3{ color:var(--white); font-size:23px; margin-bottom:14px; font-weight:500; }
+  .why-grid.five .why-col h3{ font-size:19px; margin-bottom:10px; }
+  .why-col p{ color:rgba(255,255,255,0.7); font-size:15px; line-height:1.7; }
+  .why-grid.five .why-col p{ font-size:14px; }
+  .why .section-head h2{ color:var(--white); }
+  .why .section-head p{ color:rgba(255,255,255,0.65); }
+
+  /* ================= POWERED BY ================= */
+  .powered{ background:var(--white); padding:130px 40px; }
+  .powered-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:80px; align-items:center; }
+  .powered-visual{
+    background:var(--navy); border-radius:4px; padding:56px 40px;
+    display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;
+    aspect-ratio:1/1;
+  }
+  .powered-visual .compass{ width:70%; height:70%; position:relative; z-index:2; }
+  .powered-visual .ring-outer{ position:absolute; inset:10%; border:1px solid var(--line-on-navy); border-radius:50%; }
+  .powered-visual .ring-outer.r2{ inset:2%; }
+  .powered-copy .eyebrow{ margin-bottom:20px; }
+  .powered-copy h2{ font-size:clamp(28px,3.6vw,38px); margin-bottom:22px; }
+  .powered-copy p{ color:var(--slate); font-size:16px; margin-bottom:18px; max-width:520px; }
+  .disciplines{ display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+  .discipline-chip{
+    font-size:12.5px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase;
+    padding:9px 16px; border:1px solid var(--line); border-radius:2px; color:var(--navy);
+  }
+
+  /* ================= PROCESS (bearings) ================= */
+  .process{ background:var(--ivory); padding:130px 40px; }
+  .bearings{ position:relative; margin-top:80px; }
+  .bearings-line{ position:absolute; top:19px; left:0; right:0; height:1px; background:var(--line); display:none; }
+  .bearing-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:40px; position:relative; }
+  .bearing-item{ position:relative; padding-top:44px; }
+  .bearing-deg{
+    position:absolute; top:0; left:0; font-family:var(--serif); font-style:italic;
+    font-size:15px; color:var(--copper); border:1px solid var(--copper-pale);
+    width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    background:var(--white);
+  }
+  .bearing-item h3{ font-size:20px; margin-bottom:10px; letter-spacing:0.02em; }
+  .bearing-item p{ font-size:14.5px; color:var(--slate); line-height:1.65; }
+  .bearing-arrow{ display:none; }
+
+  /* ================= RESULTS ================= */
+  .results{ background:var(--navy-deep); color:var(--white); padding:110px 40px; }
+  .results-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line-on-navy); border:1px solid var(--line-on-navy); margin-top:60px; }
+  .result-cell{ background:var(--navy-deep); padding:44px 30px; text-align:center; }
+  .result-cell .figure{ font-family:var(--serif); font-size:46px; color:var(--copper-light); font-weight:500; }
+  .result-cell .label{ margin-top:10px; font-size:12.5px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.6); font-weight:600; }
+  .results .note{ margin-top:36px; font-size:13px; color:rgba(255,255,255,0.45); text-align:center; }
+
+  /* ================= GROWTH AUDIT ================= */
+  .audit{ background:var(--ivory); padding:120px 40px; }
+  .audit-grid{ display:grid; grid-template-columns:0.65fr 1.35fr; gap:70px; align-items:center; }
+  .audit-visual{ display:flex; justify-content:center; }
+  .audit-book{
+    width:200px; height:270px; background:linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+    border-radius:3px 8px 8px 3px; box-shadow:6px 10px 26px rgba(1,22,51,0.28), inset -3px 0 0 rgba(255,255,255,0.06);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; padding:24px;
+    position:relative;
+  }
+  .audit-book::before{
+    content:''; position:absolute; left:10px; top:0; bottom:0; width:1px; background:rgba(255,255,255,0.12);
+  }
+  .audit-book-compass{
+    width:56px; height:56px; background-image:var(--compass-img); background-size:contain;
+    background-repeat:no-repeat; background-position:center;
+  }
+  .audit-book-text{
+    font-family:var(--serif); color:var(--white); text-align:center; font-size:19px; letter-spacing:0.1em; line-height:1.4;
+  }
+  .audit-book-text span{ display:block; font-family:var(--sans); font-size:8px; letter-spacing:0.16em; color:var(--copper-light); margin-top:6px; text-transform:uppercase; }
+  .audit-copy h2{ font-size:clamp(28px,3.6vw,38px); margin:18px 0 22px; }
+  .audit-copy p{ color:var(--slate); font-size:16px; margin-bottom:30px; max-width:540px; }
+
+  /* ================= FAQ ================= */
+  .faq{ background:var(--white); padding:120px 40px; }
+  .faq-list{ max-width:820px; }
+  .faq-item{ padding:28px 0; border-bottom:1px solid var(--line); }
+  .faq-item:first-child{ padding-top:0; }
+  .faq-item h3{ font-size:20px; margin-bottom:12px; font-weight:600; }
+  .faq-item p{ font-size:15.5px; color:var(--slate); line-height:1.7; }
+
+  /* ================= FINAL CTA ================= */
+  .final-cta{
+    background:linear-gradient(120deg, var(--navy) 0%, var(--navy-soft) 100%);
+    color:var(--white); padding:130px 40px; text-align:center; position:relative; overflow:hidden;
+  }
+  .final-cta .compass-watermark{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:900px; height:900px; opacity:0.05; }
+  .final-cta .inner{ position:relative; z-index:2; max-width:640px; margin:0 auto; }
+  .final-cta h2{ color:var(--white); font-size:clamp(32px,5vw,50px); margin:20px 0 34px; }
+  .final-cta .ctas{ display:flex; gap:18px; justify-content:center; flex-wrap:wrap; }
+  .final-cta .cta-email{ margin-top:26px; font-size:14px; color:rgba(255,255,255,0.55); }
+  .final-cta .cta-email a{ color:rgba(255,255,255,0.85); text-decoration:underline; text-underline-offset:3px; }
+  .final-cta .cta-email a:hover{ color:var(--white); }
+
+  /* ================= FOOTER ================= */
+  footer{ background:var(--navy-deep); color:rgba(255,255,255,0.6); padding:70px 40px 34px; }
+  .foot-grid{ display:grid; grid-template-columns:1.4fr repeat(3,1fr); gap:50px; padding-bottom:50px; border-bottom:1px solid var(--line-on-navy); }
+  .foot-brand .compass{ width:32px; height:32px; margin-bottom:16px; }
+  .foot-brand p{ font-size:13.5px; line-height:1.7; max-width:280px; color:rgba(255,255,255,0.5); }
+  .foot-contact{ margin-top:16px; }
+  .foot-contact a{ color:rgba(255,255,255,0.75); transition:color .2s; }
+  .foot-contact a:hover{ color:var(--white); }
+  .foot-col h4{ color:rgba(255,255,255,0.85); font-family:var(--sans); font-size:12.5px; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:18px; font-weight:600; }
+  .foot-col a{ display:block; font-size:14px; color:rgba(255,255,255,0.55); margin-bottom:12px; transition:color .2s; }
+  .foot-col a:hover{ color:var(--white); }
+  .foot-bottom{ display:flex; justify-content:space-between; align-items:center; padding-top:28px; font-size:12.5px; color:rgba(255,255,255,0.4); flex-wrap:wrap; gap:12px; }
+
+  /* ================= RESPONSIVE ================= */
+  @media (max-width:980px){
+    .svc-grid{ grid-template-columns:repeat(2,1fr); }
+    .framework-grid{ grid-template-columns:repeat(2,1fr); }
+    .why-grid{ grid-template-columns:1fr; gap:44px; }
+    .why-grid.five{ grid-template-columns:repeat(2,1fr); gap:44px; }
+    .powered-grid{ grid-template-columns:1fr; }
+    .powered-visual{ max-width:340px; margin:0 auto; }
+    .audit-grid{ grid-template-columns:1fr; gap:40px; text-align:center; }
+    .audit-visual{ order:-1; }
+    .audit-copy p{ margin-left:auto; margin-right:auto; }
+    .bearing-grid{ grid-template-columns:repeat(2,1fr); row-gap:48px; }
+    .results-grid{ grid-template-columns:1fr; }
+    .foot-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:760px){
+    nav.links{
+      display:none; position:absolute; top:100%; left:0; right:0;
+      flex-direction:column; align-items:stretch; gap:0;
+      background:rgba(1,22,51,0.98); backdrop-filter:blur(8px);
+      border-top:1px solid var(--line-on-navy);
+      padding:8px 22px 18px;
+    }
+    nav.links.open{ display:flex; }
+    nav.links a{ padding:14px 4px; border-bottom:1px solid var(--line-on-navy); font-size:15px; }
+    nav.links a:last-child{ border-bottom:none; }
+    header{ overflow:visible; }
+    .nav{ position:relative; }
+    .menu-toggle{ display:block; }
+    .wrap, .nav, .hero, .statement, .services, .why, .powered, .process, .results, .final-cta, footer{ padding-left:22px; padding-right:22px; }
+    .nav{ padding-top:12px; padding-bottom:12px; }
+    .nav-right{ gap:12px; }
+    .nav .btn-copper{ padding:9px 14px; font-size:12px; }
+    .hero-brand .compass{ width:44px; height:44px; }
+    .hero-brand-text{ font-size:21px; letter-spacing:0.04em; }
+    .svc-grid{ grid-template-columns:1fr; }
+    .why-grid.five{ grid-template-columns:1fr; }
+    .bearing-grid{ grid-template-columns:1fr; }
+    .foot-grid{ grid-template-columns:1fr; gap:36px; }
+    .hero{ padding-top:70px; padding-bottom:100px; }
+    .hero .compass-watermark{ width:400px; height:400px; right:-160px; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Riva Hospitality Partners",
+  "alternateName": "RHP",
+  "description": "Hospitality growth partner for restaurants, bars, hotels, resorts, marinas, and private clubs across the Gulf Coast and Southern US. Five levers, one system: market visibility, guest acquisition, guest retention, revenue expansion, and strategic growth.",
+  "url": "https://rivastrategies.com/rivahospitality/",
+  "telephone": "+1-832-905-0570",
+  "email": "jordan@rivastrategies.com",
+  "priceRange": "$$$",
+  "image": "https://rivastrategies.com/rivahospitality/assets/og-image.jpg",
+  "logo": "https://rivastrategies.com/rivahospitality/assets/og-image.jpg",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Riva Strategies",
+    "url": "https://rivastrategies.com/"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Houston, TX"
+    },
+    {
+      "@type": "City",
+      "name": "Galveston, TX"
+    },
+    {
+      "@type": "City",
+      "name": "Sugar Land, TX"
+    },
+    {
+      "@type": "City",
+      "name": "Pearland, TX"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Harris County, TX"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Galveston County, TX"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Fort Bend County, TX"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Brazoria County, TX"
+    },
+    {
+      "@type": "Place",
+      "name": "Gulf Coast"
+    },
+    {
+      "@type": "Place",
+      "name": "Southern United States"
+    }
+  ],
+  "knowsAbout": [
+    "Market visibility",
+    "Google and AI search optimization",
+    "Local search",
+    "Reputation management",
+    "Competitive intelligence",
+    "Guest acquisition",
+    "Paid advertising",
+    "Event marketing",
+    "Guest retention",
+    "Loyalty programs",
+    "Email marketing",
+    "SMS marketing",
+    "VIP programs",
+    "Revenue expansion",
+    "Catering sales growth",
+    "Private events",
+    "Delivery and online ordering",
+    "Strategic partnerships",
+    "Strategic growth",
+    "Growth audits",
+    "Fractional leadership",
+    "Revenue planning",
+    "Expansion strategy"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Hospitality Growth Framework",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Market Visibility",
+          "description": "Google and AI search, local search, reputation management, and competitive intelligence."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Guest Acquisition",
+          "description": "Paid advertising, promotions, event marketing, and launch campaigns."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Guest Retention",
+          "description": "Loyalty programs, email marketing, SMS marketing, and VIP programs."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Revenue Expansion",
+          "description": "Catering, private events, delivery and online ordering, and strategic partnerships."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Strategic Growth",
+          "description": "Growth audits, fractional leadership, revenue planning, and expansion strategy."
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "RHP Growth Audit",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "RHP Growth Audit",
+          "description": "A clear assessment and roadmap to more revenue, evaluating visibility, reviews, revenue channels, guest experience, operations, and profitability."
+        }
+      }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does Riva Hospitality Partners do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Riva Hospitality Partners is a hospitality growth partner for restaurants, bars, hotels, resorts, marinas, and private clubs. We evaluate five revenue levers together (visibility, retention, reputation, revenue channels, and systems) and build the strategy, technology, and execution needed to move them, rather than running isolated marketing campaigns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas does Riva Hospitality Partners serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve hospitality operators across the Gulf Coast and Southern US, including Houston, Galveston, Sugar Land, and Pearland, with continued expansion across the region."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Riva Hospitality Partners different from a marketing agency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We're a growth partner, not a marketing agency. We diagnose the actual bottleneck constraining growth first (visibility, retention, offer structure, or operations) before recommending any tactic, and every engagement is evaluated on revenue, retention, and enterprise value, not campaign metrics."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is behind Riva Hospitality Partners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Riva Hospitality Partners is powered by Riva Strategies, a multidisciplinary team specializing in marketing, AI and automation, SEO, paid media, analytics, business systems, and creative production."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the RHP Growth Audit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The RHP Growth Audit is a clear assessment and roadmap to more revenue. Riva Hospitality Partners evaluates an operator's visibility, reviews, revenue channels, guest experience, operations, and profitability to identify opportunities and prioritize what actually moves the needle."
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header>
+  <div class="nav">
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="#results">Results</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a href="#contact" class="btn btn-copper">Schedule a Strategy Call</a>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="compass-watermark compass spin-slow" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-brand">
+        <div class="compass" role="img" aria-label="Riva Hospitality Partners compass mark"></div>
+        <div class="hero-brand-text">RIVA HOSPITALITY <span class="copper">PARTNERS</span></div>
+      </div>
+      <p class="eyebrow light">Powered by Riva Strategies</p>
+      <h1>Building Better <em>Hospitality</em> Businesses.</h1>
+      <p class="lead">We help restaurants, bars, hotels, resorts, marinas, and private clubs increase revenue and enterprise value through strategy, operational systems, technology, and disciplined execution, across every channel that drives guests back through the door.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-copper">Schedule a Strategy Call</a>
+        <a href="#services" class="btn btn-line-light">Explore Our Services</a>
+      </div>
+    </div>
+    <div class="bearing-strip">
+      <div><span>Visibility</span> · <span>Retention</span> · <span>Reputation</span> · <span>Revenue Channels</span> · <span>Systems</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATEMENT ============ -->
+<section class="statement">
+  <div class="wrap">
+    <p class="eyebrow center" style="justify-content:center;">How We Think</p>
+    <h2 style="margin-top:22px;">Ownership doesn't need more ads. <span class="accent">It needs a revenue engine.</span></h2>
+    <p>Restaurant and hospitality owners need a partner who understands margins, labor, guest experience, and reputation, and who evaluates the five levers that actually move revenue together, not one at a time.</p>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Our Growth Framework</p>
+      <h2>Five levers. One system.</h2>
+      <p>A growth partner who understands your entire business, not a vendor running one channel in isolation.</p>
+    </div>
+    <div class="svc-grid framework-grid">
+      <div class="svc-card">
+        <h3>Market Visibility</h3>
+        <ul class="svc-list">
+          <li>Google &amp; AI Search</li>
+          <li>Local Search</li>
+          <li>Reputation Management</li>
+          <li>Competitive Intelligence</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <h3>Guest Acquisition</h3>
+        <ul class="svc-list">
+          <li>Paid Advertising</li>
+          <li>Promotions</li>
+          <li>Event Marketing</li>
+          <li>Launch Campaigns</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <h3>Guest Retention</h3>
+        <ul class="svc-list">
+          <li>Loyalty Programs</li>
+          <li>Email Marketing</li>
+          <li>SMS Marketing</li>
+          <li>VIP Programs</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <h3>Revenue Expansion</h3>
+        <ul class="svc-list">
+          <li>Catering</li>
+          <li>Private Events</li>
+          <li>Delivery &amp; Online Ordering</li>
+          <li>Strategic Partnerships</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <h3>Strategic Growth</h3>
+        <ul class="svc-list">
+          <li>Growth Audits</li>
+          <li>Fractional Leadership</li>
+          <li>Revenue Planning</li>
+          <li>Expansion Strategy</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY RIVA ============ -->
+<section class="why" id="approach">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow light">Why Partner With Riva</p>
+      <h2>Strategy before tactics.</h2>
+      <p>Marketing and technology are tools. Ownership-level thinking is the differentiator.</p>
+    </div>
+    <div class="why-grid five">
+      <div class="why-col">
+        <div class="mark compass" aria-hidden="true"></div>
+        <h3>Operator Focused</h3>
+        <p>We understand hospitality because we've built it.</p>
+      </div>
+      <div class="why-col">
+        <div class="mark compass" aria-hidden="true"></div>
+        <h3>Systems Driven</h3>
+        <p>We build repeatable systems that drive results.</p>
+      </div>
+      <div class="why-col">
+        <div class="mark compass" aria-hidden="true"></div>
+        <h3>Revenue First</h3>
+        <p>We measure success in revenue, profitability, and enterprise value.</p>
+      </div>
+      <div class="why-col">
+        <div class="mark compass" aria-hidden="true"></div>
+        <h3>Hands-On Partnership</h3>
+        <p>We're as involved as you need us to be, strategy through execution.</p>
+      </div>
+      <div class="why-col">
+        <div class="mark compass" aria-hidden="true"></div>
+        <h3>Long-Term Focus</h3>
+        <p>We're invested in your success for the long haul.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POWERED BY ============ -->
+<section class="powered">
+  <div class="wrap powered-grid">
+    <div class="powered-visual">
+      <div class="ring-outer"></div>
+      <div class="ring-outer r2"></div>
+      <div class="compass" aria-hidden="true"></div>
+    </div>
+    <div class="powered-copy">
+      <p class="eyebrow">The Engine Behind the Partnership</p>
+      <h2>Powered by Riva Strategies.</h2>
+      <p>Behind every hospitality engagement is the full strength of Riva Strategies: specialists in marketing, artificial intelligence, automation, analytics, technology, and business systems.</p>
+      <p>You work with one dedicated hospitality partner. An entire team works behind the scenes to move your business forward.</p>
+      <div class="disciplines">
+        <span class="discipline-chip">Marketing</span>
+        <span class="discipline-chip">AI &amp; Automation</span>
+        <span class="discipline-chip">SEO</span>
+        <span class="discipline-chip">Paid Media</span>
+        <span class="discipline-chip">Analytics</span>
+        <span class="discipline-chip">Business Systems</span>
+        <span class="discipline-chip">Creative Production</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS AS BEARINGS ============ -->
+<section class="process">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How We Work</p>
+      <h2>Four bearings. One course.</h2>
+      <p>A disciplined operating rhythm, not a one-time campaign.</p>
+    </div>
+    <div class="bearings">
+      <div class="bearing-grid">
+        <div class="bearing-item">
+          <div class="bearing-deg">N</div>
+          <h3>Discover</h3>
+          <p>Understand the business: operations, guest data, market position, and the true bottleneck to growth.</p>
+        </div>
+        <div class="bearing-item">
+          <div class="bearing-deg">E</div>
+          <h3>Engineer</h3>
+          <p>Build the strategy, systems, and technology required to remove that bottleneck, not a generic tactic list.</p>
+        </div>
+        <div class="bearing-item">
+          <div class="bearing-deg">S</div>
+          <h3>Execute</h3>
+          <p>Implement across every relevant channel with clear ownership, timelines, and accountability.</p>
+        </div>
+        <div class="bearing-item">
+          <div class="bearing-deg">W</div>
+          <h3>Optimize</h3>
+          <p>Measure against revenue and retention. Refine the course. Scale what's working.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESULTS ============ -->
+<section class="results" id="results">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow light">What Ownership Sees</p>
+      <h2 style="color:#fff;">Measured against outcomes that matter.</h2>
+    </div>
+    <div class="results-grid">
+      <div class="result-cell"><div class="figure">+38%</div><div class="label">Search Visibility</div></div>
+      <div class="result-cell"><div class="figure">+27%</div><div class="label">Review Growth</div></div>
+      <div class="result-cell"><div class="figure">+19%</div><div class="label">Guest Retention</div></div>
+      <div class="result-cell"><div class="figure">+24%</div><div class="label">Catering &amp; Group Revenue</div></div>
+      <div class="result-cell"><div class="figure">+31%</div><div class="label">Guest Frequency</div></div>
+      <div class="result-cell"><div class="figure">−15%</div><div class="label">Operational Overhead</div></div>
+    </div>
+    <p class="note">Representative ranges from active engagements. Figures are placeholders pending client-specific reporting.</p>
+  </div>
+</section>
+
+<!-- ============ GROWTH AUDIT ============ -->
+<section class="audit">
+  <div class="wrap audit-grid">
+    <div class="audit-visual" aria-hidden="true">
+      <div class="audit-book">
+        <div class="audit-book-compass"></div>
+        <div class="audit-book-text">RIVA<br><span>HOSPITALITY PARTNERS</span></div>
+      </div>
+    </div>
+    <div class="audit-copy">
+      <p class="eyebrow">RHP Growth Audit</p>
+      <h2>A clear assessment. A roadmap to more revenue.</h2>
+      <p>We evaluate your visibility, reviews, revenue channels, guest experience, operations, and profitability to identify opportunities and prioritize what actually moves the needle.</p>
+      <a href="#contact" class="btn btn-copper">Request Your RHP Growth Audit Today</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Common Questions</p>
+      <h2>What owners ask us.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>What does Riva Hospitality Partners do?</h3>
+        <p>We're a growth partner for restaurants, bars, hotels, resorts, marinas, and private clubs. We evaluate five revenue levers together, visibility, retention, reputation, revenue channels, and systems, and build the strategy, technology, and execution needed to move them, rather than running isolated marketing campaigns.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What areas do you serve?</h3>
+        <p>Hospitality operators across the Gulf Coast and Southern US, including Houston, Galveston, Sugar Land, and Pearland, with continued expansion across the region.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is this different from a marketing agency?</h3>
+        <p>We diagnose the actual bottleneck constraining growth first, whether that's visibility, retention, offer structure, or operations, before recommending a single tactic. Every engagement is measured against revenue, retention, and enterprise value, not campaign metrics.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Who is behind Riva Hospitality Partners?</h3>
+        <p>Riva Hospitality Partners is powered by Riva Strategies, a multidisciplinary team specializing in marketing, AI and automation, SEO, paid media, analytics, business systems, and creative production.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the RHP Growth Audit?</h3>
+        <p>A clear assessment and roadmap to more revenue. We evaluate an operator's visibility, reviews, revenue channels, guest experience, operations, and profitability to identify opportunities and prioritize what actually moves the needle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta" id="contact">
+  <div class="compass-watermark compass" aria-hidden="true"></div>
+  <div class="inner">
+    <p class="eyebrow light" style="justify-content:center;">Get Your Bearings</p>
+    <h2>Ready to build something better?</h2>
+    <div class="ctas">
+      <a href="/contact/" class="btn btn-copper">Schedule Your Strategy Session</a>
+      <a href="tel:+18329050570" class="btn btn-line-light">Call (832) 905-0570</a>
+    </div>
+    <p class="cta-email">Or email <a href="mailto:jordan@rivastrategies.com">jordan@rivastrategies.com</a></p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="compass" role="img" aria-label="Riva Hospitality Partners compass mark"></div>
+        <p>Riva Hospitality Partners is the hospitality growth division of Riva Strategies, serving independent operators and hospitality groups across the Gulf Coast and Southern US.</p>
+        <p class="foot-contact">
+          <a href="tel:+18329050570">(832) 905-0570</a><br>
+          <a href="mailto:jordan@rivastrategies.com">jordan@rivastrategies.com</a>
+        </p>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="#approach">Approach</a>
+        <a href="#services">Services</a>
+        <a href="#results">Results</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Focus Areas</h4>
+        <a href="#">Restaurants &amp; Groups</a>
+        <a href="#">Hotels &amp; Resorts</a>
+        <a href="#">Marinas &amp; Waterfront</a>
+        <a href="#">Private Clubs</a>
+      </div>
+      <div class="foot-col">
+        <h4>Service Area</h4>
+        <a href="#">Houston Metro</a>
+        <a href="#">Galveston County</a>
+        <a href="#">Fort Bend &amp; Brazoria</a>
+        <a href="#">Southern US &amp; Gulf Coast</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Riva Hospitality Partners. Powered by Riva Strategies.</span>
+      <span>rivastrategies.com</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle = document.querySelector('.menu-toggle');
+  var links = document.querySelector('nav.links');
+  toggle.addEventListener('click', function(){
+    links.classList.toggle('open');
+    toggle.textContent = links.classList.contains('open') ? '✕' : '☰';
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      links.classList.remove('open');
+      toggle.textContent = '☰';
+    });
+  });
+})();
+</script>
+</body>
+</html>
