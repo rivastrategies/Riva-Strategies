@@ -4,7 +4,7 @@
     "url": "https://www.rivastrategies.com/",
     "defaultLanguage": "en",
     "locale": "en_US",
-    "description": "Multi-disciplinary business growth partner focused on revenue systems, operational efficiency, strategic planning, and team performance.",
+    "description": "Houston–Gulf Coast growth partner combining strategy, technology, marketing, AI and business systems for organizations across Texas and the United States.",
     "keywords": [
       "business growth partner",
       "revenue operations",
@@ -28,7 +28,8 @@
     "phoneE164": "+18329050570",
     "telephoneSchema": "+1-832-905-0570",
     "sameAs": [
-      "https://www.facebook.com/rivastrategies"
+      "https://www.facebook.com/rivastrategies",
+      "https://x.com/RivaStrategies"
     ],
     "logo": {
       "url": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png",
@@ -38,16 +39,16 @@
 
   "pages": {
     "home": {
-      "title": "Riva Strategies | Multi-Disciplinary Business Growth Partner",
-      "description": "Riva Strategies transforms operator-dependent businesses into high-performance, system-led assets through revenue systems, operational efficiency, strategic planning, and team performance.",
+      "title": "Riva Strategies | Growth Strategy, Technology & Systems",
+      "description": "Houston–Gulf Coast growth partner combining strategy, technology, marketing, AI and business systems for organizations across Texas and the United States.",
       "canonical": "https://www.rivastrategies.com/",
       "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
       "themeColor": "#0A2F73",
       "og": {
         "type": "website",
         "siteName": "Riva Strategies",
-        "title": "Riva Strategies | Multi-Disciplinary Business Growth Partner",
-        "description": "Multi-disciplinary business growth partner focused on revenue systems, operational efficiency, strategic planning, and team performance.",
+        "title": "Riva Strategies | Growth Strategy, Technology & Systems",
+        "description": "Strategy, technology, marketing, AI and business systems organized around the constraint that matters most.",
         "url": "https://www.rivastrategies.com/",
         "image": {
           "url": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png",
@@ -58,23 +59,23 @@
       },
       "twitter": {
         "card": "summary_large_image",
-        "title": "Riva Strategies | Multi-Disciplinary Business Growth Partner",
-        "description": "Multi-disciplinary business growth partner focused on revenue systems, operational efficiency, strategic planning, and team performance.",
+        "title": "Riva Strategies | Growth Strategy, Technology & Systems",
+        "description": "Strategy, technology, marketing, AI and business systems organized around the constraint that matters most.",
         "image": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png"
       }
     },
 
     "services": {
-      "title": "Services | Riva Strategies",
-      "description": "Explore Riva Strategies services: Revenue Systems, Operational Efficiency, Strategic Planning, and Team Performance—built to create measurable ROI and operational freedom.",
-      "canonical": "https://www.rivastrategies.com/#services",
+      "title": "Growth Strategy, Technology & Systems | Riva Strategies",
+      "description": "Explore Riva Strategies audits, growth capabilities, recovery and operating-system protocols, implementation stages and specialized market divisions.",
+      "canonical": "https://www.rivastrategies.com/services/",
       "robots": "index,follow",
       "og": {
         "type": "website",
         "siteName": "Riva Strategies",
         "title": "Services | Riva Strategies",
         "description": "Revenue Systems, Operational Efficiency, Strategic Planning, and Team Performance—built to create measurable ROI and operational freedom.",
-        "url": "https://www.rivastrategies.com/#services",
+        "url": "https://www.rivastrategies.com/services/",
         "image": {
           "url": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png",
           "width": 1200,
@@ -91,42 +92,42 @@
     },
 
     "industries": {
-      "title": "Industries | Riva Strategies",
-      "description": "Industry-specific growth systems for hospitality, local services, professional services, retail/e-commerce, real estate, healthcare, technology/software, manufacturing/logistics, financial services, and non-profit/education.",
-      "canonical": "https://www.rivastrategies.com/#industries",
+      "title": "Industries We Serve | Riva Strategies",
+      "description": "Riva Strategies builds industry-specific growth systems for hospitality, service companies, professional firms, healthcare, technology, manufacturing and more.",
+      "canonical": "https://www.rivastrategies.com/industries/",
       "robots": "index,follow",
       "og": {
         "type": "website",
         "siteName": "Riva Strategies",
-        "title": "Industries | Riva Strategies",
-        "description": "Industry-specific growth systems across 10+ verticals—from hospitality and local services to SaaS and manufacturing.",
-        "url": "https://www.rivastrategies.com/#industries",
+        "title": "Industries We Serve | Riva Strategies",
+        "description": "Industry-specific growth systems built around each market's customers, channels, economics and operating realities.",
+        "url": "https://www.rivastrategies.com/industries/",
         "image": {
-          "url": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png",
-          "width": 1200,
-          "height": 630,
+          "url": "https://www.rivastrategies.com/images/riva_landscape_1600x900.png",
+          "width": 1600,
+          "height": 900,
           "alt": "Riva Strategies industries"
         }
       },
       "twitter": {
         "card": "summary_large_image",
-        "title": "Industries | Riva Strategies",
-        "description": "Industry-specific growth systems across 10+ verticals—from hospitality and local services to SaaS and manufacturing.",
-        "image": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png"
+        "title": "Industries We Serve | Riva Strategies",
+        "description": "Industry-specific growth systems built around each market's customers, channels, economics and operating realities.",
+        "image": "https://www.rivastrategies.com/images/riva_landscape_1600x900.png"
       }
     },
 
     "faq": {
       "title": "FAQ | Riva Strategies",
       "description": "Straight answers on fit, process, timelines, and what implementation looks like with Riva Strategies.",
-      "canonical": "https://www.rivastrategies.com/#faq",
+      "canonical": "https://www.rivastrategies.com/faq/",
       "robots": "index,follow",
       "og": {
         "type": "website",
         "siteName": "Riva Strategies",
         "title": "FAQ | Riva Strategies",
         "description": "Answers for high-intent operators: fit, process, timelines, implementation, industries served, and outcomes.",
-        "url": "https://www.rivastrategies.com/#faq",
+        "url": "https://www.rivastrategies.com/faq/",
         "image": {
           "url": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png",
           "width": 1200,
@@ -144,15 +145,15 @@
 
     "contact": {
       "title": "Contact | Riva Strategies",
-      "description": "Request a Revenue Audit from Riva Strategies. Identify your highest-leverage gaps and define an implementation plan across six focused systems.",
-      "canonical": "https://www.rivastrategies.com/#contact",
+      "description": "Talk with Riva Strategies about a Digital Visibility Audit, Growth Systems Audit or division-specific growth engagement.",
+      "canonical": "https://www.rivastrategies.com/contact/",
       "robots": "index,follow",
       "og": {
         "type": "website",
         "siteName": "Riva Strategies",
         "title": "Contact | Riva Strategies",
         "description": "Request a Revenue Audit. Identify your highest-leverage gaps and get a clear implementation plan across six focused systems.",
-        "url": "https://www.rivastrategies.com/#contact",
+        "url": "https://www.rivastrategies.com/contact/",
         "image": {
           "url": "https://www.rivastrategies.com/images/Untitled%20Design%20-%201%20-%20Edited.png",
           "width": 1200,
@@ -179,7 +180,8 @@
   },
 
   "social": {
-    "facebook": "https://www.facebook.com/rivastrategies"
+    "facebook": "https://www.facebook.com/rivastrategies",
+    "x": "https://x.com/RivaStrategies"
   },
 
   "telemetry": {
