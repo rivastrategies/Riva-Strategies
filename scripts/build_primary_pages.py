@@ -4,6 +4,8 @@ from pathlib import Path
 import html
 import json
 
+from gtm import inject_gtm
+
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://www.rivastrategies.com"
 PHONE = "832-905-0570"
@@ -81,7 +83,8 @@ def page_schema(title, description, path, kind="WebPage"):
 
 
 def shell(title, description, path, schema, active, body):
-    return "<!DOCTYPE html>\n<html lang=\"en\">\n" + head(title, description, path, schema) + "\n<body>\n" + header(active) + body + footer() + "\n</body>\n</html>\n"
+    document = "<!DOCTYPE html>\n<html lang=\"en\">\n" + head(title, description, path, schema) + "\n<body>\n" + header(active) + body + footer() + "\n</body>\n</html>\n"
+    return inject_gtm(document)
 
 
 INDUSTRIES = {
@@ -130,7 +133,8 @@ def industry_page(slug, data):
 <section class="section soft faq"><div class="wrap"><div class="eyebrow">Questions</div><h2>What operators ask first.</h2>{''.join(f'<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q,a in faq)}</div></section>
 <section class="cta"><div class="wrap"><h2>Find the constraint before funding the solution.</h2><p>{esc(data['outcome'])}</p><div class="actions" style="justify-content:center"><a class="button" href="/contact/">Start a Conversation</a><a class="button outline" href="/#audits">Compare Riva Audits</a></div></div></section>
 </main>{footer()}'''
-    return "<!DOCTYPE html>\n<html lang=\"en\">\n"+head(data["title"],data["desc"],path,schema)+"\n<body>"+body+"</body>\n</html>\n"
+    document = "<!DOCTYPE html>\n<html lang=\"en\">\n"+head(data["title"],data["desc"],path,schema)+"\n<body>"+body+"</body>\n</html>\n"
+    return inject_gtm(document)
 
 
 FAQS = [
@@ -180,7 +184,8 @@ def build_contact():
 
 def redirect_page(source, target, label):
     canonical = BASE + target.split("#")[0]
-    return f'''<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(label)} | Riva Strategies</title><meta name="robots" content="noindex,follow"><link rel="canonical" href="{canonical}"><meta http-equiv="refresh" content="0; url={target}"><script>location.replace({json.dumps(target)});</script></head><body><p>This page has moved to <a href="{target}">{esc(label)}</a>.</p></body></html>\n'''
+    document = f'''<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(label)} | Riva Strategies</title><meta name="robots" content="noindex,follow"><link rel="canonical" href="{canonical}"><meta http-equiv="refresh" content="0; url={target}"><script>location.replace({json.dumps(target)});</script></head><body><p>This page has moved to <a href="{target}">{esc(label)}</a>.</p></body></html>\n'''
+    return inject_gtm(document)
 
 
 def protect_internal_page(path):
