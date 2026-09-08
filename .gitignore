@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local source checkpoint used to productionize the approved v2 homepage.
+prototype-archive/
+scripts/productionize_v2_homepage.mjs
