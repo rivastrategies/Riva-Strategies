@@ -5,6 +5,8 @@ const root = path.resolve(import.meta.dirname, '..');
 const releasePages = [
   'index.html',
   'riva-service-partners/index.html',
+  'riva-service-partners/services/index.html',
+  'riva-service-partners/growth-platform/index.html',
   'rivahospitality/index.html',
   'riva-reps/index.html',
   'privacy-policy/index.html',
@@ -49,7 +51,7 @@ if (!fs.existsSync(og)) fail('index.html', 'missing social image');
 if (fs.existsSync(og) && fs.statSync(og).size > 1_000_000) fail('index.html', 'social image exceeds 1 MB');
 
 const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
-for (const required of ['/riva-service-partners/', '/rivahospitality/', '/riva-reps/', '/privacy-policy/']) {
+for (const required of ['/riva-service-partners/', '/riva-service-partners/services/', '/riva-service-partners/growth-platform/', '/rivahospitality/', '/riva-reps/', '/privacy-policy/']) {
   if (!sitemap.includes(`https://rivastrategies.com${required}`)) fail('sitemap.xml', `missing ${required}`);
 }
 
