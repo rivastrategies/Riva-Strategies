@@ -85,6 +85,7 @@ h1 { font-size: clamp(3rem, 7vw, 6.5rem); max-width: 13ch; margin-top: 1.25rem; 
 .architecture h2, .capabilities h2, .packages h2, .management h2, .pr-addon h2 { font-size: clamp(2.2rem, 4vw, 4.2rem); color: var(--navy); }
 .architecture__head p { margin: 0; color: var(--muted); font-size: 1.08rem; }
 .architecture__paths { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.25rem; margin-top: 4rem; }
+.architecture__paths--two { grid-template-columns: repeat(2, 1fr); max-width: 880px; }
 .architecture__path { padding-top: 1.35rem; border-top: 3px solid var(--accent); }
 .architecture__path h3 { color: var(--navy); font-size: 1.45rem; }
 .architecture__path p { color: var(--muted); }
@@ -149,6 +150,24 @@ h1 { font-size: clamp(3rem, 7vw, 6.5rem); max-width: 13ch; margin-top: 1.25rem; 
 .management__actions { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 2rem; }
 .management__actions a { color: var(--navy); font-weight: 800; text-underline-offset: .2em; }
 
+.media-buying { padding-block: 7rem; color: #fff; background: var(--navy-deep); }
+.media-buying__grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 6rem; align-items: start; }
+.media-buying h2 { max-width: 14ch; font-size: clamp(2.5rem, 5vw, 5rem); }
+.media-buying p { margin-top: 0; color: #d2d9e5; font-size: 1.08rem; }
+.media-fee { margin-top: 2.25rem; padding: 1.6rem; border: 1px solid rgba(255,255,255,.24); border-top: 5px solid var(--accent); background: rgba(255,255,255,.05); }
+.media-fee span { display: block; color: var(--accent-soft); font-size: .72rem; font-weight: 850; letter-spacing: .15em; text-transform: uppercase; }
+.media-fee strong { display: block; margin-top: .55rem; color: #fff; font: 600 clamp(2rem, 4vw, 3.6rem)/1.08 var(--serif); }
+.media-fee p { margin: 1rem 0 0; font-size: .92rem; }
+
+.management-rules { padding-block: 7rem; }
+.management-rules__grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 6rem; align-items: start; }
+.management-rules h2 { color: var(--navy); font-size: clamp(2.2rem, 4vw, 4.2rem); }
+.management-rules p { color: var(--muted); }
+.rule-list { border-top: 1px solid var(--line); }
+.rule-list article { padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+.rule-list h3 { color: var(--navy); font-size: 1.25rem; }
+.rule-list p { margin-bottom: 0; }
+
 .proof { padding-block: 7rem; }
 .proof h2 { max-width: 18ch; color: var(--navy); }
 .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 4rem; }
@@ -205,8 +224,8 @@ footer a { color: #d5dbe5; }
   .service { grid-template-columns: 2.5rem 1fr; gap: 1rem; }
   .service p { grid-column: 2; }
   .proof-grid, .engine-grid, .cta .wrap, .footer-grid { grid-template-columns: 1fr; }
-  .architecture__head, .architecture__paths, .flagship__grid, .pr-addon__grid, .management__grid { grid-template-columns: 1fr; }
-  .architecture__head, .flagship__grid, .pr-addon__grid, .management__grid { gap: 2.5rem; }
+  .architecture__head, .architecture__paths, .flagship__grid, .pr-addon__grid, .management__grid, .media-buying__grid, .management-rules__grid { grid-template-columns: 1fr; }
+  .architecture__head, .flagship__grid, .pr-addon__grid, .management__grid, .media-buying__grid, .management-rules__grid { gap: 2.5rem; }
   .capability { grid-template-columns: 2.5rem 1fr; gap: 1rem; }
   .capability p { grid-column: 2; }
   .package { grid-column: 1 / -1; }
