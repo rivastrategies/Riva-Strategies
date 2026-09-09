@@ -223,9 +223,8 @@ a:focus-visible, button:focus-visible{outline:3px solid var(--navy); outline-off
    repeated rows. A single bearing rail runs behind all three moves with a
    ring marking each chapter start; an oversized serif chapter number sits
    in the rail's gutter, never overlapping the heading it introduces. The
-   middle chapter mirrors its two-column subjects and the third leads with
-   its heading flush right, so the sequence reads as three distinct
-   compositions rather than one template repeated. ---------- */
+   middle chapter mirrors its two-column subjects while every chapter keeps
+   its heading anchored to the shared timeline for a stable reading path. ---------- */
 .stack{background:var(--navy-deep); color:#fff; padding:var(--u6) 0 var(--u6); counter-reset:chapter;}
 .stack-head{max-width:36rem; margin-bottom:var(--u6);}
 .stack-head h2{font-size:clamp(2rem,3vw,2.4rem); color:#fff; margin:0;}
@@ -253,8 +252,8 @@ a:focus-visible, button:focus-visible{outline:3px solid var(--navy); outline-off
 .move-build .subjects{direction:rtl;}
 .move-build .subjects .subject{direction:ltr;}
 
-.move-run h3{text-align:right;}
-.move-run .subjects{margin-left:auto; max-width:44rem;}
+.move-run h3{text-align:left;}
+.move-run .subjects{margin-left:0; max-width:none;}
 
 @media (prefers-reduced-motion:no-preference){
   .move::before{transform-origin:top; animation:rivaDraw .8s cubic-bezier(.2,.8,.2,1) both;}
