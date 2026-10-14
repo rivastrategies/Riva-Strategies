@@ -194,6 +194,35 @@ footer strong { color: #fff; }
 footer nav { display: grid; gap: .55rem; }
 footer a { color: #d5dbe5; }
 
+/* RivaPR is a focused service line inside the Riva growth system. Its page
+   uses the established division language while giving the editorial process
+   a deliberate long-form rhythm of its own. */
+.pr-hero h1 { max-width: 15ch; }
+.pr-intro, .pr-process, .pr-fit, .pr-standard, .pr-faq { padding-block: 7rem; }
+.pr-intro__grid, .pr-fit__grid, .pr-standard__grid, .pr-faq__grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 6rem; align-items: start; }
+.pr-intro h2, .pr-process h2, .pr-fit h2, .pr-standard h2, .pr-faq h2 { color: var(--navy); font-size: clamp(2.2rem, 4vw, 4.2rem); }
+.pr-intro h2 span { display: inline-block; margin-top: .8rem; color: var(--accent); font-family: var(--serif); font-style: italic; font-weight: 600; }
+.pr-intro__grid > div:last-child > p:first-child, .pr-standard__grid > div:last-child p { margin-top: 0; color: var(--muted); font-size: 1.08rem; }
+.pr-process { color: #fff; background: var(--navy); }
+.pr-process h2 { max-width: 12ch; color: #fff; }
+.pr-steps { margin-top: 4rem; border-top: 1px solid rgba(255,255,255,.25); }
+.pr-steps article { display: grid; grid-template-columns: 4rem minmax(220px,.75fr) 1.25fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,.25); }
+.pr-steps span { color: var(--accent-soft); font: italic 1.25rem/1 var(--serif); }
+.pr-steps h3 { font-size: 1.3rem; }
+.pr-steps p { margin: 0; color: #cbd4e2; }
+.pr-fit { background: #e9e6df; }
+.pr-fit__list { border-top: 1px solid #bbb5a8; }
+.pr-fit__list article { padding: 1.5rem 0; border-bottom: 1px solid #bbb5a8; }
+.pr-fit__list h3 { color: var(--navy); font-size: 1.3rem; }
+.pr-fit__list p { margin-bottom: 0; color: var(--muted); }
+.pr-standard { color: #fff; background: var(--navy-deep); }
+.pr-standard h2 { color: #fff; }
+.pr-standard__grid > div:last-child p { color: #d2d9e5; }
+.pr-faq details { border-top: 1px solid var(--line); padding: 1.35rem 0; }
+.pr-faq details:last-child { border-bottom: 1px solid var(--line); }
+.pr-faq summary { cursor: pointer; color: var(--navy); font-size: 1.15rem; font-weight: 800; }
+.pr-faq details p { color: var(--muted); }
+
 @media (max-width: 1040px) {
   .masthead__row { grid-template-columns: auto 1fr; padding-block: .75rem; }
   .division-nav { grid-column: 1 / -1; order: 3; justify-content: space-between; border-top: 1px solid var(--line); }
@@ -211,6 +240,7 @@ footer a { color: #d5dbe5; }
   .masthead__row { grid-template-columns: 1fr auto; gap: .75rem; }
   .parent-mark img { width: 135px; }
   .division-nav { display: grid; gap: 0; }
+  .division-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .division-nav a { border-bottom: 1px solid var(--line); }
   .utility a:first-child { display: none; }
   .rsp-masthead .masthead__row { grid-template-columns: 1fr; }
@@ -224,10 +254,12 @@ footer a { color: #d5dbe5; }
   .service { grid-template-columns: 2.5rem 1fr; gap: 1rem; }
   .service p { grid-column: 2; }
   .proof-grid, .engine-grid, .cta .wrap, .footer-grid { grid-template-columns: 1fr; }
-  .architecture__head, .architecture__paths, .flagship__grid, .pr-addon__grid, .management__grid, .media-buying__grid, .management-rules__grid { grid-template-columns: 1fr; }
-  .architecture__head, .flagship__grid, .pr-addon__grid, .management__grid, .media-buying__grid, .management-rules__grid { gap: 2.5rem; }
+  .architecture__head, .architecture__paths, .flagship__grid, .pr-addon__grid, .management__grid, .media-buying__grid, .management-rules__grid, .pr-intro__grid, .pr-fit__grid, .pr-standard__grid, .pr-faq__grid { grid-template-columns: 1fr; }
+  .architecture__head, .flagship__grid, .pr-addon__grid, .management__grid, .media-buying__grid, .management-rules__grid, .pr-intro__grid, .pr-fit__grid, .pr-standard__grid, .pr-faq__grid { gap: 2.5rem; }
   .capability { grid-template-columns: 2.5rem 1fr; gap: 1rem; }
   .capability p { grid-column: 2; }
+  .pr-steps article { grid-template-columns: 2.5rem 1fr; gap: 1rem; }
+  .pr-steps p { grid-column: 2; }
   .package { grid-column: 1 / -1; }
   .flagship__systems { columns: 1; }
   .engine-grid { gap: 2.5rem; }

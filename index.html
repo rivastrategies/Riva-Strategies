@@ -55,9 +55,9 @@ a:focus-visible, button:focus-visible{outline:3px solid var(--navy); outline-off
 
 /* ---------- Masthead: slim, editorial spacing, no dividers, whitespace does the work ---------- */
 .masthead{background:var(--paper); border-bottom:1px solid var(--line-soft);}
-.masthead-row{display:flex; align-items:center; gap:var(--u5); padding-top:1.1rem; padding-bottom:1.1rem;}
+.masthead-row{display:flex; align-items:center; gap:var(--u4); padding-top:1.1rem; padding-bottom:1.1rem;}
 .mark{height:2.1rem; width:auto; display:block; flex-shrink:0;}
-.division-row{display:flex; align-items:center; gap:var(--u4); margin-right:auto;}
+.division-row{display:flex; align-items:center; gap:var(--u3); margin-right:auto;}
 .division-row a{
   display:inline-flex; align-items:center; gap:.5rem; text-decoration:none; color:var(--ink);
   font-weight:700; font-size:1.02rem; letter-spacing:-.005em; white-space:nowrap;
@@ -88,7 +88,7 @@ a:focus-visible, button:focus-visible{outline:3px solid var(--navy); outline-off
   .masthead-row{flex-wrap:wrap; row-gap:0; padding-top:1.1rem; padding-bottom:0;}
   .division-row{
     width:100%; margin-right:0; margin-top:1rem; order:3;
-    display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); align-items:stretch; gap:0;
+    display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); align-items:stretch; gap:0;
     border-top:1px solid var(--line-soft);
   }
   .division-row a{
@@ -604,6 +604,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </g>
         </svg>
         Riva Represents
+      </a>
+      <a href="/riva-pr/">
+        <svg class="riva-bearing" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="8.4" fill="none" stroke="currentColor" stroke-width="1.1"/>
+          <line x1="12" y1="2.2" x2="12" y2="4.4" stroke="currentColor" stroke-width="1.1"/>
+          <g class="riva-needle">
+            <path d="M12 12 L13 12.8 L12 6.4 L11 12.8 Z" fill="currentColor"/>
+            <path d="M12 12 L13 11.2 L12 17.6 L11 11.2 Z" fill="currentColor" opacity=".38"/>
+          </g>
+        </svg>
+        RivaPR
       </a>
     </nav>
     <nav class="util-row" aria-label="Page sections">
