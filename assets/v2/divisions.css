@@ -198,9 +198,9 @@ footer a { color: #d5dbe5; }
    uses the established division language while giving the editorial process
    a deliberate long-form rhythm of its own. */
 .pr-hero h1 { max-width: 15ch; }
-.pr-intro, .pr-process, .pr-fit, .pr-standard, .pr-faq { padding-block: 7rem; }
+.pr-intro, .pr-process, .pr-fit, .pr-standard, .pr-faq, .pr-packages { padding-block: 7rem; }
 .pr-intro__grid, .pr-fit__grid, .pr-standard__grid, .pr-faq__grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 6rem; align-items: start; }
-.pr-intro h2, .pr-process h2, .pr-fit h2, .pr-standard h2, .pr-faq h2 { color: var(--navy); font-size: clamp(2.2rem, 4vw, 4.2rem); }
+.pr-intro h2, .pr-process h2, .pr-fit h2, .pr-standard h2, .pr-faq h2, .pr-packages h2 { color: var(--navy); font-size: clamp(2.2rem, 4vw, 4.2rem); }
 .pr-intro h2 span { display: inline-block; margin-top: .8rem; color: var(--accent); font-family: var(--serif); font-style: italic; font-weight: 600; }
 .pr-intro__grid > div:last-child > p:first-child, .pr-standard__grid > div:last-child p { margin-top: 0; color: var(--muted); font-size: 1.08rem; }
 .pr-process { color: #fff; background: var(--navy); }
@@ -222,6 +222,32 @@ footer a { color: #d5dbe5; }
 .pr-faq details:last-child { border-bottom: 1px solid var(--line); }
 .pr-faq summary { cursor: pointer; color: var(--navy); font-size: 1.15rem; font-weight: 800; }
 .pr-faq details p { color: var(--muted); }
+.pr-packages { background: #e9e6df; }
+.pr-packages__head { display: grid; grid-template-columns: 1.1fr .9fr; gap: 5rem; align-items: end; }
+.pr-packages__head > p { margin: 0; color: var(--muted); font-size: 1.08rem; }
+.pr-package-group { margin-top: 4.5rem; }
+.pr-package-group__label { display: grid; grid-template-columns: .45fr 1.55fr; gap: 3rem; padding-bottom: 1.2rem; border-bottom: 1px solid #bbb5a8; }
+.pr-package-group__label span { color: var(--navy); font-weight: 850; text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; }
+.pr-package-group__label p { max-width: 700px; margin: 0; color: var(--muted); }
+.pr-package-grid { display: grid; gap: 1.5rem; margin-top: 1.5rem; }
+.pr-package-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pr-package { display: flex; flex-direction: column; min-height: 100%; padding: 2rem; border-top: 5px solid var(--accent); background: #fff; }
+.pr-package__type { margin: 0 0 1rem; color: var(--accent); font-size: .72rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
+.pr-package h3 { color: var(--navy); font-size: clamp(1.65rem, 3vw, 2.4rem); }
+.pr-package__price { margin: 1rem 0; color: var(--navy); font: 600 clamp(2rem, 4vw, 3.2rem)/1 var(--serif); }
+.pr-package__price small { display: block; margin-top: .45rem; color: var(--muted); font: 750 .72rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; }
+.pr-package > p:not(.pr-package__type):not(.pr-package__price), .pr-package li { color: var(--muted); }
+.pr-package ul { margin: .75rem 0 2rem; padding-left: 1.1rem; }
+.pr-package li { margin-top: .55rem; }
+.pr-package > a { margin-top: auto; color: var(--navy); font-weight: 850; text-underline-offset: .22em; }
+.pr-package--dark { color: #fff; background: var(--navy-deep); }
+.pr-package--dark h3, .pr-package--dark .pr-package__price, .pr-package--dark > a { color: #fff; }
+.pr-package--dark .pr-package__type { color: var(--accent-soft); }
+.pr-package--dark .pr-package__price small, .pr-package--dark > p:not(.pr-package__type):not(.pr-package__price), .pr-package--dark li { color: #d2d9e5; }
+.pr-distribution-note { margin-top: 1.5rem; padding: 1.75rem 2rem; border-left: 4px solid var(--accent); background: #f7f6f3; }
+.pr-distribution-note h3 { color: var(--navy); font-size: 1.35rem; }
+.pr-distribution-note p { max-width: 1000px; margin: .65rem 0 0; color: var(--muted); }
+.pr-packages > .wrap > .scope-note { margin-top: 2rem; background: #f7f6f3; }
 
 @media (max-width: 1040px) {
   .masthead__row { grid-template-columns: auto 1fr; padding-block: .75rem; }
@@ -254,8 +280,8 @@ footer a { color: #d5dbe5; }
   .service { grid-template-columns: 2.5rem 1fr; gap: 1rem; }
   .service p { grid-column: 2; }
   .proof-grid, .engine-grid, .cta .wrap, .footer-grid { grid-template-columns: 1fr; }
-  .architecture__head, .architecture__paths, .flagship__grid, .pr-addon__grid, .management__grid, .media-buying__grid, .management-rules__grid, .pr-intro__grid, .pr-fit__grid, .pr-standard__grid, .pr-faq__grid { grid-template-columns: 1fr; }
-  .architecture__head, .flagship__grid, .pr-addon__grid, .management__grid, .media-buying__grid, .management-rules__grid, .pr-intro__grid, .pr-fit__grid, .pr-standard__grid, .pr-faq__grid { gap: 2.5rem; }
+  .architecture__head, .architecture__paths, .flagship__grid, .pr-addon__grid, .management__grid, .media-buying__grid, .management-rules__grid, .pr-intro__grid, .pr-fit__grid, .pr-standard__grid, .pr-faq__grid, .pr-packages__head, .pr-package-grid--two, .pr-package-group__label { grid-template-columns: 1fr; }
+  .architecture__head, .flagship__grid, .pr-addon__grid, .management__grid, .media-buying__grid, .management-rules__grid, .pr-intro__grid, .pr-fit__grid, .pr-standard__grid, .pr-faq__grid, .pr-packages__head, .pr-package-group__label { gap: 2.5rem; }
   .capability { grid-template-columns: 2.5rem 1fr; gap: 1rem; }
   .capability p { grid-column: 2; }
   .pr-steps article { grid-template-columns: 2.5rem 1fr; gap: 1rem; }
