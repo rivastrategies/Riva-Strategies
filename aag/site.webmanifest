@@ -1,0 +1,37 @@
+{
+  "id": "/aag/",
+  "name": "Absolute Auto Glass",
+  "short_name": "Absolute Glass",
+  "description": "Auto, RV and specialty glass services in South Louisiana.",
+  "start_url": "/aag/",
+  "scope": "/aag/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/aag/android-chrome-192x192.png?v=aag-full-logo-1",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/aag/android-chrome-512x512.png?v=aag-full-logo-1",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/aag/maskable-icon-512x512.png?v=aag-full-logo-1",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/aag/maskable-icon-1024x1024.png?v=aag-full-logo-1",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
