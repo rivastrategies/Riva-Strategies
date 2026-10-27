@@ -103,16 +103,7 @@ p { max-width: 72ch; }
   box-shadow: var(--shadow);
   overflow: hidden;
 }
-.hero-brand::before {
-  content: "";
-  position: absolute;
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  background: var(--yellow);
-  opacity: .32;
-}
-.hero-brand img { position: relative; z-index: 1; width: min(88%, 490px); aspect-ratio: 1; object-fit: contain; mix-blend-mode: multiply; }
+.hero-brand img { position: relative; z-index: 1; width: min(88%, 490px); aspect-ratio: 1; object-fit: contain; }
 .hero-stamp {
   position: absolute;
   right: 1.25rem;
