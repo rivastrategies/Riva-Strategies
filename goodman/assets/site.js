@@ -14,9 +14,9 @@ if(form){
   if(!form.reportValidity())return;
   const d=Object.fromEntries(new FormData(form));
   const service=form.elements.service.selectedOptions[0].textContent;
-  message=`Goodman Environmental,\n\nPlease review the following service inquiry:\n\nService: ${service}\nFacility: ${d.location.trim()}\nCompany: ${d.company.trim()||'Not provided'}\n\nEquipment and project details:\n${d.details.trim()}\n\nName: ${d.name.trim()}\nEmail: ${d.email.trim()}\nPhone: ${d.phone.trim()||'Not provided'}\n`;
+  message=`Goodman Environmental,\n\nPlease review the following service inquiry:\n\nService: ${service}\nFacility: ${d.location.trim()}\nCompany: ${d.company.trim()||'Not provided'}\n\nEquipment And Project Details:\n${d.details.trim()}\n\nName: ${d.name.trim()}\nEmail: ${d.email.trim()}\nPhone: ${d.phone.trim()||'Not provided'}\n`;
   document.querySelector('#email-content').textContent=message;
-  document.querySelector('#open-email').href='mailto:rick@goodmanenvironmental.com?subject='+encodeURIComponent('Service inquiry — '+service)+'&body='+encodeURIComponent(message);
+  document.querySelector('#open-email').href='mailto:rick@goodmanenvironmental.com?subject='+encodeURIComponent('Service Inquiry — '+service)+'&body='+encodeURIComponent(message);
   const preview=document.querySelector('#email-preview');preview.hidden=false;preview.focus();preview.scrollIntoView({behavior:'smooth',block:'center'});
   document.querySelector('#copy-status').textContent='';
  });
