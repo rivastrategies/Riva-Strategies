@@ -1,0 +1,31 @@
+{
+  "id": "./",
+  "name": "Goodman Environmental",
+  "short_name": "Goodman",
+  "description": "Industrial CEMS, analyzer, and controls service.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "browser",
+  "background_color": "#073aa1",
+  "theme_color": "#073aa1",
+  "icons": [
+    {
+      "src": "./assets/android-chrome-192x192.png?v=20261028-1",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/android-chrome-512x512.png?v=20261028-1",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/maskable-icon-512x512.png?v=20261028-1",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
