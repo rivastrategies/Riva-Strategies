@@ -1,0 +1,1 @@
+import{r as e}from"./framework-D_rUT4EX.js";var t=e();function n({label:e=`Print the property worksheet ↓`}){return(0,t.jsx)(`button`,{className:`button print-action`,onClick:()=>window.print(),children:e})}export{n as default};
