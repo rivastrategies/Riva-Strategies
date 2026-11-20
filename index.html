@@ -57,7 +57,7 @@ a:focus-visible, button:focus-visible{outline:3px solid var(--navy); outline-off
 .masthead{background:var(--paper); border-bottom:1px solid var(--line-soft);}
 .masthead-row{display:flex; align-items:center; gap:var(--u4); padding-top:1.1rem; padding-bottom:1.1rem;}
 .mark{height:2.1rem; width:auto; display:block; flex-shrink:0;}
-.division-row{display:flex; align-items:center; gap:var(--u3); margin-right:auto;}
+.division-row{display:flex; flex-wrap:wrap; align-items:center; gap:.35rem var(--u3); margin-right:auto; min-width:0;}
 .division-row a{
   display:inline-flex; align-items:center; gap:.5rem; text-decoration:none; color:var(--ink);
   font-weight:700; font-size:1.02rem; letter-spacing:-.005em; white-space:nowrap;
@@ -74,7 +74,7 @@ a:focus-visible, button:focus-visible{outline:3px solid var(--navy); outline-off
   .riva-needle{transform:rotate(35deg); transition:transform .4s cubic-bezier(.2,.8,.2,1);}
   .division-row a:hover .riva-needle, .division-row a:focus-visible .riva-needle{transform:rotate(0deg);}
 }
-@media (max-width:68rem){ .util-row{display:none;} }
+@media (max-width:84rem){ .util-row{display:none;} }
 
 /* Mobile masthead, 767px and below: a deliberate two-tier structure, not a
    collapsed desktop bar. Row 1 is the parent Riva mark alone. Row 2 is a
@@ -99,6 +99,7 @@ a:focus-visible, button:focus-visible{outline:3px solid var(--navy); outline-off
     border-right:1px solid var(--line-soft);
   }
   .division-row a:last-child{border-right:none;}
+  .division-row a.product-link{grid-column:1 / -1; flex-direction:row; min-height:3.5rem; border-top:1px solid var(--line-soft);}
   .riva-bearing{width:1.6rem; height:1.6rem;}
 }
 
@@ -571,7 +572,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="masthead" id="top">
   <div class="wrap masthead-row">
     <img class="mark" src="/assets/v2/riva-strategies-logo-190.webp" width="190" height="70" alt="Riva Strategies" loading="eager" decoding="async">
-    <nav class="division-row" aria-label="Riva divisions">
+    <nav class="division-row" aria-label="Riva divisions and products">
       <a href="/riva-service-partners/">
         <svg class="riva-bearing" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <circle cx="12" cy="12" r="8.4" fill="none" stroke="currentColor" stroke-width="1.1"/>
@@ -616,6 +617,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </svg>
         RivaPR
       </a>
+      <a class="product-link" href="/aio/">RivaAIO</a>
     </nav>
     <nav class="util-row" aria-label="Page sections">
       <a href="#capabilities">Capabilities</a>
@@ -628,11 +630,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="hero">
   <div class="hero-copy">
     <div class="wrap">
-      <h1>Riva Strategies Builds and Runs the Growth System Between Attention and Revenue.</h1>
+      <h1>Riva Strategies builds and runs the growth system between attention and revenue.</h1>
       <p>We diagnose where growth is breaking, then build and run the search, paid, CRM, and follow-up systems that turn attention into revenue the business can trace, not another report.</p>
       <div class="hero-actions">
-        <a class="hero-cta hero-cta-primary" href="#contact">Find Where Growth Is Breaking <span class="arrow" aria-hidden="true">&#8594;</span></a>
-        <a class="hero-cta hero-cta-secondary" href="#capabilities">See How Riva Works</a>
+        <a class="hero-cta hero-cta-primary" href="#contact">Find where growth is breaking <span class="arrow" aria-hidden="true">&#8594;</span></a>
+        <a class="hero-cta hero-cta-secondary" href="#capabilities">See how Riva works</a>
       </div>
     </div>
   </div>
@@ -781,6 +783,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+
+<section aria-labelledby="rivaaio-product-title" style="border-top:1px solid #DAD6CC;padding:3rem 0;background:#F7F6F3"><div class="wrap"><p style="font-size:.85rem;font-weight:700;color:#0A2F73;margin-bottom:.75rem">STANDALONE SUBSCRIPTION</p><h2 id="rivaaio-product-title" style="font-size:2rem;color:#081B45;margin-bottom:1rem">RivaAIO: Search Intelligence for Real Business</h2><p style="max-width:48rem;margin-bottom:1.25rem">Explore a focused AI search visibility subscription, with research, competitor context, and practical priorities for your business.</p><a href="/aio/" class="path-cta">Explore RivaAIO plans</a></div></section>
 
 <section class="convert" id="contact">
   <div class="wrap convert-grid">
@@ -1008,7 +1012,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </ul>
       </div>
     </div>
-    <p class="foot-legal">Riva Strategies.</p>
+    <p class="foot-legal">Riva Strategies. <span style="margin-left:1rem;font-size:.9rem">Built by <a href="https://rivastrategies.com/">Riva</a></span></p>
   </div>
 </footer>
 </body>
