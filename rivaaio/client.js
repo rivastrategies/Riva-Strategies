@@ -16,10 +16,10 @@
     window.dataLayer.push({event, product: 'RivaAIO', ...values});
   }
   function updatePlan() {
-    const small = revenue.value === 'under5';
+    const small = revenue.value === 'under1';
     document.querySelector('#selected-plan').textContent = {basic:'Basic', enhanced:'Enhanced+', advice:'Plan consultation'}[plan.value];
     document.querySelector('#selected-price').textContent = plan.value === 'enhanced' ? '$1,000 / month' : plan.value === 'advice' ? 'We will help you choose' : small ? '$250 / month Small Business Rate' : '$500 / month standard rate';
-    document.querySelector('#rate-note').textContent = plan.value === 'basic' ? (small ? 'Subject to qualification for companies under $5 million in annual revenue.' : 'The $250 rate applies to qualifying companies under $5 million in annual revenue.') : 'Scope and terms are confirmed before any recurring payment is authorized.';
+    document.querySelector('#rate-note').textContent = plan.value === 'basic' ? (small ? 'Subject to qualification for businesses with under $1 million in annual revenue.' : 'The $250/month rate is for qualifying businesses with under $1 million in annual revenue.') : 'Scope and terms are confirmed before any recurring payment is authorized.';
     button.textContent = plan.value === 'advice' ? 'Request a plan consultation' : 'Request subscription setup';
   }
   plan.addEventListener('change', updatePlan);
