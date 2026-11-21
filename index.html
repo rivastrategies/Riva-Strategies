@@ -53,54 +53,35 @@ a:focus-visible, button:focus-visible{outline:3px solid var(--navy); outline-off
 .skip{position:absolute; left:-999px; background:var(--navy); color:#fff; padding:.8rem 1.2rem; z-index:50; text-decoration:none; font-size:.95rem;}
 .skip:focus{left:var(--u3); top:var(--u2);}
 
-/* ---------- Masthead: slim, editorial spacing, no dividers, whitespace does the work ---------- */
-.masthead{background:var(--paper); border-bottom:1px solid var(--line-soft);}
-.masthead-row{display:grid; grid-template-columns:auto minmax(0,1fr); align-items:center; gap:.15rem var(--u4); padding-top:.8rem; padding-bottom:.8rem;}
-.mark{height:2.1rem; width:auto; display:block; grid-column:1; grid-row:1 / 3;}
-.division-row{display:flex; flex-wrap:nowrap; justify-content:space-between; align-items:center; gap:1rem; min-width:0; grid-column:2; grid-row:1;}
-.division-row a{
-  display:inline-flex; align-items:center; gap:.5rem; text-decoration:none; color:var(--ink);
-  font-weight:700; font-size:1.02rem; letter-spacing:-.005em; white-space:nowrap;
-  min-height:44px; padding:.4rem 0;
-}
-.riva-bearing{width:1.375rem; height:1.375rem; flex-shrink:0; color:var(--navy);}
-.riva-needle{transform-box:fill-box; transform-origin:50% 50%; color:var(--riva-blue);}
-.division-row a:hover, .division-row a:focus-visible{color:var(--navy);}
-.util-row{display:flex; justify-content:flex-end; gap:var(--u3); grid-column:2; grid-row:2;}
-.util-row a{font-size:.85rem; color:#565C69; text-decoration:none; min-height:36px; display:inline-flex; align-items:center;}
-.util-row a:hover, .util-row a:focus-visible{color:var(--navy);}
+/* Masthead: primary page navigation above the division buttons. */
+.masthead{background:var(--paper);border-bottom:1px solid var(--line-soft);}
+.masthead-row{display:flex;align-items:center;justify-content:space-between;gap:.8rem 1.25rem;padding-top:.7rem;padding-bottom:.65rem;}
+.masthead-home{display:inline-flex;align-items:center;min-height:44px;flex:0 0 auto;}
+.mark{display:block;width:clamp(6rem,9vw,7.75rem);height:auto;max-width:100%;}
+.util-row{display:flex;justify-content:flex-end;align-items:center;flex-wrap:wrap;gap:0 clamp(.55rem,2vw,1.65rem);min-width:0;}
+.util-row a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.25rem .2rem;color:var(--riva-blue);font-size:.95rem;font-weight:750;line-height:1.25;text-decoration:none;text-align:center;}
+.util-row a:hover,.util-row a:focus-visible{color:var(--navy);text-decoration:underline;text-underline-offset:.2em;}
+.division-band{border-top:1px solid var(--line-soft);background:#EEEDF0;}
+.division-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:stretch;gap:.55rem;padding-top:.6rem;padding-bottom:.65rem;}
+.division-row a{display:flex;align-items:center;justify-content:center;gap:.45rem;min-width:0;min-height:44px;padding:.45rem .35rem;border:1px solid #C7CFE0;border-radius:.35rem;background:#fff;color:var(--riva-blue);font-size:.875rem;font-weight:750;line-height:1.25;text-align:center;text-decoration:none;overflow-wrap:break-word;}
+.division-row a:hover,.division-row a:focus-visible{border-color:var(--riva-blue);background:#F5F8FF;color:var(--navy);}
+.division-row span{min-width:0;}
+.division-mark{width:1.75rem;height:1.75rem;display:block;flex:0 0 1.75rem;object-fit:contain;border-radius:.14rem;}
+.division-mark--aio{width:2.75rem;flex-basis:2.75rem;padding:.2rem;background:var(--navy-deep);}
 @media (prefers-reduced-motion:no-preference){
-  .division-row a, .riva-bearing, .util-row a{transition:color .18s ease;}
-  .riva-needle{transform:rotate(35deg); transition:transform .4s cubic-bezier(.2,.8,.2,1);}
-  .division-row a:hover .riva-needle, .division-row a:focus-visible .riva-needle{transform:rotate(0deg);}
+  .util-row a,.division-row a{transition:color .18s ease,background-color .18s ease,border-color .18s ease,transform .18s ease;}
+  .division-row a:hover,.division-row a:focus-visible{transform:translateY(-1px);}
 }
-/* Tablets keep all five products together below the brand and utility links. */
-@media (max-width:1099px){
-  .masthead-row{grid-template-columns:auto 1fr; row-gap:.6rem;}
-  .mark{grid-row:1;}
-  .util-row{grid-row:1;}
-  .division-row{grid-column:1 / -1; grid-row:2; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); align-items:stretch; gap:.6rem; border-top:1px solid var(--line-soft); padding-top:.6rem;}
-  .division-row a{flex-direction:column; justify-content:flex-start; text-align:center; white-space:normal; font-size:.9rem; line-height:1.25; min-width:0; padding:.4rem .2rem;}
+@media (max-width:700px){
+  .masthead-row{flex-direction:column;justify-content:center;gap:.25rem;padding-top:.55rem;padding-bottom:.45rem;}
+  .util-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%;gap:0 .25rem;}
+  .util-row a{font-size:.875rem;}
+  .masthead-row,.division-row{padding-inline:.85rem;}
+  .division-row{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .division-row a:last-child{grid-column:1 / -1;}
 }
-/* Phones use a two-column menu with the final product spanning the last row. */
-@media (max-width:767px){
-  .masthead-row{row-gap:0; padding-top:1.1rem; padding-bottom:0;}
-  .util-row{display:none;}
-  .division-row{
-    width:100%; margin-top:1rem; padding-top:0;
-    display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); align-items:stretch; gap:0;
-    border-top:1px solid var(--line-soft);
-  }
-  .division-row a{
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-    min-width:0; gap:.4rem; text-align:center; white-space:normal;
-    font-size:.78rem; line-height:1.2; letter-spacing:-.005em;
-    padding:.85rem .4rem; min-height:6.5rem;
-    border-right:1px solid var(--line-soft);
-  }
-  .division-row a:nth-child(2n), .division-row a:last-child{border-right:none;}
-  .division-row a.product-link{grid-column:1 / -1; flex-direction:row; min-height:3.5rem; border-top:1px solid var(--line-soft);}
-  .riva-bearing{width:1.6rem; height:1.6rem;}
+@media (max-width:360px){
+  .util-row{grid-template-columns:repeat(2,minmax(0,1fr));}
 }
 
 /* ---------- Hero, desktop and tablet (>=768px): exact geometry from the
@@ -202,6 +183,7 @@ a:focus-visible, button:focus-visible{outline:3px solid var(--navy); outline-off
 .problem-movement:nth-child(3) p{font-size:1.16rem; max-width:42rem;}
 
 .problem-close{margin-top:var(--u5); padding-top:var(--u4); border-top:1px solid var(--line-soft); max-width:42rem; font-size:1.05rem; line-height:1.6; color:#4B5262;}
+.problem-close h2{margin:0 0 .65rem;color:var(--navy);font-size:clamp(1.45rem,2.3vw,1.8rem);line-height:1.2;}
 
 @media (prefers-reduced-motion:no-preference){
   .problem-movements::before{animation:rivaDraw .9s cubic-bezier(.2,.8,.2,1) both;}
@@ -571,68 +553,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header class="masthead" id="top">
   <div class="wrap masthead-row">
-    <img class="mark" src="/assets/v2/riva-strategies-logo-190.webp" width="190" height="70" alt="Riva Strategies" loading="eager" decoding="async">
-    <nav class="division-row" aria-label="Riva divisions and products">
-      <a href="/riva-service-partners/">
-        <svg class="riva-bearing" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <circle cx="12" cy="12" r="8.4" fill="none" stroke="currentColor" stroke-width="1.1"/>
-          <line x1="12" y1="2.2" x2="12" y2="4.4" stroke="currentColor" stroke-width="1.1"/>
-          <g class="riva-needle">
-            <path d="M12 12 L13 12.8 L12 6.4 L11 12.8 Z" fill="currentColor"/>
-            <path d="M12 12 L13 11.2 L12 17.6 L11 11.2 Z" fill="currentColor" opacity=".38"/>
-          </g>
-        </svg>
-        Riva Service Partners
-      </a>
-      <a href="/rivahospitality/">
-        <svg class="riva-bearing" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <circle cx="12" cy="12" r="8.4" fill="none" stroke="currentColor" stroke-width="1.1"/>
-          <line x1="12" y1="2.2" x2="12" y2="4.4" stroke="currentColor" stroke-width="1.1"/>
-          <g class="riva-needle">
-            <path d="M12 12 L13 12.8 L12 6.4 L11 12.8 Z" fill="currentColor"/>
-            <path d="M12 12 L13 11.2 L12 17.6 L11 11.2 Z" fill="currentColor" opacity=".38"/>
-          </g>
-        </svg>
-        Riva Hospitality Partners
-      </a>
-      <a href="/riva-reps/">
-        <svg class="riva-bearing" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <circle cx="12" cy="12" r="8.4" fill="none" stroke="currentColor" stroke-width="1.1"/>
-          <line x1="12" y1="2.2" x2="12" y2="4.4" stroke="currentColor" stroke-width="1.1"/>
-          <g class="riva-needle">
-            <path d="M12 12 L13 12.8 L12 6.4 L11 12.8 Z" fill="currentColor"/>
-            <path d="M12 12 L13 11.2 L12 17.6 L11 11.2 Z" fill="currentColor" opacity=".38"/>
-          </g>
-        </svg>
-        Riva Represents
-      </a>
-      <a href="/riva-pr/">
-        <svg class="riva-bearing" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <circle cx="12" cy="12" r="8.4" fill="none" stroke="currentColor" stroke-width="1.1"/>
-          <line x1="12" y1="2.2" x2="12" y2="4.4" stroke="currentColor" stroke-width="1.1"/>
-          <g class="riva-needle">
-            <path d="M12 12 L13 12.8 L12 6.4 L11 12.8 Z" fill="currentColor"/>
-            <path d="M12 12 L13 11.2 L12 17.6 L11 11.2 Z" fill="currentColor" opacity=".38"/>
-          </g>
-        </svg>
-        RivaPR
-      </a>
-      <a class="product-link" href="/aio/">
-        <svg class="riva-bearing" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <circle cx="12" cy="12" r="8.4" fill="none" stroke="currentColor" stroke-width="1.1"/>
-          <line x1="12" y1="2.2" x2="12" y2="4.4" stroke="currentColor" stroke-width="1.1"/>
-          <g class="riva-needle">
-            <path d="M12 12 L13 12.8 L12 6.4 L11 12.8 Z" fill="currentColor"/>
-            <path d="M12 12 L13 11.2 L12 17.6 L11 11.2 Z" fill="currentColor" opacity=".38"/>
-          </g>
-        </svg>
-        RivaAIO
-      </a>
-    </nav>
-    <nav class="util-row" aria-label="Page sections">
+    <a class="masthead-home" href="/" aria-label="Riva Strategies home"><img class="mark" src="/assets/v2/riva-strategies-logo-190.webp" width="190" height="70" alt="Riva Strategies" loading="eager" decoding="async"></a>
+    <nav class="util-row" aria-label="Main navigation">
+      <a href="#about-us">About Us</a>
       <a href="#capabilities">Capabilities</a>
       <a href="#method">Method</a>
       <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="division-band">
+    <nav class="wrap division-row" aria-label="Riva divisions and products">
+      <a href="/riva-service-partners/"><span>Riva Service Partners</span></a>
+      <a href="/rivahospitality/"><img class="division-mark" src="/assets/v2/riva-hospitality-partners-masthead.webp" width="96" height="93" alt="" decoding="async"><span>Riva Hospitality Partners</span></a>
+      <a href="/riva-reps/"><span>Riva Represents</span></a>
+      <a href="/riva-pr/"><span>RivaPR</span></a>
+      <a href="/aio/"><img class="division-mark division-mark--aio" src="/assets/v2/rivaaio-masthead.webp" width="170" height="57" alt="" decoding="async"><span>RivaAIO</span></a>
     </nav>
   </div>
 </header>
@@ -675,7 +610,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Advertising and content run disconnected from the CRM, and nobody can say with confidence which channel actually produced last quarter's revenue, only which one produced the most clicks.</p>
       </div>
     </div>
-    <p class="problem-close">Riva Strategies removes that friction as an outside growth strategy and operating partner, directly or through its divisions, Riva Service Partners, Riva Hospitality Partners, and Riva Represents. The parent company remains the engine.</p>
+    <section class="problem-close" id="about-us" aria-labelledby="about-us-title">
+      <h2 id="about-us-title">About Us</h2>
+      <p>Riva Strategies removes that friction as an outside growth strategy and operating partner, directly or through its divisions, Riva Service Partners, Riva Hospitality Partners, and Riva Represents. The parent company remains the engine.</p>
+    </section>
   </div>
 </section>
 
