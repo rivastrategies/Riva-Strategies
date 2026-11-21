@@ -39,14 +39,37 @@
   const allowedAttribution = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
   const attribution = Object.fromEntries(allowedAttribution.map(key => [key, (params.get(key) || '').slice(0,160)]));
 
+  function normalizeWebsite(value) {
+    const raw = String(value || '').trim();
+    if (!raw || /[\s\\]/.test(raw)) return '';
+    const candidate = /^[a-z][a-z\d+.-]*:\/\//i.test(raw) ? raw : 'https://' + raw;
+    const authority = candidate.match(/^https?:\/\/([^/?#]+)/i);
+    if (!authority || authority[1].includes('@')) return '';
+    try {
+      const url = new URL(candidate);
+      const labels = url.hostname.split('.');
+      if (!['http:', 'https:'].includes(url.protocol) || url.username || url.password || url.hostname.length > 253 || labels.length < 2 || !labels.every(label => /^[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?$/i.test(label))) return '';
+      return url.href;
+    } catch {
+      return '';
+    }
+  }
+
   form.addEventListener('submit', async event => {
     event.preventDefault();
     if (busy || !form.reportValidity()) return;
+    const website = normalizeWebsite(form.elements.website.value);
+    if (!website) {
+      status.textContent = 'Enter a valid website, such as example.com or https://example.com. Use HTTP or HTTPS and leave out any login details.';
+      form.elements.website.focus();
+      return;
+    }
     busy = true;
     button.disabled = true;
     status.textContent = 'Saving your request…';
     try {
       const payload = Object.fromEntries(new FormData(form));
+      payload.website = website;
       payload.consent = form.elements.consent.checked;
       const response = await fetch(form.dataset.endpoint || '/rivaaio/api/requests', {
         method:'POST',
