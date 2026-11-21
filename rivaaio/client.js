@@ -66,7 +66,7 @@
       track('rivaaio_request_saved', {plan:plan.value, preview:data.preview === true});
       status.textContent = '';
     } catch (error) {
-      status.textContent = error.message === 'Failed to fetch' ? 'We could not confirm receipt. Please try again, or contact jordan@rivastrategies.com.' : error.message;
+      status.textContent = error.message === 'Failed to fetch' ? 'We could not confirm receipt. Please try again, or contact growth@rivastrategies.com.' : error.message;
     } finally {
       busy = false;
       button.disabled = false;
