@@ -28,7 +28,8 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Riva Growth Platform","url":"https://rivastrategies.com/riva-service-partners/growth-platform/","provider":{"@type":"Organization","name":"Riva Service Partners","url":"https://rivastrategies.com/riva-service-partners/"},"description":"One-time digital growth platform development for service businesses.","offers":[{"@type":"Offer","name":"Launch","price":"500","priceCurrency":"USD"},{"@type":"Offer","name":"Foundation","price":"2500","priceCurrency":"USD"},{"@type":"Offer","name":"Growth","price":"5000","priceCurrency":"USD"},{"@type":"Offer","name":"Dominate","price":"7500","priceCurrency":"USD"}]}</script>
 <script>
 (function () {
-  if (!/^(www\\.)?rivastrategies\\.com$/.test(window.location.hostname)) return;
+  var host = window.location.hostname;
+  if (host !== 'rivastrategies.com' && host !== 'www.rivastrategies.com') return;
   var script = document.createElement('script');
   script.src = 'https://tracker.metricool.com/resources/be.js';
   script.async = true;
