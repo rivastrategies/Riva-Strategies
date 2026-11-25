@@ -28,7 +28,8 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Riva Management","url":"https://rivastrategies.com/riva-service-partners/management/","provider":{"@type":"Organization","name":"Riva Service Partners","url":"https://rivastrategies.com/riva-service-partners/"},"description":"Recurring growth, media buying, advertising, content, search, analytics, conversion, and strategic management for service businesses.","offers":[{"@type":"Offer","name":"Essentials","price":"1250","priceCurrency":"USD"},{"@type":"Offer","name":"Momentum","price":"2500","priceCurrency":"USD"},{"@type":"Offer","name":"Growth Partner","price":"3500","priceCurrency":"USD"},{"@type":"Offer","name":"Full Suite Management","price":"5000","priceCurrency":"USD"}]}</script>
 <script>
 (function () {
-  if (!/^(www\\.)?rivastrategies\\.com$/.test(window.location.hostname)) return;
+  var host = window.location.hostname;
+  if (host !== 'rivastrategies.com' && host !== 'www.rivastrategies.com') return;
   var script = document.createElement('script');
   script.src = 'https://tracker.metricool.com/resources/be.js';
   script.async = true;
