@@ -141,6 +141,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
     }
   </style>
+<script>
+(function () {
+  var host = window.location.hostname;
+  if (host !== 'rivastrategies.com' && host !== 'www.rivastrategies.com') return;
+  var script = document.createElement('script');
+  script.src = 'https://tracker.metricool.com/resources/be.js';
+  script.async = true;
+  script.onload = function () {
+    if (window.beTracker) window.beTracker.t({ hash: 'c264559c75063c826db960f70f3fd547' });
+  };
+  document.head.appendChild(script);
+})();
+</script>
 </head>
 
 <body class="bg-white text-gray-800 antialiased selection-gold overflow-x-hidden">
