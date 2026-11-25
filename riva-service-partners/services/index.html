@@ -28,7 +28,8 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Riva Service Partners services","url":"https://rivastrategies.com/riva-service-partners/services/","provider":{"@type":"Organization","name":"Riva Service Partners","url":"https://rivastrategies.com/riva-service-partners/","parentOrganization":{"@type":"Organization","name":"Riva Strategies","url":"https://rivastrategies.com/"}},"description":"Connected digital growth capabilities for local, field, and industrial service businesses.","areaServed":"United States"}</script>
 <script>
 (function () {
-  if (!/^(www\\.)?rivastrategies\\.com$/.test(window.location.hostname)) return;
+  var host = window.location.hostname;
+  if (host !== 'rivastrategies.com' && host !== 'www.rivastrategies.com') return;
   var script = document.createElement('script');
   script.src = 'https://tracker.metricool.com/resources/be.js';
   script.async = true;
