@@ -563,7 +563,8 @@ footer{background:var(--paper); border-top:1px solid var(--line-soft); padding:v
 </script>
 <script>
 (function () {
-  if (!/^(www\\.)?rivastrategies\\.com$/.test(window.location.hostname)) return;
+  var host = window.location.hostname;
+  if (host !== 'rivastrategies.com' && host !== 'www.rivastrategies.com') return;
   var script = document.createElement('script');
   script.src = 'https://tracker.metricool.com/resources/be.js';
   script.async = true;
