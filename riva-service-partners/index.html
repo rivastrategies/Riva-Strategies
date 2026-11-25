@@ -25,7 +25,8 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Riva Service Partners","url":"https://rivastrategies.com/riva-service-partners/","parentOrganization":{"@type":"Organization","name":"Riva Strategies","url":"https://rivastrategies.com/"},"description":"Growth systems for local, field, and industrial service companies.","telephone":"+1-832-905-0570","email":"growth@rivastrategies.com","knowsAbout":["Local SEO","Industrial vendor access","Approved Vendor Lists","Lead generation","CRM automation","Paid search","Social media management","Conversion tracking"]}</script>
 <script>
 (function () {
-  if (!/^(www\\.)?rivastrategies\\.com$/.test(window.location.hostname)) return;
+  var host = window.location.hostname;
+  if (host !== 'rivastrategies.com' && host !== 'www.rivastrategies.com') return;
   var script = document.createElement('script');
   script.src = 'https://tracker.metricool.com/resources/be.js';
   script.async = true;
